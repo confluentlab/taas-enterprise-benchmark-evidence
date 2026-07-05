@@ -1,0 +1,25 @@
+{
+    "runName":  "flowplane-1mb-4runtime-breakpoint",
+    "outputRoot":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-1mb-4runtime-breakpoint",
+    "payloadPath":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-1mb-4runtime-breakpoint\\source-payload-1mb.json",
+    "payloadBytes":  1039980,
+    "rawTopic":  "raw.flowplane.1mb.breakpoint",
+    "flinkOutputTopic":  "transformed.flowplane.1mb.flink",
+    "dlqTopics":  [
+                      "dlq.flowplane.1mb.mongo",
+                      "dlq.flowplane.1mb.postgres",
+                      "dlq.flowplane.1mb.s3",
+                      "dlq.flowplane.1mb.flink"
+                  ],
+    "runtimes":  {
+                     "postgres":  "connect-smt-1mb-postgres-breakpoint",
+                     "s3":  "connect-smt-1mb-s3-breakpoint",
+                     "mongo":  "connect-smt-1mb-mongo-breakpoint",
+                     "flink":  "flink-runtime-1mb-breakpoint"
+                 },
+    "connectorTasks":  3,
+    "flinkParallelism":  2,
+    "fieldsPerMapping":  2000,
+    "postgresFields":  300,
+    "payloadRecordCount":  900
+}

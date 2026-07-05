@@ -1,0 +1,12 @@
+{
+    "connector":  "flowplane-1mb-postgres-sink-runtime",
+    "kind":  "postgres",
+    "runtimeId":  "connect-smt-1mb-postgres-breakpoint",
+    "startedAt":  "2026-06-13T08:52:41.1814072Z",
+    "rawTopic":  "raw.flowplane.1mb.ramp25.postgres.flowplane-connect-byteconverter-all-2min-25rps-20260613-012043",
+    "dlqTopic":  "dlq.flowplane.1mb.ramp25.postgres.flowplane-connect-byteconverter-all-2min-25rps-20260613-012043",
+    "target":  "orders_1mb_ramp25_pg_20260613012043",
+    "records":  3000,
+    "rate":  25,
+    "durationSeconds":  120
+}

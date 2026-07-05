@@ -1,0 +1,7 @@
+{
+    "connector":  "flowplane-1mb-mongo-sink-runtime",
+    "rawTopic":  "raw.flowplane.1mb.byteall.mongo-20260613-002038",
+    "dlqTopic":  "dlq.flowplane.1mb.byteall.mongo-20260613-002038",
+    "target":  "orders_1mb_byteall_mongo_20260613_002038",
+    "startedAt":  "2026-06-13T07:22:05.2101295Z"
+}

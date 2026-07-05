@@ -1,0 +1,13 @@
+﻿{
+    "runName":  "s3-100rps-20260613-031935-100rps",
+    "kind":  "s3",
+    "connector":  "flowplane-1mb-s3-sink-runtime",
+    "runtimeId":  "connect-smt-1mb-s3-breakpoint",
+    "startedAt":  "2026-06-13T10:29:54.9217500Z",
+    "rate":  100,
+    "durationSeconds":  180,
+    "records":  18000,
+    "rawTopic":  "raw.flowplane.1mb.s3.100rps.20260613-031935-100rps",
+    "dlqTopic":  "dlq.flowplane.1mb.s3.100rps.20260613-031935-100rps",
+    "target":  "topics/flowplane-connect-byteconverter-100rps-3min-20260613-031931/100rps/s3"
+}

@@ -1,0 +1,45 @@
+{
+    "allocP99Bytes":  "1434504",
+    "coldP95Ms":  "5.979",
+    "sinkCount":  1988,
+    "allocRatioP99":  "1.379",
+    "coldP50Ms":  "1.755",
+    "warmWindowMaxMaxMs":  36.288,
+    "startedAt":  "2026-06-13T08:52:41.1814072Z",
+    "coldP99Ms":  "8.861",
+    "kind":  "postgres",
+    "endedAt":  "2026-06-13T09:04:30.9478090Z",
+    "connector":  "flowplane-1mb-postgres-sink-runtime",
+    "raw":  3000,
+    "dlq":  4048,
+    "warmWindowMaxAvgMs":  9.0961904761904773,
+    "producerSummary":  {
+                            "value":  "3000 records sent, 24.998750 records/sec (24.79 MB/sec), 7.06 ms avg latency, 211.00 ms max latency, 7 ms 50th, 8 ms 95th, 10 ms 99th, 23 ms 99.9th.",
+                            "PSPath":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\producer.log",
+                            "PSParentPath":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres",
+                            "PSChildName":  "producer.log",
+                            "PSDrive":  {
+                                            "CurrentLocation":  "FlowPlanenew\\FLOWPLANE_Controlplane",
+                                            "Name":  "C",
+                                            "Provider":  "Microsoft.PowerShell.Core\\FileSystem",
+                                            "Root":  "C:\\",
+                                            "Description":  "Windows-SSD",
+                                            "MaximumSize":  null,
+                                            "Credential":  "System.Management.Automation.PSCredential",
+                                            "DisplayRoot":  null
+                                        },
+                            "PSProvider":  {
+                                               "ImplementingType":  "Microsoft.PowerShell.Commands.FileSystemProvider",
+                                               "HelpFile":  "System.Management.Automation.dll-Help.xml",
+                                               "Name":  "FileSystem",
+                                               "PSSnapIn":  "Microsoft.PowerShell.Core",
+                                               "ModuleName":  "Microsoft.PowerShell.Core",
+                                               "Module":  null,
+                                               "Description":  "",
+                                               "Capabilities":  52,
+                                               "Home":  "C:\\Users\\vihan",
+                                               "Drives":  "C"
+                                           },
+                            "ReadCount":  26
+                        }
+}

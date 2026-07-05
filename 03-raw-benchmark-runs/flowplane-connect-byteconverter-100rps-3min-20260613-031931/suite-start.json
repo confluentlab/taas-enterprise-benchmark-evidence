@@ -1,0 +1,19 @@
+﻿{
+    "suiteName":  "flowplane-connect-byteconverter-100rps-3min-20260613-031931",
+    "startedAt":  "2026-06-13T10:19:35.4903841Z",
+    "corpusPath":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\source-payloads-50unique-1mb.jsonl",
+    "connectors":  [
+                       "mongo",
+                       "postgres",
+                       "s3"
+                   ],
+    "rates":  [
+                  "100"
+              ],
+    "durationSecondsPerRate":  180,
+    "mode":  "isolated",
+    "valueConverter":  "org.apache.kafka.connect.converters.ByteArrayConverter",
+    "catchupSeconds":  45,
+    "monitorIntervalSeconds":  10,
+    "skipProbeCapture":  false
+}

@@ -1,0 +1,231 @@
+﻿{
+    "suiteName":  "flowplane-connect-byteconverter-100rps-3min-20260613-031931",
+    "completedAt":  "2026-06-13T10:34:25.2874226Z",
+    "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931",
+    "results":  [
+                    {
+                        "runName":  "mongo-100rps-20260613-031935-100rps",
+                        "kind":  "mongo",
+                        "connector":  "flowplane-1mb-mongo-sink-runtime",
+                        "startedAt":  "2026-06-13T10:20:01.2953029Z",
+                        "endedAt":  "2026-06-13T10:24:29.4677089Z",
+                        "rawTopic":  "raw.flowplane.1mb.mongo.100rps.20260613-031935-100rps",
+                        "dlqTopic":  "dlq.flowplane.1mb.mongo.100rps.20260613-031935-100rps",
+                        "target":  "orders_1mb_ramp_100rps_mongo_20260613031935100",
+                        "rawTotal":  18000,
+                        "dlqTotal":  9191,
+                        "residualLag":  11921,
+                        "sink":  4405,
+                        "producer":  {
+                                         "line":  "18000 records sent, 99.999444 records/sec (99.18 MB/sec), 6.17 ms avg latency, 513.00 ms max latency, 6 ms 50th, 8 ms 95th, 12 ms 99th, 50 ms 99.9th.",
+                                         "records":  18000,
+                                         "recordsPerSec":  99.999444,
+                                         "mbPerSec":  99.18,
+                                         "avgMs":  6.17,
+                                         "maxMs":  513,
+                                         "p50Ms":  6,
+                                         "p95Ms":  8,
+                                         "p99Ms":  12,
+                                         "p999Ms":  50
+                                     },
+                        "transformProbe":  {
+                                               "runtimeId":  "connect-smt-1mb-mongo-breakpoint",
+                                               "coldInclusiveLast":  {
+                                                                         "samples":  "2258",
+                                                                         "success":  "1496",
+                                                                         "failure":  "762",
+                                                                         "p50Ms":  "3.846",
+                                                                         "p95Ms":  "5.312",
+                                                                         "p99Ms":  "6.576",
+                                                                         "maxMs":  "24.839",
+                                                                         "windowSamples":  "93",
+                                                                         "windowMaxMs":  "6.166",
+                                                                         "allocP50Bytes":  "2665208",
+                                                                         "allocP95Bytes":  "2667024",
+                                                                         "allocP99Bytes":  "2667248",
+                                                                         "allocMaxBytes":  "2667312",
+                                                                         "allocRatioP99":  "2.565",
+                                                                         "allocWindowMaxBytes":  "2667248"
+                                                                     },
+                                               "warmPost60sLast":  {
+                                                                       "samples":  "2258",
+                                                                       "success":  "1496",
+                                                                       "failure":  "762",
+                                                                       "p50Ms":  "3.846",
+                                                                       "p95Ms":  "5.312",
+                                                                       "p99Ms":  "6.576",
+                                                                       "maxMs":  "24.839",
+                                                                       "windowSamples":  "93",
+                                                                       "windowMaxMs":  "6.166",
+                                                                       "allocP50Bytes":  "2665208",
+                                                                       "allocP95Bytes":  "2667024",
+                                                                       "allocP99Bytes":  "2667248",
+                                                                       "allocMaxBytes":  "2667312",
+                                                                       "allocRatioP99":  "2.565",
+                                                                       "allocWindowMaxBytes":  "2667248"
+                                                                   },
+                                               "warmPost60sWindowMax":  {
+                                                                            "count":  63,
+                                                                            "min":  5.162,
+                                                                            "avg":  7.1180476190476147,
+                                                                            "max":  17.777
+                                                                        },
+                                               "note":  "Probe emits cumulative p99 plus rolling windowMaxMs; warm windowMax is not a true rolling p99."
+                                           },
+                        "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps"
+                    },
+                    {
+                        "runName":  "postgres-100rps-20260613-031935-100rps",
+                        "kind":  "postgres",
+                        "connector":  "flowplane-1mb-postgres-sink-runtime",
+                        "startedAt":  "2026-06-13T10:25:00.6122866Z",
+                        "endedAt":  "2026-06-13T10:29:26.2026446Z",
+                        "rawTopic":  "raw.flowplane.1mb.postgres.100rps.20260613-031935-100rps",
+                        "dlqTopic":  "dlq.flowplane.1mb.postgres.100rps.20260613-031935-100rps",
+                        "target":  "orders_1mb_ramp_100rps_pg_20260613031935100",
+                        "rawTotal":  18000,
+                        "dlqTotal":  9270,
+                        "residualLag":  11825,
+                        "sink":  4389,
+                        "producer":  {
+                                         "line":  "18000 records sent, 99.998333 records/sec (99.18 MB/sec), 5.96 ms avg latency, 314.00 ms max latency, 6 ms 50th, 7 ms 95th, 9 ms 99th, 44 ms 99.9th.",
+                                         "records":  18000,
+                                         "recordsPerSec":  99.998333,
+                                         "mbPerSec":  99.18,
+                                         "avgMs":  5.96,
+                                         "maxMs":  314,
+                                         "p50Ms":  6,
+                                         "p95Ms":  7,
+                                         "p99Ms":  9,
+                                         "p999Ms":  44
+                                     },
+                        "transformProbe":  {
+                                               "runtimeId":  "connect-smt-1mb-postgres-breakpoint",
+                                               "coldInclusiveLast":  {
+                                                                         "samples":  "2259",
+                                                                         "success":  "1486",
+                                                                         "failure":  "773",
+                                                                         "p50Ms":  "1.396",
+                                                                         "p95Ms":  "2.329",
+                                                                         "p99Ms":  "2.861",
+                                                                         "maxMs":  "16.796",
+                                                                         "windowSamples":  "80",
+                                                                         "windowMaxMs":  "4.109",
+                                                                         "allocP50Bytes":  "1433904",
+                                                                         "allocP95Bytes":  "1434456",
+                                                                         "allocP99Bytes":  "1434504",
+                                                                         "allocMaxBytes":  "1434528",
+                                                                         "allocRatioP99":  "1.379",
+                                                                         "allocWindowMaxBytes":  "1434504"
+                                                                     },
+                                               "warmPost60sLast":  {
+                                                                       "samples":  "2259",
+                                                                       "success":  "1486",
+                                                                       "failure":  "773",
+                                                                       "p50Ms":  "1.396",
+                                                                       "p95Ms":  "2.329",
+                                                                       "p99Ms":  "2.861",
+                                                                       "maxMs":  "16.796",
+                                                                       "windowSamples":  "80",
+                                                                       "windowMaxMs":  "4.109",
+                                                                       "allocP50Bytes":  "1433904",
+                                                                       "allocP95Bytes":  "1434456",
+                                                                       "allocP99Bytes":  "1434504",
+                                                                       "allocMaxBytes":  "1434528",
+                                                                       "allocRatioP99":  "1.379",
+                                                                       "allocWindowMaxBytes":  "1434504"
+                                                                   },
+                                               "warmPost60sWindowMax":  {
+                                                                            "count":  63,
+                                                                            "min":  2.173,
+                                                                            "avg":  4.6601111111111111,
+                                                                            "max":  18.82
+                                                                        },
+                                               "note":  "Probe emits cumulative p99 plus rolling windowMaxMs; warm windowMax is not a true rolling p99."
+                                           },
+                        "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps"
+                    },
+                    {
+                        "runName":  "s3-100rps-20260613-031935-100rps",
+                        "kind":  "s3",
+                        "connector":  "flowplane-1mb-s3-sink-runtime",
+                        "startedAt":  "2026-06-13T10:29:54.9217500Z",
+                        "endedAt":  "2026-06-13T10:34:20.7532311Z",
+                        "rawTopic":  "raw.flowplane.1mb.s3.100rps.20260613-031935-100rps",
+                        "dlqTopic":  "dlq.flowplane.1mb.s3.100rps.20260613-031935-100rps",
+                        "target":  "topics/flowplane-connect-byteconverter-100rps-3min-20260613-031931/100rps/s3",
+                        "rawTotal":  18000,
+                        "dlqTotal":  8830,
+                        "residualLag":  12790,
+                        "sink":  {
+                                     "objects":  413,
+                                     "size":  "351MiB",
+                                     "summary":  "351MiB\t413 objects\tflowplane-hardening/topics/flowplane-connect-byteconverter-100rps-3min-20260613-031931/100rps/s3/raw.flowplane.1mb.s3.100rps.20260613-031935-100rps"
+                                 },
+                        "producer":  {
+                                         "line":  "18000 records sent, 99.996111 records/sec (99.18 MB/sec), 5.94 ms avg latency, 185.00 ms max latency, 6 ms 50th, 7 ms 95th, 9 ms 99th, 26 ms 99.9th.",
+                                         "records":  18000,
+                                         "recordsPerSec":  99.996111,
+                                         "mbPerSec":  99.18,
+                                         "avgMs":  5.94,
+                                         "maxMs":  185,
+                                         "p50Ms":  6,
+                                         "p95Ms":  7,
+                                         "p99Ms":  9,
+                                         "p999Ms":  26
+                                     },
+                        "transformProbe":  {
+                                               "runtimeId":  "connect-smt-1mb-s3-breakpoint",
+                                               "coldInclusiveLast":  {
+                                                                         "samples":  "2172",
+                                                                         "success":  "1435",
+                                                                         "failure":  "737",
+                                                                         "p50Ms":  "4.026",
+                                                                         "p95Ms":  "5.645",
+                                                                         "p99Ms":  "6.432",
+                                                                         "maxMs":  "21.785",
+                                                                         "windowSamples":  "82",
+                                                                         "windowMaxMs":  "6.638",
+                                                                         "allocP50Bytes":  "2665224",
+                                                                         "allocP95Bytes":  "2667056",
+                                                                         "allocP99Bytes":  "2667248",
+                                                                         "allocMaxBytes":  "2667304",
+                                                                         "allocRatioP99":  "2.565",
+                                                                         "allocWindowMaxBytes":  "2667120"
+                                                                     },
+                                               "warmPost60sLast":  {
+                                                                       "samples":  "2172",
+                                                                       "success":  "1435",
+                                                                       "failure":  "737",
+                                                                       "p50Ms":  "4.026",
+                                                                       "p95Ms":  "5.645",
+                                                                       "p99Ms":  "6.432",
+                                                                       "maxMs":  "21.785",
+                                                                       "windowSamples":  "82",
+                                                                       "windowMaxMs":  "6.638",
+                                                                       "allocP50Bytes":  "2665224",
+                                                                       "allocP95Bytes":  "2667056",
+                                                                       "allocP99Bytes":  "2667248",
+                                                                       "allocMaxBytes":  "2667304",
+                                                                       "allocRatioP99":  "2.565",
+                                                                       "allocWindowMaxBytes":  "2667120"
+                                                                   },
+                                               "warmPost60sWindowMax":  {
+                                                                            "count":  63,
+                                                                            "min":  5.413,
+                                                                            "avg":  7.9083333333333332,
+                                                                            "max":  23.407
+                                                                        },
+                                               "note":  "Probe emits cumulative p99 plus rolling windowMaxMs; warm windowMax is not a true rolling p99."
+                                           },
+                        "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps"
+                    }
+                ],
+    "notes":  [
+                  "Use rawTotal/dlqTotal/residualLag for Kafka evidence.",
+                  "Use producer.p99Ms for producer/client path latency.",
+                  "Use transformProbe.coldInclusiveLast.p99Ms for cold-inclusive FLOWPLANE transform p99.",
+                  "Use transformProbe.warmPost60sWindowMax as warm max signal only; current runtime probe does not emit warm rolling p99.",
+                  "S3 can retain residual lag with flush.size-only configs; use rotate.interval.ms for deterministic tail flush."
+              ]
+}

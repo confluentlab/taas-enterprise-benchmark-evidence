@@ -1,0 +1,2192 @@
+﻿[
+    {
+        "Path":  ".gitignore",
+        "Bytes":  125,
+        "LastWriteTime":  "2026-06-13T12:29:10"
+    },
+    {
+        "Path":  "00-overview\\evidence-inventory.json",
+        "Bytes":  97839,
+        "LastWriteTime":  "2026-06-13T12:28:40"
+    },
+    {
+        "Path":  "01-sample-payloads\\payload-corpus-summary.txt",
+        "Bytes":  735,
+        "LastWriteTime":  "2026-06-12T10:56:12"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-01.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-02.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-03.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-04.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-05.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-06.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-07.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-08.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-09.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-10.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-11.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-12.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-13.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-14.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-15.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-16.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-17.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-18.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-19.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-20.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-21.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-22.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-23.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-24.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-25.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-26.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-27.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-28.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-29.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-30.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-31.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-32.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-33.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-34.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-35.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-36.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-37.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-38.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-39.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-40.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-41.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-42.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-43.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-44.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-45.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-46.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-47.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-48.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-49.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-50\\source-payload-1mb-variant-50.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\payloads-manifest.csv",
+        "Bytes":  12376,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "01-sample-payloads\\source-payload-1mb.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T08:49:01"
+    },
+    {
+        "Path":  "01-sample-payloads\\source-payloads-50unique-1mb.jsonl",
+        "Bytes":  51999049,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\control-plane-mapping-drafts-export.json",
+        "Bytes":  5009160,
+        "LastWriteTime":  "2026-06-13T12:26:37"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\control-plane-mappings-export.json",
+        "Bytes":  3498,
+        "LastWriteTime":  "2026-06-13T12:26:36"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\scenario-summary.json",
+        "Bytes":  1122,
+        "LastWriteTime":  "2026-06-12T08:49:25"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-100rps-5min-20260612-093129__run-start.json",
+        "Bytes":  471,
+        "LastWriteTime":  "2026-06-12T09:31:29"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-200rps-5min-20260612-085845__run-start.json",
+        "Bytes":  612,
+        "LastWriteTime":  "2026-06-12T08:58:46"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-50unique-50rps-30min-20260612-122436__mongo-config-30min-run.json",
+        "Bytes":  2455,
+        "LastWriteTime":  "2026-06-12T12:24:41"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-50unique-50rps-30min-20260612-122436__run-start.json",
+        "Bytes":  928,
+        "LastWriteTime":  "2026-06-12T12:26:30"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-50unique-50rps-30min-20260612-122436__run-vars.txt",
+        "Bytes":  606,
+        "LastWriteTime":  "2026-06-12T12:24:36"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548__mongo-config-50unique-run.json",
+        "Bytes":  2443,
+        "LastWriteTime":  "2026-06-12T10:56:16"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548__mongo-config-before-50unique-run.json",
+        "Bytes":  2152,
+        "LastWriteTime":  "2026-06-12T10:56:16"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548__run-start.txt",
+        "Bytes":  276,
+        "LastWriteTime":  "2026-06-12T10:57:15"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658__mongo-config-before-run.json",
+        "Bytes":  2153,
+        "LastWriteTime":  "2026-06-12T11:27:02"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658__mongo-config-run.json",
+        "Bytes":  2449,
+        "LastWriteTime":  "2026-06-12T11:27:02"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658__run-start.txt",
+        "Bytes":  290,
+        "LastWriteTime":  "2026-06-12T11:28:24"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658__run-vars.txt",
+        "Bytes":  555,
+        "LastWriteTime":  "2026-06-12T11:26:58"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-exactpayload-100rps-5min-foreground-20260612-095001__run-start.json",
+        "Bytes":  458,
+        "LastWriteTime":  "2026-06-12T09:50:01"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734__mongo-config.json",
+        "Bytes":  2466,
+        "LastWriteTime":  "2026-06-12T13:37:39"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734__run-start.json",
+        "Bytes":  955,
+        "LastWriteTime":  "2026-06-12T13:38:07"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058__mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:21:02"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058__run-start.json",
+        "Bytes":  948,
+        "LastWriteTime":  "2026-06-12T13:21:26"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632__mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:26:37"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632__run-start.json",
+        "Bytes":  949,
+        "LastWriteTime":  "2026-06-12T13:26:59"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204__mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:32:09"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058__flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204__run-start.json",
+        "Bytes":  949,
+        "LastWriteTime":  "2026-06-12T13:32:30"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605__flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506__mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T23:05:10"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605__flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506__run-start.json",
+        "Bytes":  941,
+        "LastWriteTime":  "2026-06-12T23:05:34"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__mongo-100rps-20260613-031935-100rps__connector-config.json",
+        "Bytes":  2447,
+        "LastWriteTime":  "2026-06-13T03:19:41"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__mongo-100rps-20260613-031935-100rps__run-start.json",
+        "Bytes":  522,
+        "LastWriteTime":  "2026-06-13T03:20:01"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__postgres-100rps-20260613-031935-100rps__connector-config.json",
+        "Bytes":  2744,
+        "LastWriteTime":  "2026-06-13T03:24:40"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__postgres-100rps-20260613-031935-100rps__run-start.json",
+        "Bytes":  537,
+        "LastWriteTime":  "2026-06-13T03:25:00"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__s3-100rps-20260613-031935-100rps__connector-config.json",
+        "Bytes":  2859,
+        "LastWriteTime":  "2026-06-13T03:29:34"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__s3-100rps-20260613-031935-100rps__run-start.json",
+        "Bytes":  529,
+        "LastWriteTime":  "2026-06-13T03:29:54"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931__suite-start.json",
+        "Bytes":  760,
+        "LastWriteTime":  "2026-06-13T03:19:35"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744__mongo-50rps-20260613-023748-50rps__connector-config.json",
+        "Bytes":  2439,
+        "LastWriteTime":  "2026-06-13T02:37:53"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744__mongo-50rps-20260613-023748-50rps__run-start.json",
+        "Bytes":  513,
+        "LastWriteTime":  "2026-06-13T02:38:14"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744__suite-start.json",
+        "Bytes":  758,
+        "LastWriteTime":  "2026-06-13T02:37:48"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043__postgres-50rps-20260613-025047-50rps__connector-config.json",
+        "Bytes":  2736,
+        "LastWriteTime":  "2026-06-13T02:50:52"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043__postgres-50rps-20260613-025047-50rps__run-start.json",
+        "Bytes":  528,
+        "LastWriteTime":  "2026-06-13T02:51:13"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043__s3-50rps-20260613-025047-50rps__connector-config.json",
+        "Bytes":  2863,
+        "LastWriteTime":  "2026-06-13T02:57:55"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043__s3-50rps-20260613-025047-50rps__run-start.json",
+        "Bytes":  532,
+        "LastWriteTime":  "2026-06-13T02:58:15"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043__suite-start.json",
+        "Bytes":  737,
+        "LastWriteTime":  "2026-06-13T02:50:47"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__mongo__config-before.json",
+        "Bytes":  2416,
+        "LastWriteTime":  "2026-06-13T00:20:41"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__mongo__config-bytearray.json",
+        "Bytes":  2420,
+        "LastWriteTime":  "2026-06-13T00:20:41"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__mongo__run-start.json",
+        "Bytes":  294,
+        "LastWriteTime":  "2026-06-13T00:22:05"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__mongo__status-after-config.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T00:20:57"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__postgres__config-before.json",
+        "Bytes":  2759,
+        "LastWriteTime":  "2026-06-13T00:20:44"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__postgres__config-bytearray.json",
+        "Bytes":  2717,
+        "LastWriteTime":  "2026-06-13T00:20:44"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__postgres__run-start.json",
+        "Bytes":  300,
+        "LastWriteTime":  "2026-06-13T00:27:31"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__postgres__status-after-config.json",
+        "Bytes":  760,
+        "LastWriteTime":  "2026-06-13T00:20:57"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__s3__config-before.json",
+        "Bytes":  2881,
+        "LastWriteTime":  "2026-06-13T00:20:47"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__s3__config-bytearray.json",
+        "Bytes":  2828,
+        "LastWriteTime":  "2026-06-13T00:20:47"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__s3__run-start.json",
+        "Bytes":  306,
+        "LastWriteTime":  "2026-06-13T00:33:44"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__s3__status-after-config.json",
+        "Bytes":  754,
+        "LastWriteTime":  "2026-06-13T00:20:57"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-20260613-002038__suite-start.json",
+        "Bytes":  2533,
+        "LastWriteTime":  "2026-06-13T00:20:47"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__mongo__config-bytearray.json",
+        "Bytes":  2544,
+        "LastWriteTime":  "2026-06-13T01:20:53"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__mongo__run-start.json",
+        "Bytes":  548,
+        "LastWriteTime":  "2026-06-13T01:21:13"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__postgres__config-bytearray.json",
+        "Bytes":  2838,
+        "LastWriteTime":  "2026-06-13T01:52:20"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__postgres__run-start.json",
+        "Bytes":  535,
+        "LastWriteTime":  "2026-06-13T01:52:41"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__s3__config-bytearray.json",
+        "Bytes":  2957,
+        "LastWriteTime":  "2026-06-13T02:05:32"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__s3__run-start.json",
+        "Bytes":  537,
+        "LastWriteTime":  "2026-06-13T02:05:53"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043__suite-start.json",
+        "Bytes":  445,
+        "LastWriteTime":  "2026-06-13T01:20:44"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026__mongo-config-before.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T23:50:27"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026__mongo-config-bytearray.json",
+        "Bytes":  2416,
+        "LastWriteTime":  "2026-06-12T23:50:27"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026__run-start.json",
+        "Bytes":  547,
+        "LastWriteTime":  "2026-06-12T23:50:29"
+    },
+    {
+        "Path":  "02-mappings-and-configs\\flowplane-streams-alloc-probe-demo-1mb-10rps-20260612-231623__mapping.json",
+        "Bytes":  341,
+        "LastWriteTime":  "2026-06-12T23:16:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-100rps-5min-20260612-093129\\monitor-samples.jsonl",
+        "Bytes":  11297,
+        "LastWriteTime":  "2026-06-12T09:37:39"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-100rps-5min-20260612-093129\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T09:31:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-100rps-5min-20260612-093129\\producer.log",
+        "Bytes":  19533,
+        "LastWriteTime":  "2026-06-12T09:36:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-100rps-5min-20260612-093129\\producer-report.json",
+        "Bytes":  736,
+        "LastWriteTime":  "2026-06-12T09:36:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-100rps-5min-20260612-093129\\run-start.json",
+        "Bytes":  471,
+        "LastWriteTime":  "2026-06-12T09:31:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-200rps-5min-20260612-085845\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T08:58:46"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-200rps-5min-20260612-085845\\producer.log",
+        "Bytes":  5860,
+        "LastWriteTime":  "2026-06-12T09:03:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-200rps-5min-20260612-085845\\run-start.json",
+        "Bytes":  612,
+        "LastWriteTime":  "2026-06-12T08:58:46"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-4runtime-breakpoint\\breakpoint-1mb-flink-2000.yaml",
+        "Bytes":  186454,
+        "LastWriteTime":  "2026-06-12T08:49:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-4runtime-breakpoint\\breakpoint-1mb-mongo-2000.yaml",
+        "Bytes":  180579,
+        "LastWriteTime":  "2026-06-12T08:49:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-4runtime-breakpoint\\breakpoint-1mb-postgres-300.yaml",
+        "Bytes":  28174,
+        "LastWriteTime":  "2026-06-12T08:49:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-4runtime-breakpoint\\breakpoint-1mb-s3-2000.yaml",
+        "Bytes":  186445,
+        "LastWriteTime":  "2026-06-12T08:49:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-4runtime-breakpoint\\scenario-summary.json",
+        "Bytes":  1122,
+        "LastWriteTime":  "2026-06-12T08:49:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-4runtime-breakpoint\\source-payload-1mb.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T08:49:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\connect-transform-probe.log",
+        "Bytes":  179992,
+        "LastWriteTime":  "2026-06-12T12:58:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\flink-transform-probe.log",
+        "Bytes":  121068,
+        "LastWriteTime":  "2026-06-12T12:58:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\mongo-config-30min-run.json",
+        "Bytes":  2455,
+        "LastWriteTime":  "2026-06-12T12:24:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\monitor-10s.csv",
+        "Bytes":  16801,
+        "LastWriteTime":  "2026-06-12T12:58:38"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\monitor-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T12:26:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\monitor-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T12:26:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\processes.json",
+        "Bytes":  239,
+        "LastWriteTime":  "2026-06-12T12:26:18"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\producer.log",
+        "Bytes":  67096,
+        "LastWriteTime":  "2026-06-12T12:56:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\producer-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T12:26:18"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\producer-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T12:26:18"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\run-end.json",
+        "Bytes":  352,
+        "LastWriteTime":  "2026-06-12T12:56:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\run-start.json",
+        "Bytes":  928,
+        "LastWriteTime":  "2026-06-12T12:26:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-50unique-50rps-30min-20260612-122436\\run-vars.txt",
+        "Bytes":  606,
+        "LastWriteTime":  "2026-06-12T12:24:36"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\connect-dlq-sample-and-counts.jsonl",
+        "Bytes":  6990762,
+        "LastWriteTime":  "2026-06-12T11:01:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\connect-transform-probe-timestamped.log",
+        "Bytes":  5757,
+        "LastWriteTime":  "2026-06-12T11:01:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\flink-dlq-sample-and-counts.jsonl",
+        "Bytes":  7860159,
+        "LastWriteTime":  "2026-06-12T11:01:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\flink-transform-probe-timestamped.log",
+        "Bytes":  4364,
+        "LastWriteTime":  "2026-06-12T11:01:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\mongo-config-50unique-run.json",
+        "Bytes":  2443,
+        "LastWriteTime":  "2026-06-12T10:56:16"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\mongo-config-before-50unique-run.json",
+        "Bytes":  2152,
+        "LastWriteTime":  "2026-06-12T10:56:16"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payload-corpus-summary.txt",
+        "Bytes":  735,
+        "LastWriteTime":  "2026-06-12T10:56:12"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-01.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-02.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-03.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-04.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-05.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-06.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-07.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-08.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-09.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-10.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-11.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-12.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-13.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-14.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-15.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-16.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-17.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-18.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-19.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-20.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-21.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-22.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-23.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-24.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-25.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-26.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-27.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-28.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-29.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-30.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-31.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-32.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-33.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-34.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-35.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-36.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-37.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-38.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-39.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-40.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-41.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-42.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-43.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-44.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-45.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-46.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-47.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-48.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-49.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-50\\source-payload-1mb-variant-50.json",
+        "Bytes":  1039980,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\payloads-manifest.csv",
+        "Bytes":  12376,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\producer.log",
+        "Bytes":  1093,
+        "LastWriteTime":  "2026-06-12T10:58:11"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\run-end.txt",
+        "Bytes":  73,
+        "LastWriteTime":  "2026-06-12T10:58:11"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\run-observation-summary.json",
+        "Bytes":  215,
+        "LastWriteTime":  "2026-06-12T11:01:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\run-start.txt",
+        "Bytes":  276,
+        "LastWriteTime":  "2026-06-12T10:57:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\source-payloads-50unique-1mb.jsonl",
+        "Bytes":  51999049,
+        "LastWriteTime":  "2026-06-12T10:55:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\transform-probe-parsed.csv",
+        "Bytes":  3509,
+        "LastWriteTime":  "2026-06-12T11:01:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\connect-transform-probe-timestamped.log",
+        "Bytes":  74759,
+        "LastWriteTime":  "2026-06-12T11:46:12"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\final-summary.json",
+        "Bytes":  271,
+        "LastWriteTime":  "2026-06-12T11:46:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\flink-transform-probe-timestamped.log",
+        "Bytes":  65076,
+        "LastWriteTime":  "2026-06-12T11:46:12"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\mongo-config-before-run.json",
+        "Bytes":  2153,
+        "LastWriteTime":  "2026-06-12T11:27:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\mongo-config-run.json",
+        "Bytes":  2449,
+        "LastWriteTime":  "2026-06-12T11:27:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\monitor-10s.csv",
+        "Bytes":  9356,
+        "LastWriteTime":  "2026-06-12T11:33:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\monitor-summary.csv",
+        "Bytes":  645,
+        "LastWriteTime":  "2026-06-12T11:46:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\producer.log",
+        "Bytes":  5823,
+        "LastWriteTime":  "2026-06-12T11:33:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\run-end.txt",
+        "Bytes":  74,
+        "LastWriteTime":  "2026-06-12T11:33:31"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\run-start.txt",
+        "Bytes":  290,
+        "LastWriteTime":  "2026-06-12T11:28:24"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\run-vars.txt",
+        "Bytes":  555,
+        "LastWriteTime":  "2026-06-12T11:26:58"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-connect-flink-50unique-50rps-5min-20260612112658\\transform-probe-parsed.csv",
+        "Bytes":  47937,
+        "LastWriteTime":  "2026-06-12T11:46:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-exactpayload-100rps-5min-foreground-20260612-095001\\producer.log",
+        "Bytes":  7342,
+        "LastWriteTime":  "2026-06-12T09:56:09"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-exactpayload-100rps-5min-foreground-20260612-095001\\run-end.json",
+        "Bytes":  83,
+        "LastWriteTime":  "2026-06-12T09:56:09"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-exactpayload-100rps-5min-foreground-20260612-095001\\run-start.json",
+        "Bytes":  458,
+        "LastWriteTime":  "2026-06-12T09:50:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\ramp-process.err.log",
+        "Bytes":  3900,
+        "LastWriteTime":  "2026-06-12T13:37:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\ramp-process.out.log",
+        "Bytes":  2515,
+        "LastWriteTime":  "2026-06-12T13:43:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\suite-process.json",
+        "Bytes":  290,
+        "LastWriteTime":  "2026-06-12T13:20:58"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\suite-progress.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:43:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\suite-summary.json",
+        "Bytes":  2515,
+        "LastWriteTime":  "2026-06-12T13:43:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-12T13:43:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\flink-jobs-end.json",
+        "Bytes":  936,
+        "LastWriteTime":  "2026-06-12T13:43:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\level-start.json",
+        "Bytes":  595,
+        "LastWriteTime":  "2026-06-12T13:37:34"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\mongo-config.json",
+        "Bytes":  2466,
+        "LastWriteTime":  "2026-06-12T13:37:39"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\monitor-10s.csv",
+        "Bytes":  3243,
+        "LastWriteTime":  "2026-06-12T13:42:59"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\monitor-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:37:55"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\monitor-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:37:55"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\producer.log",
+        "Bytes":  11752,
+        "LastWriteTime":  "2026-06-12T13:43:08"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\run-end.json",
+        "Bytes":  380,
+        "LastWriteTime":  "2026-06-12T13:43:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-100rps-20260612-133734\\run-start.json",
+        "Bytes":  955,
+        "LastWriteTime":  "2026-06-12T13:38:07"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-12T13:26:32"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\flink-jobs-end.json",
+        "Bytes":  636,
+        "LastWriteTime":  "2026-06-12T13:26:32"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\level-start.json",
+        "Bytes":  587,
+        "LastWriteTime":  "2026-06-12T13:20:58"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:21:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\monitor-10s.csv",
+        "Bytes":  3440,
+        "LastWriteTime":  "2026-06-12T13:26:20"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\monitor-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:21:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\monitor-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:21:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\producer.log",
+        "Bytes":  11578,
+        "LastWriteTime":  "2026-06-12T13:26:28"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\run-end.json",
+        "Bytes":  378,
+        "LastWriteTime":  "2026-06-12T13:26:32"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058\\run-start.json",
+        "Bytes":  948,
+        "LastWriteTime":  "2026-06-12T13:21:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-12T13:32:04"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\flink-jobs-end.json",
+        "Bytes":  636,
+        "LastWriteTime":  "2026-06-12T13:32:04"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\level-start.json",
+        "Bytes":  588,
+        "LastWriteTime":  "2026-06-12T13:26:32"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:26:37"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\monitor-10s.csv",
+        "Bytes":  3441,
+        "LastWriteTime":  "2026-06-12T13:31:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\monitor-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:26:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\monitor-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:26:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\producer.log",
+        "Bytes":  11610,
+        "LastWriteTime":  "2026-06-12T13:32:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\run-end.json",
+        "Bytes":  379,
+        "LastWriteTime":  "2026-06-12T13:32:04"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-50rps-20260612-132632\\run-start.json",
+        "Bytes":  949,
+        "LastWriteTime":  "2026-06-12T13:26:59"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-12T13:37:34"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\flink-jobs-end.json",
+        "Bytes":  786,
+        "LastWriteTime":  "2026-06-12T13:37:34"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\level-start.json",
+        "Bytes":  588,
+        "LastWriteTime":  "2026-06-12T13:32:04"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T13:32:09"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\monitor-10s.csv",
+        "Bytes":  3452,
+        "LastWriteTime":  "2026-06-12T13:37:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\monitor-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:32:19"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\monitor-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T13:32:19"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\producer.log",
+        "Bytes":  11630,
+        "LastWriteTime":  "2026-06-12T13:37:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\run-end.json",
+        "Bytes":  379,
+        "LastWriteTime":  "2026-06-12T13:37:34"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058\\flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204\\run-start.json",
+        "Bytes":  949,
+        "LastWriteTime":  "2026-06-12T13:32:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\suite-progress.json",
+        "Bytes":  900,
+        "LastWriteTime":  "2026-06-12T23:06:38"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\suite-summary.json",
+        "Bytes":  953,
+        "LastWriteTime":  "2026-06-12T23:06:38"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-12T23:06:38"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\flink-jobs-end.json",
+        "Bytes":  334,
+        "LastWriteTime":  "2026-06-12T23:06:38"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\level-start.json",
+        "Bytes":  580,
+        "LastWriteTime":  "2026-06-12T23:05:06"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\mongo-config.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T23:05:10"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\monitor-10s.csv",
+        "Bytes":  971,
+        "LastWriteTime":  "2026-06-12T23:06:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\monitor-process.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T23:05:21"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\monitor-process.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-12T23:05:21"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\producer.log",
+        "Bytes":  2584,
+        "LastWriteTime":  "2026-06-12T23:06:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\run-end.json",
+        "Bytes":  368,
+        "LastWriteTime":  "2026-06-12T23:06:38"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506\\run-start.json",
+        "Bytes":  941,
+        "LastWriteTime":  "2026-06-12T23:05:34"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\combined-summary-final.json",
+        "Bytes":  5084,
+        "LastWriteTime":  "2026-06-13T03:41:28"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\connector-config.json",
+        "Bytes":  2447,
+        "LastWriteTime":  "2026-06-13T03:19:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\connector-status-end.json",
+        "Bytes":  764,
+        "LastWriteTime":  "2026-06-13T03:24:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\monitor-10s.csv",
+        "Bytes":  2333,
+        "LastWriteTime":  "2026-06-13T03:24:19"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\probe-cold-inclusive.log",
+        "Bytes":  40985,
+        "LastWriteTime":  "2026-06-13T03:24:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\probe-warm-post60s.log",
+        "Bytes":  31947,
+        "LastWriteTime":  "2026-06-13T03:24:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T03:20:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\producer.log",
+        "Bytes":  3564,
+        "LastWriteTime":  "2026-06-13T03:24:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\producer.out.log",
+        "Bytes":  3526,
+        "LastWriteTime":  "2026-06-13T03:23:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\run-end.json",
+        "Bytes":  4486,
+        "LastWriteTime":  "2026-06-13T03:24:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\mongo-100rps-20260613-031935-100rps\\run-start.json",
+        "Bytes":  522,
+        "LastWriteTime":  "2026-06-13T03:20:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\orchestrator.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T03:19:31"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\orchestrator.out.log",
+        "Bytes":  18952,
+        "LastWriteTime":  "2026-06-13T03:34:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\orchestrator-process.json",
+        "Bytes":  610,
+        "LastWriteTime":  "2026-06-13T03:19:31"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\connector-config.json",
+        "Bytes":  2744,
+        "LastWriteTime":  "2026-06-13T03:24:40"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\connector-status-end.json",
+        "Bytes":  767,
+        "LastWriteTime":  "2026-06-13T03:29:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\monitor-10s.csv",
+        "Bytes":  2324,
+        "LastWriteTime":  "2026-06-13T03:29:16"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\probe-cold-inclusive.log",
+        "Bytes":  41216,
+        "LastWriteTime":  "2026-06-13T03:29:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\probe-warm-post60s.log",
+        "Bytes":  32128,
+        "LastWriteTime":  "2026-06-13T03:29:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T03:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\producer.log",
+        "Bytes":  3556,
+        "LastWriteTime":  "2026-06-13T03:29:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\producer.out.log",
+        "Bytes":  3518,
+        "LastWriteTime":  "2026-06-13T03:28:01"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\run-end.json",
+        "Bytes":  4501,
+        "LastWriteTime":  "2026-06-13T03:29:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\postgres-100rps-20260613-031935-100rps\\run-start.json",
+        "Bytes":  537,
+        "LastWriteTime":  "2026-06-13T03:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\connector-config.json",
+        "Bytes":  2859,
+        "LastWriteTime":  "2026-06-13T03:29:34"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T03:34:20"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\monitor-10s.csv",
+        "Bytes":  2330,
+        "LastWriteTime":  "2026-06-13T03:34:10"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\probe-cold-inclusive.log",
+        "Bytes":  40756,
+        "LastWriteTime":  "2026-06-13T03:34:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\probe-warm-post60s.log",
+        "Bytes":  31756,
+        "LastWriteTime":  "2026-06-13T03:34:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T03:29:54"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\producer.log",
+        "Bytes":  3555,
+        "LastWriteTime":  "2026-06-13T03:34:20"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\producer.out.log",
+        "Bytes":  3517,
+        "LastWriteTime":  "2026-06-13T03:32:55"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\run-end.json",
+        "Bytes":  4759,
+        "LastWriteTime":  "2026-06-13T03:34:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps\\run-start.json",
+        "Bytes":  529,
+        "LastWriteTime":  "2026-06-13T03:29:54"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\suite-progress.json",
+        "Bytes":  20464,
+        "LastWriteTime":  "2026-06-13T03:34:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\suite-start.json",
+        "Bytes":  760,
+        "LastWriteTime":  "2026-06-13T03:19:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\suite-summary.json",
+        "Bytes":  18955,
+        "LastWriteTime":  "2026-06-13T03:34:25"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\connector-config.json",
+        "Bytes":  2439,
+        "LastWriteTime":  "2026-06-13T02:37:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\connector-status-end.json",
+        "Bytes":  764,
+        "LastWriteTime":  "2026-06-13T02:44:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\monitor-10s.csv",
+        "Bytes":  3385,
+        "LastWriteTime":  "2026-06-13T02:44:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\probe-cold-inclusive.log",
+        "Bytes":  59320,
+        "LastWriteTime":  "2026-06-13T02:44:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\probe-warm-post60s.log",
+        "Bytes":  50262,
+        "LastWriteTime":  "2026-06-13T02:44:51"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:38:14"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\producer.log",
+        "Bytes":  5744,
+        "LastWriteTime":  "2026-06-13T02:44:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\producer.out.log",
+        "Bytes":  5682,
+        "LastWriteTime":  "2026-06-13T02:43:14"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\mongo-50rps-20260613-023748-50rps\\run-start.json",
+        "Bytes":  513,
+        "LastWriteTime":  "2026-06-13T02:38:14"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\orchestrator.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:37:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\orchestrator.out.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:37:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\orchestrator-process.json",
+        "Bytes":  1212,
+        "LastWriteTime":  "2026-06-13T02:37:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-20260613-023744\\suite-start.json",
+        "Bytes":  758,
+        "LastWriteTime":  "2026-06-13T02:37:48"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\orchestrator.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:50:43"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\orchestrator.out.log",
+        "Bytes":  13097,
+        "LastWriteTime":  "2026-06-13T03:04:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\orchestrator-process.json",
+        "Bytes":  654,
+        "LastWriteTime":  "2026-06-13T02:50:43"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\connector-config.json",
+        "Bytes":  2736,
+        "LastWriteTime":  "2026-06-13T02:50:52"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\connector-status-end.json",
+        "Bytes":  767,
+        "LastWriteTime":  "2026-06-13T02:57:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\monitor-10s.csv",
+        "Bytes":  3382,
+        "LastWriteTime":  "2026-06-13T02:57:37"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\probe-cold-inclusive.log",
+        "Bytes":  59598,
+        "LastWriteTime":  "2026-06-13T02:57:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\probe-warm-post60s.log",
+        "Bytes":  50522,
+        "LastWriteTime":  "2026-06-13T02:57:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:51:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\producer.log",
+        "Bytes":  5761,
+        "LastWriteTime":  "2026-06-13T02:57:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\producer.out.log",
+        "Bytes":  5699,
+        "LastWriteTime":  "2026-06-13T02:56:14"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\run-end.json",
+        "Bytes":  4505,
+        "LastWriteTime":  "2026-06-13T02:57:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\postgres-50rps-20260613-025047-50rps\\run-start.json",
+        "Bytes":  528,
+        "LastWriteTime":  "2026-06-13T02:51:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\connector-config.json",
+        "Bytes":  2863,
+        "LastWriteTime":  "2026-06-13T02:57:55"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T03:04:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\monitor-10s.csv",
+        "Bytes":  3386,
+        "LastWriteTime":  "2026-06-13T03:04:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\probe-cold-inclusive.log",
+        "Bytes":  58955,
+        "LastWriteTime":  "2026-06-13T03:04:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\probe-warm-post60s.log",
+        "Bytes":  49961,
+        "LastWriteTime":  "2026-06-13T03:04:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:58:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\producer.log",
+        "Bytes":  5759,
+        "LastWriteTime":  "2026-06-13T03:04:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\producer.out.log",
+        "Bytes":  5697,
+        "LastWriteTime":  "2026-06-13T03:03:16"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\run-end.json",
+        "Bytes":  4782,
+        "LastWriteTime":  "2026-06-13T03:04:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\s3-50rps-20260613-025047-50rps\\run-start.json",
+        "Bytes":  532,
+        "LastWriteTime":  "2026-06-13T02:58:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\suite-progress.json",
+        "Bytes":  14124,
+        "LastWriteTime":  "2026-06-13T03:04:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\suite-start.json",
+        "Bytes":  737,
+        "LastWriteTime":  "2026-06-13T02:50:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\suite-summary.json",
+        "Bytes":  13100,
+        "LastWriteTime":  "2026-06-13T03:04:49"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\config-before.json",
+        "Bytes":  2416,
+        "LastWriteTime":  "2026-06-13T00:20:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\config-bytearray.json",
+        "Bytes":  2420,
+        "LastWriteTime":  "2026-06-13T00:20:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\monitor-10s.csv",
+        "Bytes":  944,
+        "LastWriteTime":  "2026-06-13T00:25:55"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\producer.log",
+        "Bytes":  4708,
+        "LastWriteTime":  "2026-06-13T00:24:06"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\run-end.json",
+        "Bytes":  236,
+        "LastWriteTime":  "2026-06-13T00:25:59"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\run-start.json",
+        "Bytes":  294,
+        "LastWriteTime":  "2026-06-13T00:22:05"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\status-after-config.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T00:20:57"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\mongo\\status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T00:25:56"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\config-before.json",
+        "Bytes":  2759,
+        "LastWriteTime":  "2026-06-13T00:20:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\config-bytearray.json",
+        "Bytes":  2717,
+        "LastWriteTime":  "2026-06-13T00:20:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\monitor-10s.csv",
+        "Bytes":  945,
+        "LastWriteTime":  "2026-06-13T00:31:36"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\producer.log",
+        "Bytes":  4746,
+        "LastWriteTime":  "2026-06-13T00:29:32"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\run-end.json",
+        "Bytes":  239,
+        "LastWriteTime":  "2026-06-13T00:31:39"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\run-start.json",
+        "Bytes":  300,
+        "LastWriteTime":  "2026-06-13T00:27:31"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\status-after-config.json",
+        "Bytes":  760,
+        "LastWriteTime":  "2026-06-13T00:20:57"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\postgres\\status-end.json",
+        "Bytes":  764,
+        "LastWriteTime":  "2026-06-13T00:31:36"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\config-before.json",
+        "Bytes":  2881,
+        "LastWriteTime":  "2026-06-13T00:20:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\config-bytearray.json",
+        "Bytes":  2828,
+        "LastWriteTime":  "2026-06-13T00:20:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\monitor-10s.csv",
+        "Bytes":  1014,
+        "LastWriteTime":  "2026-06-13T00:38:31"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\producer.log",
+        "Bytes":  4734,
+        "LastWriteTime":  "2026-06-13T00:35:45"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\run-end.json",
+        "Bytes":  3984,
+        "LastWriteTime":  "2026-06-13T00:46:33"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\run-start.json",
+        "Bytes":  306,
+        "LastWriteTime":  "2026-06-13T00:33:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\status-after-config.json",
+        "Bytes":  754,
+        "LastWriteTime":  "2026-06-13T00:20:57"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\s3\\status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T00:45:23"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\suite-start.json",
+        "Bytes":  2533,
+        "LastWriteTime":  "2026-06-13T00:20:47"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-20260613-002038\\suite-summary.json",
+        "Bytes":  4436,
+        "LastWriteTime":  "2026-06-13T00:48:09"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\config-bytearray.json",
+        "Bytes":  2544,
+        "LastWriteTime":  "2026-06-13T01:20:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\monitor-10s.csv",
+        "Bytes":  1715,
+        "LastWriteTime":  "2026-06-13T01:24:50"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\probe-cold-inclusive.log",
+        "Bytes":  34427,
+        "LastWriteTime":  "2026-06-13T01:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\probe-summary.json",
+        "Bytes":  3248,
+        "LastWriteTime":  "2026-06-13T01:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\probe-warm-post60s.log",
+        "Bytes":  24790,
+        "LastWriteTime":  "2026-06-13T01:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T01:21:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\producer.log",
+        "Bytes":  2423,
+        "LastWriteTime":  "2026-06-13T01:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\producer.out.log",
+        "Bytes":  2397,
+        "LastWriteTime":  "2026-06-13T01:23:14"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\run-start.json",
+        "Bytes":  548,
+        "LastWriteTime":  "2026-06-13T01:21:13"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo\\status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-13T01:25:00"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\config-bytearray.json",
+        "Bytes":  2838,
+        "LastWriteTime":  "2026-06-13T01:52:20"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\monitor-10s.csv",
+        "Bytes":  1833,
+        "LastWriteTime":  "2026-06-13T01:55:55"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\probe-cold-inclusive.log",
+        "Bytes":  21011,
+        "LastWriteTime":  "2026-06-13T01:59:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\probe-summary.json",
+        "Bytes":  3191,
+        "LastWriteTime":  "2026-06-13T01:59:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\probe-warm-post60s.log",
+        "Bytes":  11328,
+        "LastWriteTime":  "2026-06-13T01:59:02"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T01:52:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\producer.log",
+        "Bytes":  2415,
+        "LastWriteTime":  "2026-06-13T01:56:05"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\producer.out.log",
+        "Bytes":  2389,
+        "LastWriteTime":  "2026-06-13T01:54:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\run-end.json",
+        "Bytes":  2833,
+        "LastWriteTime":  "2026-06-13T02:04:30"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\run-start.json",
+        "Bytes":  535,
+        "LastWriteTime":  "2026-06-13T01:52:41"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres\\status-end.json",
+        "Bytes":  764,
+        "LastWriteTime":  "2026-06-13T01:56:05"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\config-bytearray.json",
+        "Bytes":  2957,
+        "LastWriteTime":  "2026-06-13T02:05:32"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\monitor-10s.csv",
+        "Bytes":  1770,
+        "LastWriteTime":  "2026-06-13T02:09:05"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\producer.err.log",
+        "Bytes":  0,
+        "LastWriteTime":  "2026-06-13T02:05:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\producer.log",
+        "Bytes":  2409,
+        "LastWriteTime":  "2026-06-13T02:09:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\producer.out.log",
+        "Bytes":  2383,
+        "LastWriteTime":  "2026-06-13T02:07:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\run-start.json",
+        "Bytes":  537,
+        "LastWriteTime":  "2026-06-13T02:05:53"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3\\status-end.json",
+        "Bytes":  758,
+        "LastWriteTime":  "2026-06-13T02:09:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\suite-start.json",
+        "Bytes":  445,
+        "LastWriteTime":  "2026-06-13T01:20:44"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\suite-summary-final.json",
+        "Bytes":  3875,
+        "LastWriteTime":  "2026-06-13T02:14:35"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026\\connector-status-end.json",
+        "Bytes":  761,
+        "LastWriteTime":  "2026-06-12T23:52:37"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026\\mongo-config-before.json",
+        "Bytes":  2462,
+        "LastWriteTime":  "2026-06-12T23:50:27"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026\\mongo-config-bytearray.json",
+        "Bytes":  2416,
+        "LastWriteTime":  "2026-06-12T23:50:27"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026\\producer.log",
+        "Bytes":  2550,
+        "LastWriteTime":  "2026-06-12T23:52:15"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026\\run-end.json",
+        "Bytes":  264,
+        "LastWriteTime":  "2026-06-12T23:52:39"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026\\run-start.json",
+        "Bytes":  547,
+        "LastWriteTime":  "2026-06-12T23:50:29"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-streams-alloc-probe-demo-1mb-10rps-20260612-231623\\deploy.log",
+        "Bytes":  180,
+        "LastWriteTime":  "2026-06-12T23:16:28"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-streams-alloc-probe-demo-1mb-10rps-20260612-231623\\mapping.json",
+        "Bytes":  341,
+        "LastWriteTime":  "2026-06-12T23:16:26"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-streams-alloc-probe-demo-1mb-10rps-20260612-231623\\producer.log",
+        "Bytes":  926,
+        "LastWriteTime":  "2026-06-12T23:16:54"
+    },
+    {
+        "Path":  "03-raw-benchmark-runs\\flowplane-streams-alloc-probe-demo-1mb-10rps-20260612-231623\\run-end.json",
+        "Bytes":  611,
+        "LastWriteTime":  "2026-06-12T23:17:18"
+    },
+    {
+        "Path":  "04-curated-results\\ENTERPRISE_BENCHMARK_REPORT.md",
+        "Bytes":  2732,
+        "LastWriteTime":  "2026-06-13T12:28:15"
+    },
+    {
+        "Path":  "04-curated-results\\flowplane-connect-byteconverter-50rps-5min-combined-summary.json",
+        "Bytes":  4913,
+        "LastWriteTime":  "2026-06-13T03:10:24"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\CONNECT_SINK_RAMP_RUNBOOK.md",
+        "Bytes":  2552,
+        "LastWriteTime":  "2026-06-13T02:34:39"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\monitor-1mb-platform-run.ps1",
+        "Bytes":  3450,
+        "LastWriteTime":  "2026-06-12T13:12:29"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\monitor-hardening-run.ps1",
+        "Bytes":  1712,
+        "LastWriteTime":  "2026-06-11T10:10:05"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\record-hardening-run.mjs",
+        "Bytes":  3167,
+        "LastWriteTime":  "2026-06-11T10:03:21"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\run-1mb-platform-run.ps1",
+        "Bytes":  3326,
+        "LastWriteTime":  "2026-06-12T12:23:55"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\run-1mb-ramp-suite.ps1",
+        "Bytes":  6508,
+        "LastWriteTime":  "2026-06-12T13:20:34"
+    },
+    {
+        "Path":  "05-orchestration-scripts\\run-connect-sink-ramp-suite.ps1",
+        "Bytes":  17513,
+        "LastWriteTime":  "2026-06-13T02:47:20"
+    },
+    {
+        "Path":  "06-runtime-validation\\PRODUCTION_INTEGRATION.md",
+        "Bytes":  4678,
+        "LastWriteTime":  "2026-06-12T05:27:39"
+    },
+    {
+        "Path":  "07-notes-and-caveats\\HONEST_CAVEATS.md",
+        "Bytes":  1387,
+        "LastWriteTime":  "2026-06-13T12:28:15"
+    },
+    {
+        "Path":  "README.md",
+        "Bytes":  15624,
+        "LastWriteTime":  "2026-06-13T12:28:15"
+    }
+]

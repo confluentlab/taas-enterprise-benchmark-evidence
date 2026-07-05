@@ -1,0 +1,10 @@
+{
+    "runName":  "flowplane-1mb-50unique-50rps-30min-20260612-122436",
+    "endedAt":  "2026-06-12T19:56:31.3040821Z",
+    "offsetsAfter":  {
+                         "raw":  90000,
+                         "flinkOutput":  14957,
+                         "connectDlq":  39595,
+                         "flinkDlq":  30647
+                     }
+}

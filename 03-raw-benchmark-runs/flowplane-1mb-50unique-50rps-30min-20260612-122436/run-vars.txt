@@ -1,0 +1,10 @@
+runName=flowplane-1mb-50unique-50rps-30min-20260612-122436
+runDir=C:\FlowPlanenew\FLOWPLANE_Controlplane\bench-runs\multi-runtime-1mb\flowplane-1mb-50unique-50rps-30min-20260612-122436
+rawTopic=raw.flowplane.1mb.50unique-50rps30min-20260612-122436
+flinkOut=transformed.flowplane.1mb.flink-50rps30min-20260612-122436
+connectDlq=dlq.flowplane.1mb.connect-50rps30min-20260612-122436
+flinkDlq=dlq.flowplane.1mb.flink-50rps30min-20260612-122436
+corpus=C:\FlowPlanenew\FLOWPLANE_Controlplane\bench-runs\multi-runtime-1mb\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\source-payloads-50unique-1mb.jsonl
+records=90000
+throughput=50
+plannedSeconds=1800

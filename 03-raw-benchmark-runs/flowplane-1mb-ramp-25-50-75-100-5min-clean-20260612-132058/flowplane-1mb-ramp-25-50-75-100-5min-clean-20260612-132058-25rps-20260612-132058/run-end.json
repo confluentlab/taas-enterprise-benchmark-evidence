@@ -1,0 +1,10 @@
+{
+    "runName":  "flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-25rps-20260612-132058",
+    "endedAt":  "2026-06-12T20:26:28.4915496Z",
+    "offsetsAfter":  {
+                         "raw":  7500,
+                         "flinkOutput":  3158,
+                         "connectDlq":  8408,
+                         "flinkDlq":  6470
+                     }
+}

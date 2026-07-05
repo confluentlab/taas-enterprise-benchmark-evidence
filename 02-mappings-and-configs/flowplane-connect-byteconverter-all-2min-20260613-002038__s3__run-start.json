@@ -1,0 +1,7 @@
+{
+    "connector":  "flowplane-1mb-s3-sink-runtime",
+    "rawTopic":  "raw.flowplane.1mb.byteall.s3-20260613-002038",
+    "dlqTopic":  "dlq.flowplane.1mb.byteall.s3-20260613-002038",
+    "target":  "topics/flowplane-connect-byteconverter-all-2min-20260613-002038/s3",
+    "startedAt":  "2026-06-13T07:33:44.3628728Z"
+}

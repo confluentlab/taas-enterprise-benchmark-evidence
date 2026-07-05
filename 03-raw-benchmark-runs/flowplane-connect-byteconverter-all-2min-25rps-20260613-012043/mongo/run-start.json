@@ -1,0 +1,13 @@
+{
+    "connector":  "flowplane-1mb-mongo-sink-runtime",
+    "kind":  "mongo",
+    "runtimeId":  "connect-smt-1mb-mongo-breakpoint",
+    "startedAt":  "2026-06-13T08:21:13.3739298Z",
+    "rawTopic":  "raw.flowplane.1mb.ramp25.mongo.flowplane-connect-byteconverter-all-2min-25rps-20260613-012043",
+    "dlqTopic":  "dlq.flowplane.1mb.ramp25.mongo.flowplane-connect-byteconverter-all-2min-25rps-20260613-012043",
+    "target":  "orders_1mb_ramp25_mongo_22520260613012043",
+    "prefix":  null,
+    "records":  3000,
+    "rate":  25,
+    "durationSeconds":  120
+}

@@ -1,0 +1,13 @@
+﻿{
+    "runName":  "s3-50rps-20260613-025047-50rps",
+    "kind":  "s3",
+    "connector":  "flowplane-1mb-s3-sink-runtime",
+    "runtimeId":  "connect-smt-1mb-s3-breakpoint",
+    "startedAt":  "2026-06-13T09:58:15.6736107Z",
+    "rate":  50,
+    "durationSeconds":  300,
+    "records":  15000,
+    "rawTopic":  "raw.flowplane.1mb.s3.50rps.20260613-025047-50rps",
+    "dlqTopic":  "dlq.flowplane.1mb.s3.50rps.20260613-025047-50rps",
+    "target":  "topics/flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043/50rps/s3"
+}

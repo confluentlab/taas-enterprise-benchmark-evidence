@@ -1,0 +1,9 @@
+{
+    "runName":  "flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026",
+    "endedAt":  "2026-06-13T06:52:37.1431428Z",
+    "offsets":  {
+                    "raw":  600,
+                    "dlq":  752
+                },
+    "mongoCount":  412
+}

@@ -1,0 +1,26 @@
+Reading payloads from: /tmp/flowplane-connect-byteconverter-all-2min-25rps-20260613-012043-payloads.jsonl
+Number of messages read: 50
+127 records sent, 25.3 records/sec (25.06 MB/sec), 9.7 ms avg latency, 201.0 ms max latency.
+125 records sent, 25.0 records/sec (24.75 MB/sec), 7.5 ms avg latency, 13.0 ms max latency.
+126 records sent, 25.0 records/sec (24.80 MB/sec), 7.5 ms avg latency, 10.0 ms max latency.
+126 records sent, 25.0 records/sec (24.83 MB/sec), 7.3 ms avg latency, 10.0 ms max latency.
+125 records sent, 25.0 records/sec (24.79 MB/sec), 7.0 ms avg latency, 9.0 ms max latency.
+126 records sent, 25.0 records/sec (24.82 MB/sec), 6.9 ms avg latency, 9.0 ms max latency.
+126 records sent, 25.1 records/sec (24.88 MB/sec), 6.8 ms avg latency, 9.0 ms max latency.
+125 records sent, 24.9 records/sec (24.70 MB/sec), 6.9 ms avg latency, 9.0 ms max latency.
+125 records sent, 25.0 records/sec (24.76 MB/sec), 6.9 ms avg latency, 19.0 ms max latency.
+126 records sent, 25.1 records/sec (24.94 MB/sec), 6.7 ms avg latency, 9.0 ms max latency.
+125 records sent, 25.0 records/sec (24.77 MB/sec), 6.7 ms avg latency, 10.0 ms max latency.
+125 records sent, 25.0 records/sec (24.77 MB/sec), 6.6 ms avg latency, 8.0 ms max latency.
+125 records sent, 25.0 records/sec (24.80 MB/sec), 6.5 ms avg latency, 8.0 ms max latency.
+125 records sent, 24.9 records/sec (24.72 MB/sec), 7.4 ms avg latency, 117.0 ms max latency.
+126 records sent, 25.1 records/sec (24.89 MB/sec), 6.6 ms avg latency, 13.0 ms max latency.
+125 records sent, 24.9 records/sec (24.67 MB/sec), 6.5 ms avg latency, 9.0 ms max latency.
+126 records sent, 25.1 records/sec (24.85 MB/sec), 6.8 ms avg latency, 10.0 ms max latency.
+126 records sent, 25.0 records/sec (24.84 MB/sec), 6.8 ms avg latency, 9.0 ms max latency.
+125 records sent, 24.9 records/sec (24.68 MB/sec), 6.7 ms avg latency, 9.0 ms max latency.
+126 records sent, 25.1 records/sec (24.88 MB/sec), 6.6 ms avg latency, 9.0 ms max latency.
+126 records sent, 25.0 records/sec (24.80 MB/sec), 6.9 ms avg latency, 9.0 ms max latency.
+126 records sent, 25.1 records/sec (24.88 MB/sec), 6.8 ms avg latency, 12.0 ms max latency.
+125 records sent, 25.0 records/sec (24.76 MB/sec), 6.6 ms avg latency, 10.0 ms max latency.
+3000 records sent, 25.003334 records/sec (24.80 MB/sec), 6.99 ms avg latency, 201.00 ms max latency, 7 ms 50th, 8 ms 95th, 9 ms 99th, 23 ms 99.9th.

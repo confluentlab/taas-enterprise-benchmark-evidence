@@ -1,0 +1,48 @@
+{
+    "suite":  "flowplane-connect-byteconverter-all-2min-25rps-20260613-012043",
+    "completedAt":  "2026-06-13T09:14:35.1502393Z",
+    "mode":  "25 rps, 2 minutes per connector, 3000 records each, 50 rotating unique ~1MB payloads, ByteArrayConverter, connectors isolated one at a time",
+    "connectors":  [
+                       {
+                           "name":  "mongo",
+                           "raw":  3000,
+                           "dlq":  4048,
+                           "sink":  1988,
+                           "producer":  "3000 records, 24.999583 rps, 24.79 MB/sec, avg 8.36 ms, p50 8 ms, p95 11 ms, p99 16 ms, p99.9 64 ms, max 453 ms",
+                           "transform":  "cold cumulative p50 8.323 ms, p95 10.993 ms, p99 13.355 ms, max 30.416 ms; warm post-60s windowMax avg 15.832 ms, max 72.493 ms",
+                           "allocation":  "p99 2,667,248 bytes, ratio 2.565x",
+                           "memory":  "Connect around 6.72 GiB during monitor tail",
+                           "artifacts":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\mongo"
+                       },
+                       {
+                           "name":  "postgres",
+                           "raw":  3000,
+                           "dlq":  4048,
+                           "sink":  1988,
+                           "producer":  "3000 records, 24.998750 rps, 24.79 MB/sec, avg 7.06 ms, p50 7 ms, p95 8 ms, p99 10 ms, p99.9 23 ms, max 211 ms",
+                           "transform":  "cold cumulative p50 1.755 ms, p95 5.979 ms, p99 8.861 ms, max 15.715 ms; warm post-60s windowMax avg 9.096 ms, max 36.288 ms",
+                           "allocation":  "p99 1,434,504 bytes, ratio 1.379x",
+                           "memory":  "Connect around 6.76 GiB during monitor tail",
+                           "artifacts":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\postgres"
+                       },
+                       {
+                           "name":  "s3",
+                           "raw":  3000,
+                           "dlq":  4048,
+                           "sink":  "187 objects / 159 MiB",
+                           "residualLag":  179,
+                           "producer":  "3000 records, 25.003334 rps, 24.80 MB/sec, avg 6.99 ms, p50 7 ms, p95 8 ms, p99 9 ms, p99.9 23 ms, max 201 ms",
+                           "transform":  "recent bounded probe p50 ~4.6-4.8 ms, p95 ~6.6-7.0 ms, p99 ~7.7-8.3 ms, max observed 22.581 ms",
+                           "allocation":  "p99 ~2,667,248 bytes, ratio 2.565x",
+                           "memory":  "Connect around 6.80 GiB during monitor tail",
+                           "artifacts":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-all-2min-25rps-20260613-012043\\s3",
+                           "note":  "Residual lag is consistent with S3 sink flush.size=10 and no time-based rotation for sparse partition tails."
+                       }
+                   ],
+    "notes":  [
+                  "All three connectors were converted/kept on ByteArrayConverter for the run.",
+                  "Mongo and Postgres drained to zero lag and wrote 1988 successful sink rows/docs; 4048 field-level DLQ events were expected from intentionally bad fields.",
+                  "S3 wrote objects successfully but left 179 records as consumer lag because S3 only commits offsets with file commits; add rotate.interval.ms or lower flush.size for demo-grade drain behavior.",
+                  "Cold-inclusive and warm-only are not identical metrics: current probe logs cumulative p99 plus rolling windowMaxMs, not rolling warm p99."
+              ]
+}

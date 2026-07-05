@@ -1,0 +1,75 @@
+﻿{
+    "runName":  "s3-100rps-20260613-031935-100rps",
+    "kind":  "s3",
+    "connector":  "flowplane-1mb-s3-sink-runtime",
+    "startedAt":  "2026-06-13T10:29:54.9217500Z",
+    "endedAt":  "2026-06-13T10:34:20.7532311Z",
+    "rawTopic":  "raw.flowplane.1mb.s3.100rps.20260613-031935-100rps",
+    "dlqTopic":  "dlq.flowplane.1mb.s3.100rps.20260613-031935-100rps",
+    "target":  "topics/flowplane-connect-byteconverter-100rps-3min-20260613-031931/100rps/s3",
+    "rawTotal":  18000,
+    "dlqTotal":  8830,
+    "residualLag":  12790,
+    "sink":  {
+                 "objects":  413,
+                 "size":  "351MiB",
+                 "summary":  "351MiB\t413 objects\tflowplane-hardening/topics/flowplane-connect-byteconverter-100rps-3min-20260613-031931/100rps/s3/raw.flowplane.1mb.s3.100rps.20260613-031935-100rps"
+             },
+    "producer":  {
+                     "line":  "18000 records sent, 99.996111 records/sec (99.18 MB/sec), 5.94 ms avg latency, 185.00 ms max latency, 6 ms 50th, 7 ms 95th, 9 ms 99th, 26 ms 99.9th.",
+                     "records":  18000,
+                     "recordsPerSec":  99.996111,
+                     "mbPerSec":  99.18,
+                     "avgMs":  5.94,
+                     "maxMs":  185,
+                     "p50Ms":  6,
+                     "p95Ms":  7,
+                     "p99Ms":  9,
+                     "p999Ms":  26
+                 },
+    "transformProbe":  {
+                           "runtimeId":  "connect-smt-1mb-s3-breakpoint",
+                           "coldInclusiveLast":  {
+                                                     "samples":  "2172",
+                                                     "success":  "1435",
+                                                     "failure":  "737",
+                                                     "p50Ms":  "4.026",
+                                                     "p95Ms":  "5.645",
+                                                     "p99Ms":  "6.432",
+                                                     "maxMs":  "21.785",
+                                                     "windowSamples":  "82",
+                                                     "windowMaxMs":  "6.638",
+                                                     "allocP50Bytes":  "2665224",
+                                                     "allocP95Bytes":  "2667056",
+                                                     "allocP99Bytes":  "2667248",
+                                                     "allocMaxBytes":  "2667304",
+                                                     "allocRatioP99":  "2.565",
+                                                     "allocWindowMaxBytes":  "2667120"
+                                                 },
+                           "warmPost60sLast":  {
+                                                   "samples":  "2172",
+                                                   "success":  "1435",
+                                                   "failure":  "737",
+                                                   "p50Ms":  "4.026",
+                                                   "p95Ms":  "5.645",
+                                                   "p99Ms":  "6.432",
+                                                   "maxMs":  "21.785",
+                                                   "windowSamples":  "82",
+                                                   "windowMaxMs":  "6.638",
+                                                   "allocP50Bytes":  "2665224",
+                                                   "allocP95Bytes":  "2667056",
+                                                   "allocP99Bytes":  "2667248",
+                                                   "allocMaxBytes":  "2667304",
+                                                   "allocRatioP99":  "2.565",
+                                                   "allocWindowMaxBytes":  "2667120"
+                                               },
+                           "warmPost60sWindowMax":  {
+                                                        "count":  63,
+                                                        "min":  5.413,
+                                                        "avg":  7.9083333333333332,
+                                                        "max":  23.407
+                                                    },
+                           "note":  "Probe emits cumulative p99 plus rolling windowMaxMs; warm windowMax is not a true rolling p99."
+                       },
+    "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\s3-100rps-20260613-031935-100rps"
+}

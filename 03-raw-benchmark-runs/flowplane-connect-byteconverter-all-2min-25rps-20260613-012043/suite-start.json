@@ -1,0 +1,11 @@
+{
+    "suiteName":  "flowplane-connect-byteconverter-all-2min-25rps-20260613-012043",
+    "startedAt":  "2026-06-13T08:20:44.1844870Z",
+    "rate":  25,
+    "durationSeconds":  120,
+    "recordsPerConnector":  3000,
+    "corpusPath":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\source-payloads-50unique-1mb.jsonl",
+    "connectors":  [
+
+                   ]
+}

@@ -1,0 +1,8 @@
+{
+    "suiteName":  "flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043",
+    "suiteDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043",
+    "pid":  22484,
+    "startedAt":  "2026-06-13T09:50:43.4385896Z",
+    "stdout":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\orchestrator.out.log",
+    "stderr":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-50rps-5min-postgres-s3-20260613-025043\\orchestrator.err.log"
+}

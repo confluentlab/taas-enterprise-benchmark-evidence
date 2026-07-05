@@ -1,0 +1,17 @@
+{
+    "suiteName":  "flowplane-alloc-probe-demo-clean-10rps-20260613-0605",
+    "startedAt":  "2026-06-13T06:05:06.8426372Z",
+    "corpusPath":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-1mb-connect-flink-50unique-1000probe-20260612105548\\source-payloads-50unique-1mb.jsonl",
+    "rates":  [
+                  10
+              ],
+    "durationSecondsPerRate":  60,
+    "runs":  [
+                 {
+                     "runName":  "flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506",
+                     "rate":  10,
+                     "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605\\flowplane-alloc-probe-demo-clean-10rps-20260613-0605-10rps-20260612-230506",
+                     "completedAt":  "2026-06-13T06:06:38.9017280Z"
+                 }
+             ]
+}

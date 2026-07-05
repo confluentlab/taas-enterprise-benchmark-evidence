@@ -1,0 +1,12 @@
+{
+    "runName":  "flowplane-1mb-ramp-25-50-75-100-5min-clean-20260612-132058-75rps-20260612-133204",
+    "rate":  75,
+    "records":  22500,
+    "rawTopic":  "raw.flowplane.1mb.ramp-75rps-20260612-133204",
+    "flinkOutputTopic":  "transformed.flowplane.1mb.flink-ramp-75rps-20260612-133204",
+    "connectDlqTopic":  "dlq.flowplane.1mb.connect-ramp-75rps-20260612-133204",
+    "flinkDlqTopic":  "dlq.flowplane.1mb.flink-ramp-75rps-20260612-133204",
+    "mongoDatabase":  "flowplane_sink",
+    "mongoCollection":  "orders_1mb_ramp_75rps_20260612-133204",
+    "startedAt":  "2026-06-12T20:32:04.9601266Z"
+}

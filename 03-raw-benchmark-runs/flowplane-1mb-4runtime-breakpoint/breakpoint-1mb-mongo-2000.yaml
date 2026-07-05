@@ -1,0 +1,2025 @@
+version: 1
+name: breakpoint-1mb-mongo-2000
+output: FLAT_OBJECT
+error_policy:
+  on_transformation_error: ROUTE_TO_DLQ
+  on_validation_failure: ROUTE_TO_DLQ
+  on_type_mismatch: ROUTE_TO_DLQ
+  dlq_topic: dlq.flowplane.1mb.mongo
+  include_original_payload: false
+  include_error_metadata: true
+error_output:
+  action: ROUTE_TO_DLQ
+  format: ENVELOPE
+  dlq_topic: dlq.flowplane.1mb.mongo
+  headers: [x-trace-id, x-runtime-id]
+  max_payload_bytes: 4096
+  include_runtime_metadata: true
+lookups:
+  statusCode: { OK: observe, WARN: investigate, FAIL: dispatch, NEW: created, PAID: paid, SHIPPED: shipped, CANCELLED: cancelled }
+  riskAction: { LOW: monitor, MEDIUM: review, HIGH: escalate }
+  nestedLookup:
+    WARN: { action: investigate, severity: medium }
+fields:
+  event_id_required: { path: $.event.id, required: true, validate: { required: true, pattern: '^evt-' } }
+  event_type_upper: { path: $.event.type, case_convert: upper }
+  event_type_lower: { path: $.event.type, case_convert: lower }
+  event_timestamp_millis: { path: $.event.ts, cast: timestamp }
+  custom_date: { path: $.event.dateText, cast: date, date_format: 'MM/dd/yyyy' }
+  custom_time: { path: $.event.timeText, cast: time, date_format: 'HH:mm:ss' }
+  custom_timestamp_millis: { path: $.event.timestampText, cast: timestamp, date_format: 'MM/dd/yyyy HH:mm:ss' }
+  tenant_id_direct: { direct: $.tenant.id }
+  environment_source: { source: $.tenant.env, case_convert: upper }
+  missing_region_fallback: { path: $.tenant.missingRegion, fallback: [$.tenant.region], default: NA }
+  constant_runtime: { constant: live-stack }
+  literal_value: { value: demo-value }
+  generated_uuid: { generate: uuid }
+  generated_now: { generate: now }
+  concat_label: { valueExpr: { function: { name: concat, args: [ { path: $.device.type }, { const: '-' }, { path: $.device.id } ] } } }
+  template_function: { valueExpr: { fn: { name: template, args: [ { const: 'site=' }, { path: $.site.name }, { const: '|device=' }, { path: $.device.id } ] } } }
+  coalesce_contact: { valueExpr: { coalesce: { mode: FIRST_NON_EMPTY, candidates: [ { type: PATH, path: $.site.contact }, { type: PATH, path: $.site.backupContact }, { type: CONST, value: unknown@local } ] } } }
+  case_route: { valueExpr: { case: { branches: [ { when: { path: $.metrics.risk, operator: eq, value: HIGH }, then: { const: page-oncall } }, { when: { path: $.metrics.load, operator: gte, value: 90 }, then: { const: scale-up } } ], else: { const: observe } } } }
+  status_lookup_inline: { path: $.device.status, lookup: { dictionary: statusCode } }
+  risk_lookup_expr_default: { valueExpr: { lookup: { dictionary: riskAction, path: $.metrics.risk, onMiss: DEFAULT, defaultValue: observe, caseInsensitive: true, trimInput: true } } }
+  nested_lookup_field: { valueExpr: { lookup: { dictionary: nestedLookup, path: $.device.status, resultField: severity, onMiss: DEFAULT, defaultValue: unknown } } }
+  serial_family: { path: $.device.serial, regex_extract: '^(GW)-.*' }
+  firmware_number: { path: $.device.firmware, regex_replace: '^fw-', replacement: '' }
+  status_matches: { path: $.device.status, regex_match: '^(OK|WARN|FAIL)$' }
+  normalized_message: { path: $.packet.message, normalize_string: true }
+  templated_status: { path: $.device.status, template: 'status-${value}' }
+  serial_prefix: { path: $.device.serial, substring: { start: 0, end: 2 } }
+  label_parts: { path: $.packet.labels, split: { by: '|' } }
+  temp_f: { expression: '$.metrics.tempC * 1.8 + 32', round: { scale: 2 } }
+  is_hot: { expression: '$.metrics.tempC >= 20' }
+  load_plus_ten: { arithmetic: '$.metrics.load + 10' }
+  load_int: { path: $.metrics.load, cast: int }
+  metric_long: { path: '$.data.records[0].longValue', cast: long }
+  temp_double: { path: $.metrics.tempC, cast: double }
+  voltage_decimal_round: { path: $.metrics.voltage, cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  voltage_decimal_truncate: { path: $.metrics.voltage, cast: decimal, decimalScale: 2, decimalScalePolicy: TRUNCATE }
+  online_boolean: { path: $.metrics.online, cast: boolean }
+  raw_packet_json: { path: $.packet.raw, cast: json }
+  raw_packet_object: { path: $.packet.raw, cast: object }
+  strict_tenant_id_for_negative_smoke: { path: $.tenant.id, onMissing: ERROR }
+  signal_values_array: { path: '$.signals[*].value', array_mode: COLLECT, cast: array }
+  first_signal_name: { path: '$.signals[*].name', array_mode: FIRST }
+  last_signal_name: { path: '$.signals[*].name', array_mode: LAST }
+  second_signal_name: { path: '$.signals[*].name', array_mode: INDEX, array_index: 1 }
+  only_signal_name: { path: '$.singleSignal[*].name', array_mode: ONLY }
+  high_signal_first: { path: '$.signals[?(@.value >= 80)].name', array_mode: FILTER_FIRST }
+  high_signal_names: { path: '$.signals[?(@.value >= 80)].name', array_mode: FILTER_ALL }
+  signal_count: { path: '$.signals[*]', array_mode: COUNT }
+  signal_name_join: { path: '$.signals[*].name', array_mode: JOIN, delimiter: '|' }
+  expensive_signal_objects: { path: '$.signals[*]', filter: 'item.value >= 80', map: { metric: item.name, reading: item.value } }
+  flattened_literal: { value: [ [edge, critical], [night, critical] ], flatten: true }
+  unique_tags: { path: '$.tags[*]', distinct: true }
+  signal_value_sum: { path: '$.signals[*].value', aggregate: sum }
+  signal_value_min: { path: '$.signals[*].value', aggregate: min }
+  signal_value_max: { path: '$.signals[*].value', aggregate: max }
+  signal_value_aggregate_count: { path: '$.signals[*].value', aggregate: count }
+  device_summary: { object: { id: $.device.id, status: $.device.status, 'site.name': $.site.name } }
+  profile_merged: { merge: [$.profile.base, $.profile.prefs] }
+  nested_device_id: { path: $.device.id }
+  object_as_json: { path: $.device, onObject: JSON_STRING }
+  array_as_json: { path: $.tags, onArray: JSON_STRING }
+  missing_as_null: { path: $.does.not.exist, onMissing: NULL }
+  missing_skipped: { path: $.does.not.exist, onMissing: SKIP_FIELD }
+  missing_defaulted: { path: $.does.not.exist, default: missing-default }
+  nullable_default: { path: $.nullable, onNull: DEFAULT, default: fallback-null }
+  nullable_default_secondary: { path: $.nullable, onNull: DEFAULT, default: fallback-null-secondary }
+  bad_int_default: { path: $.metrics.badInt, cast: int, onTypeMismatch: DEFAULT, default: -1 }
+  bad_int_stringified: { path: $.metrics.badInt, cast: int, onTypeMismatch: STRINGIFY }
+  huge_int_clamped: { path: $.metrics.huge, cast: int, onOverflow: CLAMP }
+  huge_int_default: { path: $.metrics.huge, cast: int, onOverflow: DEFAULT, default: 2147483647 }
+  amount_decimal_from_string: { path: $.metrics.amountText, cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  status_allowed_set: { path: $.device.status, validate: { one_of: [OK, WARN, FAIL] } }
+  status_pattern_valid: { path: $.device.status, validate: '^(OK|WARN|FAIL)$' }
+  token_masked: { path: $.device.token, mask: last4 }
+  sensitive_token: { path: $.device.token, sensitive: true }
+  trace_hash: { path: $.event.trace, hash: sha256 }
+  secret_redacted: { path: $.device.secret, redact: true }
+  secret_encrypted: { path: $.device.secret, encrypt: { key_ref: demo } }
+  secret_decrypt_defaulted: { path: $.device.secret, decrypt: { key_ref: demo }, onTypeMismatch: DEFAULT, default: decrypt-failed }
+  metadata_request_id: { metadata: requestId, default: no-metadata }
+  header_trace_id: { header: x-trace-id, default: no-header }
+  extract_0_0079: { path: '$.data.records[0].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0080: { path: '$.data.records[1].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0081: { path: '$.data.records[2].text', normalize_string: true }
+  extract_0_0082: { path: '$.data.records[3].intValue', cast: int }
+  extract_0_0083: { path: '$.data.records[4].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0084: { path: '$.data.records[5].status', lookup: { dictionary: statusCode } }
+  extract_0_0085: { path: '$.data.records[6].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0086: { path: '$.data.records[7].token', hash: sha256 }
+  extract_0_0087: { path: '$.data.records[8].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0088: { path: '$.data.records[9].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0089: { path: '$.data.records[10].text', normalize_string: true }
+  extract_0_0090: { path: '$.data.records[11].intValue', cast: int }
+  extract_0_0091: { path: '$.data.records[12].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0092: { path: '$.data.records[13].status', lookup: { dictionary: statusCode } }
+  extract_0_0093: { path: '$.data.records[14].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0094: { path: '$.data.records[15].token', hash: sha256 }
+  extract_0_0095: { path: '$.data.records[16].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0096: { path: '$.data.records[17].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0097: { path: '$.data.records[18].text', normalize_string: true }
+  extract_0_0098: { path: '$.data.records[19].intValue', cast: int }
+  extract_0_0099: { path: '$.data.records[20].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0100: { path: '$.data.records[21].status', lookup: { dictionary: statusCode } }
+  extract_0_0101: { path: '$.data.records[22].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0102: { path: '$.data.records[23].token', hash: sha256 }
+  extract_0_0103: { path: '$.data.records[24].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0104: { path: '$.data.records[25].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0105: { path: '$.data.records[26].text', normalize_string: true }
+  extract_0_0106: { path: '$.data.records[27].intValue', cast: int }
+  extract_0_0107: { path: '$.data.records[28].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0108: { path: '$.data.records[29].status', lookup: { dictionary: statusCode } }
+  extract_0_0109: { path: '$.data.records[30].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0110: { path: '$.data.records[31].token', hash: sha256 }
+  extract_0_0111: { path: '$.data.records[32].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0112: { path: '$.data.records[33].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0113: { path: '$.data.records[34].text', normalize_string: true }
+  extract_0_0114: { path: '$.data.records[35].intValue', cast: int }
+  extract_0_0115: { path: '$.data.records[36].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0116: { path: '$.data.records[37].status', lookup: { dictionary: statusCode } }
+  extract_0_0117: { path: '$.data.records[38].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0118: { path: '$.data.records[39].token', hash: sha256 }
+  extract_0_0119: { path: '$.data.records[40].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0120: { path: '$.data.records[41].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0121: { path: '$.data.records[42].text', normalize_string: true }
+  extract_0_0122: { path: '$.data.records[43].intValue', cast: int }
+  extract_0_0123: { path: '$.data.records[44].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0124: { path: '$.data.records[45].status', lookup: { dictionary: statusCode } }
+  extract_0_0125: { path: '$.data.records[46].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0126: { path: '$.data.records[47].token', hash: sha256 }
+  extract_0_0127: { path: '$.data.records[48].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0128: { path: '$.data.records[49].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0129: { path: '$.data.records[50].text', normalize_string: true }
+  extract_0_0130: { path: '$.data.records[51].intValue', cast: int }
+  extract_0_0131: { path: '$.data.records[52].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0132: { path: '$.data.records[53].status', lookup: { dictionary: statusCode } }
+  extract_0_0133: { path: '$.data.records[54].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0134: { path: '$.data.records[55].token', hash: sha256 }
+  extract_0_0135: { path: '$.data.records[56].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0136: { path: '$.data.records[57].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0137: { path: '$.data.records[58].text', normalize_string: true }
+  extract_0_0138: { path: '$.data.records[59].intValue', cast: int }
+  extract_0_0139: { path: '$.data.records[60].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0140: { path: '$.data.records[61].status', lookup: { dictionary: statusCode } }
+  extract_0_0141: { path: '$.data.records[62].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0142: { path: '$.data.records[63].token', hash: sha256 }
+  extract_0_0143: { path: '$.data.records[64].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0144: { path: '$.data.records[65].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0145: { path: '$.data.records[66].text', normalize_string: true }
+  extract_0_0146: { path: '$.data.records[67].intValue', cast: int }
+  extract_0_0147: { path: '$.data.records[68].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0148: { path: '$.data.records[69].status', lookup: { dictionary: statusCode } }
+  extract_0_0149: { path: '$.data.records[70].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0150: { path: '$.data.records[71].token', hash: sha256 }
+  extract_0_0151: { path: '$.data.records[72].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0152: { path: '$.data.records[73].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0153: { path: '$.data.records[74].text', normalize_string: true }
+  extract_0_0154: { path: '$.data.records[75].intValue', cast: int }
+  extract_0_0155: { path: '$.data.records[76].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0156: { path: '$.data.records[77].status', lookup: { dictionary: statusCode } }
+  extract_0_0157: { path: '$.data.records[78].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0158: { path: '$.data.records[79].token', hash: sha256 }
+  extract_0_0159: { path: '$.data.records[80].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0160: { path: '$.data.records[81].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0161: { path: '$.data.records[82].text', normalize_string: true }
+  extract_0_0162: { path: '$.data.records[83].intValue', cast: int }
+  extract_0_0163: { path: '$.data.records[84].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0164: { path: '$.data.records[85].status', lookup: { dictionary: statusCode } }
+  extract_0_0165: { path: '$.data.records[86].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0166: { path: '$.data.records[87].token', hash: sha256 }
+  extract_0_0167: { path: '$.data.records[88].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0168: { path: '$.data.records[89].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0169: { path: '$.data.records[90].text', normalize_string: true }
+  extract_0_0170: { path: '$.data.records[91].intValue', cast: int }
+  extract_0_0171: { path: '$.data.records[92].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0172: { path: '$.data.records[93].status', lookup: { dictionary: statusCode } }
+  extract_0_0173: { path: '$.data.records[94].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0174: { path: '$.data.records[95].token', hash: sha256 }
+  extract_0_0175: { path: '$.data.records[96].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0176: { path: '$.data.records[97].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0177: { path: '$.data.records[98].text', normalize_string: true }
+  extract_0_0178: { path: '$.data.records[99].intValue', cast: int }
+  extract_0_0179: { path: '$.data.records[100].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0180: { path: '$.data.records[101].status', lookup: { dictionary: statusCode } }
+  extract_0_0181: { path: '$.data.records[102].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0182: { path: '$.data.records[103].token', hash: sha256 }
+  extract_0_0183: { path: '$.data.records[104].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0184: { path: '$.data.records[105].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0185: { path: '$.data.records[106].text', normalize_string: true }
+  extract_0_0186: { path: '$.data.records[107].intValue', cast: int }
+  extract_0_0187: { path: '$.data.records[108].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0188: { path: '$.data.records[109].status', lookup: { dictionary: statusCode } }
+  extract_0_0189: { path: '$.data.records[110].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0190: { path: '$.data.records[111].token', hash: sha256 }
+  extract_0_0191: { path: '$.data.records[112].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0192: { path: '$.data.records[113].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0193: { path: '$.data.records[114].text', normalize_string: true }
+  extract_0_0194: { path: '$.data.records[115].intValue', cast: int }
+  extract_0_0195: { path: '$.data.records[116].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0196: { path: '$.data.records[117].status', lookup: { dictionary: statusCode } }
+  extract_0_0197: { path: '$.data.records[118].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0198: { path: '$.data.records[119].token', hash: sha256 }
+  extract_0_0199: { path: '$.data.records[120].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0200: { path: '$.data.records[121].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0201: { path: '$.data.records[122].text', normalize_string: true }
+  extract_0_0202: { path: '$.data.records[123].intValue', cast: int }
+  extract_0_0203: { path: '$.data.records[124].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0204: { path: '$.data.records[125].status', lookup: { dictionary: statusCode } }
+  extract_0_0205: { path: '$.data.records[126].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0206: { path: '$.data.records[127].token', hash: sha256 }
+  extract_0_0207: { path: '$.data.records[128].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0208: { path: '$.data.records[129].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0209: { path: '$.data.records[130].text', normalize_string: true }
+  extract_0_0210: { path: '$.data.records[131].intValue', cast: int }
+  extract_0_0211: { path: '$.data.records[132].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0212: { path: '$.data.records[133].status', lookup: { dictionary: statusCode } }
+  extract_0_0213: { path: '$.data.records[134].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0214: { path: '$.data.records[135].token', hash: sha256 }
+  extract_0_0215: { path: '$.data.records[136].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0216: { path: '$.data.records[137].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0217: { path: '$.data.records[138].text', normalize_string: true }
+  extract_0_0218: { path: '$.data.records[139].intValue', cast: int }
+  extract_0_0219: { path: '$.data.records[140].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0220: { path: '$.data.records[141].status', lookup: { dictionary: statusCode } }
+  extract_0_0221: { path: '$.data.records[142].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0222: { path: '$.data.records[143].token', hash: sha256 }
+  extract_0_0223: { path: '$.data.records[144].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0224: { path: '$.data.records[145].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0225: { path: '$.data.records[146].text', normalize_string: true }
+  extract_0_0226: { path: '$.data.records[147].intValue', cast: int }
+  extract_0_0227: { path: '$.data.records[148].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0228: { path: '$.data.records[149].status', lookup: { dictionary: statusCode } }
+  extract_0_0229: { path: '$.data.records[150].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0230: { path: '$.data.records[151].token', hash: sha256 }
+  extract_0_0231: { path: '$.data.records[152].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0232: { path: '$.data.records[153].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0233: { path: '$.data.records[154].text', normalize_string: true }
+  extract_0_0234: { path: '$.data.records[155].intValue', cast: int }
+  extract_0_0235: { path: '$.data.records[156].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0236: { path: '$.data.records[157].status', lookup: { dictionary: statusCode } }
+  extract_0_0237: { path: '$.data.records[158].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0238: { path: '$.data.records[159].token', hash: sha256 }
+  extract_0_0239: { path: '$.data.records[160].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0240: { path: '$.data.records[161].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0241: { path: '$.data.records[162].text', normalize_string: true }
+  extract_0_0242: { path: '$.data.records[163].intValue', cast: int }
+  extract_0_0243: { path: '$.data.records[164].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0244: { path: '$.data.records[165].status', lookup: { dictionary: statusCode } }
+  extract_0_0245: { path: '$.data.records[166].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0246: { path: '$.data.records[167].token', hash: sha256 }
+  extract_0_0247: { path: '$.data.records[168].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0248: { path: '$.data.records[169].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0249: { path: '$.data.records[170].text', normalize_string: true }
+  extract_0_0250: { path: '$.data.records[171].intValue', cast: int }
+  extract_0_0251: { path: '$.data.records[172].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0252: { path: '$.data.records[173].status', lookup: { dictionary: statusCode } }
+  extract_0_0253: { path: '$.data.records[174].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0254: { path: '$.data.records[175].token', hash: sha256 }
+  extract_0_0255: { path: '$.data.records[176].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0256: { path: '$.data.records[177].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0257: { path: '$.data.records[178].text', normalize_string: true }
+  extract_0_0258: { path: '$.data.records[179].intValue', cast: int }
+  extract_0_0259: { path: '$.data.records[180].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0260: { path: '$.data.records[181].status', lookup: { dictionary: statusCode } }
+  extract_0_0261: { path: '$.data.records[182].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0262: { path: '$.data.records[183].token', hash: sha256 }
+  extract_0_0263: { path: '$.data.records[184].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0264: { path: '$.data.records[185].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0265: { path: '$.data.records[186].text', normalize_string: true }
+  extract_0_0266: { path: '$.data.records[187].intValue', cast: int }
+  extract_0_0267: { path: '$.data.records[188].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0268: { path: '$.data.records[189].status', lookup: { dictionary: statusCode } }
+  extract_0_0269: { path: '$.data.records[190].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0270: { path: '$.data.records[191].token', hash: sha256 }
+  extract_0_0271: { path: '$.data.records[192].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0272: { path: '$.data.records[193].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0273: { path: '$.data.records[194].text', normalize_string: true }
+  extract_0_0274: { path: '$.data.records[195].intValue', cast: int }
+  extract_0_0275: { path: '$.data.records[196].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0276: { path: '$.data.records[197].status', lookup: { dictionary: statusCode } }
+  extract_0_0277: { path: '$.data.records[198].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0278: { path: '$.data.records[199].token', hash: sha256 }
+  extract_0_0279: { path: '$.data.records[200].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0280: { path: '$.data.records[201].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0281: { path: '$.data.records[202].text', normalize_string: true }
+  extract_0_0282: { path: '$.data.records[203].intValue', cast: int }
+  extract_0_0283: { path: '$.data.records[204].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0284: { path: '$.data.records[205].status', lookup: { dictionary: statusCode } }
+  extract_0_0285: { path: '$.data.records[206].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0286: { path: '$.data.records[207].token', hash: sha256 }
+  extract_0_0287: { path: '$.data.records[208].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0288: { path: '$.data.records[209].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0289: { path: '$.data.records[210].text', normalize_string: true }
+  extract_0_0290: { path: '$.data.records[211].intValue', cast: int }
+  extract_0_0291: { path: '$.data.records[212].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0292: { path: '$.data.records[213].status', lookup: { dictionary: statusCode } }
+  extract_0_0293: { path: '$.data.records[214].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0294: { path: '$.data.records[215].token', hash: sha256 }
+  extract_0_0295: { path: '$.data.records[216].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0296: { path: '$.data.records[217].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0297: { path: '$.data.records[218].text', normalize_string: true }
+  extract_0_0298: { path: '$.data.records[219].intValue', cast: int }
+  extract_0_0299: { path: '$.data.records[220].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0300: { path: '$.data.records[221].status', lookup: { dictionary: statusCode } }
+  extract_0_0301: { path: '$.data.records[222].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0302: { path: '$.data.records[223].token', hash: sha256 }
+  extract_0_0303: { path: '$.data.records[224].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0304: { path: '$.data.records[225].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0305: { path: '$.data.records[226].text', normalize_string: true }
+  extract_0_0306: { path: '$.data.records[227].intValue', cast: int }
+  extract_0_0307: { path: '$.data.records[228].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0308: { path: '$.data.records[229].status', lookup: { dictionary: statusCode } }
+  extract_0_0309: { path: '$.data.records[230].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0310: { path: '$.data.records[231].token', hash: sha256 }
+  extract_0_0311: { path: '$.data.records[232].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0312: { path: '$.data.records[233].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0313: { path: '$.data.records[234].text', normalize_string: true }
+  extract_0_0314: { path: '$.data.records[235].intValue', cast: int }
+  extract_0_0315: { path: '$.data.records[236].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0316: { path: '$.data.records[237].status', lookup: { dictionary: statusCode } }
+  extract_0_0317: { path: '$.data.records[238].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0318: { path: '$.data.records[239].token', hash: sha256 }
+  extract_0_0319: { path: '$.data.records[240].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0320: { path: '$.data.records[241].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0321: { path: '$.data.records[242].text', normalize_string: true }
+  extract_0_0322: { path: '$.data.records[243].intValue', cast: int }
+  extract_0_0323: { path: '$.data.records[244].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0324: { path: '$.data.records[245].status', lookup: { dictionary: statusCode } }
+  extract_0_0325: { path: '$.data.records[246].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0326: { path: '$.data.records[247].token', hash: sha256 }
+  extract_0_0327: { path: '$.data.records[248].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0328: { path: '$.data.records[249].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0329: { path: '$.data.records[250].text', normalize_string: true }
+  extract_0_0330: { path: '$.data.records[251].intValue', cast: int }
+  extract_0_0331: { path: '$.data.records[252].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0332: { path: '$.data.records[253].status', lookup: { dictionary: statusCode } }
+  extract_0_0333: { path: '$.data.records[254].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0334: { path: '$.data.records[255].token', hash: sha256 }
+  extract_0_0335: { path: '$.data.records[256].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0336: { path: '$.data.records[257].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0337: { path: '$.data.records[258].text', normalize_string: true }
+  extract_0_0338: { path: '$.data.records[259].intValue', cast: int }
+  extract_0_0339: { path: '$.data.records[260].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0340: { path: '$.data.records[261].status', lookup: { dictionary: statusCode } }
+  extract_0_0341: { path: '$.data.records[262].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0342: { path: '$.data.records[263].token', hash: sha256 }
+  extract_0_0343: { path: '$.data.records[264].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0344: { path: '$.data.records[265].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0345: { path: '$.data.records[266].text', normalize_string: true }
+  extract_0_0346: { path: '$.data.records[267].intValue', cast: int }
+  extract_0_0347: { path: '$.data.records[268].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0348: { path: '$.data.records[269].status', lookup: { dictionary: statusCode } }
+  extract_0_0349: { path: '$.data.records[270].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0350: { path: '$.data.records[271].token', hash: sha256 }
+  extract_0_0351: { path: '$.data.records[272].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0352: { path: '$.data.records[273].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0353: { path: '$.data.records[274].text', normalize_string: true }
+  extract_0_0354: { path: '$.data.records[275].intValue', cast: int }
+  extract_0_0355: { path: '$.data.records[276].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0356: { path: '$.data.records[277].status', lookup: { dictionary: statusCode } }
+  extract_0_0357: { path: '$.data.records[278].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0358: { path: '$.data.records[279].token', hash: sha256 }
+  extract_0_0359: { path: '$.data.records[280].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0360: { path: '$.data.records[281].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0361: { path: '$.data.records[282].text', normalize_string: true }
+  extract_0_0362: { path: '$.data.records[283].intValue', cast: int }
+  extract_0_0363: { path: '$.data.records[284].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0364: { path: '$.data.records[285].status', lookup: { dictionary: statusCode } }
+  extract_0_0365: { path: '$.data.records[286].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0366: { path: '$.data.records[287].token', hash: sha256 }
+  extract_0_0367: { path: '$.data.records[288].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0368: { path: '$.data.records[289].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0369: { path: '$.data.records[290].text', normalize_string: true }
+  extract_0_0370: { path: '$.data.records[291].intValue', cast: int }
+  extract_0_0371: { path: '$.data.records[292].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0372: { path: '$.data.records[293].status', lookup: { dictionary: statusCode } }
+  extract_0_0373: { path: '$.data.records[294].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0374: { path: '$.data.records[295].token', hash: sha256 }
+  extract_0_0375: { path: '$.data.records[296].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0376: { path: '$.data.records[297].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0377: { path: '$.data.records[298].text', normalize_string: true }
+  extract_0_0378: { path: '$.data.records[299].intValue', cast: int }
+  extract_0_0379: { path: '$.data.records[300].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0380: { path: '$.data.records[301].status', lookup: { dictionary: statusCode } }
+  extract_0_0381: { path: '$.data.records[302].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0382: { path: '$.data.records[303].token', hash: sha256 }
+  extract_0_0383: { path: '$.data.records[304].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0384: { path: '$.data.records[305].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0385: { path: '$.data.records[306].text', normalize_string: true }
+  extract_0_0386: { path: '$.data.records[307].intValue', cast: int }
+  extract_0_0387: { path: '$.data.records[308].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0388: { path: '$.data.records[309].status', lookup: { dictionary: statusCode } }
+  extract_0_0389: { path: '$.data.records[310].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0390: { path: '$.data.records[311].token', hash: sha256 }
+  extract_0_0391: { path: '$.data.records[312].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0392: { path: '$.data.records[313].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0393: { path: '$.data.records[314].text', normalize_string: true }
+  extract_0_0394: { path: '$.data.records[315].intValue', cast: int }
+  extract_0_0395: { path: '$.data.records[316].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0396: { path: '$.data.records[317].status', lookup: { dictionary: statusCode } }
+  extract_0_0397: { path: '$.data.records[318].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0398: { path: '$.data.records[319].token', hash: sha256 }
+  extract_0_0399: { path: '$.data.records[320].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0400: { path: '$.data.records[321].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0401: { path: '$.data.records[322].text', normalize_string: true }
+  extract_0_0402: { path: '$.data.records[323].intValue', cast: int }
+  extract_0_0403: { path: '$.data.records[324].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0404: { path: '$.data.records[325].status', lookup: { dictionary: statusCode } }
+  extract_0_0405: { path: '$.data.records[326].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0406: { path: '$.data.records[327].token', hash: sha256 }
+  extract_0_0407: { path: '$.data.records[328].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0408: { path: '$.data.records[329].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0409: { path: '$.data.records[330].text', normalize_string: true }
+  extract_0_0410: { path: '$.data.records[331].intValue', cast: int }
+  extract_0_0411: { path: '$.data.records[332].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0412: { path: '$.data.records[333].status', lookup: { dictionary: statusCode } }
+  extract_0_0413: { path: '$.data.records[334].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0414: { path: '$.data.records[335].token', hash: sha256 }
+  extract_0_0415: { path: '$.data.records[336].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0416: { path: '$.data.records[337].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0417: { path: '$.data.records[338].text', normalize_string: true }
+  extract_0_0418: { path: '$.data.records[339].intValue', cast: int }
+  extract_0_0419: { path: '$.data.records[340].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0420: { path: '$.data.records[341].status', lookup: { dictionary: statusCode } }
+  extract_0_0421: { path: '$.data.records[342].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0422: { path: '$.data.records[343].token', hash: sha256 }
+  extract_0_0423: { path: '$.data.records[344].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0424: { path: '$.data.records[345].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0425: { path: '$.data.records[346].text', normalize_string: true }
+  extract_0_0426: { path: '$.data.records[347].intValue', cast: int }
+  extract_0_0427: { path: '$.data.records[348].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0428: { path: '$.data.records[349].status', lookup: { dictionary: statusCode } }
+  extract_0_0429: { path: '$.data.records[350].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0430: { path: '$.data.records[351].token', hash: sha256 }
+  extract_0_0431: { path: '$.data.records[352].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0432: { path: '$.data.records[353].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0433: { path: '$.data.records[354].text', normalize_string: true }
+  extract_0_0434: { path: '$.data.records[355].intValue', cast: int }
+  extract_0_0435: { path: '$.data.records[356].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0436: { path: '$.data.records[357].status', lookup: { dictionary: statusCode } }
+  extract_0_0437: { path: '$.data.records[358].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0438: { path: '$.data.records[359].token', hash: sha256 }
+  extract_0_0439: { path: '$.data.records[360].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0440: { path: '$.data.records[361].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0441: { path: '$.data.records[362].text', normalize_string: true }
+  extract_0_0442: { path: '$.data.records[363].intValue', cast: int }
+  extract_0_0443: { path: '$.data.records[364].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0444: { path: '$.data.records[365].status', lookup: { dictionary: statusCode } }
+  extract_0_0445: { path: '$.data.records[366].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0446: { path: '$.data.records[367].token', hash: sha256 }
+  extract_0_0447: { path: '$.data.records[368].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0448: { path: '$.data.records[369].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0449: { path: '$.data.records[370].text', normalize_string: true }
+  extract_0_0450: { path: '$.data.records[371].intValue', cast: int }
+  extract_0_0451: { path: '$.data.records[372].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0452: { path: '$.data.records[373].status', lookup: { dictionary: statusCode } }
+  extract_0_0453: { path: '$.data.records[374].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0454: { path: '$.data.records[375].token', hash: sha256 }
+  extract_0_0455: { path: '$.data.records[376].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0456: { path: '$.data.records[377].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0457: { path: '$.data.records[378].text', normalize_string: true }
+  extract_0_0458: { path: '$.data.records[379].intValue', cast: int }
+  extract_0_0459: { path: '$.data.records[380].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0460: { path: '$.data.records[381].status', lookup: { dictionary: statusCode } }
+  extract_0_0461: { path: '$.data.records[382].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0462: { path: '$.data.records[383].token', hash: sha256 }
+  extract_0_0463: { path: '$.data.records[384].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0464: { path: '$.data.records[385].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0465: { path: '$.data.records[386].text', normalize_string: true }
+  extract_0_0466: { path: '$.data.records[387].intValue', cast: int }
+  extract_0_0467: { path: '$.data.records[388].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0468: { path: '$.data.records[389].status', lookup: { dictionary: statusCode } }
+  extract_0_0469: { path: '$.data.records[390].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0470: { path: '$.data.records[391].token', hash: sha256 }
+  extract_0_0471: { path: '$.data.records[392].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0472: { path: '$.data.records[393].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0473: { path: '$.data.records[394].text', normalize_string: true }
+  extract_0_0474: { path: '$.data.records[395].intValue', cast: int }
+  extract_0_0475: { path: '$.data.records[396].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0476: { path: '$.data.records[397].status', lookup: { dictionary: statusCode } }
+  extract_0_0477: { path: '$.data.records[398].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0478: { path: '$.data.records[399].token', hash: sha256 }
+  extract_0_0479: { path: '$.data.records[400].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0480: { path: '$.data.records[401].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0481: { path: '$.data.records[402].text', normalize_string: true }
+  extract_0_0482: { path: '$.data.records[403].intValue', cast: int }
+  extract_0_0483: { path: '$.data.records[404].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0484: { path: '$.data.records[405].status', lookup: { dictionary: statusCode } }
+  extract_0_0485: { path: '$.data.records[406].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0486: { path: '$.data.records[407].token', hash: sha256 }
+  extract_0_0487: { path: '$.data.records[408].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0488: { path: '$.data.records[409].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0489: { path: '$.data.records[410].text', normalize_string: true }
+  extract_0_0490: { path: '$.data.records[411].intValue', cast: int }
+  extract_0_0491: { path: '$.data.records[412].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0492: { path: '$.data.records[413].status', lookup: { dictionary: statusCode } }
+  extract_0_0493: { path: '$.data.records[414].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0494: { path: '$.data.records[415].token', hash: sha256 }
+  extract_0_0495: { path: '$.data.records[416].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0496: { path: '$.data.records[417].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0497: { path: '$.data.records[418].text', normalize_string: true }
+  extract_0_0498: { path: '$.data.records[419].intValue', cast: int }
+  extract_0_0499: { path: '$.data.records[420].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0500: { path: '$.data.records[421].status', lookup: { dictionary: statusCode } }
+  extract_0_0501: { path: '$.data.records[422].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0502: { path: '$.data.records[423].token', hash: sha256 }
+  extract_0_0503: { path: '$.data.records[424].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0504: { path: '$.data.records[425].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0505: { path: '$.data.records[426].text', normalize_string: true }
+  extract_0_0506: { path: '$.data.records[427].intValue', cast: int }
+  extract_0_0507: { path: '$.data.records[428].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0508: { path: '$.data.records[429].status', lookup: { dictionary: statusCode } }
+  extract_0_0509: { path: '$.data.records[430].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0510: { path: '$.data.records[431].token', hash: sha256 }
+  extract_0_0511: { path: '$.data.records[432].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0512: { path: '$.data.records[433].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0513: { path: '$.data.records[434].text', normalize_string: true }
+  extract_0_0514: { path: '$.data.records[435].intValue', cast: int }
+  extract_0_0515: { path: '$.data.records[436].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0516: { path: '$.data.records[437].status', lookup: { dictionary: statusCode } }
+  extract_0_0517: { path: '$.data.records[438].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0518: { path: '$.data.records[439].token', hash: sha256 }
+  extract_0_0519: { path: '$.data.records[440].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0520: { path: '$.data.records[441].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0521: { path: '$.data.records[442].text', normalize_string: true }
+  extract_0_0522: { path: '$.data.records[443].intValue', cast: int }
+  extract_0_0523: { path: '$.data.records[444].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0524: { path: '$.data.records[445].status', lookup: { dictionary: statusCode } }
+  extract_0_0525: { path: '$.data.records[446].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0526: { path: '$.data.records[447].token', hash: sha256 }
+  extract_0_0527: { path: '$.data.records[448].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0528: { path: '$.data.records[449].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0529: { path: '$.data.records[450].text', normalize_string: true }
+  extract_0_0530: { path: '$.data.records[451].intValue', cast: int }
+  extract_0_0531: { path: '$.data.records[452].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0532: { path: '$.data.records[453].status', lookup: { dictionary: statusCode } }
+  extract_0_0533: { path: '$.data.records[454].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0534: { path: '$.data.records[455].token', hash: sha256 }
+  extract_0_0535: { path: '$.data.records[456].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0536: { path: '$.data.records[457].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0537: { path: '$.data.records[458].text', normalize_string: true }
+  extract_0_0538: { path: '$.data.records[459].intValue', cast: int }
+  extract_0_0539: { path: '$.data.records[460].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0540: { path: '$.data.records[461].status', lookup: { dictionary: statusCode } }
+  extract_0_0541: { path: '$.data.records[462].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0542: { path: '$.data.records[463].token', hash: sha256 }
+  extract_0_0543: { path: '$.data.records[464].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0544: { path: '$.data.records[465].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0545: { path: '$.data.records[466].text', normalize_string: true }
+  extract_0_0546: { path: '$.data.records[467].intValue', cast: int }
+  extract_0_0547: { path: '$.data.records[468].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0548: { path: '$.data.records[469].status', lookup: { dictionary: statusCode } }
+  extract_0_0549: { path: '$.data.records[470].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0550: { path: '$.data.records[471].token', hash: sha256 }
+  extract_0_0551: { path: '$.data.records[472].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0552: { path: '$.data.records[473].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0553: { path: '$.data.records[474].text', normalize_string: true }
+  extract_0_0554: { path: '$.data.records[475].intValue', cast: int }
+  extract_0_0555: { path: '$.data.records[476].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0556: { path: '$.data.records[477].status', lookup: { dictionary: statusCode } }
+  extract_0_0557: { path: '$.data.records[478].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0558: { path: '$.data.records[479].token', hash: sha256 }
+  extract_0_0559: { path: '$.data.records[480].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0560: { path: '$.data.records[481].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0561: { path: '$.data.records[482].text', normalize_string: true }
+  extract_0_0562: { path: '$.data.records[483].intValue', cast: int }
+  extract_0_0563: { path: '$.data.records[484].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0564: { path: '$.data.records[485].status', lookup: { dictionary: statusCode } }
+  extract_0_0565: { path: '$.data.records[486].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0566: { path: '$.data.records[487].token', hash: sha256 }
+  extract_0_0567: { path: '$.data.records[488].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0568: { path: '$.data.records[489].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0569: { path: '$.data.records[490].text', normalize_string: true }
+  extract_0_0570: { path: '$.data.records[491].intValue', cast: int }
+  extract_0_0571: { path: '$.data.records[492].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0572: { path: '$.data.records[493].status', lookup: { dictionary: statusCode } }
+  extract_0_0573: { path: '$.data.records[494].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0574: { path: '$.data.records[495].token', hash: sha256 }
+  extract_0_0575: { path: '$.data.records[496].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0576: { path: '$.data.records[497].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0577: { path: '$.data.records[498].text', normalize_string: true }
+  extract_0_0578: { path: '$.data.records[499].intValue', cast: int }
+  extract_0_0579: { path: '$.data.records[500].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0580: { path: '$.data.records[501].status', lookup: { dictionary: statusCode } }
+  extract_0_0581: { path: '$.data.records[502].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0582: { path: '$.data.records[503].token', hash: sha256 }
+  extract_0_0583: { path: '$.data.records[504].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0584: { path: '$.data.records[505].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0585: { path: '$.data.records[506].text', normalize_string: true }
+  extract_0_0586: { path: '$.data.records[507].intValue', cast: int }
+  extract_0_0587: { path: '$.data.records[508].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0588: { path: '$.data.records[509].status', lookup: { dictionary: statusCode } }
+  extract_0_0589: { path: '$.data.records[510].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0590: { path: '$.data.records[511].token', hash: sha256 }
+  extract_0_0591: { path: '$.data.records[512].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0592: { path: '$.data.records[513].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0593: { path: '$.data.records[514].text', normalize_string: true }
+  extract_0_0594: { path: '$.data.records[515].intValue', cast: int }
+  extract_0_0595: { path: '$.data.records[516].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0596: { path: '$.data.records[517].status', lookup: { dictionary: statusCode } }
+  extract_0_0597: { path: '$.data.records[518].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0598: { path: '$.data.records[519].token', hash: sha256 }
+  extract_0_0599: { path: '$.data.records[520].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0600: { path: '$.data.records[521].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0601: { path: '$.data.records[522].text', normalize_string: true }
+  extract_0_0602: { path: '$.data.records[523].intValue', cast: int }
+  extract_0_0603: { path: '$.data.records[524].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0604: { path: '$.data.records[525].status', lookup: { dictionary: statusCode } }
+  extract_0_0605: { path: '$.data.records[526].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0606: { path: '$.data.records[527].token', hash: sha256 }
+  extract_0_0607: { path: '$.data.records[528].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0608: { path: '$.data.records[529].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0609: { path: '$.data.records[530].text', normalize_string: true }
+  extract_0_0610: { path: '$.data.records[531].intValue', cast: int }
+  extract_0_0611: { path: '$.data.records[532].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0612: { path: '$.data.records[533].status', lookup: { dictionary: statusCode } }
+  extract_0_0613: { path: '$.data.records[534].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0614: { path: '$.data.records[535].token', hash: sha256 }
+  extract_0_0615: { path: '$.data.records[536].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0616: { path: '$.data.records[537].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0617: { path: '$.data.records[538].text', normalize_string: true }
+  extract_0_0618: { path: '$.data.records[539].intValue', cast: int }
+  extract_0_0619: { path: '$.data.records[540].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0620: { path: '$.data.records[541].status', lookup: { dictionary: statusCode } }
+  extract_0_0621: { path: '$.data.records[542].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0622: { path: '$.data.records[543].token', hash: sha256 }
+  extract_0_0623: { path: '$.data.records[544].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0624: { path: '$.data.records[545].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0625: { path: '$.data.records[546].text', normalize_string: true }
+  extract_0_0626: { path: '$.data.records[547].intValue', cast: int }
+  extract_0_0627: { path: '$.data.records[548].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0628: { path: '$.data.records[549].status', lookup: { dictionary: statusCode } }
+  extract_0_0629: { path: '$.data.records[550].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0630: { path: '$.data.records[551].token', hash: sha256 }
+  extract_0_0631: { path: '$.data.records[552].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0632: { path: '$.data.records[553].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0633: { path: '$.data.records[554].text', normalize_string: true }
+  extract_0_0634: { path: '$.data.records[555].intValue', cast: int }
+  extract_0_0635: { path: '$.data.records[556].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0636: { path: '$.data.records[557].status', lookup: { dictionary: statusCode } }
+  extract_0_0637: { path: '$.data.records[558].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0638: { path: '$.data.records[559].token', hash: sha256 }
+  extract_0_0639: { path: '$.data.records[560].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0640: { path: '$.data.records[561].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0641: { path: '$.data.records[562].text', normalize_string: true }
+  extract_0_0642: { path: '$.data.records[563].intValue', cast: int }
+  extract_0_0643: { path: '$.data.records[564].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0644: { path: '$.data.records[565].status', lookup: { dictionary: statusCode } }
+  extract_0_0645: { path: '$.data.records[566].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0646: { path: '$.data.records[567].token', hash: sha256 }
+  extract_0_0647: { path: '$.data.records[568].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0648: { path: '$.data.records[569].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0649: { path: '$.data.records[570].text', normalize_string: true }
+  extract_0_0650: { path: '$.data.records[571].intValue', cast: int }
+  extract_0_0651: { path: '$.data.records[572].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0652: { path: '$.data.records[573].status', lookup: { dictionary: statusCode } }
+  extract_0_0653: { path: '$.data.records[574].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0654: { path: '$.data.records[575].token', hash: sha256 }
+  extract_0_0655: { path: '$.data.records[576].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0656: { path: '$.data.records[577].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0657: { path: '$.data.records[578].text', normalize_string: true }
+  extract_0_0658: { path: '$.data.records[579].intValue', cast: int }
+  extract_0_0659: { path: '$.data.records[580].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0660: { path: '$.data.records[581].status', lookup: { dictionary: statusCode } }
+  extract_0_0661: { path: '$.data.records[582].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0662: { path: '$.data.records[583].token', hash: sha256 }
+  extract_0_0663: { path: '$.data.records[584].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0664: { path: '$.data.records[585].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0665: { path: '$.data.records[586].text', normalize_string: true }
+  extract_0_0666: { path: '$.data.records[587].intValue', cast: int }
+  extract_0_0667: { path: '$.data.records[588].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0668: { path: '$.data.records[589].status', lookup: { dictionary: statusCode } }
+  extract_0_0669: { path: '$.data.records[590].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0670: { path: '$.data.records[591].token', hash: sha256 }
+  extract_0_0671: { path: '$.data.records[592].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0672: { path: '$.data.records[593].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0673: { path: '$.data.records[594].text', normalize_string: true }
+  extract_0_0674: { path: '$.data.records[595].intValue', cast: int }
+  extract_0_0675: { path: '$.data.records[596].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0676: { path: '$.data.records[597].status', lookup: { dictionary: statusCode } }
+  extract_0_0677: { path: '$.data.records[598].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0678: { path: '$.data.records[599].token', hash: sha256 }
+  extract_0_0679: { path: '$.data.records[600].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0680: { path: '$.data.records[601].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0681: { path: '$.data.records[602].text', normalize_string: true }
+  extract_0_0682: { path: '$.data.records[603].intValue', cast: int }
+  extract_0_0683: { path: '$.data.records[604].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0684: { path: '$.data.records[605].status', lookup: { dictionary: statusCode } }
+  extract_0_0685: { path: '$.data.records[606].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0686: { path: '$.data.records[607].token', hash: sha256 }
+  extract_0_0687: { path: '$.data.records[608].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0688: { path: '$.data.records[609].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0689: { path: '$.data.records[610].text', normalize_string: true }
+  extract_0_0690: { path: '$.data.records[611].intValue', cast: int }
+  extract_0_0691: { path: '$.data.records[612].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0692: { path: '$.data.records[613].status', lookup: { dictionary: statusCode } }
+  extract_0_0693: { path: '$.data.records[614].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0694: { path: '$.data.records[615].token', hash: sha256 }
+  extract_0_0695: { path: '$.data.records[616].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0696: { path: '$.data.records[617].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0697: { path: '$.data.records[618].text', normalize_string: true }
+  extract_0_0698: { path: '$.data.records[619].intValue', cast: int }
+  extract_0_0699: { path: '$.data.records[620].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0700: { path: '$.data.records[621].status', lookup: { dictionary: statusCode } }
+  extract_0_0701: { path: '$.data.records[622].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0702: { path: '$.data.records[623].token', hash: sha256 }
+  extract_0_0703: { path: '$.data.records[624].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0704: { path: '$.data.records[625].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0705: { path: '$.data.records[626].text', normalize_string: true }
+  extract_0_0706: { path: '$.data.records[627].intValue', cast: int }
+  extract_0_0707: { path: '$.data.records[628].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0708: { path: '$.data.records[629].status', lookup: { dictionary: statusCode } }
+  extract_0_0709: { path: '$.data.records[630].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0710: { path: '$.data.records[631].token', hash: sha256 }
+  extract_0_0711: { path: '$.data.records[632].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0712: { path: '$.data.records[633].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0713: { path: '$.data.records[634].text', normalize_string: true }
+  extract_0_0714: { path: '$.data.records[635].intValue', cast: int }
+  extract_0_0715: { path: '$.data.records[636].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0716: { path: '$.data.records[637].status', lookup: { dictionary: statusCode } }
+  extract_0_0717: { path: '$.data.records[638].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0718: { path: '$.data.records[639].token', hash: sha256 }
+  extract_0_0719: { path: '$.data.records[640].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0720: { path: '$.data.records[641].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0721: { path: '$.data.records[642].text', normalize_string: true }
+  extract_0_0722: { path: '$.data.records[643].intValue', cast: int }
+  extract_0_0723: { path: '$.data.records[644].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0724: { path: '$.data.records[645].status', lookup: { dictionary: statusCode } }
+  extract_0_0725: { path: '$.data.records[646].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0726: { path: '$.data.records[647].token', hash: sha256 }
+  extract_0_0727: { path: '$.data.records[648].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0728: { path: '$.data.records[649].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0729: { path: '$.data.records[650].text', normalize_string: true }
+  extract_0_0730: { path: '$.data.records[651].intValue', cast: int }
+  extract_0_0731: { path: '$.data.records[652].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0732: { path: '$.data.records[653].status', lookup: { dictionary: statusCode } }
+  extract_0_0733: { path: '$.data.records[654].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0734: { path: '$.data.records[655].token', hash: sha256 }
+  extract_0_0735: { path: '$.data.records[656].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0736: { path: '$.data.records[657].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0737: { path: '$.data.records[658].text', normalize_string: true }
+  extract_0_0738: { path: '$.data.records[659].intValue', cast: int }
+  extract_0_0739: { path: '$.data.records[660].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0740: { path: '$.data.records[661].status', lookup: { dictionary: statusCode } }
+  extract_0_0741: { path: '$.data.records[662].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0742: { path: '$.data.records[663].token', hash: sha256 }
+  extract_0_0743: { path: '$.data.records[664].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0744: { path: '$.data.records[665].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0745: { path: '$.data.records[666].text', normalize_string: true }
+  extract_0_0746: { path: '$.data.records[667].intValue', cast: int }
+  extract_0_0747: { path: '$.data.records[668].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0748: { path: '$.data.records[669].status', lookup: { dictionary: statusCode } }
+  extract_0_0749: { path: '$.data.records[670].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0750: { path: '$.data.records[671].token', hash: sha256 }
+  extract_0_0751: { path: '$.data.records[672].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0752: { path: '$.data.records[673].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0753: { path: '$.data.records[674].text', normalize_string: true }
+  extract_0_0754: { path: '$.data.records[675].intValue', cast: int }
+  extract_0_0755: { path: '$.data.records[676].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0756: { path: '$.data.records[677].status', lookup: { dictionary: statusCode } }
+  extract_0_0757: { path: '$.data.records[678].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0758: { path: '$.data.records[679].token', hash: sha256 }
+  extract_0_0759: { path: '$.data.records[680].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0760: { path: '$.data.records[681].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0761: { path: '$.data.records[682].text', normalize_string: true }
+  extract_0_0762: { path: '$.data.records[683].intValue', cast: int }
+  extract_0_0763: { path: '$.data.records[684].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0764: { path: '$.data.records[685].status', lookup: { dictionary: statusCode } }
+  extract_0_0765: { path: '$.data.records[686].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0766: { path: '$.data.records[687].token', hash: sha256 }
+  extract_0_0767: { path: '$.data.records[688].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0768: { path: '$.data.records[689].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0769: { path: '$.data.records[690].text', normalize_string: true }
+  extract_0_0770: { path: '$.data.records[691].intValue', cast: int }
+  extract_0_0771: { path: '$.data.records[692].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0772: { path: '$.data.records[693].status', lookup: { dictionary: statusCode } }
+  extract_0_0773: { path: '$.data.records[694].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0774: { path: '$.data.records[695].token', hash: sha256 }
+  extract_0_0775: { path: '$.data.records[696].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0776: { path: '$.data.records[697].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0777: { path: '$.data.records[698].text', normalize_string: true }
+  extract_0_0778: { path: '$.data.records[699].intValue', cast: int }
+  extract_0_0779: { path: '$.data.records[700].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0780: { path: '$.data.records[701].status', lookup: { dictionary: statusCode } }
+  extract_0_0781: { path: '$.data.records[702].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0782: { path: '$.data.records[703].token', hash: sha256 }
+  extract_0_0783: { path: '$.data.records[704].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0784: { path: '$.data.records[705].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0785: { path: '$.data.records[706].text', normalize_string: true }
+  extract_0_0786: { path: '$.data.records[707].intValue', cast: int }
+  extract_0_0787: { path: '$.data.records[708].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0788: { path: '$.data.records[709].status', lookup: { dictionary: statusCode } }
+  extract_0_0789: { path: '$.data.records[710].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0790: { path: '$.data.records[711].token', hash: sha256 }
+  extract_0_0791: { path: '$.data.records[712].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0792: { path: '$.data.records[713].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0793: { path: '$.data.records[714].text', normalize_string: true }
+  extract_0_0794: { path: '$.data.records[715].intValue', cast: int }
+  extract_0_0795: { path: '$.data.records[716].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0796: { path: '$.data.records[717].status', lookup: { dictionary: statusCode } }
+  extract_0_0797: { path: '$.data.records[718].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0798: { path: '$.data.records[719].token', hash: sha256 }
+  extract_0_0799: { path: '$.data.records[720].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0800: { path: '$.data.records[721].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0801: { path: '$.data.records[722].text', normalize_string: true }
+  extract_0_0802: { path: '$.data.records[723].intValue', cast: int }
+  extract_0_0803: { path: '$.data.records[724].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0804: { path: '$.data.records[725].status', lookup: { dictionary: statusCode } }
+  extract_0_0805: { path: '$.data.records[726].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0806: { path: '$.data.records[727].token', hash: sha256 }
+  extract_0_0807: { path: '$.data.records[728].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0808: { path: '$.data.records[729].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0809: { path: '$.data.records[730].text', normalize_string: true }
+  extract_0_0810: { path: '$.data.records[731].intValue', cast: int }
+  extract_0_0811: { path: '$.data.records[732].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0812: { path: '$.data.records[733].status', lookup: { dictionary: statusCode } }
+  extract_0_0813: { path: '$.data.records[734].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0814: { path: '$.data.records[735].token', hash: sha256 }
+  extract_0_0815: { path: '$.data.records[736].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0816: { path: '$.data.records[737].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0817: { path: '$.data.records[738].text', normalize_string: true }
+  extract_0_0818: { path: '$.data.records[739].intValue', cast: int }
+  extract_0_0819: { path: '$.data.records[740].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0820: { path: '$.data.records[741].status', lookup: { dictionary: statusCode } }
+  extract_0_0821: { path: '$.data.records[742].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0822: { path: '$.data.records[743].token', hash: sha256 }
+  extract_0_0823: { path: '$.data.records[744].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0824: { path: '$.data.records[745].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0825: { path: '$.data.records[746].text', normalize_string: true }
+  extract_0_0826: { path: '$.data.records[747].intValue', cast: int }
+  extract_0_0827: { path: '$.data.records[748].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0828: { path: '$.data.records[749].status', lookup: { dictionary: statusCode } }
+  extract_0_0829: { path: '$.data.records[750].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0830: { path: '$.data.records[751].token', hash: sha256 }
+  extract_0_0831: { path: '$.data.records[752].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0832: { path: '$.data.records[753].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0833: { path: '$.data.records[754].text', normalize_string: true }
+  extract_0_0834: { path: '$.data.records[755].intValue', cast: int }
+  extract_0_0835: { path: '$.data.records[756].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0836: { path: '$.data.records[757].status', lookup: { dictionary: statusCode } }
+  extract_0_0837: { path: '$.data.records[758].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0838: { path: '$.data.records[759].token', hash: sha256 }
+  extract_0_0839: { path: '$.data.records[760].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0840: { path: '$.data.records[761].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0841: { path: '$.data.records[762].text', normalize_string: true }
+  extract_0_0842: { path: '$.data.records[763].intValue', cast: int }
+  extract_0_0843: { path: '$.data.records[764].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0844: { path: '$.data.records[765].status', lookup: { dictionary: statusCode } }
+  extract_0_0845: { path: '$.data.records[766].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0846: { path: '$.data.records[767].token', hash: sha256 }
+  extract_0_0847: { path: '$.data.records[768].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0848: { path: '$.data.records[769].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0849: { path: '$.data.records[770].text', normalize_string: true }
+  extract_0_0850: { path: '$.data.records[771].intValue', cast: int }
+  extract_0_0851: { path: '$.data.records[772].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0852: { path: '$.data.records[773].status', lookup: { dictionary: statusCode } }
+  extract_0_0853: { path: '$.data.records[774].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0854: { path: '$.data.records[775].token', hash: sha256 }
+  extract_0_0855: { path: '$.data.records[776].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0856: { path: '$.data.records[777].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0857: { path: '$.data.records[778].text', normalize_string: true }
+  extract_0_0858: { path: '$.data.records[779].intValue', cast: int }
+  extract_0_0859: { path: '$.data.records[780].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0860: { path: '$.data.records[781].status', lookup: { dictionary: statusCode } }
+  extract_0_0861: { path: '$.data.records[782].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0862: { path: '$.data.records[783].token', hash: sha256 }
+  extract_0_0863: { path: '$.data.records[784].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0864: { path: '$.data.records[785].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0865: { path: '$.data.records[786].text', normalize_string: true }
+  extract_0_0866: { path: '$.data.records[787].intValue', cast: int }
+  extract_0_0867: { path: '$.data.records[788].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0868: { path: '$.data.records[789].status', lookup: { dictionary: statusCode } }
+  extract_0_0869: { path: '$.data.records[790].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0870: { path: '$.data.records[791].token', hash: sha256 }
+  extract_0_0871: { path: '$.data.records[792].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0872: { path: '$.data.records[793].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0873: { path: '$.data.records[794].text', normalize_string: true }
+  extract_0_0874: { path: '$.data.records[795].intValue', cast: int }
+  extract_0_0875: { path: '$.data.records[796].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0876: { path: '$.data.records[797].status', lookup: { dictionary: statusCode } }
+  extract_0_0877: { path: '$.data.records[798].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0878: { path: '$.data.records[799].token', hash: sha256 }
+  extract_0_0879: { path: '$.data.records[800].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0880: { path: '$.data.records[801].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0881: { path: '$.data.records[802].text', normalize_string: true }
+  extract_0_0882: { path: '$.data.records[803].intValue', cast: int }
+  extract_0_0883: { path: '$.data.records[804].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0884: { path: '$.data.records[805].status', lookup: { dictionary: statusCode } }
+  extract_0_0885: { path: '$.data.records[806].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0886: { path: '$.data.records[807].token', hash: sha256 }
+  extract_0_0887: { path: '$.data.records[808].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0888: { path: '$.data.records[809].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0889: { path: '$.data.records[810].text', normalize_string: true }
+  extract_0_0890: { path: '$.data.records[811].intValue', cast: int }
+  extract_0_0891: { path: '$.data.records[812].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0892: { path: '$.data.records[813].status', lookup: { dictionary: statusCode } }
+  extract_0_0893: { path: '$.data.records[814].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0894: { path: '$.data.records[815].token', hash: sha256 }
+  extract_0_0895: { path: '$.data.records[816].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0896: { path: '$.data.records[817].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0897: { path: '$.data.records[818].text', normalize_string: true }
+  extract_0_0898: { path: '$.data.records[819].intValue', cast: int }
+  extract_0_0899: { path: '$.data.records[820].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0900: { path: '$.data.records[821].status', lookup: { dictionary: statusCode } }
+  extract_0_0901: { path: '$.data.records[822].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0902: { path: '$.data.records[823].token', hash: sha256 }
+  extract_0_0903: { path: '$.data.records[824].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0904: { path: '$.data.records[825].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0905: { path: '$.data.records[826].text', normalize_string: true }
+  extract_0_0906: { path: '$.data.records[827].intValue', cast: int }
+  extract_0_0907: { path: '$.data.records[828].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0908: { path: '$.data.records[829].status', lookup: { dictionary: statusCode } }
+  extract_0_0909: { path: '$.data.records[830].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0910: { path: '$.data.records[831].token', hash: sha256 }
+  extract_0_0911: { path: '$.data.records[832].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0912: { path: '$.data.records[833].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0913: { path: '$.data.records[834].text', normalize_string: true }
+  extract_0_0914: { path: '$.data.records[835].intValue', cast: int }
+  extract_0_0915: { path: '$.data.records[836].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0916: { path: '$.data.records[837].status', lookup: { dictionary: statusCode } }
+  extract_0_0917: { path: '$.data.records[838].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0918: { path: '$.data.records[839].token', hash: sha256 }
+  extract_0_0919: { path: '$.data.records[840].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0920: { path: '$.data.records[841].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0921: { path: '$.data.records[842].text', normalize_string: true }
+  extract_0_0922: { path: '$.data.records[843].intValue', cast: int }
+  extract_0_0923: { path: '$.data.records[844].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0924: { path: '$.data.records[845].status', lookup: { dictionary: statusCode } }
+  extract_0_0925: { path: '$.data.records[846].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0926: { path: '$.data.records[847].token', hash: sha256 }
+  extract_0_0927: { path: '$.data.records[848].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0928: { path: '$.data.records[849].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0929: { path: '$.data.records[850].text', normalize_string: true }
+  extract_0_0930: { path: '$.data.records[851].intValue', cast: int }
+  extract_0_0931: { path: '$.data.records[852].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0932: { path: '$.data.records[853].status', lookup: { dictionary: statusCode } }
+  extract_0_0933: { path: '$.data.records[854].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0934: { path: '$.data.records[855].token', hash: sha256 }
+  extract_0_0935: { path: '$.data.records[856].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0936: { path: '$.data.records[857].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0937: { path: '$.data.records[858].text', normalize_string: true }
+  extract_0_0938: { path: '$.data.records[859].intValue', cast: int }
+  extract_0_0939: { path: '$.data.records[860].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0940: { path: '$.data.records[861].status', lookup: { dictionary: statusCode } }
+  extract_0_0941: { path: '$.data.records[862].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0942: { path: '$.data.records[863].token', hash: sha256 }
+  extract_0_0943: { path: '$.data.records[864].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0944: { path: '$.data.records[865].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0945: { path: '$.data.records[866].text', normalize_string: true }
+  extract_0_0946: { path: '$.data.records[867].intValue', cast: int }
+  extract_0_0947: { path: '$.data.records[868].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0948: { path: '$.data.records[869].status', lookup: { dictionary: statusCode } }
+  extract_0_0949: { path: '$.data.records[870].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0950: { path: '$.data.records[871].token', hash: sha256 }
+  extract_0_0951: { path: '$.data.records[872].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0952: { path: '$.data.records[873].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0953: { path: '$.data.records[874].text', normalize_string: true }
+  extract_0_0954: { path: '$.data.records[875].intValue', cast: int }
+  extract_0_0955: { path: '$.data.records[876].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0956: { path: '$.data.records[877].status', lookup: { dictionary: statusCode } }
+  extract_0_0957: { path: '$.data.records[878].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0958: { path: '$.data.records[879].token', hash: sha256 }
+  extract_0_0959: { path: '$.data.records[880].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0960: { path: '$.data.records[881].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0961: { path: '$.data.records[882].text', normalize_string: true }
+  extract_0_0962: { path: '$.data.records[883].intValue', cast: int }
+  extract_0_0963: { path: '$.data.records[884].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0964: { path: '$.data.records[885].status', lookup: { dictionary: statusCode } }
+  extract_0_0965: { path: '$.data.records[886].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0966: { path: '$.data.records[887].token', hash: sha256 }
+  extract_0_0967: { path: '$.data.records[888].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0968: { path: '$.data.records[889].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0969: { path: '$.data.records[890].text', normalize_string: true }
+  extract_0_0970: { path: '$.data.records[891].intValue', cast: int }
+  extract_0_0971: { path: '$.data.records[892].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0972: { path: '$.data.records[893].status', lookup: { dictionary: statusCode } }
+  extract_0_0973: { path: '$.data.records[894].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0974: { path: '$.data.records[895].token', hash: sha256 }
+  extract_0_0975: { path: '$.data.records[896].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0976: { path: '$.data.records[897].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0977: { path: '$.data.records[898].text', normalize_string: true }
+  extract_0_0978: { path: '$.data.records[899].intValue', cast: int }
+  extract_0_0979: { path: '$.data.records[0].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0980: { path: '$.data.records[1].status', lookup: { dictionary: statusCode } }
+  extract_0_0981: { path: '$.data.records[2].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0982: { path: '$.data.records[3].token', hash: sha256 }
+  extract_0_0983: { path: '$.data.records[4].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0984: { path: '$.data.records[5].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0985: { path: '$.data.records[6].text', normalize_string: true }
+  extract_0_0986: { path: '$.data.records[7].intValue', cast: int }
+  extract_0_0987: { path: '$.data.records[8].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0988: { path: '$.data.records[9].status', lookup: { dictionary: statusCode } }
+  extract_0_0989: { path: '$.data.records[10].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0990: { path: '$.data.records[11].token', hash: sha256 }
+  extract_0_0991: { path: '$.data.records[12].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_0992: { path: '$.data.records[13].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_0993: { path: '$.data.records[14].text', normalize_string: true }
+  extract_0_0994: { path: '$.data.records[15].intValue', cast: int }
+  extract_0_0995: { path: '$.data.records[16].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_0996: { path: '$.data.records[17].status', lookup: { dictionary: statusCode } }
+  extract_0_0997: { path: '$.data.records[18].email', regex_extract: '([^@]+)@.*' }
+  extract_0_0998: { path: '$.data.records[19].token', hash: sha256 }
+  extract_0_0999: { path: '$.data.records[20].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1000: { path: '$.data.records[21].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1001: { path: '$.data.records[22].text', normalize_string: true }
+  extract_0_1002: { path: '$.data.records[23].intValue', cast: int }
+  extract_0_1003: { path: '$.data.records[24].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1004: { path: '$.data.records[25].status', lookup: { dictionary: statusCode } }
+  extract_0_1005: { path: '$.data.records[26].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1006: { path: '$.data.records[27].token', hash: sha256 }
+  extract_0_1007: { path: '$.data.records[28].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1008: { path: '$.data.records[29].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1009: { path: '$.data.records[30].text', normalize_string: true }
+  extract_0_1010: { path: '$.data.records[31].intValue', cast: int }
+  extract_0_1011: { path: '$.data.records[32].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1012: { path: '$.data.records[33].status', lookup: { dictionary: statusCode } }
+  extract_0_1013: { path: '$.data.records[34].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1014: { path: '$.data.records[35].token', hash: sha256 }
+  extract_0_1015: { path: '$.data.records[36].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1016: { path: '$.data.records[37].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1017: { path: '$.data.records[38].text', normalize_string: true }
+  extract_0_1018: { path: '$.data.records[39].intValue', cast: int }
+  extract_0_1019: { path: '$.data.records[40].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1020: { path: '$.data.records[41].status', lookup: { dictionary: statusCode } }
+  extract_0_1021: { path: '$.data.records[42].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1022: { path: '$.data.records[43].token', hash: sha256 }
+  extract_0_1023: { path: '$.data.records[44].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1024: { path: '$.data.records[45].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1025: { path: '$.data.records[46].text', normalize_string: true }
+  extract_0_1026: { path: '$.data.records[47].intValue', cast: int }
+  extract_0_1027: { path: '$.data.records[48].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1028: { path: '$.data.records[49].status', lookup: { dictionary: statusCode } }
+  extract_0_1029: { path: '$.data.records[50].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1030: { path: '$.data.records[51].token', hash: sha256 }
+  extract_0_1031: { path: '$.data.records[52].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1032: { path: '$.data.records[53].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1033: { path: '$.data.records[54].text', normalize_string: true }
+  extract_0_1034: { path: '$.data.records[55].intValue', cast: int }
+  extract_0_1035: { path: '$.data.records[56].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1036: { path: '$.data.records[57].status', lookup: { dictionary: statusCode } }
+  extract_0_1037: { path: '$.data.records[58].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1038: { path: '$.data.records[59].token', hash: sha256 }
+  extract_0_1039: { path: '$.data.records[60].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1040: { path: '$.data.records[61].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1041: { path: '$.data.records[62].text', normalize_string: true }
+  extract_0_1042: { path: '$.data.records[63].intValue', cast: int }
+  extract_0_1043: { path: '$.data.records[64].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1044: { path: '$.data.records[65].status', lookup: { dictionary: statusCode } }
+  extract_0_1045: { path: '$.data.records[66].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1046: { path: '$.data.records[67].token', hash: sha256 }
+  extract_0_1047: { path: '$.data.records[68].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1048: { path: '$.data.records[69].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1049: { path: '$.data.records[70].text', normalize_string: true }
+  extract_0_1050: { path: '$.data.records[71].intValue', cast: int }
+  extract_0_1051: { path: '$.data.records[72].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1052: { path: '$.data.records[73].status', lookup: { dictionary: statusCode } }
+  extract_0_1053: { path: '$.data.records[74].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1054: { path: '$.data.records[75].token', hash: sha256 }
+  extract_0_1055: { path: '$.data.records[76].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1056: { path: '$.data.records[77].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1057: { path: '$.data.records[78].text', normalize_string: true }
+  extract_0_1058: { path: '$.data.records[79].intValue', cast: int }
+  extract_0_1059: { path: '$.data.records[80].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1060: { path: '$.data.records[81].status', lookup: { dictionary: statusCode } }
+  extract_0_1061: { path: '$.data.records[82].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1062: { path: '$.data.records[83].token', hash: sha256 }
+  extract_0_1063: { path: '$.data.records[84].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1064: { path: '$.data.records[85].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1065: { path: '$.data.records[86].text', normalize_string: true }
+  extract_0_1066: { path: '$.data.records[87].intValue', cast: int }
+  extract_0_1067: { path: '$.data.records[88].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1068: { path: '$.data.records[89].status', lookup: { dictionary: statusCode } }
+  extract_0_1069: { path: '$.data.records[90].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1070: { path: '$.data.records[91].token', hash: sha256 }
+  extract_0_1071: { path: '$.data.records[92].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1072: { path: '$.data.records[93].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1073: { path: '$.data.records[94].text', normalize_string: true }
+  extract_0_1074: { path: '$.data.records[95].intValue', cast: int }
+  extract_0_1075: { path: '$.data.records[96].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1076: { path: '$.data.records[97].status', lookup: { dictionary: statusCode } }
+  extract_0_1077: { path: '$.data.records[98].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1078: { path: '$.data.records[99].token', hash: sha256 }
+  extract_0_1079: { path: '$.data.records[100].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1080: { path: '$.data.records[101].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1081: { path: '$.data.records[102].text', normalize_string: true }
+  extract_0_1082: { path: '$.data.records[103].intValue', cast: int }
+  extract_0_1083: { path: '$.data.records[104].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1084: { path: '$.data.records[105].status', lookup: { dictionary: statusCode } }
+  extract_0_1085: { path: '$.data.records[106].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1086: { path: '$.data.records[107].token', hash: sha256 }
+  extract_0_1087: { path: '$.data.records[108].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1088: { path: '$.data.records[109].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1089: { path: '$.data.records[110].text', normalize_string: true }
+  extract_0_1090: { path: '$.data.records[111].intValue', cast: int }
+  extract_0_1091: { path: '$.data.records[112].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1092: { path: '$.data.records[113].status', lookup: { dictionary: statusCode } }
+  extract_0_1093: { path: '$.data.records[114].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1094: { path: '$.data.records[115].token', hash: sha256 }
+  extract_0_1095: { path: '$.data.records[116].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1096: { path: '$.data.records[117].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1097: { path: '$.data.records[118].text', normalize_string: true }
+  extract_0_1098: { path: '$.data.records[119].intValue', cast: int }
+  extract_0_1099: { path: '$.data.records[120].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1100: { path: '$.data.records[121].status', lookup: { dictionary: statusCode } }
+  extract_0_1101: { path: '$.data.records[122].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1102: { path: '$.data.records[123].token', hash: sha256 }
+  extract_0_1103: { path: '$.data.records[124].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1104: { path: '$.data.records[125].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1105: { path: '$.data.records[126].text', normalize_string: true }
+  extract_0_1106: { path: '$.data.records[127].intValue', cast: int }
+  extract_0_1107: { path: '$.data.records[128].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1108: { path: '$.data.records[129].status', lookup: { dictionary: statusCode } }
+  extract_0_1109: { path: '$.data.records[130].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1110: { path: '$.data.records[131].token', hash: sha256 }
+  extract_0_1111: { path: '$.data.records[132].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1112: { path: '$.data.records[133].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1113: { path: '$.data.records[134].text', normalize_string: true }
+  extract_0_1114: { path: '$.data.records[135].intValue', cast: int }
+  extract_0_1115: { path: '$.data.records[136].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1116: { path: '$.data.records[137].status', lookup: { dictionary: statusCode } }
+  extract_0_1117: { path: '$.data.records[138].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1118: { path: '$.data.records[139].token', hash: sha256 }
+  extract_0_1119: { path: '$.data.records[140].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1120: { path: '$.data.records[141].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1121: { path: '$.data.records[142].text', normalize_string: true }
+  extract_0_1122: { path: '$.data.records[143].intValue', cast: int }
+  extract_0_1123: { path: '$.data.records[144].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1124: { path: '$.data.records[145].status', lookup: { dictionary: statusCode } }
+  extract_0_1125: { path: '$.data.records[146].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1126: { path: '$.data.records[147].token', hash: sha256 }
+  extract_0_1127: { path: '$.data.records[148].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1128: { path: '$.data.records[149].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1129: { path: '$.data.records[150].text', normalize_string: true }
+  extract_0_1130: { path: '$.data.records[151].intValue', cast: int }
+  extract_0_1131: { path: '$.data.records[152].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1132: { path: '$.data.records[153].status', lookup: { dictionary: statusCode } }
+  extract_0_1133: { path: '$.data.records[154].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1134: { path: '$.data.records[155].token', hash: sha256 }
+  extract_0_1135: { path: '$.data.records[156].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1136: { path: '$.data.records[157].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1137: { path: '$.data.records[158].text', normalize_string: true }
+  extract_0_1138: { path: '$.data.records[159].intValue', cast: int }
+  extract_0_1139: { path: '$.data.records[160].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1140: { path: '$.data.records[161].status', lookup: { dictionary: statusCode } }
+  extract_0_1141: { path: '$.data.records[162].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1142: { path: '$.data.records[163].token', hash: sha256 }
+  extract_0_1143: { path: '$.data.records[164].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1144: { path: '$.data.records[165].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1145: { path: '$.data.records[166].text', normalize_string: true }
+  extract_0_1146: { path: '$.data.records[167].intValue', cast: int }
+  extract_0_1147: { path: '$.data.records[168].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1148: { path: '$.data.records[169].status', lookup: { dictionary: statusCode } }
+  extract_0_1149: { path: '$.data.records[170].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1150: { path: '$.data.records[171].token', hash: sha256 }
+  extract_0_1151: { path: '$.data.records[172].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1152: { path: '$.data.records[173].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1153: { path: '$.data.records[174].text', normalize_string: true }
+  extract_0_1154: { path: '$.data.records[175].intValue', cast: int }
+  extract_0_1155: { path: '$.data.records[176].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1156: { path: '$.data.records[177].status', lookup: { dictionary: statusCode } }
+  extract_0_1157: { path: '$.data.records[178].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1158: { path: '$.data.records[179].token', hash: sha256 }
+  extract_0_1159: { path: '$.data.records[180].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1160: { path: '$.data.records[181].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1161: { path: '$.data.records[182].text', normalize_string: true }
+  extract_0_1162: { path: '$.data.records[183].intValue', cast: int }
+  extract_0_1163: { path: '$.data.records[184].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1164: { path: '$.data.records[185].status', lookup: { dictionary: statusCode } }
+  extract_0_1165: { path: '$.data.records[186].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1166: { path: '$.data.records[187].token', hash: sha256 }
+  extract_0_1167: { path: '$.data.records[188].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1168: { path: '$.data.records[189].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1169: { path: '$.data.records[190].text', normalize_string: true }
+  extract_0_1170: { path: '$.data.records[191].intValue', cast: int }
+  extract_0_1171: { path: '$.data.records[192].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1172: { path: '$.data.records[193].status', lookup: { dictionary: statusCode } }
+  extract_0_1173: { path: '$.data.records[194].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1174: { path: '$.data.records[195].token', hash: sha256 }
+  extract_0_1175: { path: '$.data.records[196].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1176: { path: '$.data.records[197].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1177: { path: '$.data.records[198].text', normalize_string: true }
+  extract_0_1178: { path: '$.data.records[199].intValue', cast: int }
+  extract_0_1179: { path: '$.data.records[200].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1180: { path: '$.data.records[201].status', lookup: { dictionary: statusCode } }
+  extract_0_1181: { path: '$.data.records[202].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1182: { path: '$.data.records[203].token', hash: sha256 }
+  extract_0_1183: { path: '$.data.records[204].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1184: { path: '$.data.records[205].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1185: { path: '$.data.records[206].text', normalize_string: true }
+  extract_0_1186: { path: '$.data.records[207].intValue', cast: int }
+  extract_0_1187: { path: '$.data.records[208].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1188: { path: '$.data.records[209].status', lookup: { dictionary: statusCode } }
+  extract_0_1189: { path: '$.data.records[210].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1190: { path: '$.data.records[211].token', hash: sha256 }
+  extract_0_1191: { path: '$.data.records[212].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1192: { path: '$.data.records[213].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1193: { path: '$.data.records[214].text', normalize_string: true }
+  extract_0_1194: { path: '$.data.records[215].intValue', cast: int }
+  extract_0_1195: { path: '$.data.records[216].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1196: { path: '$.data.records[217].status', lookup: { dictionary: statusCode } }
+  extract_0_1197: { path: '$.data.records[218].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1198: { path: '$.data.records[219].token', hash: sha256 }
+  extract_0_1199: { path: '$.data.records[220].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1200: { path: '$.data.records[221].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1201: { path: '$.data.records[222].text', normalize_string: true }
+  extract_0_1202: { path: '$.data.records[223].intValue', cast: int }
+  extract_0_1203: { path: '$.data.records[224].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1204: { path: '$.data.records[225].status', lookup: { dictionary: statusCode } }
+  extract_0_1205: { path: '$.data.records[226].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1206: { path: '$.data.records[227].token', hash: sha256 }
+  extract_0_1207: { path: '$.data.records[228].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1208: { path: '$.data.records[229].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1209: { path: '$.data.records[230].text', normalize_string: true }
+  extract_0_1210: { path: '$.data.records[231].intValue', cast: int }
+  extract_0_1211: { path: '$.data.records[232].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1212: { path: '$.data.records[233].status', lookup: { dictionary: statusCode } }
+  extract_0_1213: { path: '$.data.records[234].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1214: { path: '$.data.records[235].token', hash: sha256 }
+  extract_0_1215: { path: '$.data.records[236].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1216: { path: '$.data.records[237].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1217: { path: '$.data.records[238].text', normalize_string: true }
+  extract_0_1218: { path: '$.data.records[239].intValue', cast: int }
+  extract_0_1219: { path: '$.data.records[240].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1220: { path: '$.data.records[241].status', lookup: { dictionary: statusCode } }
+  extract_0_1221: { path: '$.data.records[242].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1222: { path: '$.data.records[243].token', hash: sha256 }
+  extract_0_1223: { path: '$.data.records[244].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1224: { path: '$.data.records[245].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1225: { path: '$.data.records[246].text', normalize_string: true }
+  extract_0_1226: { path: '$.data.records[247].intValue', cast: int }
+  extract_0_1227: { path: '$.data.records[248].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1228: { path: '$.data.records[249].status', lookup: { dictionary: statusCode } }
+  extract_0_1229: { path: '$.data.records[250].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1230: { path: '$.data.records[251].token', hash: sha256 }
+  extract_0_1231: { path: '$.data.records[252].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1232: { path: '$.data.records[253].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1233: { path: '$.data.records[254].text', normalize_string: true }
+  extract_0_1234: { path: '$.data.records[255].intValue', cast: int }
+  extract_0_1235: { path: '$.data.records[256].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1236: { path: '$.data.records[257].status', lookup: { dictionary: statusCode } }
+  extract_0_1237: { path: '$.data.records[258].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1238: { path: '$.data.records[259].token', hash: sha256 }
+  extract_0_1239: { path: '$.data.records[260].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1240: { path: '$.data.records[261].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1241: { path: '$.data.records[262].text', normalize_string: true }
+  extract_0_1242: { path: '$.data.records[263].intValue', cast: int }
+  extract_0_1243: { path: '$.data.records[264].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1244: { path: '$.data.records[265].status', lookup: { dictionary: statusCode } }
+  extract_0_1245: { path: '$.data.records[266].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1246: { path: '$.data.records[267].token', hash: sha256 }
+  extract_0_1247: { path: '$.data.records[268].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1248: { path: '$.data.records[269].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1249: { path: '$.data.records[270].text', normalize_string: true }
+  extract_0_1250: { path: '$.data.records[271].intValue', cast: int }
+  extract_0_1251: { path: '$.data.records[272].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1252: { path: '$.data.records[273].status', lookup: { dictionary: statusCode } }
+  extract_0_1253: { path: '$.data.records[274].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1254: { path: '$.data.records[275].token', hash: sha256 }
+  extract_0_1255: { path: '$.data.records[276].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1256: { path: '$.data.records[277].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1257: { path: '$.data.records[278].text', normalize_string: true }
+  extract_0_1258: { path: '$.data.records[279].intValue', cast: int }
+  extract_0_1259: { path: '$.data.records[280].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1260: { path: '$.data.records[281].status', lookup: { dictionary: statusCode } }
+  extract_0_1261: { path: '$.data.records[282].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1262: { path: '$.data.records[283].token', hash: sha256 }
+  extract_0_1263: { path: '$.data.records[284].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1264: { path: '$.data.records[285].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1265: { path: '$.data.records[286].text', normalize_string: true }
+  extract_0_1266: { path: '$.data.records[287].intValue', cast: int }
+  extract_0_1267: { path: '$.data.records[288].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1268: { path: '$.data.records[289].status', lookup: { dictionary: statusCode } }
+  extract_0_1269: { path: '$.data.records[290].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1270: { path: '$.data.records[291].token', hash: sha256 }
+  extract_0_1271: { path: '$.data.records[292].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1272: { path: '$.data.records[293].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1273: { path: '$.data.records[294].text', normalize_string: true }
+  extract_0_1274: { path: '$.data.records[295].intValue', cast: int }
+  extract_0_1275: { path: '$.data.records[296].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1276: { path: '$.data.records[297].status', lookup: { dictionary: statusCode } }
+  extract_0_1277: { path: '$.data.records[298].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1278: { path: '$.data.records[299].token', hash: sha256 }
+  extract_0_1279: { path: '$.data.records[300].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1280: { path: '$.data.records[301].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1281: { path: '$.data.records[302].text', normalize_string: true }
+  extract_0_1282: { path: '$.data.records[303].intValue', cast: int }
+  extract_0_1283: { path: '$.data.records[304].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1284: { path: '$.data.records[305].status', lookup: { dictionary: statusCode } }
+  extract_0_1285: { path: '$.data.records[306].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1286: { path: '$.data.records[307].token', hash: sha256 }
+  extract_0_1287: { path: '$.data.records[308].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1288: { path: '$.data.records[309].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1289: { path: '$.data.records[310].text', normalize_string: true }
+  extract_0_1290: { path: '$.data.records[311].intValue', cast: int }
+  extract_0_1291: { path: '$.data.records[312].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1292: { path: '$.data.records[313].status', lookup: { dictionary: statusCode } }
+  extract_0_1293: { path: '$.data.records[314].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1294: { path: '$.data.records[315].token', hash: sha256 }
+  extract_0_1295: { path: '$.data.records[316].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1296: { path: '$.data.records[317].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1297: { path: '$.data.records[318].text', normalize_string: true }
+  extract_0_1298: { path: '$.data.records[319].intValue', cast: int }
+  extract_0_1299: { path: '$.data.records[320].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1300: { path: '$.data.records[321].status', lookup: { dictionary: statusCode } }
+  extract_0_1301: { path: '$.data.records[322].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1302: { path: '$.data.records[323].token', hash: sha256 }
+  extract_0_1303: { path: '$.data.records[324].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1304: { path: '$.data.records[325].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1305: { path: '$.data.records[326].text', normalize_string: true }
+  extract_0_1306: { path: '$.data.records[327].intValue', cast: int }
+  extract_0_1307: { path: '$.data.records[328].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1308: { path: '$.data.records[329].status', lookup: { dictionary: statusCode } }
+  extract_0_1309: { path: '$.data.records[330].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1310: { path: '$.data.records[331].token', hash: sha256 }
+  extract_0_1311: { path: '$.data.records[332].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1312: { path: '$.data.records[333].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1313: { path: '$.data.records[334].text', normalize_string: true }
+  extract_0_1314: { path: '$.data.records[335].intValue', cast: int }
+  extract_0_1315: { path: '$.data.records[336].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1316: { path: '$.data.records[337].status', lookup: { dictionary: statusCode } }
+  extract_0_1317: { path: '$.data.records[338].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1318: { path: '$.data.records[339].token', hash: sha256 }
+  extract_0_1319: { path: '$.data.records[340].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1320: { path: '$.data.records[341].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1321: { path: '$.data.records[342].text', normalize_string: true }
+  extract_0_1322: { path: '$.data.records[343].intValue', cast: int }
+  extract_0_1323: { path: '$.data.records[344].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1324: { path: '$.data.records[345].status', lookup: { dictionary: statusCode } }
+  extract_0_1325: { path: '$.data.records[346].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1326: { path: '$.data.records[347].token', hash: sha256 }
+  extract_0_1327: { path: '$.data.records[348].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1328: { path: '$.data.records[349].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1329: { path: '$.data.records[350].text', normalize_string: true }
+  extract_0_1330: { path: '$.data.records[351].intValue', cast: int }
+  extract_0_1331: { path: '$.data.records[352].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1332: { path: '$.data.records[353].status', lookup: { dictionary: statusCode } }
+  extract_0_1333: { path: '$.data.records[354].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1334: { path: '$.data.records[355].token', hash: sha256 }
+  extract_0_1335: { path: '$.data.records[356].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1336: { path: '$.data.records[357].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1337: { path: '$.data.records[358].text', normalize_string: true }
+  extract_0_1338: { path: '$.data.records[359].intValue', cast: int }
+  extract_0_1339: { path: '$.data.records[360].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1340: { path: '$.data.records[361].status', lookup: { dictionary: statusCode } }
+  extract_0_1341: { path: '$.data.records[362].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1342: { path: '$.data.records[363].token', hash: sha256 }
+  extract_0_1343: { path: '$.data.records[364].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1344: { path: '$.data.records[365].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1345: { path: '$.data.records[366].text', normalize_string: true }
+  extract_0_1346: { path: '$.data.records[367].intValue', cast: int }
+  extract_0_1347: { path: '$.data.records[368].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1348: { path: '$.data.records[369].status', lookup: { dictionary: statusCode } }
+  extract_0_1349: { path: '$.data.records[370].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1350: { path: '$.data.records[371].token', hash: sha256 }
+  extract_0_1351: { path: '$.data.records[372].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1352: { path: '$.data.records[373].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1353: { path: '$.data.records[374].text', normalize_string: true }
+  extract_0_1354: { path: '$.data.records[375].intValue', cast: int }
+  extract_0_1355: { path: '$.data.records[376].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1356: { path: '$.data.records[377].status', lookup: { dictionary: statusCode } }
+  extract_0_1357: { path: '$.data.records[378].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1358: { path: '$.data.records[379].token', hash: sha256 }
+  extract_0_1359: { path: '$.data.records[380].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1360: { path: '$.data.records[381].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1361: { path: '$.data.records[382].text', normalize_string: true }
+  extract_0_1362: { path: '$.data.records[383].intValue', cast: int }
+  extract_0_1363: { path: '$.data.records[384].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1364: { path: '$.data.records[385].status', lookup: { dictionary: statusCode } }
+  extract_0_1365: { path: '$.data.records[386].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1366: { path: '$.data.records[387].token', hash: sha256 }
+  extract_0_1367: { path: '$.data.records[388].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1368: { path: '$.data.records[389].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1369: { path: '$.data.records[390].text', normalize_string: true }
+  extract_0_1370: { path: '$.data.records[391].intValue', cast: int }
+  extract_0_1371: { path: '$.data.records[392].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1372: { path: '$.data.records[393].status', lookup: { dictionary: statusCode } }
+  extract_0_1373: { path: '$.data.records[394].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1374: { path: '$.data.records[395].token', hash: sha256 }
+  extract_0_1375: { path: '$.data.records[396].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1376: { path: '$.data.records[397].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1377: { path: '$.data.records[398].text', normalize_string: true }
+  extract_0_1378: { path: '$.data.records[399].intValue', cast: int }
+  extract_0_1379: { path: '$.data.records[400].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1380: { path: '$.data.records[401].status', lookup: { dictionary: statusCode } }
+  extract_0_1381: { path: '$.data.records[402].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1382: { path: '$.data.records[403].token', hash: sha256 }
+  extract_0_1383: { path: '$.data.records[404].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1384: { path: '$.data.records[405].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1385: { path: '$.data.records[406].text', normalize_string: true }
+  extract_0_1386: { path: '$.data.records[407].intValue', cast: int }
+  extract_0_1387: { path: '$.data.records[408].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1388: { path: '$.data.records[409].status', lookup: { dictionary: statusCode } }
+  extract_0_1389: { path: '$.data.records[410].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1390: { path: '$.data.records[411].token', hash: sha256 }
+  extract_0_1391: { path: '$.data.records[412].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1392: { path: '$.data.records[413].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1393: { path: '$.data.records[414].text', normalize_string: true }
+  extract_0_1394: { path: '$.data.records[415].intValue', cast: int }
+  extract_0_1395: { path: '$.data.records[416].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1396: { path: '$.data.records[417].status', lookup: { dictionary: statusCode } }
+  extract_0_1397: { path: '$.data.records[418].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1398: { path: '$.data.records[419].token', hash: sha256 }
+  extract_0_1399: { path: '$.data.records[420].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1400: { path: '$.data.records[421].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1401: { path: '$.data.records[422].text', normalize_string: true }
+  extract_0_1402: { path: '$.data.records[423].intValue', cast: int }
+  extract_0_1403: { path: '$.data.records[424].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1404: { path: '$.data.records[425].status', lookup: { dictionary: statusCode } }
+  extract_0_1405: { path: '$.data.records[426].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1406: { path: '$.data.records[427].token', hash: sha256 }
+  extract_0_1407: { path: '$.data.records[428].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1408: { path: '$.data.records[429].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1409: { path: '$.data.records[430].text', normalize_string: true }
+  extract_0_1410: { path: '$.data.records[431].intValue', cast: int }
+  extract_0_1411: { path: '$.data.records[432].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1412: { path: '$.data.records[433].status', lookup: { dictionary: statusCode } }
+  extract_0_1413: { path: '$.data.records[434].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1414: { path: '$.data.records[435].token', hash: sha256 }
+  extract_0_1415: { path: '$.data.records[436].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1416: { path: '$.data.records[437].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1417: { path: '$.data.records[438].text', normalize_string: true }
+  extract_0_1418: { path: '$.data.records[439].intValue', cast: int }
+  extract_0_1419: { path: '$.data.records[440].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1420: { path: '$.data.records[441].status', lookup: { dictionary: statusCode } }
+  extract_0_1421: { path: '$.data.records[442].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1422: { path: '$.data.records[443].token', hash: sha256 }
+  extract_0_1423: { path: '$.data.records[444].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1424: { path: '$.data.records[445].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1425: { path: '$.data.records[446].text', normalize_string: true }
+  extract_0_1426: { path: '$.data.records[447].intValue', cast: int }
+  extract_0_1427: { path: '$.data.records[448].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1428: { path: '$.data.records[449].status', lookup: { dictionary: statusCode } }
+  extract_0_1429: { path: '$.data.records[450].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1430: { path: '$.data.records[451].token', hash: sha256 }
+  extract_0_1431: { path: '$.data.records[452].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1432: { path: '$.data.records[453].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1433: { path: '$.data.records[454].text', normalize_string: true }
+  extract_0_1434: { path: '$.data.records[455].intValue', cast: int }
+  extract_0_1435: { path: '$.data.records[456].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1436: { path: '$.data.records[457].status', lookup: { dictionary: statusCode } }
+  extract_0_1437: { path: '$.data.records[458].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1438: { path: '$.data.records[459].token', hash: sha256 }
+  extract_0_1439: { path: '$.data.records[460].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1440: { path: '$.data.records[461].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1441: { path: '$.data.records[462].text', normalize_string: true }
+  extract_0_1442: { path: '$.data.records[463].intValue', cast: int }
+  extract_0_1443: { path: '$.data.records[464].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1444: { path: '$.data.records[465].status', lookup: { dictionary: statusCode } }
+  extract_0_1445: { path: '$.data.records[466].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1446: { path: '$.data.records[467].token', hash: sha256 }
+  extract_0_1447: { path: '$.data.records[468].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1448: { path: '$.data.records[469].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1449: { path: '$.data.records[470].text', normalize_string: true }
+  extract_0_1450: { path: '$.data.records[471].intValue', cast: int }
+  extract_0_1451: { path: '$.data.records[472].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1452: { path: '$.data.records[473].status', lookup: { dictionary: statusCode } }
+  extract_0_1453: { path: '$.data.records[474].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1454: { path: '$.data.records[475].token', hash: sha256 }
+  extract_0_1455: { path: '$.data.records[476].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1456: { path: '$.data.records[477].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1457: { path: '$.data.records[478].text', normalize_string: true }
+  extract_0_1458: { path: '$.data.records[479].intValue', cast: int }
+  extract_0_1459: { path: '$.data.records[480].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1460: { path: '$.data.records[481].status', lookup: { dictionary: statusCode } }
+  extract_0_1461: { path: '$.data.records[482].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1462: { path: '$.data.records[483].token', hash: sha256 }
+  extract_0_1463: { path: '$.data.records[484].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1464: { path: '$.data.records[485].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1465: { path: '$.data.records[486].text', normalize_string: true }
+  extract_0_1466: { path: '$.data.records[487].intValue', cast: int }
+  extract_0_1467: { path: '$.data.records[488].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1468: { path: '$.data.records[489].status', lookup: { dictionary: statusCode } }
+  extract_0_1469: { path: '$.data.records[490].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1470: { path: '$.data.records[491].token', hash: sha256 }
+  extract_0_1471: { path: '$.data.records[492].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1472: { path: '$.data.records[493].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1473: { path: '$.data.records[494].text', normalize_string: true }
+  extract_0_1474: { path: '$.data.records[495].intValue', cast: int }
+  extract_0_1475: { path: '$.data.records[496].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1476: { path: '$.data.records[497].status', lookup: { dictionary: statusCode } }
+  extract_0_1477: { path: '$.data.records[498].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1478: { path: '$.data.records[499].token', hash: sha256 }
+  extract_0_1479: { path: '$.data.records[500].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1480: { path: '$.data.records[501].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1481: { path: '$.data.records[502].text', normalize_string: true }
+  extract_0_1482: { path: '$.data.records[503].intValue', cast: int }
+  extract_0_1483: { path: '$.data.records[504].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1484: { path: '$.data.records[505].status', lookup: { dictionary: statusCode } }
+  extract_0_1485: { path: '$.data.records[506].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1486: { path: '$.data.records[507].token', hash: sha256 }
+  extract_0_1487: { path: '$.data.records[508].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1488: { path: '$.data.records[509].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1489: { path: '$.data.records[510].text', normalize_string: true }
+  extract_0_1490: { path: '$.data.records[511].intValue', cast: int }
+  extract_0_1491: { path: '$.data.records[512].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1492: { path: '$.data.records[513].status', lookup: { dictionary: statusCode } }
+  extract_0_1493: { path: '$.data.records[514].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1494: { path: '$.data.records[515].token', hash: sha256 }
+  extract_0_1495: { path: '$.data.records[516].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1496: { path: '$.data.records[517].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1497: { path: '$.data.records[518].text', normalize_string: true }
+  extract_0_1498: { path: '$.data.records[519].intValue', cast: int }
+  extract_0_1499: { path: '$.data.records[520].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1500: { path: '$.data.records[521].status', lookup: { dictionary: statusCode } }
+  extract_0_1501: { path: '$.data.records[522].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1502: { path: '$.data.records[523].token', hash: sha256 }
+  extract_0_1503: { path: '$.data.records[524].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1504: { path: '$.data.records[525].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1505: { path: '$.data.records[526].text', normalize_string: true }
+  extract_0_1506: { path: '$.data.records[527].intValue', cast: int }
+  extract_0_1507: { path: '$.data.records[528].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1508: { path: '$.data.records[529].status', lookup: { dictionary: statusCode } }
+  extract_0_1509: { path: '$.data.records[530].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1510: { path: '$.data.records[531].token', hash: sha256 }
+  extract_0_1511: { path: '$.data.records[532].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1512: { path: '$.data.records[533].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1513: { path: '$.data.records[534].text', normalize_string: true }
+  extract_0_1514: { path: '$.data.records[535].intValue', cast: int }
+  extract_0_1515: { path: '$.data.records[536].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1516: { path: '$.data.records[537].status', lookup: { dictionary: statusCode } }
+  extract_0_1517: { path: '$.data.records[538].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1518: { path: '$.data.records[539].token', hash: sha256 }
+  extract_0_1519: { path: '$.data.records[540].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1520: { path: '$.data.records[541].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1521: { path: '$.data.records[542].text', normalize_string: true }
+  extract_0_1522: { path: '$.data.records[543].intValue', cast: int }
+  extract_0_1523: { path: '$.data.records[544].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1524: { path: '$.data.records[545].status', lookup: { dictionary: statusCode } }
+  extract_0_1525: { path: '$.data.records[546].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1526: { path: '$.data.records[547].token', hash: sha256 }
+  extract_0_1527: { path: '$.data.records[548].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1528: { path: '$.data.records[549].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1529: { path: '$.data.records[550].text', normalize_string: true }
+  extract_0_1530: { path: '$.data.records[551].intValue', cast: int }
+  extract_0_1531: { path: '$.data.records[552].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1532: { path: '$.data.records[553].status', lookup: { dictionary: statusCode } }
+  extract_0_1533: { path: '$.data.records[554].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1534: { path: '$.data.records[555].token', hash: sha256 }
+  extract_0_1535: { path: '$.data.records[556].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1536: { path: '$.data.records[557].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1537: { path: '$.data.records[558].text', normalize_string: true }
+  extract_0_1538: { path: '$.data.records[559].intValue', cast: int }
+  extract_0_1539: { path: '$.data.records[560].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1540: { path: '$.data.records[561].status', lookup: { dictionary: statusCode } }
+  extract_0_1541: { path: '$.data.records[562].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1542: { path: '$.data.records[563].token', hash: sha256 }
+  extract_0_1543: { path: '$.data.records[564].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1544: { path: '$.data.records[565].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1545: { path: '$.data.records[566].text', normalize_string: true }
+  extract_0_1546: { path: '$.data.records[567].intValue', cast: int }
+  extract_0_1547: { path: '$.data.records[568].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1548: { path: '$.data.records[569].status', lookup: { dictionary: statusCode } }
+  extract_0_1549: { path: '$.data.records[570].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1550: { path: '$.data.records[571].token', hash: sha256 }
+  extract_0_1551: { path: '$.data.records[572].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1552: { path: '$.data.records[573].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1553: { path: '$.data.records[574].text', normalize_string: true }
+  extract_0_1554: { path: '$.data.records[575].intValue', cast: int }
+  extract_0_1555: { path: '$.data.records[576].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1556: { path: '$.data.records[577].status', lookup: { dictionary: statusCode } }
+  extract_0_1557: { path: '$.data.records[578].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1558: { path: '$.data.records[579].token', hash: sha256 }
+  extract_0_1559: { path: '$.data.records[580].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1560: { path: '$.data.records[581].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1561: { path: '$.data.records[582].text', normalize_string: true }
+  extract_0_1562: { path: '$.data.records[583].intValue', cast: int }
+  extract_0_1563: { path: '$.data.records[584].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1564: { path: '$.data.records[585].status', lookup: { dictionary: statusCode } }
+  extract_0_1565: { path: '$.data.records[586].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1566: { path: '$.data.records[587].token', hash: sha256 }
+  extract_0_1567: { path: '$.data.records[588].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1568: { path: '$.data.records[589].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1569: { path: '$.data.records[590].text', normalize_string: true }
+  extract_0_1570: { path: '$.data.records[591].intValue', cast: int }
+  extract_0_1571: { path: '$.data.records[592].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1572: { path: '$.data.records[593].status', lookup: { dictionary: statusCode } }
+  extract_0_1573: { path: '$.data.records[594].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1574: { path: '$.data.records[595].token', hash: sha256 }
+  extract_0_1575: { path: '$.data.records[596].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1576: { path: '$.data.records[597].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1577: { path: '$.data.records[598].text', normalize_string: true }
+  extract_0_1578: { path: '$.data.records[599].intValue', cast: int }
+  extract_0_1579: { path: '$.data.records[600].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1580: { path: '$.data.records[601].status', lookup: { dictionary: statusCode } }
+  extract_0_1581: { path: '$.data.records[602].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1582: { path: '$.data.records[603].token', hash: sha256 }
+  extract_0_1583: { path: '$.data.records[604].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1584: { path: '$.data.records[605].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1585: { path: '$.data.records[606].text', normalize_string: true }
+  extract_0_1586: { path: '$.data.records[607].intValue', cast: int }
+  extract_0_1587: { path: '$.data.records[608].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1588: { path: '$.data.records[609].status', lookup: { dictionary: statusCode } }
+  extract_0_1589: { path: '$.data.records[610].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1590: { path: '$.data.records[611].token', hash: sha256 }
+  extract_0_1591: { path: '$.data.records[612].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1592: { path: '$.data.records[613].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1593: { path: '$.data.records[614].text', normalize_string: true }
+  extract_0_1594: { path: '$.data.records[615].intValue', cast: int }
+  extract_0_1595: { path: '$.data.records[616].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1596: { path: '$.data.records[617].status', lookup: { dictionary: statusCode } }
+  extract_0_1597: { path: '$.data.records[618].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1598: { path: '$.data.records[619].token', hash: sha256 }
+  extract_0_1599: { path: '$.data.records[620].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1600: { path: '$.data.records[621].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1601: { path: '$.data.records[622].text', normalize_string: true }
+  extract_0_1602: { path: '$.data.records[623].intValue', cast: int }
+  extract_0_1603: { path: '$.data.records[624].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1604: { path: '$.data.records[625].status', lookup: { dictionary: statusCode } }
+  extract_0_1605: { path: '$.data.records[626].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1606: { path: '$.data.records[627].token', hash: sha256 }
+  extract_0_1607: { path: '$.data.records[628].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1608: { path: '$.data.records[629].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1609: { path: '$.data.records[630].text', normalize_string: true }
+  extract_0_1610: { path: '$.data.records[631].intValue', cast: int }
+  extract_0_1611: { path: '$.data.records[632].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1612: { path: '$.data.records[633].status', lookup: { dictionary: statusCode } }
+  extract_0_1613: { path: '$.data.records[634].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1614: { path: '$.data.records[635].token', hash: sha256 }
+  extract_0_1615: { path: '$.data.records[636].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1616: { path: '$.data.records[637].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1617: { path: '$.data.records[638].text', normalize_string: true }
+  extract_0_1618: { path: '$.data.records[639].intValue', cast: int }
+  extract_0_1619: { path: '$.data.records[640].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1620: { path: '$.data.records[641].status', lookup: { dictionary: statusCode } }
+  extract_0_1621: { path: '$.data.records[642].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1622: { path: '$.data.records[643].token', hash: sha256 }
+  extract_0_1623: { path: '$.data.records[644].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1624: { path: '$.data.records[645].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1625: { path: '$.data.records[646].text', normalize_string: true }
+  extract_0_1626: { path: '$.data.records[647].intValue', cast: int }
+  extract_0_1627: { path: '$.data.records[648].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1628: { path: '$.data.records[649].status', lookup: { dictionary: statusCode } }
+  extract_0_1629: { path: '$.data.records[650].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1630: { path: '$.data.records[651].token', hash: sha256 }
+  extract_0_1631: { path: '$.data.records[652].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1632: { path: '$.data.records[653].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1633: { path: '$.data.records[654].text', normalize_string: true }
+  extract_0_1634: { path: '$.data.records[655].intValue', cast: int }
+  extract_0_1635: { path: '$.data.records[656].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1636: { path: '$.data.records[657].status', lookup: { dictionary: statusCode } }
+  extract_0_1637: { path: '$.data.records[658].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1638: { path: '$.data.records[659].token', hash: sha256 }
+  extract_0_1639: { path: '$.data.records[660].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1640: { path: '$.data.records[661].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1641: { path: '$.data.records[662].text', normalize_string: true }
+  extract_0_1642: { path: '$.data.records[663].intValue', cast: int }
+  extract_0_1643: { path: '$.data.records[664].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1644: { path: '$.data.records[665].status', lookup: { dictionary: statusCode } }
+  extract_0_1645: { path: '$.data.records[666].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1646: { path: '$.data.records[667].token', hash: sha256 }
+  extract_0_1647: { path: '$.data.records[668].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1648: { path: '$.data.records[669].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1649: { path: '$.data.records[670].text', normalize_string: true }
+  extract_0_1650: { path: '$.data.records[671].intValue', cast: int }
+  extract_0_1651: { path: '$.data.records[672].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1652: { path: '$.data.records[673].status', lookup: { dictionary: statusCode } }
+  extract_0_1653: { path: '$.data.records[674].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1654: { path: '$.data.records[675].token', hash: sha256 }
+  extract_0_1655: { path: '$.data.records[676].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1656: { path: '$.data.records[677].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1657: { path: '$.data.records[678].text', normalize_string: true }
+  extract_0_1658: { path: '$.data.records[679].intValue', cast: int }
+  extract_0_1659: { path: '$.data.records[680].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1660: { path: '$.data.records[681].status', lookup: { dictionary: statusCode } }
+  extract_0_1661: { path: '$.data.records[682].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1662: { path: '$.data.records[683].token', hash: sha256 }
+  extract_0_1663: { path: '$.data.records[684].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1664: { path: '$.data.records[685].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1665: { path: '$.data.records[686].text', normalize_string: true }
+  extract_0_1666: { path: '$.data.records[687].intValue', cast: int }
+  extract_0_1667: { path: '$.data.records[688].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1668: { path: '$.data.records[689].status', lookup: { dictionary: statusCode } }
+  extract_0_1669: { path: '$.data.records[690].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1670: { path: '$.data.records[691].token', hash: sha256 }
+  extract_0_1671: { path: '$.data.records[692].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1672: { path: '$.data.records[693].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1673: { path: '$.data.records[694].text', normalize_string: true }
+  extract_0_1674: { path: '$.data.records[695].intValue', cast: int }
+  extract_0_1675: { path: '$.data.records[696].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1676: { path: '$.data.records[697].status', lookup: { dictionary: statusCode } }
+  extract_0_1677: { path: '$.data.records[698].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1678: { path: '$.data.records[699].token', hash: sha256 }
+  extract_0_1679: { path: '$.data.records[700].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1680: { path: '$.data.records[701].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1681: { path: '$.data.records[702].text', normalize_string: true }
+  extract_0_1682: { path: '$.data.records[703].intValue', cast: int }
+  extract_0_1683: { path: '$.data.records[704].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1684: { path: '$.data.records[705].status', lookup: { dictionary: statusCode } }
+  extract_0_1685: { path: '$.data.records[706].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1686: { path: '$.data.records[707].token', hash: sha256 }
+  extract_0_1687: { path: '$.data.records[708].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1688: { path: '$.data.records[709].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1689: { path: '$.data.records[710].text', normalize_string: true }
+  extract_0_1690: { path: '$.data.records[711].intValue', cast: int }
+  extract_0_1691: { path: '$.data.records[712].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1692: { path: '$.data.records[713].status', lookup: { dictionary: statusCode } }
+  extract_0_1693: { path: '$.data.records[714].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1694: { path: '$.data.records[715].token', hash: sha256 }
+  extract_0_1695: { path: '$.data.records[716].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1696: { path: '$.data.records[717].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1697: { path: '$.data.records[718].text', normalize_string: true }
+  extract_0_1698: { path: '$.data.records[719].intValue', cast: int }
+  extract_0_1699: { path: '$.data.records[720].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1700: { path: '$.data.records[721].status', lookup: { dictionary: statusCode } }
+  extract_0_1701: { path: '$.data.records[722].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1702: { path: '$.data.records[723].token', hash: sha256 }
+  extract_0_1703: { path: '$.data.records[724].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1704: { path: '$.data.records[725].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1705: { path: '$.data.records[726].text', normalize_string: true }
+  extract_0_1706: { path: '$.data.records[727].intValue', cast: int }
+  extract_0_1707: { path: '$.data.records[728].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1708: { path: '$.data.records[729].status', lookup: { dictionary: statusCode } }
+  extract_0_1709: { path: '$.data.records[730].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1710: { path: '$.data.records[731].token', hash: sha256 }
+  extract_0_1711: { path: '$.data.records[732].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1712: { path: '$.data.records[733].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1713: { path: '$.data.records[734].text', normalize_string: true }
+  extract_0_1714: { path: '$.data.records[735].intValue', cast: int }
+  extract_0_1715: { path: '$.data.records[736].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1716: { path: '$.data.records[737].status', lookup: { dictionary: statusCode } }
+  extract_0_1717: { path: '$.data.records[738].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1718: { path: '$.data.records[739].token', hash: sha256 }
+  extract_0_1719: { path: '$.data.records[740].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1720: { path: '$.data.records[741].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1721: { path: '$.data.records[742].text', normalize_string: true }
+  extract_0_1722: { path: '$.data.records[743].intValue', cast: int }
+  extract_0_1723: { path: '$.data.records[744].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1724: { path: '$.data.records[745].status', lookup: { dictionary: statusCode } }
+  extract_0_1725: { path: '$.data.records[746].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1726: { path: '$.data.records[747].token', hash: sha256 }
+  extract_0_1727: { path: '$.data.records[748].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1728: { path: '$.data.records[749].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1729: { path: '$.data.records[750].text', normalize_string: true }
+  extract_0_1730: { path: '$.data.records[751].intValue', cast: int }
+  extract_0_1731: { path: '$.data.records[752].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1732: { path: '$.data.records[753].status', lookup: { dictionary: statusCode } }
+  extract_0_1733: { path: '$.data.records[754].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1734: { path: '$.data.records[755].token', hash: sha256 }
+  extract_0_1735: { path: '$.data.records[756].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1736: { path: '$.data.records[757].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1737: { path: '$.data.records[758].text', normalize_string: true }
+  extract_0_1738: { path: '$.data.records[759].intValue', cast: int }
+  extract_0_1739: { path: '$.data.records[760].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1740: { path: '$.data.records[761].status', lookup: { dictionary: statusCode } }
+  extract_0_1741: { path: '$.data.records[762].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1742: { path: '$.data.records[763].token', hash: sha256 }
+  extract_0_1743: { path: '$.data.records[764].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1744: { path: '$.data.records[765].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1745: { path: '$.data.records[766].text', normalize_string: true }
+  extract_0_1746: { path: '$.data.records[767].intValue', cast: int }
+  extract_0_1747: { path: '$.data.records[768].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1748: { path: '$.data.records[769].status', lookup: { dictionary: statusCode } }
+  extract_0_1749: { path: '$.data.records[770].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1750: { path: '$.data.records[771].token', hash: sha256 }
+  extract_0_1751: { path: '$.data.records[772].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1752: { path: '$.data.records[773].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1753: { path: '$.data.records[774].text', normalize_string: true }
+  extract_0_1754: { path: '$.data.records[775].intValue', cast: int }
+  extract_0_1755: { path: '$.data.records[776].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1756: { path: '$.data.records[777].status', lookup: { dictionary: statusCode } }
+  extract_0_1757: { path: '$.data.records[778].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1758: { path: '$.data.records[779].token', hash: sha256 }
+  extract_0_1759: { path: '$.data.records[780].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1760: { path: '$.data.records[781].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1761: { path: '$.data.records[782].text', normalize_string: true }
+  extract_0_1762: { path: '$.data.records[783].intValue', cast: int }
+  extract_0_1763: { path: '$.data.records[784].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1764: { path: '$.data.records[785].status', lookup: { dictionary: statusCode } }
+  extract_0_1765: { path: '$.data.records[786].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1766: { path: '$.data.records[787].token', hash: sha256 }
+  extract_0_1767: { path: '$.data.records[788].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1768: { path: '$.data.records[789].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1769: { path: '$.data.records[790].text', normalize_string: true }
+  extract_0_1770: { path: '$.data.records[791].intValue', cast: int }
+  extract_0_1771: { path: '$.data.records[792].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1772: { path: '$.data.records[793].status', lookup: { dictionary: statusCode } }
+  extract_0_1773: { path: '$.data.records[794].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1774: { path: '$.data.records[795].token', hash: sha256 }
+  extract_0_1775: { path: '$.data.records[796].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1776: { path: '$.data.records[797].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1777: { path: '$.data.records[798].text', normalize_string: true }
+  extract_0_1778: { path: '$.data.records[799].intValue', cast: int }
+  extract_0_1779: { path: '$.data.records[800].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1780: { path: '$.data.records[801].status', lookup: { dictionary: statusCode } }
+  extract_0_1781: { path: '$.data.records[802].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1782: { path: '$.data.records[803].token', hash: sha256 }
+  extract_0_1783: { path: '$.data.records[804].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1784: { path: '$.data.records[805].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1785: { path: '$.data.records[806].text', normalize_string: true }
+  extract_0_1786: { path: '$.data.records[807].intValue', cast: int }
+  extract_0_1787: { path: '$.data.records[808].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1788: { path: '$.data.records[809].status', lookup: { dictionary: statusCode } }
+  extract_0_1789: { path: '$.data.records[810].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1790: { path: '$.data.records[811].token', hash: sha256 }
+  extract_0_1791: { path: '$.data.records[812].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1792: { path: '$.data.records[813].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1793: { path: '$.data.records[814].text', normalize_string: true }
+  extract_0_1794: { path: '$.data.records[815].intValue', cast: int }
+  extract_0_1795: { path: '$.data.records[816].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1796: { path: '$.data.records[817].status', lookup: { dictionary: statusCode } }
+  extract_0_1797: { path: '$.data.records[818].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1798: { path: '$.data.records[819].token', hash: sha256 }
+  extract_0_1799: { path: '$.data.records[820].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1800: { path: '$.data.records[821].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1801: { path: '$.data.records[822].text', normalize_string: true }
+  extract_0_1802: { path: '$.data.records[823].intValue', cast: int }
+  extract_0_1803: { path: '$.data.records[824].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1804: { path: '$.data.records[825].status', lookup: { dictionary: statusCode } }
+  extract_0_1805: { path: '$.data.records[826].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1806: { path: '$.data.records[827].token', hash: sha256 }
+  extract_0_1807: { path: '$.data.records[828].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1808: { path: '$.data.records[829].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1809: { path: '$.data.records[830].text', normalize_string: true }
+  extract_0_1810: { path: '$.data.records[831].intValue', cast: int }
+  extract_0_1811: { path: '$.data.records[832].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1812: { path: '$.data.records[833].status', lookup: { dictionary: statusCode } }
+  extract_0_1813: { path: '$.data.records[834].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1814: { path: '$.data.records[835].token', hash: sha256 }
+  extract_0_1815: { path: '$.data.records[836].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1816: { path: '$.data.records[837].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1817: { path: '$.data.records[838].text', normalize_string: true }
+  extract_0_1818: { path: '$.data.records[839].intValue', cast: int }
+  extract_0_1819: { path: '$.data.records[840].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1820: { path: '$.data.records[841].status', lookup: { dictionary: statusCode } }
+  extract_0_1821: { path: '$.data.records[842].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1822: { path: '$.data.records[843].token', hash: sha256 }
+  extract_0_1823: { path: '$.data.records[844].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1824: { path: '$.data.records[845].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1825: { path: '$.data.records[846].text', normalize_string: true }
+  extract_0_1826: { path: '$.data.records[847].intValue', cast: int }
+  extract_0_1827: { path: '$.data.records[848].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1828: { path: '$.data.records[849].status', lookup: { dictionary: statusCode } }
+  extract_0_1829: { path: '$.data.records[850].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1830: { path: '$.data.records[851].token', hash: sha256 }
+  extract_0_1831: { path: '$.data.records[852].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1832: { path: '$.data.records[853].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1833: { path: '$.data.records[854].text', normalize_string: true }
+  extract_0_1834: { path: '$.data.records[855].intValue', cast: int }
+  extract_0_1835: { path: '$.data.records[856].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1836: { path: '$.data.records[857].status', lookup: { dictionary: statusCode } }
+  extract_0_1837: { path: '$.data.records[858].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1838: { path: '$.data.records[859].token', hash: sha256 }
+  extract_0_1839: { path: '$.data.records[860].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1840: { path: '$.data.records[861].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1841: { path: '$.data.records[862].text', normalize_string: true }
+  extract_0_1842: { path: '$.data.records[863].intValue', cast: int }
+  extract_0_1843: { path: '$.data.records[864].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1844: { path: '$.data.records[865].status', lookup: { dictionary: statusCode } }
+  extract_0_1845: { path: '$.data.records[866].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1846: { path: '$.data.records[867].token', hash: sha256 }
+  extract_0_1847: { path: '$.data.records[868].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1848: { path: '$.data.records[869].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1849: { path: '$.data.records[870].text', normalize_string: true }
+  extract_0_1850: { path: '$.data.records[871].intValue', cast: int }
+  extract_0_1851: { path: '$.data.records[872].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1852: { path: '$.data.records[873].status', lookup: { dictionary: statusCode } }
+  extract_0_1853: { path: '$.data.records[874].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1854: { path: '$.data.records[875].token', hash: sha256 }
+  extract_0_1855: { path: '$.data.records[876].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1856: { path: '$.data.records[877].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1857: { path: '$.data.records[878].text', normalize_string: true }
+  extract_0_1858: { path: '$.data.records[879].intValue', cast: int }
+  extract_0_1859: { path: '$.data.records[880].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1860: { path: '$.data.records[881].status', lookup: { dictionary: statusCode } }
+  extract_0_1861: { path: '$.data.records[882].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1862: { path: '$.data.records[883].token', hash: sha256 }
+  extract_0_1863: { path: '$.data.records[884].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1864: { path: '$.data.records[885].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1865: { path: '$.data.records[886].text', normalize_string: true }
+  extract_0_1866: { path: '$.data.records[887].intValue', cast: int }
+  extract_0_1867: { path: '$.data.records[888].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1868: { path: '$.data.records[889].status', lookup: { dictionary: statusCode } }
+  extract_0_1869: { path: '$.data.records[890].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1870: { path: '$.data.records[891].token', hash: sha256 }
+  extract_0_1871: { path: '$.data.records[892].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1872: { path: '$.data.records[893].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1873: { path: '$.data.records[894].text', normalize_string: true }
+  extract_0_1874: { path: '$.data.records[895].intValue', cast: int }
+  extract_0_1875: { path: '$.data.records[896].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1876: { path: '$.data.records[897].status', lookup: { dictionary: statusCode } }
+  extract_0_1877: { path: '$.data.records[898].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1878: { path: '$.data.records[899].token', hash: sha256 }
+  extract_0_1879: { path: '$.data.records[0].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1880: { path: '$.data.records[1].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1881: { path: '$.data.records[2].text', normalize_string: true }
+  extract_0_1882: { path: '$.data.records[3].intValue', cast: int }
+  extract_0_1883: { path: '$.data.records[4].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1884: { path: '$.data.records[5].status', lookup: { dictionary: statusCode } }
+  extract_0_1885: { path: '$.data.records[6].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1886: { path: '$.data.records[7].token', hash: sha256 }
+  extract_0_1887: { path: '$.data.records[8].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1888: { path: '$.data.records[9].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1889: { path: '$.data.records[10].text', normalize_string: true }
+  extract_0_1890: { path: '$.data.records[11].intValue', cast: int }
+  extract_0_1891: { path: '$.data.records[12].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1892: { path: '$.data.records[13].status', lookup: { dictionary: statusCode } }
+  extract_0_1893: { path: '$.data.records[14].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1894: { path: '$.data.records[15].token', hash: sha256 }
+  extract_0_1895: { path: '$.data.records[16].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1896: { path: '$.data.records[17].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1897: { path: '$.data.records[18].text', normalize_string: true }
+  extract_0_1898: { path: '$.data.records[19].intValue', cast: int }
+  extract_0_1899: { path: '$.data.records[20].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1900: { path: '$.data.records[21].status', lookup: { dictionary: statusCode } }
+  extract_0_1901: { path: '$.data.records[22].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1902: { path: '$.data.records[23].token', hash: sha256 }
+  extract_0_1903: { path: '$.data.records[24].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1904: { path: '$.data.records[25].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1905: { path: '$.data.records[26].text', normalize_string: true }
+  extract_0_1906: { path: '$.data.records[27].intValue', cast: int }
+  extract_0_1907: { path: '$.data.records[28].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1908: { path: '$.data.records[29].status', lookup: { dictionary: statusCode } }
+  extract_0_1909: { path: '$.data.records[30].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1910: { path: '$.data.records[31].token', hash: sha256 }
+  extract_0_1911: { path: '$.data.records[32].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1912: { path: '$.data.records[33].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1913: { path: '$.data.records[34].text', normalize_string: true }
+  extract_0_1914: { path: '$.data.records[35].intValue', cast: int }
+  extract_0_1915: { path: '$.data.records[36].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1916: { path: '$.data.records[37].status', lookup: { dictionary: statusCode } }
+  extract_0_1917: { path: '$.data.records[38].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1918: { path: '$.data.records[39].token', hash: sha256 }
+  extract_0_1919: { path: '$.data.records[40].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1920: { path: '$.data.records[41].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1921: { path: '$.data.records[42].text', normalize_string: true }
+  extract_0_1922: { path: '$.data.records[43].intValue', cast: int }
+  extract_0_1923: { path: '$.data.records[44].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1924: { path: '$.data.records[45].status', lookup: { dictionary: statusCode } }
+  extract_0_1925: { path: '$.data.records[46].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1926: { path: '$.data.records[47].token', hash: sha256 }
+  extract_0_1927: { path: '$.data.records[48].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1928: { path: '$.data.records[49].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1929: { path: '$.data.records[50].text', normalize_string: true }
+  extract_0_1930: { path: '$.data.records[51].intValue', cast: int }
+  extract_0_1931: { path: '$.data.records[52].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1932: { path: '$.data.records[53].status', lookup: { dictionary: statusCode } }
+  extract_0_1933: { path: '$.data.records[54].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1934: { path: '$.data.records[55].token', hash: sha256 }
+  extract_0_1935: { path: '$.data.records[56].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1936: { path: '$.data.records[57].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1937: { path: '$.data.records[58].text', normalize_string: true }
+  extract_0_1938: { path: '$.data.records[59].intValue', cast: int }
+  extract_0_1939: { path: '$.data.records[60].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1940: { path: '$.data.records[61].status', lookup: { dictionary: statusCode } }
+  extract_0_1941: { path: '$.data.records[62].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1942: { path: '$.data.records[63].token', hash: sha256 }
+  extract_0_1943: { path: '$.data.records[64].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1944: { path: '$.data.records[65].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1945: { path: '$.data.records[66].text', normalize_string: true }
+  extract_0_1946: { path: '$.data.records[67].intValue', cast: int }
+  extract_0_1947: { path: '$.data.records[68].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1948: { path: '$.data.records[69].status', lookup: { dictionary: statusCode } }
+  extract_0_1949: { path: '$.data.records[70].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1950: { path: '$.data.records[71].token', hash: sha256 }
+  extract_0_1951: { path: '$.data.records[72].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1952: { path: '$.data.records[73].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1953: { path: '$.data.records[74].text', normalize_string: true }
+  extract_0_1954: { path: '$.data.records[75].intValue', cast: int }
+  extract_0_1955: { path: '$.data.records[76].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1956: { path: '$.data.records[77].status', lookup: { dictionary: statusCode } }
+  extract_0_1957: { path: '$.data.records[78].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1958: { path: '$.data.records[79].token', hash: sha256 }
+  extract_0_1959: { path: '$.data.records[80].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1960: { path: '$.data.records[81].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1961: { path: '$.data.records[82].text', normalize_string: true }
+  extract_0_1962: { path: '$.data.records[83].intValue', cast: int }
+  extract_0_1963: { path: '$.data.records[84].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1964: { path: '$.data.records[85].status', lookup: { dictionary: statusCode } }
+  extract_0_1965: { path: '$.data.records[86].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1966: { path: '$.data.records[87].token', hash: sha256 }
+  extract_0_1967: { path: '$.data.records[88].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1968: { path: '$.data.records[89].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1969: { path: '$.data.records[90].text', normalize_string: true }
+  extract_0_1970: { path: '$.data.records[91].intValue', cast: int }
+  extract_0_1971: { path: '$.data.records[92].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1972: { path: '$.data.records[93].status', lookup: { dictionary: statusCode } }
+  extract_0_1973: { path: '$.data.records[94].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1974: { path: '$.data.records[95].token', hash: sha256 }
+  extract_0_1975: { path: '$.data.records[96].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1976: { path: '$.data.records[97].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1977: { path: '$.data.records[98].text', normalize_string: true }
+  extract_0_1978: { path: '$.data.records[99].intValue', cast: int }
+  extract_0_1979: { path: '$.data.records[100].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1980: { path: '$.data.records[101].status', lookup: { dictionary: statusCode } }
+  extract_0_1981: { path: '$.data.records[102].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1982: { path: '$.data.records[103].token', hash: sha256 }
+  extract_0_1983: { path: '$.data.records[104].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1984: { path: '$.data.records[105].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1985: { path: '$.data.records[106].text', normalize_string: true }
+  extract_0_1986: { path: '$.data.records[107].intValue', cast: int }
+  extract_0_1987: { path: '$.data.records[108].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1988: { path: '$.data.records[109].status', lookup: { dictionary: statusCode } }
+  extract_0_1989: { path: '$.data.records[110].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1990: { path: '$.data.records[111].token', hash: sha256 }
+  extract_0_1991: { path: '$.data.records[112].tags[*]', array_mode: JOIN, delimiter: '|' }
+  extract_0_1992: { path: '$.data.records[113].nested.l01.l02.l03.l04.l05.l06.l07.l08.l09.deepValue' }
+  extract_0_1993: { path: '$.data.records[114].text', normalize_string: true }
+  extract_0_1994: { path: '$.data.records[115].intValue', cast: int }
+  extract_0_1995: { path: '$.data.records[116].decimalValue', cast: decimal, decimalScale: 2, decimalScalePolicy: ROUND }
+  extract_0_1996: { path: '$.data.records[117].status', lookup: { dictionary: statusCode } }
+  extract_0_1997: { path: '$.data.records[118].email', regex_extract: '([^@]+)@.*' }
+  extract_0_1998: { path: '$.data.records[119].token', hash: sha256 }
+  extract_0_1999: { path: '$.data.records[120].tags[*]', array_mode: JOIN, delimiter: '|' }
