@@ -1,0 +1,27 @@
+{
+  "status": "MEASURED_NOT_QUALIFIED",
+  "originalEvaluatorStatus": "PROVISIONAL_REJECTED",
+  "checksMet": 9,
+  "checksTotal": 12,
+  "aggregation": "median-of-three-independent-launches",
+  "groups": {
+    "A": "clean average latency",
+    "B": "percentiles and independent mean comparison",
+    "C": "allocation and profiler-supported diagnostics",
+    "D": "diagnostic only; not publication-gated"
+  },
+  "gates": [
+    {"name":"success.A.meanSpread","observed":0.026742074280287586,"maximum":0.05,"passed":true},
+    {"name":"success.B.meanSpread","observed":0.07763103952251986,"maximum":0.05,"passed":false},
+    {"name":"success.A-vs-B.meanDifference","observed":0.07219298678404257,"maximum":0.1,"passed":true},
+    {"name":"success.C.allocationSpread","observed":0.0024828852040972727,"maximum":0.02,"passed":true},
+    {"name":"success.B.p99Spread","observed":0.09133858267716544,"maximum":0.15,"passed":true},
+    {"name":"success.B.p99.9Spread","observed":0.04591657010427495,"maximum":0.2,"passed":true},
+    {"name":"errors.A.meanSpread","observed":0.05007119885571771,"maximum":0.05,"passed":false},
+    {"name":"errors.B.meanSpread","observed":0.08524803286678859,"maximum":0.05,"passed":false},
+    {"name":"errors.A-vs-B.meanDifference","observed":0.06456690455673207,"maximum":0.1,"passed":true},
+    {"name":"errors.C.allocationSpread","observed":0.0008613276273800527,"maximum":0.02,"passed":true},
+    {"name":"errors.B.p99Spread","observed":0.08037094281298307,"maximum":0.15,"passed":true},
+    {"name":"errors.B.p99.9Spread","observed":0.08069425287352729,"maximum":0.2,"passed":true}
+  ]
+}

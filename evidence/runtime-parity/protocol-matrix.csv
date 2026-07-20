@@ -1,6 +1,6 @@
-mode,contract_fixture_passed,live_service_proof,interpretation
-EMBEDDED_JAVA_SDK,true,focused local pass,"Native embedded path"
-HTTP_SINGLE,true,incomplete full run,"Contract parity passed; latest 59600/60000 live run incomplete"
-HTTP_BATCH,true,passed,"Contract parity and 60000/60000 local batch run passed"
-GRPC_BATCH,true,failed,"Contract parity passed; live service returned UNIMPLEMENTED"
-GRPC_STREAM,true,failed,"Contract parity passed; live service returned UNIMPLEMENTED"
+mode,contract_status,live_status,interpretation
+EMBEDDED_JAVA_SDK,CONTRACT_VERIFIED,LIVE_LOCAL_VERIFIED,"Native embedded path"
+HTTP_SINGLE,CONTRACT_VERIFIED,INCOMPLETE,"Contract fixture verified; latest 59600/60000 live run incomplete"
+HTTP_BATCH,CONTRACT_VERIFIED,LIVE_LOCAL_VERIFIED,"Contract fixture and 60000/60000 local batch run verified"
+GRPC_BATCH,CONTRACT_VERIFIED,PRESERVED_FAILURE,"Contract fixture verified; live service returned UNIMPLEMENTED"
+GRPC_STREAM,CONTRACT_VERIFIED,PRESERVED_FAILURE,"Contract fixture verified; live service returned UNIMPLEMENTED"

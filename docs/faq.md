@@ -6,11 +6,11 @@ The intended architecture executes payload transformations in customer-owned run
 
 ## Is every listed runtime production-certified?
 
-No. The portability matrix separates native modules, assigned adapters, stateless APIs, contract tests, local live proofs, incomplete measurements, and failed gates. No vendor certification is claimed.
+No. The portability matrix separates native modules, assigned adapters, stateless APIs, contract verification, live local verification, incomplete runs, and preserved failures. No vendor certification is claimed.
 
 ## Why publish a rejected benchmark?
 
-Because failed repeatability is evidence. Preserving the measured values and failed gates makes later improvements auditable and prevents selection bias.
+Because repeatability variance is evidence. Preserving the measured values, thresholds, and observations makes later improvements auditable and prevents selection bias. The benchmark completed; its cross-run stability qualification was not met.
 
 ## Are JMH and live Flink latency comparable?
 

@@ -10,7 +10,7 @@
 
 ## Core protocol
 
-The provisional 1 MiB publication candidate used 12 controlled launches with 30-second cooldowns on Windows 11, Oracle JDK 21.0.9, HotSpot/G1, 16 logical cores, approximately 33.82 GB RAM, AC power, and the Balanced power plan. The exact input was 1,049,487 bytes with 100 variants and 976 compiled fields. Raw hashes were verified and 174 tests passed.
+The 1 MiB publication candidate used 12 controlled launches with 30-second cooldowns on Windows 11, Oracle JDK 21.0.9, HotSpot/G1, 16 logical cores, approximately 33.82 GB RAM, AC power, and the Balanced power plan. The exact input was 1,049,487 bytes with 100 variants and 976 compiled fields. Raw hashes were verified and 174 tests passed. Nine of twelve repeatability checks met their thresholds; see [Repeatability qualification](repeatability-qualification.md).
 
 ## Scaling protocol
 
@@ -18,7 +18,7 @@ Average time used 5 × 1-second warmups, 5 × 10-second measurements, and 3 fork
 
 ## Interpretation rules
 
-- Preserve failed gates; never replace them with a headline derived from the same run.
+- Preserve missed qualification checks with their threshold and observation; do not relabel a measured result as qualified.
 - Compare results only when timed boundaries, payload shape, output materialization, host, runtime, and protocol are compatible.
 - Treat local Docker, LocalStack, and emulator runs as local proofs, not managed-service certification.
 - Verify all public artifacts with [checksums](../evidence/checksums.sha256).

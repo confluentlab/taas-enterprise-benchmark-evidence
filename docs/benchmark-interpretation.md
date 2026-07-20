@@ -1,6 +1,6 @@
 # Benchmark interpretation
 
-The observed core-engine mean of about 0.5 ms for a 1 MiB fixture is useful engineering evidence, but the latest publication candidate is **provisional rejected**. Three of twelve repeatability gates missed their thresholds, so it is not a production-certified or publication-eligible performance claim.
+The observed core-engine mean of about 0.5 ms for a 1 MiB fixture is useful engineering evidence. The benchmark completed, but its status is `MEASURED_NOT_QUALIFIED`: 9 of 12 repeatability checks met their thresholds, while three cross-run mean-latency spreads exceeded the 5% tolerance. Correctness, output validation, operation completion, evidence hashes, percentile stability, and allocation stability did not fail.
 
 The 1-64 MiB scaling result is almost linear for its frozen workload (R² 0.998895). Its approximately constant 189 KB/op allocation does **not** mean arbitrary 64 MiB transformations allocate only 189 KB. The generated bulk field was scanned but not referenced, and normalized output stayed at 36,478 bytes.
 

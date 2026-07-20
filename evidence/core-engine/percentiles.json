@@ -1,7 +1,8 @@
 {
-  "status": "PROVISIONAL_REJECTED",
+  "status": "MEASURED_NOT_QUALIFIED",
+  "originalEvaluatorStatus": "PROVISIONAL_REJECTED",
   "publicationEligible": false,
-  "failedGates": [
+  "repeatabilityChecksMissed": [
     "success.B.meanSpread",
     "errors.A.meanSpread",
     "errors.B.meanSpread"

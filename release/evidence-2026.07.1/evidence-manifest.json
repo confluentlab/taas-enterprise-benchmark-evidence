@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "evidenceVersion": "2026.07.1",
+  "generatedAt": "2026-07-20T00:00:00Z",
+  "flowplaneBuild": "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+  "repositoryCommit": "resolved-by-release-tag:evidence-2026.07.1",
+  "releaseTag": "evidence-2026.07.1",
+  "statusVocabulary": "docs/evidence-classification.md",
+  "claimsMatrix": "evidence/claims-matrix.csv",
+  "checksums": "evidence/checksums.sha256",
+  "releaseAssets": [
+    "release/evidence-2026.07.1/evidence-manifest.json",
+    "release/evidence-2026.07.1/checksums.sha256",
+    "release/evidence-2026.07.1/benchmark-summary.md",
+    "release/evidence-2026.07.1/raw-evidence.zip",
+    "release/evidence-2026.07.1/environment-bundle.zip",
+    "release/evidence-2026.07.1/benchmark-graphics.zip",
+    "release/evidence-2026.07.1/architecture.svg"
+  ],
+  "runs": [
+    {
+      "id": "core-1m-20260717",
+      "status": "MEASURED_NOT_QUALIFIED",
+      "workload": "core-1m-976-fields",
+      "summary": "evidence/core-engine/summary.md",
+      "rawResults": "evidence/core-engine/results.csv",
+      "environment": "evidence/core-engine/environment.txt",
+      "methodology": "evidence/core-engine/methodology.md",
+      "charts": [
+        "evidence/core-engine/charts/latency.svg"
+      ],
+      "checksumAlgorithm": "sha256",
+      "checksum": "d12da2337e6832aa11f8b1f07077252875c0ef72696897b0d2b5c8da23cfc12f"
+    },
+    {
+      "id": "payload-scaling-20260718",
+      "status": "MEASURED",
+      "workload": "core-1m-to-64m-976-fields-fixed-output",
+      "summary": "evidence/payload-scaling/summary.md",
+      "rawResults": "evidence/payload-scaling/results.csv",
+      "environment": "evidence/core-engine/environment.txt",
+      "methodology": "docs/benchmark-methodology.md",
+      "charts": [
+        "evidence/payload-scaling/charts/mean-latency.svg",
+        "evidence/payload-scaling/charts/tail-latency.svg",
+        "evidence/payload-scaling/charts/allocation.svg"
+      ],
+      "checksumAlgorithm": "sha256",
+      "checksum": "745c27e5a878aec7a2ca7e7516a31237923803007ae6fc367e959ad371483179"
+    },
+    {
+      "id": "kafka-soak-20260711",
+      "status": "LIVE_LOCAL_VERIFIED",
+      "workload": "kafka-flink-100kb-600rps-30m",
+      "summary": "evidence/kafka-soak/summary.md",
+      "rawResults": "evidence/kafka-soak/consumer-results.json",
+      "environment": "evidence/kafka-soak/summary.md",
+      "methodology": "docs/benchmark-methodology.md",
+      "charts": [
+        "evidence/kafka-soak/charts/accounting-and-lag.svg"
+      ],
+      "checksumAlgorithm": "sha256",
+      "checksum": "61f2f0b883d43832d8cfd89e55b1873d59e936b8df88a55112f0edef605b6adb"
+    },
+    {
+      "id": "flink-1m-20260718",
+      "status": "LIVE_LOCAL_VERIFIED",
+      "workload": "flink-kafka-1m-four-partitions-40rps",
+      "summary": "evidence/live-flink-runtime/summary.md",
+      "rawResults": "evidence/live-flink-runtime/latency-results.json",
+      "environment": "evidence/live-flink-runtime/summary.md",
+      "methodology": "docs/benchmark-methodology.md",
+      "charts": [],
+      "checksumAlgorithm": "sha256",
+      "checksum": "10d159c5e7bb34dbb2a8cbd643d3e9559463968b3e0bb190aaa3c762e5d5ed98"
+    },
+    {
+      "id": "runtime-parity-20260712",
+      "status": "CONTRACT_VERIFIED",
+      "workload": "runtime-parity-canonical-v1",
+      "summary": "evidence/runtime-parity/summary.md",
+      "rawResults": "evidence/runtime-parity/parity-output-report.json",
+      "environment": "evidence/runtime-parity/summary.md",
+      "methodology": "evidence/runtime-parity/summary.md",
+      "charts": [],
+      "checksumAlgorithm": "sha256",
+      "checksum": "dda09871e3907308f36a292290192a104467b22328e8e8b980eba607124d9519"
+    }
+  ]
+}

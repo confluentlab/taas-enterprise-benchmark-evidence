@@ -1,5 +1,7 @@
 # Kafka/Flink 30-minute soak
 
+**Status: `LIVE_LOCAL_VERIFIED`.** The live local run met its completion and exact-accounting criteria.
+
 The local Docker soak targeted 600 records/s for 1,800 seconds using 102,400-byte payloads and a deliberate 1% missing-tenant failure path.
 
 | Measure | Result |

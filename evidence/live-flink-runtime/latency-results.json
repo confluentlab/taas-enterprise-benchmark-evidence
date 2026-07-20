@@ -1,4 +1,5 @@
 {
+  "status": "LIVE_LOCAL_VERIFIED",
   "captured": "2026-07-18",
   "classification": "local Docker live runtime probe",
   "runtime": "Apache Flink",
