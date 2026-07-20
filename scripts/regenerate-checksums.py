@@ -17,11 +17,14 @@ def digest(path: Path) -> str:
 
 
 files = sorted(
-    path
-    for path in ROOT.rglob("*")
-    if path.is_file()
-    and ".git" not in path.parts
-    and path.relative_to(ROOT).as_posix() not in EXCLUDED
+    (
+        path
+        for path in ROOT.rglob("*")
+        if path.is_file()
+        and ".git" not in path.parts
+        and path.relative_to(ROOT).as_posix() not in EXCLUDED
+    ),
+    key=lambda path: path.relative_to(ROOT).as_posix(),
 )
 lines = [f"{digest(path)}  {path.relative_to(ROOT).as_posix()}" for path in files]
 MANIFEST.write_bytes(("\n".join(lines) + "\n").encode("utf-8"))
