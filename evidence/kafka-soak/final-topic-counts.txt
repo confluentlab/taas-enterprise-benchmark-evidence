@@ -1,0 +1,5 @@
+raw=1080001
+output=1069201
+error=10800
+accounted=1080001
+accounting_match=true

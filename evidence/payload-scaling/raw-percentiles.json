@@ -1,0 +1,50 @@
+[
+    {
+        "profile":  "bulk",
+        "nominalMiB":  1,
+        "exactInputBytes":  1049487,
+        "p50Us":  560.128,
+        "p95Us":  1046.528,
+        "p99Us":  1572.864,
+        "p999Us":  2428.928,
+        "sampleCount":  287791,
+        "unexpectedErrors":  0,
+        "rawResult":  "raw/percentiles-1x-1049487.json"
+    },
+    {
+        "profile":  "bulk",
+        "nominalMiB":  8,
+        "exactInputBytes":  8395896,
+        "p50Us":  4661.2480000000005,
+        "p95Us":  6971.392,
+        "p99Us":  8174.9606399999857,
+        "p999Us":  10356.195328000067,
+        "sampleCount":  37907,
+        "unexpectedErrors":  0,
+        "rawResult":  "raw/percentiles-8x-8395896.json"
+    },
+    {
+        "profile":  "bulk",
+        "nominalMiB":  32,
+        "exactInputBytes":  33583584,
+        "p50Us":  18219.008,
+        "p95Us":  22025.01119999999,
+        "p99Us":  24832.573439999996,
+        "p999Us":  29336.633344000042,
+        "sampleCount":  9716,
+        "unexpectedErrors":  0,
+        "rawResult":  "raw/percentiles-32x-33583584.json"
+    },
+    {
+        "profile":  "bulk",
+        "nominalMiB":  64,
+        "exactInputBytes":  67167168,
+        "p50Us":  33947.648,
+        "p95Us":  39649.28,
+        "p99Us":  43072.880639999988,
+        "p999Us":  51099.992064000013,
+        "sampleCount":  5275,
+        "unexpectedErrors":  0,
+        "rawResult":  "raw/percentiles-64x-67167168.json"
+    }
+]

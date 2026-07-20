@@ -1,0 +1,8 @@
+{
+  "status": "DLQ",
+  "errorCode": "REQUIRED_FIELD_MISSING",
+  "stage": "FIELD_MAPPING",
+  "field": "tenantId",
+  "mappingVersion": "orders-normalized-v3",
+  "retryable": false
+}

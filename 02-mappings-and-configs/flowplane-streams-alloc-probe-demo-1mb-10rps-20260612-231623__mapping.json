@@ -1,1 +1,0 @@
-{"version":1,"name":"streams-allocation-probe","output":"JSON_STRING","fields":{"event_id":{"path":"$.event.id"},"tenant_id":{"path":"$.tenant.id"},"device_id":{"path":"$.device.id"},"event_type_upper":{"path":"$.event.type","case_convert":"upper"},"site_name":{"path":"$.site.name"},"constant_runtime":{"constant":"kafka-streams-probe"}}}

@@ -1,0 +1,11 @@
+{
+  "status": "PROVISIONAL_REJECTED",
+  "publicationEligible": false,
+  "failedGates": [
+    "success.B.meanSpread",
+    "errors.A.meanSpread",
+    "errors.B.meanSpread"
+  ],
+  "successMicroseconds": {"p50": 424.960, "p95": 680.960, "p99": 1300.480, "p999": 1767.424},
+  "boundedErrorsMicroseconds": {"p50": 447.488, "p95": 656.384, "p99": 1325.056, "p999": 1781.760}
+}

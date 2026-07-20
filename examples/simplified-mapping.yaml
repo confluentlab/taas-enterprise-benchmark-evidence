@@ -1,0 +1,23 @@
+id: orders-normalized
+version: v3
+inputFormat: json
+outputFormat: json
+fields:
+  - from: $.eventId
+    to: $.event_id
+    required: true
+  - from: $.tenantId
+    to: $.tenant_id
+    required: true
+    onError: dlq
+  - from: $.customer.region
+    to: $.customer_region
+    transform: uppercase
+  - from: $.amountCents
+    to: $.amount
+    transform: divide(100)
+  - from: $.currency
+    to: $.currency
+    transform: uppercase
+constants:
+  $.mapping_version: orders-normalized-v3

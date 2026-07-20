@@ -1,0 +1,11 @@
+{
+  "eventId": "evt-01842",
+  "tenantId": "tenant-demo",
+  "customer": {
+    "email": "operator@example.invalid",
+    "region": "us-west"
+  },
+  "amountCents": 1299,
+  "currency": "usd",
+  "observedAt": "2026-07-19T18:42:00Z"
+}

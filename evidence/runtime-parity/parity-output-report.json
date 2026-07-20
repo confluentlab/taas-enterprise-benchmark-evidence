@@ -1,0 +1,129 @@
+{
+  "artifactHash" : "sha256:runtime-output-parity",
+  "fixtureSet" : "runtime-parity-fixtures/canonical-v1",
+  "mappingVersion" : "v2026.07.03",
+  "assertions" : [ "exact output SHA-256 equality for valid records", "status equality for valid and invalid records", "DLQ reason, metadata, and stage equality for invalid records", "mapping version and artifact hash equality across all modes" ],
+  "generatedAt" : "2026-07-12T17:37:21.700605700Z",
+  "mappingId" : "orders-parity",
+  "runtimeModes" : [ {
+    "tenantId" : "parity-tenant",
+    "artifactHash" : "sha256:runtime-output-parity",
+    "mappingVersion" : "v2026.07.03",
+    "runtimeId" : "parity-sidecar",
+    "mode" : "EMBEDDED_JAVA_SDK",
+    "mappingId" : "orders-parity",
+    "results" : [ {
+      "recordId" : "valid-order",
+      "status" : "OK",
+      "outputSha256" : "6afb9b453bb3f66f696621dec4de4bf23b57b4de1e16490691062d450c1d6a58",
+      "errorCode" : "",
+      "dlqReason" : "",
+      "dlqMetadata" : { }
+    }, {
+      "recordId" : "invalid-order",
+      "status" : "DLQ",
+      "outputSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errorCode" : "INVALID_PAYLOAD",
+      "dlqReason" : "INVALID_PAYLOAD",
+      "dlqMetadata" : {
+        "stage" : "INPUT_PARSE"
+      }
+    } ]
+  }, {
+    "tenantId" : "parity-tenant",
+    "artifactHash" : "sha256:runtime-output-parity",
+    "mappingVersion" : "v2026.07.03",
+    "runtimeId" : "parity-sidecar",
+    "mode" : "HTTP_SINGLE",
+    "mappingId" : "orders-parity",
+    "results" : [ {
+      "recordId" : "valid-order",
+      "status" : "OK",
+      "outputSha256" : "6afb9b453bb3f66f696621dec4de4bf23b57b4de1e16490691062d450c1d6a58",
+      "errorCode" : "",
+      "dlqReason" : "",
+      "dlqMetadata" : { }
+    }, {
+      "recordId" : "invalid-order",
+      "status" : "DLQ",
+      "outputSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errorCode" : "INVALID_PAYLOAD",
+      "dlqReason" : "INVALID_PAYLOAD",
+      "dlqMetadata" : {
+        "stage" : "INPUT_PARSE"
+      }
+    } ]
+  }, {
+    "tenantId" : "parity-tenant",
+    "artifactHash" : "sha256:runtime-output-parity",
+    "mappingVersion" : "v2026.07.03",
+    "runtimeId" : "parity-sidecar",
+    "mode" : "HTTP_BATCH",
+    "mappingId" : "orders-parity",
+    "results" : [ {
+      "recordId" : "valid-order",
+      "status" : "OK",
+      "outputSha256" : "6afb9b453bb3f66f696621dec4de4bf23b57b4de1e16490691062d450c1d6a58",
+      "errorCode" : "",
+      "dlqReason" : "",
+      "dlqMetadata" : { }
+    }, {
+      "recordId" : "invalid-order",
+      "status" : "DLQ",
+      "outputSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errorCode" : "INVALID_PAYLOAD",
+      "dlqReason" : "INVALID_PAYLOAD",
+      "dlqMetadata" : {
+        "stage" : "INPUT_PARSE"
+      }
+    } ]
+  }, {
+    "tenantId" : "parity-tenant",
+    "artifactHash" : "sha256:runtime-output-parity",
+    "mappingVersion" : "v2026.07.03",
+    "runtimeId" : "parity-sidecar",
+    "mode" : "GRPC_BATCH",
+    "mappingId" : "orders-parity",
+    "results" : [ {
+      "recordId" : "valid-order",
+      "status" : "OK",
+      "outputSha256" : "6afb9b453bb3f66f696621dec4de4bf23b57b4de1e16490691062d450c1d6a58",
+      "errorCode" : "",
+      "dlqReason" : "",
+      "dlqMetadata" : { }
+    }, {
+      "recordId" : "invalid-order",
+      "status" : "DLQ",
+      "outputSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errorCode" : "INVALID_PAYLOAD",
+      "dlqReason" : "INVALID_PAYLOAD",
+      "dlqMetadata" : {
+        "stage" : "INPUT_PARSE"
+      }
+    } ]
+  }, {
+    "tenantId" : "parity-tenant",
+    "artifactHash" : "sha256:runtime-output-parity",
+    "mappingVersion" : "v2026.07.03",
+    "runtimeId" : "parity-sidecar",
+    "mode" : "GRPC_STREAM",
+    "mappingId" : "orders-parity",
+    "results" : [ {
+      "recordId" : "valid-order",
+      "status" : "OK",
+      "outputSha256" : "6afb9b453bb3f66f696621dec4de4bf23b57b4de1e16490691062d450c1d6a58",
+      "errorCode" : "",
+      "dlqReason" : "",
+      "dlqMetadata" : { }
+    }, {
+      "recordId" : "invalid-order",
+      "status" : "DLQ",
+      "outputSha256" : "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "errorCode" : "INVALID_PAYLOAD",
+      "dlqReason" : "INVALID_PAYLOAD",
+      "dlqMetadata" : {
+        "stage" : "INPUT_PARSE"
+      }
+    } ]
+  } ]
+}

@@ -1,7 +1,4 @@
-# Local/editor noise
+__pycache__/
+*.pyc
 .DS_Store
 Thumbs.db
-*.tmp
-*.bak
-
-# Keep benchmark evidence tracked unless intentionally excluded later.

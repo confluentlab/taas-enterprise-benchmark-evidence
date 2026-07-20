@@ -1,9 +1,0 @@
-{
-    "runName":  "flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026",
-    "runDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-mongo-1mb-10rps-20260612-235026",
-    "rawTopic":  "raw.flowplane.1mb.connect-byte-20260612-235026",
-    "dlqTopic":  "dlq.flowplane.1mb.connect-byte-20260612-235026",
-    "mongoCollection":  "orders_1mb_connect_byte_20260612_235026",
-    "converter":  "org.apache.kafka.connect.converters.ByteArrayConverter",
-    "startedAt":  "2026-06-13T06:50:29.7949336Z"
-}

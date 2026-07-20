@@ -1,0 +1,13 @@
+{
+  "captured": "2026-07-18",
+  "classification": "local Docker live runtime probe",
+  "runtime": "Apache Flink",
+  "payloadBytes": 1048576,
+  "success": 1001,
+  "failure": 0,
+  "outputs": 1001,
+  "dlq": 0,
+  "latencyMilliseconds": {"p50": 2.029, "p95": 5.638, "p99": 9.909, "max": 74.485},
+  "allocationBytes": {"p50": 303768, "p95": 315848, "p99": 318032, "max": 4896280},
+  "drainSeconds": 0.973
+}

@@ -1,0 +1,31 @@
+{
+  "runName" : "local-soak-20260711-060931",
+  "rawTopic" : "raw.flowplane.100kb.local-soak-20260711-060931",
+  "payloadSizeBytes" : 102400,
+  "recordsProducedToRaw" : 1080001,
+  "recordsFailedToProduceRaw" : 0,
+  "recordsMarkedForFailure" : 10800,
+  "failureRecordsPer100" : 1,
+  "failureScenarioCounts" : {
+    "NONE" : 1069201,
+    "MISSING_TENANT_ID" : 10800,
+    "INVALID_STATUS" : 0,
+    "INVALID_ETA_DAYS" : 0
+  },
+  "targetRatePerSecond" : 600,
+  "durationSeconds" : 1800,
+  "producerMaxInFlight" : 1024,
+  "inputMode" : "generated-synthetic",
+  "payloadJsonlPath" : null,
+  "payloadCorpusSize" : 0,
+  "invalidPayloadPath" : null,
+  "inputPattern" : "synthetic",
+  "inputBytes" : 110591022399,
+  "elapsedSeconds" : 1800.3738821,
+  "producerRecordsPerSec" : 599.8759539547755,
+  "producerMiBPerSec" : 58.58106404210573,
+  "producerP50Ms" : 1453,
+  "producerP95Ms" : 3211,
+  "producerP99Ms" : 4876,
+  "producerP999Ms" : 7020
+}

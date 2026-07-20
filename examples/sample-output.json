@@ -1,0 +1,9 @@
+{
+  "event_id": "evt-01842",
+  "tenant_id": "tenant-demo",
+  "customer_region": "US-WEST",
+  "amount": 12.99,
+  "currency": "USD",
+  "observed_at": "2026-07-19T18:42:00Z",
+  "mapping_version": "orders-normalized-v3"
+}

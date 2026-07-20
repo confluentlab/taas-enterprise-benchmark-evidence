@@ -1,8 +1,0 @@
-{
-    "connectDlqRecords":  1312,
-    "flinkDlqRecords":  1312,
-    "connectDlqUniqueSourceRecords":  328,
-    "flinkDlqUniqueSourceRecords":  328,
-    "connectProbeLines":  16,
-    "flinkProbeLines":  12
-}

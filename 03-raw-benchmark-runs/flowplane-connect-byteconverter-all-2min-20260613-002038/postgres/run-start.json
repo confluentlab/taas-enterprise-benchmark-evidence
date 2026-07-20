@@ -1,7 +1,0 @@
-{
-    "connector":  "flowplane-1mb-postgres-sink-runtime",
-    "rawTopic":  "raw.flowplane.1mb.byteall.postgres-20260613-002038",
-    "dlqTopic":  "dlq.flowplane.1mb.byteall.postgres-20260613-002038",
-    "target":  "orders_1mb_byteall_pg_20260613_002038",
-    "startedAt":  "2026-06-13T07:27:31.6796558Z"
-}

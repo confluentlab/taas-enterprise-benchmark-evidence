@@ -1,8 +1,0 @@
-{
-    "suiteName":  "flowplane-connect-byteconverter-100rps-3min-20260613-031931",
-    "suiteDir":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931",
-    "pid":  39956,
-    "startedAt":  "2026-06-13T10:19:31.2601972Z",
-    "stdout":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\orchestrator.out.log",
-    "stderr":  "C:\\FlowPlanenew\\FLOWPLANE_Controlplane\\bench-runs\\multi-runtime-1mb\\flowplane-connect-byteconverter-100rps-3min-20260613-031931\\orchestrator.err.log"
-}

@@ -1,0 +1,12 @@
+{
+  "model": "mean_ms = intercept_ms + slope_ms_per_mib * size_mib",
+  "slope_ms_per_mib": 0.3016657368,
+  "intercept_ms": 0.276089005,
+  "r_squared": 0.998895445,
+  "allocation_mean_bytes_per_op": 189375.68,
+  "allocation_min_bytes_per_op": 188214.28,
+  "allocation_max_bytes_per_op": 191594.98,
+  "allocation_range_percent_of_mean": 1.785,
+  "output_bytes": 36478,
+  "caveat": "The grown bulk field is unreferenced. A referenced 16 MiB field with a 17.2 MB output took 178.765 ms and allocated 182349417 B/op."
+}

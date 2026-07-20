@@ -1,0 +1,16 @@
+{
+  "captured": "2026-07-18",
+  "classification": "local Docker live runtime probe",
+  "runtime": "Apache Flink",
+  "payloadBytes": 1048576,
+  "measurementRecords": 1000,
+  "flushRecords": 1,
+  "outputs": 1001,
+  "dlq": 0,
+  "outputFields": 974,
+  "kafkaPartitions": 4,
+  "targetRecordsPerSecond": 40,
+  "latencyMilliseconds": {"p50": 2.512, "p95": 11.438, "p99": 17.294, "max": 92.099},
+  "producerSeconds": 29.713,
+  "drainSeconds": 1.041
+}
