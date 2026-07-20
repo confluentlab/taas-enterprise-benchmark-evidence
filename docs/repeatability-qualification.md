@@ -9,9 +9,22 @@ One benchmark launch can look unusually fast or slow because of host scheduling,
 - **Group A** supplies the clean average-latency result.
 - **Group B** supplies percentile results and an independent mean-latency comparison.
 - **Group C** supplies allocation results and profiler-supported diagnostics.
-- **Group D** is diagnostic only and does not contribute to the 12 publication checks.
+- **Group D** enables sample-level diagnostic profiling. Its instrumentation can change latency, so the results are retained for analysis but excluded from publication qualification.
 
 “Mean spread” is the relative range between repeated mean-latency measurements inside a group. A value of 0.05 means 5%. “A-vs-B mean difference” compares the two independent group aggregates. Percentile and allocation spreads use the same relative form for their named metric.
+
+## Individual launch means
+
+The evaluator calculates each within-group spread as `(maximum launch mean - minimum launch mean) / median launch mean`. Values below are the preserved per-launch JMH means, rounded to three decimals for display; the evaluator uses full-precision values from the raw files.
+
+| Workload / group | Launch 1 (µs/op) | Launch 2 (µs/op) | Launch 3 (µs/op) | Median (µs/op) | Spread |
+|---|---:|---:|---:|---:|---:|
+| Success A | 497.258 | 510.725 | 503.620 | 503.620 | 2.674% |
+| Success B | 460.032 | 467.262 | 496.306 | 467.262 | 7.763% |
+| Bounded errors A | 517.701 | 527.598 | 501.676 | 517.701 | 5.007% |
+| Bounded errors B | 484.274 | 475.799 | 517.082 | 484.274 | 8.525% |
+
+Groups C and D also contain three launches. Group C provides allocation qualification and profiler-supported diagnostics; group D provides sample-profiler diagnostics only. Group D’s measured profiler-effect ratios differ from clean timing, which is why it is not used to accept or reject the latency publication gates.
 
 ## All 12 checks
 
@@ -41,7 +54,7 @@ One benchmark launch can look unusually fast or slow because of host scheduling,
 
 ## What did not fail
 
-These gate misses do not indicate transformation failures, incorrect output, crashes, operation failures, or allocation growth. The benchmark completed, raw evidence hashes verified, output validation passed, and 174 tests passed. The qualification result means that three cross-run mean-latency comparisons varied beyond the repository’s configured repeatability tolerance.
+These gate misses do not indicate transformation failures, incorrect output, crashes, operation failures, or allocation growth. The benchmark completed, raw evidence hashes verified, output validation passed, and the associated pre-publication semantic suite passed 174 tests. The qualification result means that three cross-run mean-latency comparisons varied beyond the repository’s configured repeatability tolerance.
 
 The evaluator does not identify a single cause. The observed variance may include workstation noise or an unresolved workload/runtime effect. Without a qualified baseline comparison, these misses should not be labeled a performance regression.
 

@@ -2,7 +2,7 @@
 
 ## Evidence classes
 
-1. **Core microbenchmark:** JMH measures raw input bytes through parse/scan, 976-field mapping, transformations/policies/error handling, and serialization to owned bytes. Mapping compilation and corpus setup are outside the timed region.
+1. **Core microbenchmark:** JMH measures raw input bytes through parse/scan, 976 compiled mapping fields, transformations/policies/error handling, and serialization to owned bytes. Mapping compilation and corpus setup are outside the timed region.
 2. **Payload-scaling benchmark:** the same compiled mapping and fixed normalized output are exercised from 1 to 64 MiB. The added bulk field is deliberately unreferenced.
 3. **Live runtime probe:** Kafka and Flink run locally in Docker, including transport and runtime execution. These latencies are not directly comparable to JMH.
 4. **Soak:** a 30-minute producer/consumer run preserves producer, streaming, topic-count, lag, throughput, latency, heap, and GC evidence.
@@ -10,7 +10,9 @@
 
 ## Core protocol
 
-The 1 MiB publication candidate used 12 controlled launches with 30-second cooldowns on Windows 11, Oracle JDK 21.0.9, HotSpot/G1, 16 logical cores, approximately 33.82 GB RAM, AC power, and the Balanced power plan. The exact input was 1,049,487 bytes with 100 variants and 976 compiled fields. Raw hashes were verified and 174 tests passed. Nine of twelve repeatability checks met their thresholds; see [Repeatability qualification](repeatability-qualification.md).
+The 1 MiB publication candidate used 12 controlled launches with 30-second cooldowns on Windows 11, Oracle JDK 21.0.9, HotSpot/G1, 16 logical cores, approximately 33.82 GB RAM, AC power, and the Balanced power plan. The exact input was 1,049,487 bytes with 100 variants and 976 compiled mapping fields. Raw hashes were verified and the associated pre-publication semantic suite passed 174 tests. Nine of twelve repeatability checks met their thresholds; see [Repeatability qualification](repeatability-qualification.md).
+
+“Full scan” means the parser/scanner consumes the complete input byte sequence. It does not mean every input field is materialized into the output model.
 
 ## Scaling protocol
 

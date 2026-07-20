@@ -95,6 +95,14 @@ def check_repeatability() -> None:
     misses = {gate["name"] for gate in gates if not gate["passed"]}
     assert misses == {"success.B.meanSpread", "errors.A.meanSpread", "errors.B.meanSpread"}
     assert all(gate["passed"] == (gate["observed"] <= gate["maximum"]) for gate in gates)
+    gate_values = {gate["name"]: gate["observed"] for gate in gates}
+    for workload in ("success", "errors"):
+        for group in ("A", "B"):
+            launches = result["launchMeansUsPerOp"][workload][group]
+            assert len(launches) == 3 and all(value > 0 for value in launches)
+            median = sorted(launches)[1]
+            spread = (max(launches) - min(launches)) / median
+            assert abs(spread - gate_values[f"{workload}.{group}.meanSpread"]) < 1e-12
 
 
 def check_soak() -> None:
@@ -109,6 +117,12 @@ def check_soak() -> None:
     assert output + failed == produced, "soak accounting mismatch"
     assert failed == 10_800
     assert consumer["rawConsumerLagEnd"] == 0
+    assert producer["inputMode"] == "generated-synthetic"
+    assert producer["targetRatePerSecond"] == 600
+    assert producer["inputBytes"] == 110_591_022_399
+    assert abs(producer["producerRecordsPerSec"] - 599.8759539547755) < 1e-12
+    assert abs(consumer["recordsPerSecEndToEnd"] - 532.1447534405139) < 1e-12
+    assert abs(consumer["drainTimeSeconds"] - 2029.5248483) < 1e-9
 
 
 def check_parity() -> None:

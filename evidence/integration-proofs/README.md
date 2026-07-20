@@ -1,6 +1,15 @@
 # Integration proof matrix
 
-These are local execution proofs, not vendor certifications. Statuses follow the repository [evidence classification](../../docs/evidence-classification.md).
+These are local execution proofs, not vendor certifications. Third-party names identify tested technical execution paths only; they do not imply sponsorship, partnership, endorsement, or certification. Statuses follow the repository [evidence classification](../../docs/evidence-classification.md).
+
+## Latest preserved evidence
+
+| Path | Evidence record | Status | Superseded? |
+|---|---|---|---|
+| HTTP batch | This matrix’s 60,000/60,000 local batch record | `LIVE_LOCAL_VERIFIED` | No later public run is preserved. |
+| HTTP single | [`http-single-60000`](../historical-attempts/http-single-60000.md) | `INCOMPLETE` | No equivalent full passing rerun is preserved. |
+| gRPC contract | [`runtime-parity-20260712`](../runtime-parity/summary.md) | `CONTRACT_VERIFIED` | Current for the preserved contract fixture. |
+| Live gRPC service | [`grpc-live-attempt`](../historical-attempts/grpc-live-service.md) | `PRESERVED_FAILURE` | No; contract verification is a different boundary. |
 
 | Path | Status | Preserved scope / result |
 |---|---|---|

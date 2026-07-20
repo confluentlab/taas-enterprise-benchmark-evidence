@@ -8,7 +8,17 @@
     "A": "clean average latency",
     "B": "percentiles and independent mean comparison",
     "C": "allocation and profiler-supported diagnostics",
-    "D": "diagnostic only; not publication-gated"
+    "D": "sample-level diagnostic profiling; instrumentation may alter timing; not publication-gated"
+  },
+  "launchMeansUsPerOp": {
+    "success": {
+      "A": [497.2575820715335, 510.72542256937663, 503.61988964224514],
+      "B": [460.0323398534322, 467.26206560512156, 496.30637973579763]
+    },
+    "errors": {
+      "A": [517.700574893168, 527.5975098801588, 501.6756214469636],
+      "B": [484.2742512850755, 475.79850633172646, 517.081933621816]
+    }
   },
   "gates": [
     {"name":"success.A.meanSpread","observed":0.026742074280287586,"maximum":0.05,"passed":true},

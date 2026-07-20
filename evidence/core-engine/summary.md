@@ -10,7 +10,7 @@ The original evaluator emitted `PROVISIONAL_REJECTED`. The public status preserv
 
 ## Timed boundary
 
-The timed boundary starts with raw bytes and includes full scan and parse, a compiled 976-field mapping, transformations, policies and bounded errors, then serialization to owned bytes. Compilation and corpus setup are excluded. The exact input was 1,049,487 bytes with 100 variants.
+The timed boundary starts with raw bytes and includes full scan and parse, 976 compiled mapping fields, transformations, policies and bounded errors, then serialization to owned bytes. Compilation and corpus setup are excluded. The exact input was 1,049,487 bytes with 100 variants. Full scan means the parser/scanner consumes the complete input byte sequence; it does not mean every input field is materialized into the output model.
 
 ## Measurements
 

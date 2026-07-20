@@ -19,6 +19,7 @@ jobs:
         run: |
           python scripts/regenerate-public-charts.py
           python scripts/regenerate-manifest.py
+          python scripts/regenerate-checksums.py
           git diff --exit-code
       - name: Validate checksums and evidence invariants
         run: python scripts/validate-evidence.py
