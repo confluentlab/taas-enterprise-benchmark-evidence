@@ -1,0 +1,7 @@
+2026-07-21T05:41:36.4103222Z Expanding the canonical fixture to 9900 valid and 100 intentional-invalid records.
+2026-07-21T05:41:37.9165730Z Creating and governing the run-specific mapping.
+2026-07-21T05:41:41.9640196Z Creating empty persistent Kafka evidence topics.
+2026-07-21T05:41:51.6989112Z Pre-registering the runtime profile and obtaining its runtime-scoped client secret.
+2026-07-21T05:41:51.7250439Z Starting the http-single runtime container.
+2026-07-21T05:42:21.5506105Z Starting the independent raw-Kafka-to-http-single bridge.
+2026-07-21T05:42:31.3070403Z Publishing 9900 valid and 100 intentional-invalid records through the raw-only verifier.

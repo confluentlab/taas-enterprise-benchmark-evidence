@@ -1,0 +1,5 @@
+{
+    "status":  "UP",
+    "containerRunning":  true,
+    "controlPlaneHealth":  "HEALTHY"
+}

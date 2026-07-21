@@ -1,0 +1,7 @@
+2026-07-21T05:41:40.8065866Z Expanding the canonical fixture to 9900 valid and 100 intentional-invalid records.
+2026-07-21T05:41:42.7651710Z Creating and governing the run-specific mapping.
+2026-07-21T05:41:47.4263249Z Creating empty persistent Kafka evidence topics.
+2026-07-21T05:42:00.3129566Z Pre-registering the runtime profile and obtaining its runtime-scoped client secret.
+2026-07-21T05:42:00.3446803Z Starting the grpc-batch runtime container.
+2026-07-21T05:42:27.7015546Z Starting the independent raw-Kafka-to-grpc-batch bridge.
+2026-07-21T05:42:35.2270575Z Publishing 9900 valid and 100 intentional-invalid records through the raw-only verifier.

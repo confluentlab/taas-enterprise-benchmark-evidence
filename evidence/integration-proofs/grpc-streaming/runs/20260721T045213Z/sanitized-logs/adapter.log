@@ -1,0 +1,6 @@
+2026-07-21T04:52:14.9581935Z Creating and governing the run-specific mapping.
+2026-07-21T04:52:15.2258259Z Creating empty persistent Kafka evidence topics.
+2026-07-21T04:52:21.5525348Z Pre-registering the sidecar profile and obtaining its runtime-scoped client secret.
+2026-07-21T04:52:21.5691019Z Starting the grpc-streaming runtime container.
+2026-07-21T04:52:40.6757229Z Starting the independent raw-Kafka-to-grpc-streaming bridge.
+2026-07-21T04:52:48.2437610Z Publishing 100 valid and 10 intentional-invalid records through the raw-only verifier.

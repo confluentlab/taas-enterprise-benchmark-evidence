@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "flowplane.emqx-mqtt-pipeline-ready.v1",
+  "runId": "20260720T185514Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane/emqx/20260720t185514z/raw"
+  ],
+  "writeTargets": [
+    "flowplane/emqx/20260720t185514z/transformed",
+    "flowplane/emqx/20260720t185514z/dlq"
+  ],
+  "qos": 1,
+  "deferredPubAck": true,
+  "separateConfirmedPublisher": true,
+  "runtimeUrl": "http://flowplane-emqx-mqtt-bento-20260720t185514z:8080/transform",
+  "readyAt": "2026-07-20T18:55:38.139Z"
+}

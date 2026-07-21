@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  4,
+    "pipelineTransformedOutputReferences":  3,
+    "pipelineDlqOutputReferences":  3,
+    "verifierWriteTargets":  [
+                                 "flowplane.spark-structured-streaming.evidence.20260720t164322z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.spark-structured-streaming.evidence.20260720t164322z.transformed",
+                                "flowplane.spark-structured-streaming.evidence.20260720t164322z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.spark-structured-streaming.evidence.20260720t164322z.transformed",
+                                 "flowplane.spark-structured-streaming.evidence.20260720t164322z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "4fd564aa96ebd9c9e6aafb2384b23b2479f976ea9f013065403cff804c145324",
+    "passed":  true
+}

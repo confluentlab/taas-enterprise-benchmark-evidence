@@ -1,0 +1,14 @@
+{
+    "id":  "http-single",
+    "type":  "protocol",
+    "runtime":  "Flowplane sidecar HTTP",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "INCOMPLETE",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-sidecar-http",
+                                "flowplane-java-sdk/flowplane-sidecar-app"
+                            ],
+    "harness":  "scripts/qa/single-source-byte-parity.ps1",
+    "protocolBoundary":  "TCP HTTP single-record request",
+    "plannedCommand":  "powershell -File scripts/qa/single-source-byte-parity.ps1"
+}

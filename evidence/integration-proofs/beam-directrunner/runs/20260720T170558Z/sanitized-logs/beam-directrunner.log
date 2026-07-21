@@ -1,0 +1,23 @@
+[INFO] Scanning for projects...
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[INFO] 
+[INFO] -----------< com.flowplane.local:beam-kafka-http-streaming >------------
+[INFO] Building beam-kafka-http-streaming 1.0.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ beam-kafka-http-streaming ---
+[INFO] skip non existing resourceDirectory /workspace/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ beam-kafka-http-streaming ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- exec:3.5.0:java (default-cli) @ beam-kafka-http-streaming ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  32.018 s
+[INFO] Finished at: 2026-07-20T17:07:05Z
+[INFO] ------------------------------------------------------------------------

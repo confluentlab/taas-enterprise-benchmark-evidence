@@ -1,0 +1,12 @@
+﻿{
+    "runId":  "20260720T183755Z",
+    "broker":  "RabbitMQ Streams",
+    "brokerContainer":  "flowplane-rabbitmq-streams-broker-20260720t183755z",
+    "brokerImage":  "rabbitmq:4-management",
+    "managementPort":  62852,
+    "flowplaneRuntimeContainer":  "flowplane-rabbitmq-streams-bento-20260720t183755z",
+    "flowplaneRuntimeId":  "rabbitmq-streams-pipeline-sidecar-20260720t183755z",
+    "flowplaneNetwork":  "flowplane-quality-stack_default",
+    "pipelineContainer":  "flowplane-rabbitmq-streams-pipeline-20260720t183755z",
+    "credentials":  "redacted"
+}

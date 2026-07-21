@@ -1,0 +1,12 @@
+2026-07-20T18:05:32.5696717Z Loading canonical mapping and fixtures.
+2026-07-20T18:05:32.5862729Z Reading an active team from the live control plane.
+2026-07-20T18:05:32.6519269Z Creating the synthetic mapping.
+2026-07-20T18:05:32.7090088Z Validating the synthetic mapping.
+2026-07-20T18:05:32.7595358Z Generating the 100-record expected-output baseline through mapping simulation.
+2026-07-20T18:05:32.9380599Z Submitting, approving, and QA-passing the mapping through governance.
+2026-07-20T18:05:33.2270850Z Starting the real Flowplane Bento HTTP sidecar container.
+2026-07-20T18:05:40.2213954Z Deploying the published artifact to the registered runtime.
+2026-07-20T18:05:40.4954229Z Starting an isolated ActiveMQ Classic 5.15.9 broker.
+2026-07-20T18:05:42.9641780Z Starting the independently deployed ActiveMQ Classic-to-Flowplane pipeline container.
+2026-07-20T18:05:44.3586244Z Publishing 110 records to the ActiveMQ raw queue only; downstream queues are read-only to the verifier.
+2026-07-20T18:05:46.9041374Z Reconciling ActiveMQ queue depths and enqueue/dequeue counts.

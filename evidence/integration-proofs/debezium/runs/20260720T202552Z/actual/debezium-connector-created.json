@@ -1,0 +1,32 @@
+{
+    "name":  "flowplane-debezium-20260720t202552z",
+    "config":  {
+                   "connector.class":  "io.debezium.connector.mysql.MySqlConnector",
+                   "tasks.max":  "1",
+                   "database.hostname":  "flowplane-debezium-mysql-20260720t202552z",
+                   "database.port":  "3306",
+                   "database.user":  "mysqluser",
+                   "database.password":  "mysqlpw",
+                   "database.server.id":  "32901",
+                   "topic.prefix":  "flowplane-debezium-20260720t202552z",
+                   "database.include.list":  "flowplane",
+                   "table.include.list":  "flowplane.records",
+                   "schema.history.internal.kafka.bootstrap.servers":  "kafka:9092",
+                   "schema.history.internal.kafka.topic":  "flowplane.debezium.evidence.20260720t202552z.schema-history",
+                   "include.schema.changes":  "false",
+                   "snapshot.mode":  "no_data",
+                   "transforms":  "route",
+                   "transforms.route.type":  "org.apache.kafka.connect.transforms.RegexRouter",
+                   "transforms.route.regex":  ".*",
+                   "transforms.route.replacement":  "flowplane.debezium.evidence.20260720t202552z.raw",
+                   "key.converter":  "org.apache.kafka.connect.json.JsonConverter",
+                   "key.converter.schemas.enable":  "false",
+                   "value.converter":  "org.apache.kafka.connect.json.JsonConverter",
+                   "value.converter.schemas.enable":  "false",
+                   "name":  "flowplane-debezium-20260720t202552z"
+               },
+    "tasks":  [
+
+              ],
+    "type":  "source"
+}

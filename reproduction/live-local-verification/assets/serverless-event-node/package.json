@@ -1,0 +1,10 @@
+{
+  "name": "flowplane-serverless-event-evidence",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@azure/event-hubs": "6.0.0",
+    "@azure/storage-queue": "12.27.0",
+    "@google-cloud/pubsub": "5.2.0"
+  }
+}

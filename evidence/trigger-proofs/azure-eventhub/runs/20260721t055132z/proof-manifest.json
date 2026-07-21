@@ -1,0 +1,15 @@
+{
+    "status":  "PASS",
+    "runId":  "20260721t055132z",
+    "trigger":  "Azure EventHubTrigger",
+    "runtimeId":  "azure-eventhub-evidence-20260721t055132z",
+    "artifactId":  "6a5efbb08dd158f5c9631626",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "validRecords":  100,
+    "invalidRecords":  10,
+    "sourceBoundary":  "Verifier writes only the emulator input Event Hub",
+    "sinkBoundary":  "Azure Functions EventHubTrigger writes output Event Hub and Azurite DLQ",
+    "emulatorImage":  "sha256:2c8e0d4dd93a5fc078df2721eeb3e211442d555d61293ac3972df931c6d9333a",
+    "functionImage":  "sha256:9ab2b0dfd70bd31f0ab00fd83557fa7f9985d461966fa4d44613caa7f8658348",
+    "completedAt":  "2026-07-21T05:53:18.5134755Z"
+}

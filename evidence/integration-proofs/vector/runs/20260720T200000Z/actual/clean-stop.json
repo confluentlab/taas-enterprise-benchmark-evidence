@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-vector-pipeline-20260720t200000z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-vector-pipeline-20260720t200000z"
+                       },
+                       {
+                           "container":  "flowplane-vector-publisher-20260720t200000z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-vector-publisher-20260720t200000z"
+                       },
+                       {
+                           "container":  "flowplane-vector-bento-20260720t200000z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-vector-bento-20260720t200000z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T20:00:43.1490573Z"
+}

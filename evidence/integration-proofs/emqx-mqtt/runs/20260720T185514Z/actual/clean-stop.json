@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-emqx-mqtt-pipeline-20260720t185514z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-emqx-mqtt-bento-20260720t185514z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-emqx-mqtt-bento-20260720t185514z"
+                       },
+                       {
+                           "container":  "flowplane-emqx-mqtt-broker-20260720t185514z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "EMQX retained temporarily for native Dashboard screenshots."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T18:55:47.4117359Z"
+}

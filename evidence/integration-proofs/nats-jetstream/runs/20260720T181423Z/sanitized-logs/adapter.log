@@ -1,0 +1,12 @@
+2026-07-20T18:14:25.6453054Z Loading canonical mapping and fixtures.
+2026-07-20T18:14:25.6633698Z Reading an active team from the live control plane.
+2026-07-20T18:14:25.7385482Z Creating the synthetic mapping.
+2026-07-20T18:14:25.7974194Z Validating the synthetic mapping.
+2026-07-20T18:14:25.8517070Z Generating the 100-record expected-output baseline through mapping simulation.
+2026-07-20T18:14:26.0508425Z Submitting, approving, and QA-passing the mapping through governance.
+2026-07-20T18:14:26.4011828Z Starting the real Flowplane Bento HTTP sidecar container.
+2026-07-20T18:14:33.1871726Z Deploying the published artifact to the registered runtime.
+2026-07-20T18:14:33.4195806Z Starting an isolated NATS 2.11 JetStream broker.
+2026-07-20T18:14:39.0662545Z Starting the independently deployed NATS JetStream-to-Flowplane pipeline container.
+2026-07-20T18:14:42.5531748Z Publishing 110 records to the JetStream raw subject only; downstream streams are read-only to the verifier.
+2026-07-20T18:14:45.5298362Z Reconciling JetStream stream messages and durable-consumer pending acknowledgements.

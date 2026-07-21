@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "flowplane.artemis-stomp-pipeline-ready.v1",
+  "runId": "20260720T194319Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane.artemis.20260720t194319z.raw"
+  ],
+  "writeTargets": [
+    "flowplane.artemis.20260720t194319z.transformed",
+    "flowplane.artemis.20260720t194319z.dlq"
+  ],
+  "acknowledgementOrder": "Flowplane HTTP -> downstream STOMP SEND receipt -> raw STOMP ACK receipt",
+  "runtimeUrl": "http://flowplane-activemq-artemis-bento-20260720t194319z:8080/transform",
+  "readyAt": "2026-07-20T19:43:40.046Z"
+}

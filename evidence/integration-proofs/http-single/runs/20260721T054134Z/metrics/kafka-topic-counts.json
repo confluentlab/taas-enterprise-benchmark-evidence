@@ -1,0 +1,171 @@
+{
+  "raw": 10000,
+  "transformed": 9900,
+  "dlq": 100,
+  "transformedWait": {
+    "count": 9900,
+    "observations": [
+      {
+        "elapsedMs": 1339,
+        "count": 47
+      },
+      {
+        "elapsedMs": 5430,
+        "count": 266
+      },
+      {
+        "elapsedMs": 10199,
+        "count": 528
+      },
+      {
+        "elapsedMs": 14885,
+        "count": 796
+      },
+      {
+        "elapsedMs": 19136,
+        "count": 1076
+      },
+      {
+        "elapsedMs": 24691,
+        "count": 1347
+      },
+      {
+        "elapsedMs": 28739,
+        "count": 1637
+      },
+      {
+        "elapsedMs": 32075,
+        "count": 1906
+      },
+      {
+        "elapsedMs": 35661,
+        "count": 2187
+      },
+      {
+        "elapsedMs": 39604,
+        "count": 2494
+      },
+      {
+        "elapsedMs": 43532,
+        "count": 2770
+      },
+      {
+        "elapsedMs": 46561,
+        "count": 3038
+      },
+      {
+        "elapsedMs": 49656,
+        "count": 3317
+      },
+      {
+        "elapsedMs": 52904,
+        "count": 3601
+      },
+      {
+        "elapsedMs": 56267,
+        "count": 3875
+      },
+      {
+        "elapsedMs": 59607,
+        "count": 4153
+      },
+      {
+        "elapsedMs": 62701,
+        "count": 4430
+      },
+      {
+        "elapsedMs": 65945,
+        "count": 4712
+      },
+      {
+        "elapsedMs": 69631,
+        "count": 5020
+      },
+      {
+        "elapsedMs": 72980,
+        "count": 5288
+      },
+      {
+        "elapsedMs": 76076,
+        "count": 5567
+      },
+      {
+        "elapsedMs": 79987,
+        "count": 5861
+      },
+      {
+        "elapsedMs": 83468,
+        "count": 6146
+      },
+      {
+        "elapsedMs": 86578,
+        "count": 6415
+      },
+      {
+        "elapsedMs": 89616,
+        "count": 6690
+      },
+      {
+        "elapsedMs": 93134,
+        "count": 6965
+      },
+      {
+        "elapsedMs": 96311,
+        "count": 7216
+      },
+      {
+        "elapsedMs": 99694,
+        "count": 7497
+      },
+      {
+        "elapsedMs": 103199,
+        "count": 7792
+      },
+      {
+        "elapsedMs": 106230,
+        "count": 8067
+      },
+      {
+        "elapsedMs": 109367,
+        "count": 8326
+      },
+      {
+        "elapsedMs": 113126,
+        "count": 8612
+      },
+      {
+        "elapsedMs": 117246,
+        "count": 8838
+      },
+      {
+        "elapsedMs": 120866,
+        "count": 9039
+      },
+      {
+        "elapsedMs": 124176,
+        "count": 9290
+      },
+      {
+        "elapsedMs": 127641,
+        "count": 9559
+      },
+      {
+        "elapsedMs": 130857,
+        "count": 9799
+      },
+      {
+        "elapsedMs": 133859,
+        "count": 9900
+      }
+    ]
+  },
+  "dlqWait": {
+    "count": 100,
+    "observations": [
+      {
+        "elapsedMs": 1020,
+        "count": 100
+      }
+    ]
+  }
+}

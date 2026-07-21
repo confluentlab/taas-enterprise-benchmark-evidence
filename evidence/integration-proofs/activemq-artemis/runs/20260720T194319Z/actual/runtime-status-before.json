@@ -1,0 +1,11 @@
+﻿{
+    "runtimeId":  "activemq-artemis-pipeline-sidecar-20260720t194319z",
+    "runtimeName":  "ActiveMQ Artemis Pipeline Sidecar 20260720T194319Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e7a5a8dd158f5c962be93",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e7a598dd158f5c962be83",
+    "mappingName":  "activemq-artemis-live-local-20260720t194319z"
+}

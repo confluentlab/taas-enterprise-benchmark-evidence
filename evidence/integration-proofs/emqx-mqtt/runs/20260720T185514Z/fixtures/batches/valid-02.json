@@ -1,0 +1,959 @@
+[
+    {
+        "event":  {
+                      "id":  "evt-live-000035",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+35@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000036",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+36@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000037",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+37@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000038",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+38@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000039",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+39@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000040",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+40@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000041",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+41@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000042",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+42@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000043",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+43@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000044",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+44@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000045",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+45@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000046",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+46@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000047",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+47@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000048",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+48@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000049",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+49@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000050",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+50@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-1"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000051",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+51@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000052",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+52@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000053",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+53@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000054",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+54@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000055",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+55@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000056",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+56@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000057",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+57@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000058",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+58@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000059",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+59@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000060",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+60@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000061",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+61@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000062",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+62@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000063",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+63@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000064",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+64@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000065",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+65@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000066",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+66@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    },
+    {
+        "event":  {
+                      "id":  "evt-live-000067",
+                      "occurredAt":  "2026-07-20T12:34:56Z"
+                  },
+        "customer":  {
+                         "name":  "  Ada   Lovelace  ",
+                         "email":  "ada+67@example.test",
+                         "region":  null
+                     },
+        "order":  {
+                      "amount":  "128.45",
+                      "tags":  [
+                                   "synthetic",
+                                   "verification",
+                                   "batch-2"
+                               ],
+                      "lines":  [
+                                    {
+                                        "sku":  "SKU-001",
+                                        "quantity":  2
+                                    },
+                                    {
+                                        "sku":  "SKU-002",
+                                        "quantity":  1
+                                    }
+                                ]
+                  }
+    }
+]

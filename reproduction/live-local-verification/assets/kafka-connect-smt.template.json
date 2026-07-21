@@ -1,0 +1,7 @@
+{
+  "evidenceOnly": true,
+  "description": "The adapter replaces this template with the sanitized, exact run-specific Kafka Connect SMT configuration.",
+  "rawTopic": "RAW_TOPIC",
+  "transformedTopic": "TRANSFORMED_TOPIC",
+  "dlqTopic": "DLQ_TOPIC"
+}

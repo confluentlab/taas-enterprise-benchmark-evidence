@@ -1,0 +1,62 @@
+{
+    "runId":  "20260721T054138Z",
+    "integration":  "grpc-batch",
+    "integrationType":  "protocol",
+    "status":  "LIVE_LOCAL_VERIFIED",
+    "startedAt":  "2026-07-21T05:41:38.8734584Z",
+    "completedAt":  "2026-07-21T05:46:43.2055388Z",
+    "durationSeconds":  304.332,
+    "flowplaneCommit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+    "evidenceRepoCommit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+    "flowplaneWorktree":  {
+                              "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                              "dirty":  true,
+                              "statusEntryCount":  185,
+                              "statusDigestSha256":  "a6b241349deb90c610384f07299c4fe58dcd2dfdd4dab799104163c0c49277cf"
+                          },
+    "evidenceRepoWorktree":  {
+                                 "commit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+                                 "dirty":  true,
+                                 "statusEntryCount":  3,
+                                 "statusDigestSha256":  "0321ff0878bf602d122cffdda041f7301f0a89cbaddb56c32faa1100cdc452e4"
+                             },
+    "artifactId":  "6a5f069b8dd158f5c9632f06",
+    "artifactVersion":  "v1.0.0",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "fixtureSet":  "flowplane-live-local-verification-v1",
+    "canonicalizationVersion":  "flowplane.canonicalization.v1",
+    "runtime":  {
+                    "name":  "grpc-batch governed runtime surface",
+                    "version":  "Flowplane 1.0.0 local build",
+                    "executionMode":  "Docker live local",
+                    "containerImages":  [
+                                            "eclipse-temurin:17-jre",
+                                            "node:22-alpine"
+                                        ]
+                },
+    "host":  {
+                 "os":  "see environment.json",
+                 "cpu":  "see environment.json",
+                 "logicalCores":  0,
+                 "memoryBytes":  0,
+                 "javaVersion":  "see environment.json",
+                 "dockerVersion":  "see environment.json"
+             },
+    "protocolBoundary":  "persistent Kafka raw topic through gRPC TransformBatch to persistent transformed and DLQ topics",
+    "sourceBoundary":  "Raw-only verifier producer to persistent Kafka raw topic",
+    "sinkBoundary":  "Independent bridge invokes grpc-batch and publishes acknowledged transformed/DLQ results",
+    "validRecords":  9900,
+    "invalidRecords":  100,
+    "successfulOutputs":  9900,
+    "errorOutputs":  100,
+    "duplicates":  0,
+    "unexplainedMissing":  0,
+    "finalLag":  0,
+    "unexpectedFailures":  0,
+    "stability":  {
+                      "requiredDurationSeconds":  300,
+                      "observedDurationSeconds":  300.92,
+                      "observationCount":  22,
+                      "allHealthy":  true
+                  }
+}

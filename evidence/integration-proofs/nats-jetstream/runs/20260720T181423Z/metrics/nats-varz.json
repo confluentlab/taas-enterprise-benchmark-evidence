@@ -1,0 +1,94 @@
+﻿{
+    "server_id":  "NCA252GMDYA74FBBUWX6IMLZO7XEYCNFTWSLEATA3DAYOG2UZCRAFEH5",
+    "server_name":  "NCA252GMDYA74FBBUWX6IMLZO7XEYCNFTWSLEATA3DAYOG2UZCRAFEH5",
+    "version":  "2.11.17",
+    "proto":  1,
+    "git_commit":  "0f192db",
+    "go":  "go1.25.9",
+    "host":  "0.0.0.0",
+    "port":  4222,
+    "max_connections":  65536,
+    "ping_interval":  120000000000,
+    "ping_max":  2,
+    "http_host":  "0.0.0.0",
+    "http_port":  8222,
+    "http_base_path":  "",
+    "https_port":  0,
+    "auth_timeout":  2,
+    "max_control_line":  4096,
+    "max_payload":  1048576,
+    "max_pending":  67108864,
+    "cluster":  {
+
+                },
+    "gateway":  {
+
+                },
+    "leaf":  {
+
+             },
+    "mqtt":  {
+
+             },
+    "websocket":  {
+
+                  },
+    "jetstream":  {
+                      "config":  {
+                                     "max_memory":  22071760896,
+                                     "max_storage":  560367507456,
+                                     "store_dir":  "/data/jetstream",
+                                     "sync_interval":  120000000000
+                                 },
+                      "stats":  {
+                                    "memory":  0,
+                                    "storage":  131024,
+                                    "reserved_memory":  0,
+                                    "reserved_storage":  0,
+                                    "accounts":  1,
+                                    "ha_assets":  0,
+                                    "api":  {
+                                                "level":  1,
+                                                "total":  11,
+                                                "errors":  0
+                                            }
+                                },
+                      "limits":  {
+
+                                 }
+                  },
+    "tls_timeout":  2,
+    "write_deadline":  10000000000,
+    "start":  "2026-07-20T18:14:38.926643852Z",
+    "now":  "2026-07-20T18:14:45.571867733Z",
+    "uptime":  "6s",
+    "mem":  19529728,
+    "cores":  10,
+    "gomaxprocs":  10,
+    "cpu":  11,
+    "connections":  0,
+    "total_connections":  2,
+    "routes":  0,
+    "remotes":  0,
+    "leafnodes":  0,
+    "in_msgs":  671,
+    "out_msgs":  451,
+    "in_bytes":  134650,
+    "out_bytes":  134876,
+    "slow_consumers":  0,
+    "subscriptions":  76,
+    "http_req_stats":  {
+                           "/healthz":  1,
+                           "/jsz":  1,
+                           "/varz":  1
+                       },
+    "config_load_time":  "2026-07-20T18:14:38.926643852Z",
+    "config_digest":  "",
+    "system_account":  "$SYS",
+    "slow_consumer_stats":  {
+                                "clients":  0,
+                                "routes":  0,
+                                "gateways":  0,
+                                "leafs":  0
+                            }
+}

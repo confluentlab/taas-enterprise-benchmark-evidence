@@ -1,0 +1,119 @@
+﻿{
+    "raw":  {
+                "garbage_collection":  {
+                                           "max_heap_size":  -1,
+                                           "min_bin_vheap_size":  -1,
+                                           "min_heap_size":  -1,
+                                           "fullsweep_after":  -1,
+                                           "minor_gcs":  -1
+                                       },
+                "consumer_details":  [
+
+                                     ],
+                "arguments":  {
+                                  "x-max-age":  "1h",
+                                  "x-queue-type":  "stream"
+                              },
+                "auto_delete":  false,
+                "deliveries":  [
+
+                               ],
+                "durable":  true,
+                "exclusive":  false,
+                "incoming":  [
+
+                             ],
+                "internal":  false,
+                "internal_owner":  false,
+                "leader":  "rabbit@0d7f21b024b7",
+                "members":  [
+                                "rabbit@0d7f21b024b7"
+                            ],
+                "name":  "flowplane.rabbitmq.20260720t183755z.raw",
+                "node":  "rabbit@0d7f21b024b7",
+                "online":  [
+                               "rabbit@0d7f21b024b7"
+                           ],
+                "state":  "running",
+                "type":  "stream",
+                "vhost":  "/"
+            },
+    "transformed":  {
+                        "garbage_collection":  {
+                                                   "max_heap_size":  -1,
+                                                   "min_bin_vheap_size":  -1,
+                                                   "min_heap_size":  -1,
+                                                   "fullsweep_after":  -1,
+                                                   "minor_gcs":  -1
+                                               },
+                        "consumer_details":  [
+
+                                             ],
+                        "arguments":  {
+                                          "x-max-age":  "1h",
+                                          "x-queue-type":  "stream"
+                                      },
+                        "auto_delete":  false,
+                        "deliveries":  [
+
+                                       ],
+                        "durable":  true,
+                        "exclusive":  false,
+                        "incoming":  [
+
+                                     ],
+                        "internal":  false,
+                        "internal_owner":  false,
+                        "leader":  "rabbit@0d7f21b024b7",
+                        "members":  [
+                                        "rabbit@0d7f21b024b7"
+                                    ],
+                        "name":  "flowplane.rabbitmq.20260720t183755z.transformed",
+                        "node":  "rabbit@0d7f21b024b7",
+                        "online":  [
+                                       "rabbit@0d7f21b024b7"
+                                   ],
+                        "state":  "running",
+                        "type":  "stream",
+                        "vhost":  "/"
+                    },
+    "dlq":  {
+                "garbage_collection":  {
+                                           "max_heap_size":  -1,
+                                           "min_bin_vheap_size":  -1,
+                                           "min_heap_size":  -1,
+                                           "fullsweep_after":  -1,
+                                           "minor_gcs":  -1
+                                       },
+                "consumer_details":  [
+
+                                     ],
+                "arguments":  {
+                                  "x-max-age":  "1h",
+                                  "x-queue-type":  "stream"
+                              },
+                "auto_delete":  false,
+                "deliveries":  [
+
+                               ],
+                "durable":  true,
+                "exclusive":  false,
+                "incoming":  [
+
+                             ],
+                "internal":  false,
+                "internal_owner":  false,
+                "leader":  "rabbit@0d7f21b024b7",
+                "members":  [
+                                "rabbit@0d7f21b024b7"
+                            ],
+                "name":  "flowplane.rabbitmq.20260720t183755z.dlq",
+                "node":  "rabbit@0d7f21b024b7",
+                "online":  [
+                               "rabbit@0d7f21b024b7"
+                           ],
+                "state":  "running",
+                "type":  "stream",
+                "vhost":  "/"
+            }
+}

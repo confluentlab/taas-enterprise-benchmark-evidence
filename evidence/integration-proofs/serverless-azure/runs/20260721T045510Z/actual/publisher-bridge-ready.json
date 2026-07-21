@@ -1,0 +1,19 @@
+{
+  "integrationId": "serverless-azure",
+  "runId": "20260721T045510Z",
+  "mode": "azure-functions",
+  "endpoint": "http://flowplane-serverless-azure-runtime-20260721t045510z:80/api/flowplaneHttpTransform",
+  "metadata": {
+    "tenantId": "acme-corp",
+    "runtimeId": "serverless-azure-evidence-20260721t045510z",
+    "mappingId": "6a5efbb08dd158f5c963161b",
+    "mappingVersion": "v1.0.0",
+    "artifactHash": "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+  },
+  "topics": {
+    "raw": "flowplane.serverless-azure.evidence.20260721t045510z.raw",
+    "transformed": "flowplane.serverless-azure.evidence.20260721t045510z.transformed",
+    "dlq": "flowplane.serverless-azure.evidence.20260721t045510z.dlq"
+  },
+  "readyAt": "2026-07-21T04:55:37.895Z"
+}

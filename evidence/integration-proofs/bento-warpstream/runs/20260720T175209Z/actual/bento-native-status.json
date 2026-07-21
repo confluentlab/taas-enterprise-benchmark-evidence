@@ -1,0 +1,66 @@
+﻿OKn# HELP input_connection_failed Bento Counter metric
+# TYPE input_connection_failed counter
+input_connection_failed{label="",path="root.input"} 0
+# HELP input_connection_lost Bento Counter metric
+# TYPE input_connection_lost counter
+input_connection_lost{label="",path="root.input"} 0
+# HELP input_connection_up Bento Counter metric
+# TYPE input_connection_up counter
+input_connection_up{label="",path="root.input"} 1
+# HELP input_latency_ns Bento Timing metric
+# TYPE input_latency_ns summary
+input_latency_ns{label="",path="root.input",quantile="0.5"} NaN
+input_latency_ns{label="",path="root.input",quantile="0.9"} NaN
+input_latency_ns{label="",path="root.input",quantile="0.99"} NaN
+input_latency_ns_sum{label="",path="root.input"} 0
+input_latency_ns_count{label="",path="root.input"} 0
+# HELP input_received Bento Counter metric
+# TYPE input_received counter
+input_received{label="",path="root.input"} 0
+# HELP output_batch_sent Bento Counter metric
+# TYPE output_batch_sent counter
+output_batch_sent{label="",path="root.output.switch.output"} 0
+# HELP output_connection_failed Bento Counter metric
+# TYPE output_connection_failed counter
+output_connection_failed{label="",path="root.output.switch.output"} 0
+# HELP output_connection_lost Bento Counter metric
+# TYPE output_connection_lost counter
+output_connection_lost{label="",path="root.output.switch.output"} 0
+# HELP output_connection_up Bento Counter metric
+# TYPE output_connection_up counter
+output_connection_up{label="",path="root.output.switch.output"} 2
+# HELP output_error Bento Counter metric
+# TYPE output_error counter
+output_error{label="",path="root.output.switch.output"} 0
+# HELP output_latency_ns Bento Timing metric
+# TYPE output_latency_ns summary
+output_latency_ns{label="",path="root.output.switch.output",quantile="0.5"} NaN
+output_latency_ns{label="",path="root.output.switch.output",quantile="0.9"} NaN
+output_latency_ns{label="",path="root.output.switch.output",quantile="0.99"} NaN
+output_latency_ns_sum{label="",path="root.output.switch.output"} 0
+output_latency_ns_count{label="",path="root.output.switch.output"} 0
+# HELP output_sent Bento Counter metric
+# TYPE output_sent counter
+output_sent{label="",path="root.output.switch.output"} 0
+# HELP processor_batch_received Bento Counter metric
+# TYPE processor_batch_received counter
+processor_batch_received{label="",path="root.pipeline.processors.0"} 0
+# HELP processor_batch_sent Bento Counter metric
+# TYPE processor_batch_sent counter
+processor_batch_sent{label="",path="root.pipeline.processors.0"} 0
+# HELP processor_error Bento Counter metric
+# TYPE processor_error counter
+processor_error{label="",path="root.pipeline.processors.0"} 0
+# HELP processor_latency_ns Bento Timing metric
+# TYPE processor_latency_ns summary
+processor_latency_ns{label="",path="root.pipeline.processors.0",quantile="0.5"} NaN
+processor_latency_ns{label="",path="root.pipeline.processors.0",quantile="0.9"} NaN
+processor_latency_ns{label="",path="root.pipeline.processors.0",quantile="0.99"} NaN
+processor_latency_ns_sum{label="",path="root.pipeline.processors.0"} 0
+processor_latency_ns_count{label="",path="root.pipeline.processors.0"} 0
+# HELP processor_received Bento Counter metric
+# TYPE processor_received counter
+processor_received{label="",path="root.pipeline.processors.0"} 0
+# HELP processor_sent Bento Counter metric
+# TYPE processor_sent counter
+processor_sent{label="",path="root.pipeline.processors.0"} 0

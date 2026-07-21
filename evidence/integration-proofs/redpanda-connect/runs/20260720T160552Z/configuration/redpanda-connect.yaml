@@ -1,0 +1,45 @@
+input:
+  kafka:
+    addresses:
+      - ${KAFKA_BOOTSTRAP:kafka:9092}
+    topics:
+      - ${RAW_TOPIC}
+    consumer_group: ${GROUP_ID}
+    start_from_oldest: true
+
+pipeline:
+  threads: 1
+  processors:
+    - http:
+        url: ${FLOWPLANE_TRANSFORM_URL}
+        verb: POST
+        headers:
+          Content-Type: application/json
+          X-FlowPlane-Source-Topic: ${RAW_TOPIC}
+          X-FlowPlane-Source-Key: redpanda-connect-streaming
+        successful_on:
+          - 200
+          - 422
+        # Only 200 and Flowplane's governed 422 envelope are record outcomes.
+        # Transport, assignment, throttling, and 5xx failures exhaust retries and
+        # fail/nack the source message rather than creating an integration-owned DLQ.
+        retries: 3
+        retry_period: 1s
+        max_retry_backoff: 8s
+        parallel: false
+
+output:
+  switch:
+    cases:
+      - check: meta("http_status_code") == "200"
+        output:
+          kafka:
+            addresses:
+              - ${KAFKA_BOOTSTRAP:kafka:9092}
+            topic: ${TRANSFORMED_TOPIC}
+      - check: meta("http_status_code") == "422"
+        output:
+          kafka:
+            addresses:
+              - ${KAFKA_BOOTSTRAP:kafka:9092}
+            topic: ${DLQ_TOPIC}

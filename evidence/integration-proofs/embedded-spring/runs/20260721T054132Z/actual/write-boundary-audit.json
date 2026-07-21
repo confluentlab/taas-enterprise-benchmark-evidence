@@ -1,0 +1,17 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeReferences":  0,
+    "pipelineRawInputReferences":  5,
+    "pipelineTransformedOutputReferences":  3,
+    "pipelineDlqOutputReferences":  3,
+    "verifierWriteTargets":  [
+                                 "flowplane.embedded-spring.evidence.20260721t054132z.raw"
+                             ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.embedded-spring.evidence.20260721t054132z.transformed",
+                                 "flowplane.embedded-spring.evidence.20260721t054132z.dlq"
+                             ],
+    "passed":  true
+}

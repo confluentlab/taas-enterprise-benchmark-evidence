@@ -1,0 +1,17 @@
+{
+    "schemaVersion":  "flowplane.bento-warpstream-pipeline-result.v1",
+    "container":  "flowplane-bento-warpstream-pipeline-20260720t175209z",
+    "runningAtCompletion":  true,
+    "completedSuccessfully":  false,
+    "readTargets":  [
+                        "flowplane.bento-warpstream.evidence.20260720t175209z.raw"
+                    ],
+    "writeTargets":  [
+                         "flowplane.bento-warpstream.evidence.20260720t175209z.transformed",
+                         "flowplane.bento-warpstream.evidence.20260720t175209z.dlq"
+                     ],
+    "processedInput":  110,
+    "successfulOutput":  100,
+    "errorOutput":  10,
+    "unexpectedFailures":  0
+}

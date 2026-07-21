@@ -1,0 +1,5 @@
+{
+    "applicable":  false,
+    "environment":  "DEVELOPMENT",
+    "reason":  "Tenant policy limits review requests to production; validated development mappings publish directly."
+}

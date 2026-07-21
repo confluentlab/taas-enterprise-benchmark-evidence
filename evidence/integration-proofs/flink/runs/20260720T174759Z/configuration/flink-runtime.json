@@ -1,0 +1,19 @@
+{
+    "runtimeId":  "flink-evidence-20260720t174759z",
+    "runtimeName":  "Flink Evidence 20260720T174759Z",
+    "runtimeEnvironment":  "DEVELOPMENT",
+    "bootstrapServers":  "kafka:9092",
+    "inputTopic":  "flowplane.flink.evidence.20260720t174759z.raw",
+    "outputTopic":  "flowplane.flink.evidence.20260720t174759z.transformed",
+    "errorTopic":  "flowplane.flink.evidence.20260720t174759z.dlq",
+    "groupId":  "flink-evidence-20260720t174759z",
+    "controlPlaneUrl":  "http://flowplane-backend:8080",
+    "outputShape":  "JSON_STRING",
+    "outputComplexTypes":  "NATIVE_JSON",
+    "outputFieldNaming":  "AS_IS",
+    "flinkOutputMode":  "JSON_STRING",
+    "parallelism":  1,
+    "failOnError":  false,
+    "authToken":  "\u003credacted\u003e",
+    "runtimeClientSecret":  "\u003credacted\u003e"
+}

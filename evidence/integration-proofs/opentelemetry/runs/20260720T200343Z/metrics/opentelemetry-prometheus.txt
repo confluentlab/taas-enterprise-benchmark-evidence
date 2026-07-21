@@ -1,0 +1,256 @@
+# HELP otelcol_exporter_queue_batch_send_size Number of units in the batch [Development]
+# TYPE otelcol_exporter_queue_batch_send_size histogram
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="10"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="25"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="50"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="75"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="100"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="250"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="500"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="750"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="1000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="2000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="3000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="4000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="5000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="6000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="7000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="8000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="9000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="10000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="20000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="30000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="50000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="100000"} 110
+otelcol_exporter_queue_batch_send_size_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="+Inf"} 110
+otelcol_exporter_queue_batch_send_size_sum{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 110
+otelcol_exporter_queue_batch_send_size_count{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 110
+# HELP otelcol_exporter_queue_batch_send_size_bytes Number of bytes in batch that was sent. Only available on detailed level. [Development]
+# TYPE otelcol_exporter_queue_batch_send_size_bytes histogram
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="10"} 0
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="25"} 0
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="50"} 0
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="75"} 0
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="100"} 0
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="250"} 10
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="500"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="750"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="1000"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="2000"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="3000"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="4000"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="5000"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="6000"} 110
+otelcol_exporter_queue_batch_send_size_bytes_bucket{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version="",le="+Inf"} 110
+otelcol_exporter_queue_batch_send_size_bytes_sum{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 34632
+otelcol_exporter_queue_batch_send_size_bytes_count{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 110
+# HELP otelcol_exporter_queue_capacity Fixed capacity of the retry queue (in batches). [Alpha]
+# TYPE otelcol_exporter_queue_capacity gauge
+otelcol_exporter_queue_capacity{data_type="logs",exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 1000
+# HELP otelcol_exporter_queue_size Current size of the retry queue (in batches). [Alpha]
+# TYPE otelcol_exporter_queue_size gauge
+otelcol_exporter_queue_size{data_type="logs",exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 0
+# HELP otelcol_exporter_sent_log_records Number of log record successfully sent to destination. [Alpha]
+# TYPE otelcol_exporter_sent_log_records counter
+otelcol_exporter_sent_log_records{exporter="kafka",otel_scope_name="go.opentelemetry.io/collector/exporter/exporterhelper",otel_scope_schema_url="",otel_scope_version=""} 110
+# HELP otelcol_kafka_broker_connects The total number of connections opened. [Development]
+# TYPE otelcol_kafka_broker_connects counter
+otelcol_kafka_broker_connects{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 3
+otelcol_kafka_broker_connects{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 1
+otelcol_kafka_broker_connects{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka"} 2
+otelcol_kafka_broker_connects{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka"} 1
+# HELP otelcol_kafka_exporter_bytes The size in bytes of exported records seen by the broker. [Development]
+# TYPE otelcol_kafka_exporter_bytes counter
+otelcol_kafka_exporter_bytes{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",server_address="kafka",topic="flowplane.opentelemetry.evidence.20260720t200343z.forwarded"} 33092
+# HELP otelcol_kafka_exporter_bytes_uncompressed The uncompressed size in bytes of exported messages seen by the client. [Development]
+# TYPE otelcol_kafka_exporter_bytes_uncompressed counter
+otelcol_kafka_exporter_bytes_uncompressed{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",server_address="kafka",topic="flowplane.opentelemetry.evidence.20260720t200343z.forwarded"} 33092
+# HELP otelcol_kafka_exporter_latency The time it took in ms to export a batch of messages. [Deprecated]
+# TYPE otelcol_kafka_exporter_latency histogram
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0"} 38
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="5"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="10"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="25"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="50"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="75"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="100"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="250"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="500"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="750"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="1000"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="2500"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="5000"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="7500"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="10000"} 50
+otelcol_kafka_exporter_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="+Inf"} 50
+otelcol_kafka_exporter_latency_sum{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka"} 13
+otelcol_kafka_exporter_latency_count{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka"} 50
+# HELP otelcol_kafka_exporter_messages The number of exported messages. [Deprecated]
+# TYPE otelcol_kafka_exporter_messages counter
+otelcol_kafka_exporter_messages{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",server_address="kafka",topic="flowplane.opentelemetry.evidence.20260720t200343z.forwarded"} 110
+# HELP otelcol_kafka_exporter_records The number of exported records. [Development]
+# TYPE otelcol_kafka_exporter_records counter
+otelcol_kafka_exporter_records{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",server_address="kafka",topic="flowplane.opentelemetry.evidence.20260720t200343z.forwarded"} 110
+# HELP otelcol_kafka_exporter_write_latency The time it took in seconds to export a batch of records. [Development]
+# TYPE otelcol_kafka_exporter_write_latency histogram
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0"} 0
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.005"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.01"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.025"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.05"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.075"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.1"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.25"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.5"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="0.75"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="1"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="2.5"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="5"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="7.5"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="10"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="25"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="50"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="75"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="100"} 50
+otelcol_kafka_exporter_write_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka",le="+Inf"} 50
+otelcol_kafka_exporter_write_latency_sum{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka"} 0.043763105
+otelcol_kafka_exporter_write_latency_count{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/exporter/kafkaexporter",otel_scope_schema_url="",otel_scope_version="",outcome="success",server_address="kafka"} 50
+# HELP otelcol_kafka_receiver_bytes The size in bytes of received records seen by the broker. [Development]
+# TYPE otelcol_kafka_receiver_bytes counter
+otelcol_kafka_receiver_bytes{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",topic="flowplane.opentelemetry.evidence.20260720t200343z.raw"} 33092
+# HELP otelcol_kafka_receiver_bytes_uncompressed The uncompressed size in bytes of received records seen by the client. [Development]
+# TYPE otelcol_kafka_receiver_bytes_uncompressed counter
+otelcol_kafka_receiver_bytes_uncompressed{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",topic="flowplane.opentelemetry.evidence.20260720t200343z.raw"} 33092
+# HELP otelcol_kafka_receiver_current_offset Current message offset [Development]
+# TYPE otelcol_kafka_receiver_current_offset gauge
+otelcol_kafka_receiver_current_offset{otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",partition="0",topic="flowplane.opentelemetry.evidence.20260720t200343z.raw"} 109
+# HELP otelcol_kafka_receiver_latency The time it took in ms to receive a batch of messages. [Deprecated]
+# TYPE otelcol_kafka_receiver_latency histogram
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0"} 12
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="5"} 15
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="10"} 15
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="25"} 15
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="50"} 15
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="75"} 15
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="100"} 15
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="250"} 46
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="500"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="750"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="1000"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="2500"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="5000"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="7500"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="10000"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="+Inf"} 67
+otelcol_kafka_receiver_latency_sum{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 12959
+otelcol_kafka_receiver_latency_count{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 67
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="5"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="10"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="25"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="50"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="75"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="100"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="250"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="500"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="750"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="1000"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="2500"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="5000"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="7500"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="10000"} 3
+otelcol_kafka_receiver_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="+Inf"} 3
+otelcol_kafka_receiver_latency_sum{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 0
+otelcol_kafka_receiver_latency_count{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 3
+# HELP otelcol_kafka_receiver_messages The number of received messages. [Deprecated]
+# TYPE otelcol_kafka_receiver_messages counter
+otelcol_kafka_receiver_messages{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",topic="flowplane.opentelemetry.evidence.20260720t200343z.raw"} 110
+# HELP otelcol_kafka_receiver_offset_lag Current offset lag [Development]
+# TYPE otelcol_kafka_receiver_offset_lag gauge
+otelcol_kafka_receiver_offset_lag{otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",partition="0",topic="flowplane.opentelemetry.evidence.20260720t200343z.raw"} 0
+# HELP otelcol_kafka_receiver_partition_start Number of started partitions [Development]
+# TYPE otelcol_kafka_receiver_partition_start counter
+otelcol_kafka_receiver_partition_start{otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version=""} 1
+# HELP otelcol_kafka_receiver_read_latency The time it took in seconds to receive a batch of records. [Development]
+# TYPE otelcol_kafka_receiver_read_latency histogram
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0"} 0
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.005"} 15
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.01"} 15
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.025"} 15
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.05"} 15
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.075"} 15
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.1"} 15
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.25"} 20
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.5"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.75"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="1"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="2.5"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="5"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="7.5"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="10"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="25"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="50"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="75"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="100"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="+Inf"} 67
+otelcol_kafka_receiver_read_latency_sum{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 12.995502578
+otelcol_kafka_receiver_read_latency_count{node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 67
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0"} 0
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.005"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.01"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.025"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.05"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.075"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.1"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.25"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.5"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="0.75"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="1"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="2.5"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="5"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="7.5"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="10"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="25"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="50"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="75"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="100"} 3
+otelcol_kafka_receiver_read_latency_bucket{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",le="+Inf"} 3
+otelcol_kafka_receiver_read_latency_sum{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 0.0015562780000000001
+otelcol_kafka_receiver_read_latency_count{node_id="seed_0",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success"} 3
+# HELP otelcol_kafka_receiver_records The number of received records. [Development]
+# TYPE otelcol_kafka_receiver_records counter
+otelcol_kafka_receiver_records{compression_codec="none",node_id="1",otel_scope_name="github.com/open-telemetry/opentelemetry-collector-contrib/receiver/kafkareceiver",otel_scope_schema_url="",otel_scope_version="",outcome="success",partition="0",topic="flowplane.opentelemetry.evidence.20260720t200343z.raw"} 110
+# HELP otelcol_process_cpu_seconds Total CPU user and system time in seconds [Alpha]
+# TYPE otelcol_process_cpu_seconds counter
+otelcol_process_cpu_seconds{otel_scope_name="go.opentelemetry.io/collector/service",otel_scope_schema_url="",otel_scope_version=""} 0.17
+# HELP otelcol_process_memory_rss Total physical memory (resident set size) [Alpha]
+# TYPE otelcol_process_memory_rss gauge
+otelcol_process_memory_rss{otel_scope_name="go.opentelemetry.io/collector/service",otel_scope_schema_url="",otel_scope_version=""} 1.84549376e+08
+# HELP otelcol_process_runtime_heap_alloc_bytes Bytes of allocated heap objects (see 'go doc runtime.MemStats.HeapAlloc') [Alpha]
+# TYPE otelcol_process_runtime_heap_alloc_bytes gauge
+otelcol_process_runtime_heap_alloc_bytes{otel_scope_name="go.opentelemetry.io/collector/service",otel_scope_schema_url="",otel_scope_version=""} 2.2399208e+07
+# HELP otelcol_process_runtime_total_alloc_bytes Cumulative bytes allocated for heap objects (see 'go doc runtime.MemStats.TotalAlloc') [Alpha]
+# TYPE otelcol_process_runtime_total_alloc_bytes counter
+otelcol_process_runtime_total_alloc_bytes{otel_scope_name="go.opentelemetry.io/collector/service",otel_scope_schema_url="",otel_scope_version=""} 3.5827072e+07
+# HELP otelcol_process_runtime_total_sys_memory_bytes Total bytes of memory obtained from the OS (see 'go doc runtime.MemStats.Sys') [Alpha]
+# TYPE otelcol_process_runtime_total_sys_memory_bytes gauge
+otelcol_process_runtime_total_sys_memory_bytes{otel_scope_name="go.opentelemetry.io/collector/service",otel_scope_schema_url="",otel_scope_version=""} 4.1294088e+07
+# HELP otelcol_process_uptime Uptime of the process [Alpha]
+# TYPE otelcol_process_uptime counter
+otelcol_process_uptime{otel_scope_name="go.opentelemetry.io/collector/service",otel_scope_schema_url="",otel_scope_version=""} 13.166122383
+# HELP otelcol_receiver_accepted_log_records Number of log records successfully pushed into the pipeline. [Alpha]
+# TYPE otelcol_receiver_accepted_log_records counter
+otelcol_receiver_accepted_log_records{otel_scope_name="go.opentelemetry.io/collector/receiver/receiverhelper",otel_scope_schema_url="",otel_scope_version="",receiver="kafka",transport="kafka"} 110
+# HELP otelcol_receiver_failed_log_records The number of log records that failed to be processed by the receiver due to internal errors. [Alpha]
+# TYPE otelcol_receiver_failed_log_records counter
+otelcol_receiver_failed_log_records{otel_scope_name="go.opentelemetry.io/collector/receiver/receiverhelper",otel_scope_schema_url="",otel_scope_version="",receiver="kafka",transport="kafka"} 0
+# HELP otelcol_receiver_refused_log_records Number of log records that could not be pushed into the pipeline. [Alpha]
+# TYPE otelcol_receiver_refused_log_records counter
+otelcol_receiver_refused_log_records{otel_scope_name="go.opentelemetry.io/collector/receiver/receiverhelper",otel_scope_schema_url="",otel_scope_version="",receiver="kafka",transport="kafka"} 0
+# HELP promhttp_metric_handler_errors_total Total number of internal errors encountered by the promhttp metric handler.
+# TYPE promhttp_metric_handler_errors_total counter
+promhttp_metric_handler_errors_total{cause="encoding"} 0
+promhttp_metric_handler_errors_total{cause="gathering"} 0
+# HELP target_info Target metadata
+# TYPE target_info gauge
+target_info{service_instance_id="c6685ddf-ed52-46bb-b6b9-ac4387ec87f9",service_name="otelcol-contrib",service_version="0.149.0"} 1

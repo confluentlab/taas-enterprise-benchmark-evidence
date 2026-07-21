@@ -1,0 +1,1 @@
+{"runtimeIds":["activemq-classic-pipeline-sidecar-20260720t180530z"],"requireReplayGate":false,"changeTicket":"ACTIVEMQ-20260720T180530Z","rolloutPercent":100,"reason":"Assign the approved synthetic artifact to the ActiveMQ Classic pipeline sidecar."}

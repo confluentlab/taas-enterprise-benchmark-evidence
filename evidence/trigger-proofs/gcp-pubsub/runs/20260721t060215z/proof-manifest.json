@@ -1,0 +1,16 @@
+{
+    "status":  "PASS",
+    "runId":  "20260721t060215z",
+    "trigger":  "GCP Pub/Sub CloudEvent",
+    "runtimeId":  "gcp-pubsub-evidence-20260721t060215z",
+    "artifactId":  "6a5efccf8dd158f5c96318ec",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "validRecords":  100,
+    "invalidRecords":  10,
+    "sourceBoundary":  "Verifier writes only the Pub/Sub emulator input topic",
+    "sinkBoundary":  "CloudEvent handler publishes transformed and DLQ Pub/Sub topics",
+    "eventarcBoundary":  "Local bridge converts the emulator push envelope to the standard binary CloudEvent envelope; it performs no transformation or result publishing",
+    "emulatorImage":  "sha256:873834701bc92f5fd5052cd5f5e572246caaf24b3e3b79e741ba1b29f7a291c6",
+    "functionImage":  "sha256:9527ef871a18352e5fada4f746c56e74b684ae3468ea6e8c76bc9d6fd1d557de",
+    "completedAt":  "2026-07-21T06:02:41.9628400Z"
+}

@@ -1,0 +1,51 @@
+{
+  "raw": 10000,
+  "transformed": 9900,
+  "dlq": 100,
+  "transformedWait": {
+    "count": 9900,
+    "observations": [
+      {
+        "elapsedMs": 2082,
+        "count": 242
+      },
+      {
+        "elapsedMs": 5841,
+        "count": 1332
+      },
+      {
+        "elapsedMs": 9398,
+        "count": 2272
+      },
+      {
+        "elapsedMs": 13509,
+        "count": 3470
+      },
+      {
+        "elapsedMs": 18285,
+        "count": 5171
+      },
+      {
+        "elapsedMs": 23389,
+        "count": 6394
+      },
+      {
+        "elapsedMs": 27827,
+        "count": 8153
+      },
+      {
+        "elapsedMs": 31259,
+        "count": 9900
+      }
+    ]
+  },
+  "dlqWait": {
+    "count": 100,
+    "observations": [
+      {
+        "elapsedMs": 1159,
+        "count": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+    "id":  "nifi",
+    "type":  "tool",
+    "runtime":  "Apache NiFi 1.27.0",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/docker-compose.yml"
+                            ],
+    "harness":  "scripts/dev/test-nifi-kafka-http-streaming-local.ps1",
+    "protocolBoundary":  "NiFi processors and queues to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-nifi-kafka-http-streaming-local.ps1 -ValidRecordCount 100"
+}

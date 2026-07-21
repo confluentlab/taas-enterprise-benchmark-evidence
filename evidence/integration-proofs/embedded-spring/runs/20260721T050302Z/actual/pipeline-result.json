@@ -1,0 +1,16 @@
+{
+    "schemaVersion":  "flowplane.runtime-surface-pipeline-result.v1",
+    "container":  "flowplane-embedded-spring-runtime-20260721t050302z",
+    "completedSuccessfully":  true,
+    "readTargets":  [
+                        "flowplane.embedded-spring.evidence.20260721t050302z.raw"
+                    ],
+    "writeTargets":  [
+                         "flowplane.embedded-spring.evidence.20260721t050302z.transformed",
+                         "flowplane.embedded-spring.evidence.20260721t050302z.dlq"
+                     ],
+    "processedInput":  110,
+    "successfulOutput":  100,
+    "errorOutput":  10,
+    "unexpectedFailures":  0
+}

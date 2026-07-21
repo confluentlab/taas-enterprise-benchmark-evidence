@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-spark-structured-streaming-pipeline-20260720t164322z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-spark-structured-streaming-pipeline-20260720t164322z"
+                       },
+                       {
+                           "container":  "flowplane-spark-structured-streaming-bento-20260720t164322z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-spark-structured-streaming-bento-20260720t164322z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T16:44:42.4722243Z"
+}

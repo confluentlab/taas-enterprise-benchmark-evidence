@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "flowplane.redis-streams-raw-only-verification-result.v1",
+  "runId": "20260720T182351Z",
+  "streams": {
+    "raw": "flowplane:redis:20260720t182351z:raw",
+    "transformed": "flowplane:redis:20260720t182351z:transformed",
+    "dlq": "flowplane:redis:20260720t182351z:dlq"
+  },
+  "boundary": "raw-only verifier -> Redis raw stream -> independent consumer-group pipeline -> Flowplane sidecar -> Redis output/DLQ -> read-only verifier groups",
+  "verifierWriteTargets": [
+    "flowplane:redis:20260720t182351z:raw"
+  ],
+  "verifierReadTargets": [
+    "flowplane:redis:20260720t182351z:transformed",
+    "flowplane:redis:20260720t182351z:dlq"
+  ],
+  "attemptedInput": 110,
+  "acceptedInput": 110,
+  "validInput": 100,
+  "intentionalInvalid": 10,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "filtered": 0,
+  "duplicates": 0,
+  "expectedHashMatches": 100,
+  "expectedErrorMatches": 10,
+  "expectedErrorCodes": [
+    "MISSING_REQUIRED_FIELD",
+    "REGEX_FAILED",
+    "TYPE_CONVERSION_FAILED"
+  ],
+  "durationSeconds": 0.86
+}

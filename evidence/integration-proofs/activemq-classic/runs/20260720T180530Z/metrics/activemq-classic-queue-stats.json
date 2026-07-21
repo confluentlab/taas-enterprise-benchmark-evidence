@@ -1,0 +1,23 @@
+﻿{
+    "raw":  {
+                "queueName":  "flowplane.activemq-classic.20260720t180530z.raw",
+                "queueSize":  0,
+                "enqueueCount":  110,
+                "dequeueCount":  110,
+                "consumerCount":  1
+            },
+    "transformed":  {
+                        "queueName":  "flowplane.activemq-classic.20260720t180530z.transformed",
+                        "queueSize":  0,
+                        "enqueueCount":  100,
+                        "dequeueCount":  100,
+                        "consumerCount":  1
+                    },
+    "dlq":  {
+                "queueName":  "flowplane.activemq-classic.20260720t180530z.dlq",
+                "queueSize":  0,
+                "enqueueCount":  10,
+                "dequeueCount":  10,
+                "consumerCount":  1
+            }
+}

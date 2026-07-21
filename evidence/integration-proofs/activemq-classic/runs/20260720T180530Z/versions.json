@@ -1,0 +1,21 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "activeMqClassicVersion":  "5.15.9",
+    "activeMqImage":  "rmohr/activemq:5.15.9",
+    "activeMqImageId":  "sha256:b5669f141ac5c455b1010b90d348fe78289bba7e2db5659484d99736b696593c",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineImage":  "node:22-alpine",
+    "pipelineImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "pipelineScriptSha256":  "0ed5a4c81542c2e25cf0412a00fa34fa7d85c40e647546a1000b2cde16c6b95e",
+    "rawOnlyVerifierSha256":  "c0d76a65e4ce54d79476850e676ac8869f178ee8a693e7affdeb635fdd6044b8",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

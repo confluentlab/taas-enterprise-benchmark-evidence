@@ -1,0 +1,13 @@
+{
+    "id":  "vector",
+    "type":  "tool",
+    "runtime":  "Vector",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/vector_kafka_http.toml"
+                            ],
+    "harness":  "scripts/dev/test-http-integrations-local.ps1",
+    "protocolBoundary":  "Vector Kafka pipeline to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-http-integrations-local.ps1 -VerifyRealRuntimeFailure"
+}

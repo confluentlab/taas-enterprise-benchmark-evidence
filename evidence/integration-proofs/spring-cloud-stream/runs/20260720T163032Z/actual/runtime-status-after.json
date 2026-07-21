@@ -1,0 +1,11 @@
+{
+    "runtimeId":  "spring-cloud-stream-sidecar-20260720t163032z",
+    "runtimeName":  "Spring Cloud Stream Sidecar 20260720T163032Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e4d2b8dd158f5c96270d1",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e4d2a8dd158f5c96270c3",
+    "mappingName":  "spring-cloud-stream-live-local-20260720t163032z"
+}

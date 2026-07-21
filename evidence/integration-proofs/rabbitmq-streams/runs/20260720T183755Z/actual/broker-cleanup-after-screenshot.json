@@ -1,0 +1,9 @@
+{
+  "container": "flowplane-rabbitmq-streams-broker-20260720t183755z",
+  "purpose": "RabbitMQ was retained only long enough to capture its authenticated Management stream-queue view.",
+  "screenshotEvidence": ["screenshots/rabbitmq-management-native-stream-queues.png"],
+  "stoppedAt": "2026-07-20T18:38:59.8518750Z",
+  "runningAfterStop": false,
+  "containerExitCode": 0,
+  "sharedFlowplaneServicesStopped": false
+}

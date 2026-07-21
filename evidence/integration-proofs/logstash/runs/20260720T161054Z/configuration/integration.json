@@ -1,0 +1,13 @@
+{
+    "id":  "logstash",
+    "type":  "tool",
+    "runtime":  "Logstash 8.15.3",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/logstash_kafka_http.conf"
+                            ],
+    "harness":  "scripts/dev/test-logstash-kafka-http-streaming-local.ps1",
+    "protocolBoundary":  "Logstash Kafka pipeline to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-logstash-kafka-http-streaming-local.ps1 -ValidRecordCount 100"
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "flowplane.rocketmq-pipeline-ready.v1",
+  "runId": "20260720T192342Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane_rocketmq_20260720t192342z_raw"
+  ],
+  "writeTargets": [
+    "flowplane_rocketmq_20260720t192342z_transformed",
+    "flowplane_rocketmq_20260720t192342z_dlq"
+  ],
+  "acknowledgementOrder": "Flowplane HTTP -> confirmed RocketMQ downstream send -> raw ack",
+  "runtimeUrl": "http://flowplane-rocketmq-bento-20260720t192342z:8080/transform",
+  "readyAt": "2026-07-20T19:24:31.820Z"
+}

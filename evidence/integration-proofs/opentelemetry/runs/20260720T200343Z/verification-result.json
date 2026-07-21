@@ -1,0 +1,331 @@
+{
+    "schemaVersion":  "flowplane.verification-result.v1",
+    "status":  "LIVE_LOCAL_VERIFIED",
+    "functionalMinimumMet":  true,
+    "exactAccounting":  true,
+    "checksumsVerified":  true,
+    "gates":  [
+                  {
+                      "id":  "runtime.started",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/pipeline-result.json",
+                                       "configuration/opentelemetry-kafka-evidence.yaml"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "runtime.healthConfirmed",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/pipeline-result.json",
+                                       "actual/runtime-health-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "runtime.versionRecorded",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "versions.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "boundary.realRuntimeUsed",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "boundary.realProtocolCrossed",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/write-boundary-audit.json",
+                                       "configuration/opentelemetry-kafka-evidence.yaml",
+                                       "metrics/kafka-topic-counts.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "boundary.verifierWritesRawOnly",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/write-boundary-audit.json",
+                                       "actual/bridge-result.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "artifact.loaded",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-status-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "artifact.idRecorded",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-status-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "artifact.hashRecorded",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-status-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "fixture.validProcessed",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/transformed-output.jsonl"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "fixture.invalidProcessed",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/error-output.jsonl"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "output.expectedHashMatched",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "expected/simulation-batch.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "error.expectedCodeMatched",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/error-output.jsonl",
+                                       "actual/bridge-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.inputReconciled",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.noUnexpectedLoss",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json",
+                                       "actual/bridge-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.noUnexpectedDuplicates",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json",
+                                       "actual/bridge-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.noUnexpectedFailures",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "state.finalLagZero",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "metrics/kafka-consumer-group.txt",
+                                       "final-state.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "state.pendingWorkZero",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "metrics/kafka-topic-counts.json",
+                                       "final-state.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "state.runtimeHealthyAtCompletion",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-health-after.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "evidence.environmentRecorded",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "environment.json"
+                                   ],
+                      "reason":  "Environment evidence is mandatory."
+                  },
+                  {
+                      "id":  "evidence.commandsRecorded",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "commands.txt"
+                                   ],
+                      "reason":  "Executed commands are mandatory."
+                  },
+                  {
+                      "id":  "evidence.logsPreserved",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "sanitized-logs/adapter.log",
+                                       "sanitized-logs/flowplane-runtime.log",
+                                       "sanitized-logs/opentelemetry-publisher-bridge.log",
+                                       "sanitized-logs/opentelemetry.log",
+                                       "sanitized-logs/raw-only-verifier.log",
+                                       "sanitized-logs/runner.log",
+                                       "sanitized-logs/steps.log"
+                                   ],
+                      "reason":  "At least one sanitized runtime log is mandatory."
+                  },
+                  {
+                      "id":  "evidence.rawOutputsPreserved",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/adapter-gate-assertions.json",
+                                       "actual/api-response-01.json",
+                                       "actual/api-response-02.json",
+                                       "actual/api-response-03.json",
+                                       "actual/api-response-04.json",
+                                       "actual/api-response-05.json",
+                                       "actual/api-response-06.json",
+                                       "actual/api-response-07.json",
+                                       "actual/api-response-08.json",
+                                       "actual/api-response-09.json",
+                                       "actual/api-response-10.json",
+                                       "actual/api-response-11.json",
+                                       "actual/api-response-12.json",
+                                       "actual/api-response-13.json",
+                                       "actual/bridge-result.json",
+                                       "actual/clean-stop.json",
+                                       "actual/deployment.json",
+                                       "actual/error-output.jsonl",
+                                       "actual/mapping-approval.json",
+                                       "actual/mapping-created.json",
+                                       "actual/mapping-published.json",
+                                       "actual/mapping-validation.json",
+                                       "actual/not-executed.json",
+                                       "actual/opentelemetry-health.json",
+                                       "actual/pipeline-result.json",
+                                       "actual/publisher-bridge-ready.json",
+                                       "actual/publisher-bridge-result.json",
+                                       "actual/runtime-health-after.json",
+                                       "actual/runtime-registration.json",
+                                       "actual/runtime-status-after.json",
+                                       "actual/runtime-status-before.json",
+                                       "actual/transformed-output.jsonl",
+                                       "actual/write-boundary-audit.json"
+                                   ],
+                      "reason":  "At least one raw result is mandatory."
+                  },
+                  {
+                      "id":  "evidence.checksumsVerified",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "hashes.sha256"
+                                   ],
+                      "reason":  "The evaluator recomputed all listed SHA-256 values."
+                  },
+                  {
+                      "id":  "evidence.reproductionScriptAvailable",
+                      "required":  true,
+                      "applicable":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "reproduce.ps1"
+                                   ],
+                      "reason":  "A bundle-local reproduction command is mandatory."
+                  }
+              ],
+    "failedRequiredGates":  [
+
+                            ],
+    "warnings":  [
+                     "Technical local interoperability only; no vendor certification or endorsement is implied."
+                 ]
+}

@@ -1,0 +1,7 @@
+2026-07-20T20:00:02.6521540Z Loading canonical mapping and fixtures.
+2026-07-20T20:00:02.6730268Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T20:00:03.3430907Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T20:00:09.6341416Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T20:00:18.9562278Z Starting the dedicated Flowplane HTTP/Kafka publisher bridge used by Vector.
+2026-07-20T20:00:24.6035683Z Starting the independently deployed Vector pipeline.
+2026-07-20T20:00:25.1384800Z Publishing canonical fixtures through the raw-only verifier.

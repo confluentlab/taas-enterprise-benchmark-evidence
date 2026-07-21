@@ -1,0 +1,41 @@
+version: 1
+name: flowplane-live-local-verification-v1
+error_policy:
+  on_transformation_error: ROUTE_TO_DLQ
+  on_validation_failure: ROUTE_TO_DLQ
+  on_type_mismatch: ROUTE_TO_DLQ
+output:
+  shape: FLAT_OBJECT
+  complexTypes: NATIVE_JSON
+  fieldNaming: AS_IS
+fields:
+  eventId:
+    path: $.event.id
+    required: true
+    validate:
+      required: true
+      pattern: "^evt-live-[0-9]{6}$"
+  customerName:
+    path: $.customer.name
+    normalize_string: true
+  amount:
+    path: $.order.amount
+    cast: decimal
+    decimalScale: 2
+    decimalScalePolicy: ROUND
+  amountWithTax:
+    arithmetic: "$.order.amount * 1.10"
+  occurredAt:
+    path: $.event.occurredAt
+    cast: timestamp
+  region:
+    path: $.customer.region
+    default: unknown
+  emailMasked:
+    path: $.customer.email
+    mask: last4
+  tags:
+    path: $.order.tags
+  primarySku:
+    path: $.order.lines[0].sku
+    required: true

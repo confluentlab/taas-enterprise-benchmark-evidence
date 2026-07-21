@@ -1,0 +1,51 @@
+data_dir = "/var/lib/vector"
+
+[api]
+enabled = true
+address = "0.0.0.0:8686"
+
+[sources.raw_kafka]
+type = "kafka"
+bootstrap_servers = "${FLOWPLANE_KAFKA_BOOTSTRAP}"
+group_id = "${FLOWPLANE_GROUP_ID}"
+topics = ["${FLOWPLANE_RAW_TOPIC}"]
+auto_offset_reset = "earliest"
+commit_interval_ms = 500
+
+[sources.raw_kafka.decoding]
+codec = "bytes"
+
+[transforms.payload_only]
+type = "remap"
+inputs = ["raw_kafka"]
+source = '''
+. = parse_json!(.message)
+'''
+
+[sinks.flowplane_publisher_bridge]
+type = "http"
+inputs = ["payload_only"]
+uri = "${FLOWPLANE_BRIDGE_URL}/ingest"
+method = "post"
+encoding.codec = "json"
+acknowledgements.enabled = true
+
+[sinks.flowplane_publisher_bridge.batch]
+max_events = 1
+timeout_secs = 0.1
+
+[sinks.flowplane_publisher_bridge.buffer]
+type = "disk"
+max_size = 268435488
+when_full = "block"
+
+[sinks.flowplane_publisher_bridge.request.headers]
+Content-Type = "application/json"
+
+[sources.internal_metrics]
+type = "internal_metrics"
+
+[sinks.prometheus]
+type = "prometheus_exporter"
+inputs = ["internal_metrics"]
+address = "0.0.0.0:9598"

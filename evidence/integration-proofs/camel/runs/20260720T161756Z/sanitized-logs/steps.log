@@ -1,0 +1,6 @@
+2026-07-20T16:17:59.2343034Z Loading canonical mapping and fixtures.
+2026-07-20T16:17:59.2567406Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T16:18:00.3798762Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T16:18:07.6374614Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T16:18:13.2897219Z Starting the independently deployed Apache Camel pipeline.
+2026-07-20T16:18:33.6918456Z Publishing canonical fixtures through the raw-only verifier.

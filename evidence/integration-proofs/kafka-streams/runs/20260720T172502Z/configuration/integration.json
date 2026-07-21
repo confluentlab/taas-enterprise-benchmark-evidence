@@ -1,0 +1,13 @@
+{
+    "id":  "kafka-streams",
+    "type":  "native",
+    "runtime":  "Kafka Streams",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-kafka-streams-runtime"
+                            ],
+    "harness":  "scripts/qa/single-source-byte-parity.ps1",
+    "protocolBoundary":  "Kafka input, transformed output, and DLQ topics",
+    "plannedCommand":  "powershell -File scripts/qa/single-source-byte-parity.ps1"
+}

@@ -1,0 +1,8 @@
+{"schemaVersion":"flowplane.rocketmq-raw-only-verification-result.v1","runId":"20260720T192342Z","topics":{"raw":"flowplane_rocketmq_20260720t192342z_raw","transformed":"flowplane_rocketmq_20260720t192342z_transformed","dlq":"flowplane_rocketmq_20260720t192342z_dlq"},"verifierWriteTargets":["flowplane_rocketmq_20260720t192342z_raw"],"verifierReadTargets":["flowplane_rocketmq_20260720t192342z_transformed","flowplane_rocketmq_20260720t192342z_dlq"],"attemptedInput":110,"acceptedInput":110,"validInput":100,"intentionalInvalid":10,"successfulOutput":100,"errorOutput":10,"filtered":0,"duplicates":0,"expectedHashMatches":100,"expectedErrorMatches":10,"expectedErrorCodes":["MISSING_REQUIRED_FIELD","REGEX_FAILED","TYPE_CONVERSION_FAILED"],"durationSeconds":12.01}
+Error: /root/logs/rocketmq/rocketmq_client_nodejs.log log stream had been closed
+    at FileBufferTransport.log (/app/node_modules/egg-logger/lib/transports/file.js:57:19)
+    at EggLogger.log (/app/node_modules/egg-logger/lib/logger.js:76:19)
+    at Logger.<computed> [as info] (/app/node_modules/egg-logger/lib/logger.js:166:10)
+    at Producer.shutdown (/app/node_modules/rocketmq-client-nodejs/dist/producer/Producer.js:61:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async file:///app/verifier.mjs:131:1

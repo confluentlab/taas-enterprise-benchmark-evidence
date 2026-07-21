@@ -1,0 +1,24 @@
+## raw: flowplane_rocketmq_20260720t192342z_raw
+#Broker Name                      #QID  #Min Offset           #Max Offset             #Last Updated
+broker-a                          0     0                     30                      2026-07-20 19:24:40,686
+broker-a                          1     0                     22                      2026-07-20 19:24:40,697
+broker-a                          2     0                     24                      2026-07-20 19:24:40,668
+broker-a                          3     0                     34                      2026-07-20 19:24:40,691
+## transformed: flowplane_rocketmq_20260720t192342z_transformed
+#Broker Name                      #QID  #Min Offset           #Max Offset             #Last Updated
+broker-a                          0     0                     22                      2026-07-20 19:24:42,080
+broker-a                          1     0                     31                      2026-07-20 19:24:42,028
+broker-a                          2     0                     17                      2026-07-20 19:24:42,092
+broker-a                          3     0                     30                      2026-07-20 19:24:42,054
+## dlq: flowplane_rocketmq_20260720t192342z_dlq
+#Broker Name                      #QID  #Min Offset           #Max Offset             #Last Updated
+broker-a                          0     0                     4                       2026-07-20 19:24:42,220
+broker-a                          1     0                     3                       2026-07-20 19:24:42,196
+broker-a                          2     0                     1                       2026-07-20 19:24:42,120
+broker-a                          3     0                     2                       2026-07-20 19:24:41,733
+## broker runtime after completed pipeline
+brokerVersionDesc               : V5_3_2
+dispatchBehindBytes             : 0
+msgGetTotalTodayNow             : 220
+msgPutTotalTodayNow             : 220
+putMessageFailedTimes           : 0

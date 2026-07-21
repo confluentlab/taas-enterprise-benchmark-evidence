@@ -1,0 +1,29 @@
+{
+  "name": "${FLOWPLANE_CONNECTOR_NAME}",
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector",
+    "tasks.max": "1",
+    "database.hostname": "${FLOWPLANE_DATABASE_HOST}",
+    "database.port": "3306",
+    "database.user": "${FLOWPLANE_DATABASE_USER}",
+    "database.password": "<redacted>",
+    "database.server.id": "${FLOWPLANE_DATABASE_SERVER_ID}",
+    "topic.prefix": "${FLOWPLANE_TOPIC_PREFIX}",
+    "database.include.list": "flowplane",
+    "table.include.list": "flowplane.records",
+    "schema.history.internal.kafka.bootstrap.servers": "${FLOWPLANE_KAFKA_BOOTSTRAP}",
+    "schema.history.internal.kafka.topic": "${FLOWPLANE_SCHEMA_HISTORY_TOPIC}",
+    "include.schema.changes": "false",
+    "snapshot.mode": "no_data",
+    "transforms": "route",
+    "transforms.route.type": "org.apache.kafka.connect.transforms.RegexRouter",
+    "transforms.route.regex": ".*",
+    "transforms.route.replacement": "${FLOWPLANE_CDC_TOPIC}",
+    "key.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "key.converter.schemas.enable": "false",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false"
+  },
+  "cdcTopic": "${FLOWPLANE_CDC_TOPIC}",
+  "downstreamTopics": ["topics.transformed", "topics.dlq"]
+}

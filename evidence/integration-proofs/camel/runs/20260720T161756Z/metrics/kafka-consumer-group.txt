@@ -1,0 +1,2 @@
+GROUP                                     TOPIC                                         PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                                               HOST            CLIENT-ID
+flowplane-camel-evidence-20260720t161756z flowplane.camel.evidence.20260720t161756z.raw 0          110             110             0               consumer-flowplane-camel-evidence-20260720t161756z-1-2a92d923-fb12-4686-91d1-c42b5558b492 /172.28.0.22    consumer-flowplane-camel-evidence-20260720t161756z-1

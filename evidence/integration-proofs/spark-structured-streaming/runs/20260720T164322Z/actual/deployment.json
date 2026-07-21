@@ -1,0 +1,106 @@
+{
+    "mappingId":  "6a5e502c8dd158f5c9627567",
+    "artifactId":  "6a5e502c8dd158f5c9627575",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "spark-structured-streaming-sidecar-20260720t164322z",
+                        "runtimeName":  "Apache Spark Structured Streaming Sidecar 20260720T164322Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "spark-structured-streaming-sidecar-20260720t164322z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5e50358dd158f5c9627585",
+                        "runtimeId":  "spark-structured-streaming-sidecar-20260720t164322z",
+                        "runtimeName":  "Apache Spark Structured Streaming Sidecar 20260720T164322Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "artifactId":  "6a5e502c8dd158f5c9627575",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-20T16:43:33.463Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5e502c8dd158f5c9627575",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-20T16:43:33.463Z",
+                               "lastActiveAt":  "2026-07-20T16:43:33.463Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "spark-structured-streaming-sidecar-20260720t164322z",
+                                                    "runtimeName":  "Apache Spark Structured Streaming Sidecar 20260720T164322Z",
+                                                    "runtimeType":  "BENTO",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-20T16:43:33.463Z",
+                                                    "lastActiveAt":  "2026-07-20T16:43:33.463Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+                       {
+                           "approvalId":  "6a5e502c8dd158f5c9627571",
+                           "environment":  "PRODUCTION",
+                           "requestedVersion":  "v1.0.0-draft",
+                           "status":  "QA_PASSED",
+                           "reviewer":  "admin@flowplane.local",
+                           "qaTester":  "admin@flowplane.local",
+                           "requestedAt":  "2026-07-20T16:43:24.342Z",
+                           "qaVerifiedAt":  "2026-07-20T16:43:24.480Z",
+                           "qaComment":  "Valid and invalid simulation gates passed.",
+                           "qaArtifactId":  "6a5e502c8dd158f5c9627575",
+                           "qaArtifactVersion":  "v1.0.0",
+                           "qaArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+                       }
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  "2026-07-20T17:13:33.463Z",
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

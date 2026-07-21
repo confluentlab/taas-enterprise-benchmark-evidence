@@ -1,17 +1,31 @@
 # Runtime portability
 
-This matrix reflects source inspection and preserved evidence as of 2026-07-19. “Native” describes an implementation module, not a vendor certification.
+This matrix reflects the preserved local evidence through 2026-07-21 UTC. “Native” describes an implementation module, not vendor certification. “HTTP/sidecar” means the named tool transported a record to or from a separately deployed Flowplane runtime.
 
-| Runtime path | Implementation | Assignment | Replay/schema/failure reporting | Latest public evidence |
-|---|---|---|---|---|
-| Embedded Java / Spring Boot | Native embedded | Yes | Yes | `LIVE_LOCAL_VERIFIED` |
-| Kafka Connect SMT | Native | Yes | Yes | `LIVE_LOCAL_VERIFIED` for focused MongoDB and PostgreSQL fixtures |
-| Kafka Streams | Native | Yes | Yes | `LIVE_LOCAL_VERIFIED` |
-| Apache Flink | Native | Yes | Yes | `LIVE_LOCAL_VERIFIED`, including the 1 MiB local Docker proof |
-| Bento | Assigned adapter | Yes | Replay when enabled | `LIVE_LOCAL_VERIFIED` for a small local fixture |
-| AWS/Azure/GCP serverless wrappers | Assigned wrappers | Yes | Replay when enabled | `NOT_TESTED` as a single cross-cloud qualification suite |
-| HTTP single/batch | Stateless synchronous API | No | No | Batch `LIVE_LOCAL_VERIFIED`; latest full single run `INCOMPLETE` |
-| gRPC batch/stream | Contract and implementation modules | No | No | `CONTRACT_VERIFIED`; live service attempt `PRESERVED_FAILURE` |
-| NiFi, Spark, Redpanda Connect, Logstash, Vector | HTTP/sidecar paths | Varies | Varies | `MEASURED`; not first-class native wrappers |
+| Runtime path | Implementation | Latest preserved local evidence |
+|---|---|---|
+| Embedded Java / Spring Boot | Native embedded engine | `LIVE_LOCAL_VERIFIED`; baseline plus a 10,000-record/five-minute soak |
+| Kafka Connect SMT | Native connector transform | `LIVE_LOCAL_VERIFIED`; focused 100-valid/10-invalid Docker proof |
+| Kafka Streams | Native topology integration | `LIVE_LOCAL_VERIFIED`; focused 100-valid/10-invalid Docker proof |
+| Apache Flink | Native map/runtime integration | `LIVE_LOCAL_VERIFIED`; focused proof plus the separate 1 MiB live probe |
+| HTTP single | Stateless synchronous sidecar API | `LIVE_LOCAL_VERIFIED`; baseline plus a 10,000-record/five-minute soak |
+| HTTP batch | Stateless batch sidecar API | `LIVE_LOCAL_VERIFIED`; baseline plus a 10,000-record/five-minute soak |
+| gRPC batch | Live sidecar `TransformBatch` | `LIVE_LOCAL_VERIFIED`; baseline plus a 10,000-record/five-minute soak |
+| gRPC bidirectional stream | Live sidecar `TransformStream` | `LIVE_LOCAL_VERIFIED`; baseline plus a 10,000-record/five-minute soak |
+| AWS Lambda HTTP wrapper | Assigned wrapper in Docker | `LIVE_LOCAL_VERIFIED`; Lambda Runtime Interface Emulator |
+| Azure Functions HTTP wrapper | Assigned wrapper in Docker | `LIVE_LOCAL_VERIFIED`; official Azure Functions Java host image |
+| Google Cloud Functions HTTP wrapper | Assigned wrapper in Docker | `LIVE_LOCAL_VERIFIED`; Java Functions Framework 2.0.1 image |
+| Azure QueueTrigger | Provider trigger handler | Local `PASS`; Azurite input/output queues |
+| Azure EventHubTrigger | Provider trigger handler | Local `PASS`; Microsoft Event Hubs emulator plus Azurite DLQ |
+| GCP Pub/Sub CloudEvent | Provider CloudEvent handler | Local `PASS`; Pub/Sub emulator plus documented envelope-only bridge |
+| Pulsar, ActiveMQ Classic/Artemis, NATS, Redis Streams, RabbitMQ Streams, EMQX/MQTT, RocketMQ | Broker-native input/output plus Flowplane HTTP/sidecar execution | `LIVE_LOCAL_VERIFIED` for focused local Docker fixtures |
+| Redpanda Connect, Logstash, Camel, Spring Cloud Stream, NiFi, Spark, Beam, Bento, Vector, OpenTelemetry Collector, Debezium | Tool/framework integration, primarily HTTP or sidecar | `LIVE_LOCAL_VERIFIED` for focused local Docker fixtures |
 
-The runtime contract includes stable identity, capabilities, assignment polling, heartbeat, deployment state, bounded operational metrics, canonical failure records, replay, and schema observations. See [Runtime parity](../evidence/runtime-parity/summary.md) for output identity and [Integration proofs](../evidence/integration-proofs/README.md) for test status.
+The runtime contract includes stable identity, capabilities, assignment polling, heartbeat, deployment state, bounded operational metrics, canonical failure records, replay, and schema observations. See [Runtime parity](../evidence/runtime-parity/summary.md) for the earlier fixed-fixture contract proof and [Proven local integration evidence](../evidence/integration-proofs/EVIDENCE-OVERVIEW.md) for live execution boundaries, run IDs, screenshots, and raw artifacts.
+
+## Important distinctions
+
+- Implementation presence is not execution proof; every green row above links to a preserved successful bundle.
+- Local Docker/emulator evidence is not managed-cloud parity or vendor certification.
+- A tool can be interoperable through HTTP/sidecar transport without being a first-class native Flowplane wrapper.
+- Historical incomplete HTTP and `UNIMPLEMENTED` gRPC attempts are preserved, but newer successful runs are now the latest local evidence.

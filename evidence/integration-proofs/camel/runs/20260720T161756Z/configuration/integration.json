@@ -1,0 +1,13 @@
+{
+    "id":  "camel",
+    "type":  "tool",
+    "runtime":  "Apache Camel",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/camel-kafka-http-streaming"
+                            ],
+    "harness":  "scripts/dev/test-camel-kafka-http-streaming-local.ps1",
+    "protocolBoundary":  "Camel Kafka route to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-camel-kafka-http-streaming-local.ps1 -ValidRecordCount 100"
+}

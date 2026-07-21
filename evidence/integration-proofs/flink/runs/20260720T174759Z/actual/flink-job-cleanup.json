@@ -1,0 +1,7 @@
+{
+  "jobId": "bbada270a6a76aa94a3753f21486ad9b",
+  "action": "cancel",
+  "finalState": "CANCELED",
+  "scope": "run-specific evidence job only",
+  "sharedFlinkClusterStopped": false
+}

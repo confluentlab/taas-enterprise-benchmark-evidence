@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "flowplane.kafka-raw-only-verification-result.v1",
+  "runId": "20260720T172502Z",
+  "integrationId": "kafka-streams",
+  "topics": {
+    "raw": "flowplane.kafka-streams.evidence.20260720t172502z.raw",
+    "transformed": "flowplane.kafka-streams.evidence.20260720t172502z.transformed",
+    "dlq": "flowplane.kafka-streams.evidence.20260720t172502z.dlq"
+  },
+  "groupId": "flowplane-kafka-streams-evidence-20260720t172502z",
+  "boundary": "raw-only verifier producer -> integration consumer -> Flowplane sidecar -> integration transformed/DLQ producers -> verifier consumers",
+  "verifierWriteTargets": [
+    "flowplane.kafka-streams.evidence.20260720t172502z.raw"
+  ],
+  "verifierReadTargets": [
+    "flowplane.kafka-streams.evidence.20260720t172502z.transformed",
+    "flowplane.kafka-streams.evidence.20260720t172502z.dlq"
+  ],
+  "attemptedInput": 110,
+  "acceptedInput": 110,
+  "validInput": 100,
+  "intentionalInvalid": 10,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "filtered": 0,
+  "duplicates": 0,
+  "expectedHashMatches": 100,
+  "expectedErrorMatches": 10,
+  "expectedErrorCodes": [
+    "MISSING_REQUIRED_FIELD",
+    "REGEX_FAILED",
+    "TYPE_CONVERSION_FAILED"
+  ],
+  "finalLag": 0
+}

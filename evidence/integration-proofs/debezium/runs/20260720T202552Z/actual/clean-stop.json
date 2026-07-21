@@ -1,0 +1,30 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-debezium-pipeline-20260720t202552z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-debezium-pipeline-20260720t202552z"
+                       },
+                       {
+                           "container":  "flowplane-debezium-publisher-20260720t202552z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-debezium-publisher-20260720t202552z"
+                       },
+                       {
+                           "container":  "flowplane-debezium-mysql-20260720t202552z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-debezium-mysql-20260720t202552z"
+                       },
+                       {
+                           "container":  "flowplane-debezium-bento-20260720t202552z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-debezium-bento-20260720t202552z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T20:27:04.1236802Z"
+}

@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "kafka-streams-evidence-20260720t172502z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "KSTREAMS-20260720T172502Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the Kafka Streams runtime."
+}

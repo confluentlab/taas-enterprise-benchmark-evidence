@@ -1,0 +1,11 @@
+﻿{
+    "runtimeId":  "emqx-mqtt-pipeline-sidecar-20260720t185514z",
+    "runtimeName":  "EMQX MQTT Pipeline Sidecar 20260720T185514Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e6f158dd158f5c962aaa0",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e6f148dd158f5c962aa8f",
+    "mappingName":  "emqx-mqtt-live-local-20260720t185514z"
+}

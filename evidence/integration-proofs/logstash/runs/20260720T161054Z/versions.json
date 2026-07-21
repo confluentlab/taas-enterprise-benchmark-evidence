@@ -1,0 +1,20 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "logstash",
+    "toolVersion":  "Using bundled JDK: /usr/share/logstash/jdk\nlogstash 8.15.3",
+    "toolImage":  "docker.elastic.co/logstash/logstash:8.15.3",
+    "toolImageId":  "sha256:35a566a2c4d3be55451443d76d9f5977982d8413e5edb02e383f658c06bab087",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineConfigurationSha256":  "6c743e2a66ec798d05ea356ab495cad0db3f6f65760e2091c20012eae9a441cc",
+    "rawOnlyVerifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

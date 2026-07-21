@@ -1,0 +1,13 @@
+{
+    "id":  "rocketmq",
+    "type":  "tool",
+    "runtime":  "Apache RocketMQ 5.3.2 Broker+Proxy with Flowplane HTTP bridge",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "FEASIBLE_BRIDGE",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "RocketMQ raw SimpleConsumer through assigned Flowplane HTTP runtime to confirmed transformed/DLQ sends before raw acknowledgement",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration rocketmq"
+}

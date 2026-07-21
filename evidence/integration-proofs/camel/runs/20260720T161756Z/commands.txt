@@ -1,0 +1,7 @@
+# Exact run values; generated credentials are redacted.
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.camel.evidence.20260720t161756z.raw --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.camel.evidence.20260720t161756z.transformed --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.camel.evidence.20260720t161756z.dlq --partitions 1 --replication-factor 1
+docker run --name flowplane-camel-bento-20260720t161756z --network flowplane-quality-stack_default -p 127.0.0.1::8080 -v <bento-jar>:/app/flowplane-bento-runtime.jar:ro eclipse-temurin:17-jre java -jar /app/flowplane-bento-runtime.jar
+docker run --name flowplane-camel-pipeline-20260720t161756z --network flowplane-quality-stack_default -v <bundle>/configuration/camel-project:/workspace:ro <tool-environment> -e FLOWPLANE_TRANSFORM_URL=http://flowplane-camel-bento-20260720t161756z:8080/transform maven:3.9.9-eclipse-temurin-17 mvn -q -DskipTests compile exec:java
+node kafka-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> 20260720T161756Z camel flowplane-kafka kafka:9092

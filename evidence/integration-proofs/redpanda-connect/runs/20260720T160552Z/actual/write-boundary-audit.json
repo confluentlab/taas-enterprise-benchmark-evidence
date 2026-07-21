@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  2,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  1,
+    "verifierWriteTargets":  [
+                                 "flowplane.redpanda-connect.evidence.20260720t160552z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.redpanda-connect.evidence.20260720t160552z.transformed",
+                                "flowplane.redpanda-connect.evidence.20260720t160552z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.redpanda-connect.evidence.20260720t160552z.transformed",
+                                 "flowplane.redpanda-connect.evidence.20260720t160552z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "34c7900446b74a7146a5e9414a20bb14fa5d64f256ed6efc20e46d7c1d6b0415",
+    "passed":  true
+}

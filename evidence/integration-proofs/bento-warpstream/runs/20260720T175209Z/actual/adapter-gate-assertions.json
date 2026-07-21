@@ -1,0 +1,294 @@
+{
+    "schemaVersion":  "flowplane.adapter-gate-assertions.v1",
+    "boundaryClass":  "live",
+    "gates":  [
+                  {
+                      "id":  "runtime.started",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/pipeline-result.json",
+                                       "configuration/warpstream-bento.yml"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "runtime.healthConfirmed",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/pipeline-result.json",
+                                       "actual/runtime-health-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "runtime.versionRecorded",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "versions.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "boundary.realRuntimeUsed",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "boundary.realProtocolCrossed",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/write-boundary-audit.json",
+                                       "configuration/warpstream-bento.yml",
+                                       "metrics/kafka-topic-counts.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "boundary.verifierWritesRawOnly",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/write-boundary-audit.json",
+                                       "actual/bridge-result.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "artifact.loaded",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-status-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "artifact.idRecorded",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-status-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "artifact.hashRecorded",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-status-after.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "fixture.validProcessed",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/transformed-output.jsonl"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "fixture.invalidProcessed",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/error-output.jsonl"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "output.expectedHashMatched",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "expected/simulation-batch.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "error.expectedCodeMatched",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/error-output.jsonl",
+                                       "actual/bridge-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.inputReconciled",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.noUnexpectedLoss",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json",
+                                       "actual/bridge-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.noUnexpectedDuplicates",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json",
+                                       "actual/bridge-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "accounting.noUnexpectedFailures",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "counts.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "state.finalLagZero",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "metrics/kafka-consumer-group.txt",
+                                       "final-state.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "state.pendingWorkZero",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "metrics/kafka-topic-counts.json",
+                                       "final-state.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "state.runtimeHealthyAtCompletion",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/runtime-health-after.json",
+                                       "actual/pipeline-result.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "evidence.environmentRecorded",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "environment.json"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "evidence.commandsRecorded",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "commands.txt"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "evidence.logsPreserved",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "sanitized-logs/adapter.log",
+                                       "sanitized-logs/raw-only-verifier.log",
+                                       "sanitized-logs/bento-warpstream.log",
+                                       "sanitized-logs/flowplane-runtime.log"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "evidence.rawOutputsPreserved",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "actual/bridge-result.json",
+                                       "actual/pipeline-result.json",
+                                       "actual/write-boundary-audit.json",
+                                       "actual/transformed-output.jsonl",
+                                       "actual/error-output.jsonl"
+                                   ],
+                      "reason":  ""
+                  },
+                  {
+                      "id":  "evidence.checksumsVerified",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  false,
+                      "evidence":  [
+
+                                   ],
+                      "reason":  "Set by the bundle evaluator."
+                  },
+                  {
+                      "id":  "evidence.reproductionScriptAvailable",
+                      "applicable":  true,
+                      "required":  true,
+                      "passed":  true,
+                      "evidence":  [
+                                       "reproduce.ps1"
+                                   ],
+                      "reason":  ""
+                  }
+              ],
+    "warnings":  [
+                     "Technical local interoperability only; no vendor certification or endorsement is implied."
+                 ]
+}

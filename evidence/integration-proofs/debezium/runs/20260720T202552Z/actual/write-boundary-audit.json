@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  0,
+    "verifierDatabaseInsertOperations":  1,
+    "verifierRawProducerTargets":  0,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  1,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  1,
+    "verifierWriteTargets":  "mysql://flowplane-debezium-mysql-20260720t202552z/flowplane.records",
+    "verifierReadTargets":  [
+                                "flowplane.debezium.evidence.20260720t202552z.transformed",
+                                "flowplane.debezium.evidence.20260720t202552z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.debezium.evidence.20260720t202552z.transformed",
+                                 "flowplane.debezium.evidence.20260720t202552z.dlq"
+                             ],
+    "verifierSha256":  "26ba463cef1c89199cfc0e9cda5a8d5ce66b7a0bfa00480359f85fa244ca7f93",
+    "pipelineConfigurationSha256":  "8d8a1ef8f5014ad5914bc2dce646f9880107331696ee1b8ecf4cc149ef7ccb6b",
+    "publisherBridgeSha256":  "6f3eb43c8ecdde3d33d085644011d8c7674cf592cc78e2aaf34b71e9ab261b31",
+    "passed":  true
+}

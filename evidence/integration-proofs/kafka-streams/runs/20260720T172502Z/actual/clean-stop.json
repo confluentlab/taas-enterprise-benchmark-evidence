@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-kafka-streams-evidence-20260720t172502z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-kafka-streams-evidence-20260720t172502z"
+                       },
+                       {
+                           "container":  "flowplane-kafka-streams-evidence-20260720t172502z",
+                           "action":  "already-exited",
+                           "exitCode":  143,
+                           "output":  "Container completed before cleanup."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T17:25:48.1947379Z"
+}

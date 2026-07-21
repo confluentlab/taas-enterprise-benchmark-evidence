@@ -1,0 +1,93 @@
+{
+    "mappingId":  "6a5efabc8dd158f5c96313eb",
+    "artifactId":  "6a5efabc8dd158f5c96313f6",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "grpc-batch-evidence-20260721t045105z",
+                        "runtimeName":  "grpc-batch Evidence 20260721T045105Z",
+                        "runtimeType":  "SIDECAR",
+                        "environment":  "DEVELOPMENT",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "grpc-batch-evidence-20260721t045105z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5efaca8dd158f5c9631410",
+                        "runtimeId":  "grpc-batch-evidence-20260721t045105z",
+                        "runtimeName":  "grpc-batch Evidence 20260721T045105Z",
+                        "runtimeType":  "SIDECAR",
+                        "environment":  "DEVELOPMENT",
+                        "artifactId":  "6a5efabc8dd158f5c96313f6",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-21T04:51:22.619Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5efabc8dd158f5c96313f6",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-21T04:51:22.619Z",
+                               "lastActiveAt":  "2026-07-21T04:51:22.619Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "grpc-batch-evidence-20260721t045105z",
+                                                    "runtimeName":  "grpc-batch Evidence 20260721T045105Z",
+                                                    "runtimeType":  "SIDECAR",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-21T04:51:22.619Z",
+                                                    "lastActiveAt":  "2026-07-21T04:51:22.619Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  null,
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

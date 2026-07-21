@@ -1,0 +1,29 @@
+﻿{
+    "id":  "6a5e636c8dd158f5c9629579",
+    "outputPreview":  {
+                          "eventId":  "",
+                          "customerName":  "Invalid Synthetic",
+                          "region":  "unknown",
+                          "emailMasked":  "****************test",
+                          "tags":  [
+
+                                   ],
+                          "primarySku":  null
+                      },
+    "warnings":  [
+
+                 ],
+    "errors":  [
+                   "eventId: MISSING_REQUIRED_FIELD - Required field is missing",
+                   "eventId: REGEX_FAILED - Value did not match validation pattern",
+                   "amount: TYPE_CONVERSION_FAILED - Failed to cast value to decimal (invalid_number)",
+                   "amountWithTax: TYPE_CONVERSION_FAILED - Failed to cast value to target type (invalid_number)",
+                   "occurredAt: TYPE_CONVERSION_FAILED - Failed to cast value to timestamp (invalid_datetime)",
+                   "primarySku: MISSING_REQUIRED_FIELD - Required field is missing"
+               ],
+    "latencyEstimateMs":  0.293637,
+    "warningCount":  0,
+    "errorCount":  6,
+    "outputPreviewRedacted":  false,
+    "outputPreviewMode":  "plaintext"
+}

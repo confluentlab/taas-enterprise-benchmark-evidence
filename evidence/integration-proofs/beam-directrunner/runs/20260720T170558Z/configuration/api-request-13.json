@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "beam-directrunner-sidecar-20260720t170558z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "BEAM-20260720T170558Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the beam-directrunner sidecar."
+}

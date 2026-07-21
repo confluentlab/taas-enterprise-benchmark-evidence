@@ -1,0 +1,5 @@
+# Exact run values; credentials are intentionally redacted.
+docker compose -f C:\FlowPlaneNew\video-generation-scripts-copy\pulsar-local-ui\compose.yaml up -d
+docker run --name flowplane-pulsar-bento-20260720t135944z --network flowplane-quality-stack_default -p 127.0.0.1::8080 -v <bento-jar>:/app/flowplane-bento-runtime.jar:ro eclipse-temurin:17-jre java -jar /app/flowplane-bento-runtime.jar
+docker run --name flowplane-pulsar-pipeline-20260720t135944z --network pulsar-local-ui_default -v <pipeline-script>:/app/pipeline.mjs:ro -v <bundle>:/evidence node:22-alpine node /app/pipeline.mjs http://flowplane-pulsar-local:8080 http://host.docker.internal:<sidecar-port>/transform 20260720T135944Z 110 /evidence
+node pulsar-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> http://127.0.0.1:8080 20260720T135944Z

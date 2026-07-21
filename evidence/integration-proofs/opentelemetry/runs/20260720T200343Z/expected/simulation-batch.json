@@ -1,0 +1,2658 @@
+{
+    "id":  "6a5e7f228dd158f5c962c6e5",
+    "records":  [
+                    {
+                        "recordId":  "evt-live-000001",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000001",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  193.713,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000002",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000002",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  35.927,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000003",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000003",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  18.756,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000004",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000004",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.537,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000005",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000005",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.23,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000006",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000006",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  15.499,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000007",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000007",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.714,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000008",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000008",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.905,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000009",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000009",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "**************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.45,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000010",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000010",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  15.127,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000011",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000011",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.598,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000012",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000012",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.277,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000013",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000013",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.511,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000014",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000014",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.779,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000015",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000015",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.72,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000016",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000016",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.502,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000017",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000017",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  44.965,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000018",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000018",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  22.597,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000019",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000019",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  18.894,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000020",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000020",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  17.079,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000021",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000021",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  16.255,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000022",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000022",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  15.16,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000023",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000023",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.918,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000024",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000024",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  16.119,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000025",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000025",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-0"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.211,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000026",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000026",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  15.241,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000027",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000027",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.891,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000028",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000028",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.241,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000029",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000029",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.247,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000030",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000030",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  14.552,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000031",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000031",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  13.134,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000032",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000032",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.587,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000033",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000033",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.808,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000034",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000034",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  25.495,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000035",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000035",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.841,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000036",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000036",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.751,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000037",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000037",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.283,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000038",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000038",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.571,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000039",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000039",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.809,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000040",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000040",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.4,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000041",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000041",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.071,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000042",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000042",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.287,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000043",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000043",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.035,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000044",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000044",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.375,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000045",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000045",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.339,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000046",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000046",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.939,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000047",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000047",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.523,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000048",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000048",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.048,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000049",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000049",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.174,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000050",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000050",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-1"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.211,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000051",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000051",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.752,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000052",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000052",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.89,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000053",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000053",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.621,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000054",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000054",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.225,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000055",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000055",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.623,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000056",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000056",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.298,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000057",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000057",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.617,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000058",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000058",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.544,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000059",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000059",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.302,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000060",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000060",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.762,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000061",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000061",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.035,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000062",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000062",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.933,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000063",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000063",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.404,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000064",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000064",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.985,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000065",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000065",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.146,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000066",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000066",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.897,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000067",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000067",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.576,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000068",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000068",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.689,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000069",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000069",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.193,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000070",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000070",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.389,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000071",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000071",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.503,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000072",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000072",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.149,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000073",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000073",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.422,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000074",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000074",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.805,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000075",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000075",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-2"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.834,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000076",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000076",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.577,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000077",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000077",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.833,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000078",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000078",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.415,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000079",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000079",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.622,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000080",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000080",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.386,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000081",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000081",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  13.194,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000082",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000082",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.006,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000083",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000083",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.622,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000084",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000084",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.695,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000085",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000085",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.858,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000086",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000086",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  17.474,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000087",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000087",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.034,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000088",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000088",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.002,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000089",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000089",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.974,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000090",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000090",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.745,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000091",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000091",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.4,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000092",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000092",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.21,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000093",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000093",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.871,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000094",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000094",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.275,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000095",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000095",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.464,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000096",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000096",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.578,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000097",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000097",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.25,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000098",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000098",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  11.48,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000099",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000099",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "***************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.442,
+                        "success":  true
+                    },
+                    {
+                        "recordId":  "evt-live-000100",
+                        "outputPreview":  {
+                                              "eventId":  "evt-live-000100",
+                                              "customerName":  "Ada Lovelace",
+                                              "amount":  128.45,
+                                              "amountWithTax":  141.295,
+                                              "occurredAt":  1784550896000,
+                                              "region":  "unknown",
+                                              "emailMasked":  "****************test",
+                                              "tags":  [
+                                                           "synthetic",
+                                                           "verification",
+                                                           "batch-3"
+                                                       ],
+                                              "primarySku":  "SKU-001"
+                                          },
+                        "warnings":  [
+
+                                     ],
+                        "errors":  [
+
+                                   ],
+                        "latencyMicros":  12.197,
+                        "success":  true
+                    }
+                ],
+    "parity":  [
+                   {
+                       "runtimeMode":  "HTTP_SINGLE",
+                       "recordsCompared":  100,
+                       "recordsMatched":  100,
+                       "recordsDifferent":  0,
+                       "recordsFailed":  0,
+                       "p95LatencyMicros":  18.894,
+                       "p99LatencyMicros":  44.965,
+                       "status":  "PROJECTED"
+                   },
+                   {
+                       "runtimeMode":  "HTTP_BATCH",
+                       "recordsCompared":  100,
+                       "recordsMatched":  100,
+                       "recordsDifferent":  0,
+                       "recordsFailed":  0,
+                       "p95LatencyMicros":  18.894,
+                       "p99LatencyMicros":  44.965,
+                       "status":  "PROJECTED"
+                   },
+                   {
+                       "runtimeMode":  "GRPC_BATCH",
+                       "recordsCompared":  100,
+                       "recordsMatched":  100,
+                       "recordsDifferent":  0,
+                       "recordsFailed":  0,
+                       "p95LatencyMicros":  18.894,
+                       "p99LatencyMicros":  44.965,
+                       "status":  "PROJECTED"
+                   },
+                   {
+                       "runtimeMode":  "GRPC_STREAM",
+                       "recordsCompared":  100,
+                       "recordsMatched":  100,
+                       "recordsDifferent":  0,
+                       "recordsFailed":  0,
+                       "p95LatencyMicros":  18.894,
+                       "p99LatencyMicros":  44.965,
+                       "status":  "PROJECTED"
+                   }
+               ],
+    "warnings":  [
+                     "Runtime modes are projections from one shared core-engine execution; this simulation does not invoke HTTP or gRPC runtime transports."
+                 ],
+    "errors":  [
+
+               ],
+    "latencyEstimateMs":  1.636561,
+    "success":  true,
+    "recordCount":  100,
+    "outputPreviewRedacted":  false,
+    "outputPreviewMode":  "plaintext"
+}

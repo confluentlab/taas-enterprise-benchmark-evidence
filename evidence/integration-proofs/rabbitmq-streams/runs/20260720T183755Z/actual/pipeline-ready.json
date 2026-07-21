@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "flowplane.rabbitmq-streams-pipeline-ready.v1",
+  "runId": "20260720T183755Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane.rabbitmq.20260720t183755z.raw"
+  ],
+  "writeTargets": [
+    "flowplane.rabbitmq.20260720t183755z.transformed",
+    "flowplane.rabbitmq.20260720t183755z.dlq"
+  ],
+  "runtimeUrl": "http://flowplane-rabbitmq-streams-bento-20260720t183755z:8080/transform",
+  "readyAt": "2026-07-20T18:38:10.736Z"
+}

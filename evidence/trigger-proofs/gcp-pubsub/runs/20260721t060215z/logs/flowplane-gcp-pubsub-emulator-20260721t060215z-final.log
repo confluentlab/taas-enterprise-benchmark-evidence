@@ -1,0 +1,18 @@
+﻿Executing: /google-cloud-sdk/platform/pubsub-emulator/bin/cloud-pubsub-emulator --host=0.0.0.0 --port=8085
+[pubsub] This is the Google Pub/Sub fake.
+[pubsub] Implementation may be incomplete or differ from the real system.
+[pubsub] Jul 21, 2026 6:02:19 AM com.google.cloud.pubsub.testing.v1.Main main
+[pubsub] INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+[pubsub] SLF4J(W): No SLF4J providers were found.
+[pubsub] SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+[pubsub] SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+[pubsub] Jul 21, 2026 6:02:20 AM com.google.cloud.pubsub.testing.v1.Main main
+[pubsub] INFO: Server started, listening on 8085
+[pubsub] Jul 21, 2026 6:02:29 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+[pubsub] INFO: Detected HTTP/2 connection.
+[pubsub] Jul 21, 2026 6:02:30 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+[pubsub] INFO: Detected HTTP/2 connection.
+[pubsub] Jul 21, 2026 6:02:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+[pubsub] INFO: Detected HTTP/2 connection.
+[pubsub] Jul 21, 2026 6:02:37 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+[pubsub] INFO: Detected HTTP/2 connection.

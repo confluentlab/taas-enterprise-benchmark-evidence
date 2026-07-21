@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "debezium-sidecar-20260720t202552z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "DEBEZIUM-20260720T202552Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the debezium sidecar."
+}

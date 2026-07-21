@@ -1,0 +1,13 @@
+{
+    "id":  "redpanda-connect",
+    "type":  "tool",
+    "runtime":  "Redpanda Connect",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/redpanda_connect_kafka_http.yaml"
+                            ],
+    "harness":  "scripts/dev/test-redpanda-connect-kafka-http-streaming-local.ps1",
+    "protocolBoundary":  "Redpanda Connect Kafka pipeline to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-redpanda-connect-kafka-http-streaming-local.ps1 -ValidRecordCount 100"
+}

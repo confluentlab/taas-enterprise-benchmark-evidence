@@ -1,0 +1,12 @@
+﻿{
+    "verifierRawProducerCalls":  1,
+    "verifierDownstreamProducerCalls":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawSubscriptionCalls":  1,
+    "pipelineDownstreamProducerCalls":  2,
+    "deferredPubAck":  1,
+    "separateConfirmedPublisher":  1,
+    "verifierSha256":  "2556777bb44302d9e5283680b6e3173c7e56b33039a53b1c541cf674ec50e8ce",
+    "pipelineSha256":  "cb4e6e18d3279cd9bbc5708c2510d3175025c3106e146c3f76968ce20bf0a552",
+    "passed":  true
+}

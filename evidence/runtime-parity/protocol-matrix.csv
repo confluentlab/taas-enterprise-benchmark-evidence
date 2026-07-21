@@ -2,5 +2,5 @@ mode,contract_status,live_status,interpretation
 EMBEDDED_JAVA_SDK,CONTRACT_VERIFIED,LIVE_LOCAL_VERIFIED,"Native embedded path"
 HTTP_SINGLE,CONTRACT_VERIFIED,INCOMPLETE,"Contract fixture verified; latest 59600/60000 live run incomplete"
 HTTP_BATCH,CONTRACT_VERIFIED,LIVE_LOCAL_VERIFIED,"Contract fixture and 60000/60000 local batch run verified"
-GRPC_BATCH,CONTRACT_VERIFIED,PRESERVED_FAILURE,"Contract fixture verified; live service returned UNIMPLEMENTED"
-GRPC_STREAM,CONTRACT_VERIFIED,PRESERVED_FAILURE,"Contract fixture verified; live service returned UNIMPLEMENTED"
+GRPC_BATCH,CONTRACT_VERIFIED,LIVE_LOCAL_VERIFIED,"Contract fixture verified; older live service attempt returned UNIMPLEMENTED; newer sidecar baseline and 10000-record soak passed"
+GRPC_STREAM,CONTRACT_VERIFIED,LIVE_LOCAL_VERIFIED,"Contract fixture verified; older live service attempt returned UNIMPLEMENTED; newer sidecar baseline and 10000-record soak passed"

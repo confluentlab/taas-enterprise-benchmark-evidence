@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: flowplane-spring-cloud-stream-kafka-http
+  cloud:
+    function:
+      definition: transform
+    stream:
+      bindings:
+        transform-in-0:
+          destination: ${FLOWPLANE_RAW_TOPIC}
+          group: ${FLOWPLANE_GROUP_ID}
+          content-type: application/json
+          consumer:
+            max-attempts: ${FLOWPLANE_HTTP_MAX_ATTEMPTS:3}
+            back-off-initial-interval: ${FLOWPLANE_HTTP_BACKOFF_INITIAL_MS:1000}
+            back-off-max-interval: ${FLOWPLANE_HTTP_BACKOFF_MAX_MS:10000}
+            back-off-multiplier: ${FLOWPLANE_HTTP_BACKOFF_MULTIPLIER:2.0}
+        transformed-out-0:
+          destination: ${FLOWPLANE_TRANSFORMED_TOPIC}
+          content-type: application/json
+        dlq-out-0:
+          destination: ${FLOWPLANE_DLQ_TOPIC}
+          content-type: application/json
+      kafka:
+        binder:
+          brokers: ${FLOWPLANE_KAFKA_BOOTSTRAP:kafka:9092}
+        bindings:
+          transform-in-0:
+            consumer:
+              start-offset: earliest
+              auto-commit-offset: true
+flowplane:
+  transform-url: ${FLOWPLANE_TRANSFORM_URL}
+logging:
+  level:
+    root: warn
+    com.flowplane.local: info

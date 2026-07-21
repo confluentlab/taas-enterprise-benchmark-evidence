@@ -1,0 +1,6 @@
+2026-07-20T16:10:57.5566005Z Loading canonical mapping and fixtures.
+2026-07-20T16:10:57.5944405Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T16:10:58.9030062Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T16:11:08.2325170Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T16:11:13.6055552Z Starting the independently deployed Logstash pipeline.
+2026-07-20T16:11:19.0404510Z Publishing canonical fixtures through the raw-only verifier.

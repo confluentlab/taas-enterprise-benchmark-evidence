@@ -1,0 +1,5 @@
+{
+    "integration":  "serverless-azure",
+    "executionAttempted":  false,
+    "reason":  "Prepared bundle only."
+}

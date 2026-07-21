@@ -1,0 +1,11 @@
+{
+    "runtimeId":  "camel-sidecar-20260720t161756z",
+    "runtimeName":  "Apache Camel Sidecar 20260720T161756Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e4a378dd158f5c9626c6b",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e4a368dd158f5c9626c5d",
+    "mappingName":  "camel-live-local-20260720t161756z"
+}

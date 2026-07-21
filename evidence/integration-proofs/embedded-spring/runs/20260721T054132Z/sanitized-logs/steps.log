@@ -1,0 +1,7 @@
+2026-07-21T05:41:34.4667653Z Expanding the canonical fixture to 9900 valid and 100 intentional-invalid records.
+2026-07-21T05:41:36.0982464Z Creating and governing the run-specific mapping.
+2026-07-21T05:41:39.9324322Z Creating empty persistent Kafka evidence topics.
+2026-07-21T05:41:47.4073776Z Pre-registering the runtime profile and obtaining its runtime-scoped client secret.
+2026-07-21T05:41:47.4296025Z Starting the embedded-spring runtime container.
+2026-07-21T05:42:12.3478404Z Using the independently deployed embedded Spring runtime as the raw Kafka consumer and downstream publisher.
+2026-07-21T05:42:12.3712841Z Publishing 9900 valid and 100 intentional-invalid records through the raw-only verifier.

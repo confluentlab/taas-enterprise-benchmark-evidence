@@ -1,0 +1,16 @@
+{
+    "id":  "http-batch",
+    "type":  "protocol",
+    "runtime":  "Flowplane sidecar HTTP",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-sidecar-http",
+                                "flowplane-java-sdk/flowplane-sidecar-app",
+                                "scripts/demo/live-local-verification/adapters/runtime-surface.ps1",
+                                "scripts/demo/live-local-verification/adapters/kafka-runtime-surface-bridge.mjs"
+                            ],
+    "harness":  "scripts/demo/live-local-verification/adapters/http-batch.ps1",
+    "protocolBoundary":  "persistent Kafka raw topic through HTTP /v1/transform:batch to persistent transformed and DLQ topics",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration http-batch"
+}

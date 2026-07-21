@@ -1,0 +1,8 @@
+# Exact run values; generated credentials are redacted.
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.opentelemetry.evidence.20260720t200343z.raw --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.opentelemetry.evidence.20260720t200343z.transformed --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.opentelemetry.evidence.20260720t200343z.dlq --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.opentelemetry.evidence.20260720t200343z.forwarded --partitions 1 --replication-factor 1
+docker run --name flowplane-opentelemetry-bento-20260720t200343z --network flowplane-quality-stack_default -p 127.0.0.1::8080 -v <bento-jar>:/app/flowplane-bento-runtime.jar:ro eclipse-temurin:17-jre java -jar /app/flowplane-bento-runtime.jar
+docker run --name flowplane-opentelemetry-publisher-20260720t200343z --network flowplane-quality-stack_default <publisher-bridge> kafka:9092 http://flowplane-opentelemetry-bento-20260720t200343z:8080/transform opentelemetry 20260720T200343Z 110 /evidence flowplane.opentelemetry.evidence.20260720t200343z.forwarded; docker run --name flowplane-opentelemetry-pipeline-20260720t200343z --network flowplane-quality-stack_default -v <otel-config>:/etc/otelcol-contrib/config.yaml:ro otel/opentelemetry-collector-contrib:0.149.0 --config=/etc/otelcol-contrib/config.yaml
+node kafka-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> 20260720T200343Z opentelemetry flowplane-kafka kafka:9092

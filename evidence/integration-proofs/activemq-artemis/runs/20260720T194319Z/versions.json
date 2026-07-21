@@ -1,0 +1,14 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "artemisVersion":  "2.44.0",
+    "artemisImage":  "apache/activemq-artemis:latest-alpine",
+    "artemisImageId":  "sha256:1bce124d2324faeb1253e2db4bb68d64decf46412ecfd8d9ef46c08b1b4af5b4",
+    "stompitVersion":  "1.0.0",
+    "pipelineScriptSha256":  "93180bd5accb002432f435390b41b57f125257778827fb48b48e6f9d7783fb29",
+    "rawOnlyVerifierSha256":  "e38695d92897439fa442dd287c717e0e5322260c4b44fd3cb5eb5bbc49e59fef"
+}

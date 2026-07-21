@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "flowplane.pulsar-pipeline-ready.v1",
+  "runId": "20260720T135944Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane-pulsar-20260720t135944z-raw"
+  ],
+  "writeTargets": [
+    "flowplane-pulsar-20260720t135944z-transformed",
+    "flowplane-pulsar-20260720t135944z-dlq"
+  ],
+  "runtimeUrl": "http://host.docker.internal:60782/transform",
+  "readyAt": "2026-07-20T14:00:12.169Z"
+}

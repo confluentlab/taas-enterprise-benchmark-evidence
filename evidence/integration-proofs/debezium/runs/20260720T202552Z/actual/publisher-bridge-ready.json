@@ -1,0 +1,12 @@
+{
+  "integrationId": "debezium",
+  "runId": "20260720T202552Z",
+  "kafkaBootstrap": "kafka:9092",
+  "runtimeUrl": "http://flowplane-debezium-bento-20260720t202552z:8080/transform",
+  "sourceTopic": "flowplane.debezium.evidence.20260720t202552z.raw",
+  "topics": {
+    "transformed": "flowplane.debezium.evidence.20260720t202552z.transformed",
+    "dlq": "flowplane.debezium.evidence.20260720t202552z.dlq"
+  },
+  "readyAt": "2026-07-20T20:26:13.915Z"
+}

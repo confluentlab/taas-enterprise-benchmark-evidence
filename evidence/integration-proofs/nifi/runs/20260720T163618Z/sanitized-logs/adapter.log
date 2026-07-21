@@ -1,0 +1,6 @@
+2026-07-20T16:36:20.2696976Z Loading canonical mapping and fixtures.
+2026-07-20T16:36:20.2858726Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T16:36:20.8700941Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T16:36:28.0700602Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T16:36:33.7702790Z Starting the independently deployed Apache NiFi pipeline.
+2026-07-20T16:37:11.0278115Z Publishing canonical fixtures through the raw-only verifier.

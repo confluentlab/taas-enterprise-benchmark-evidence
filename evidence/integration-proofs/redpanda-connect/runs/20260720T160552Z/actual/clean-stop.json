@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-redpanda-connect-pipeline-20260720t160552z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-redpanda-connect-pipeline-20260720t160552z"
+                       },
+                       {
+                           "container":  "flowplane-redpanda-connect-bento-20260720t160552z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-redpanda-connect-bento-20260720t160552z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T16:06:31.5817723Z"
+}

@@ -1,0 +1,2 @@
+GROUP                                    TOPIC                                        PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                                              HOST            CLIENT-ID
+flowplane-nifi-evidence-20260720t163618z flowplane.nifi.evidence.20260720t163618z.raw 0          110             110             0               consumer-flowplane-nifi-evidence-20260720t163618z-1-7f037bd2-f90e-4fbb-81da-54c96df40650 /172.28.0.22    consumer-flowplane-nifi-evidence-20260720t163618z-1

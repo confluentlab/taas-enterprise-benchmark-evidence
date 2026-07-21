@@ -1,0 +1,1 @@
+PLANNED: powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration embedded-spring

@@ -1,0 +1,1 @@
+{"runtimeIds":["redis-streams-pipeline-sidecar-20260720t182351z"],"requireReplayGate":false,"changeTicket":"REDIS-20260720T182351Z","rolloutPercent":100,"reason":"Assign the approved synthetic artifact to the Redis Streams pipeline sidecar."}

@@ -1,0 +1,17 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  179,
+                      "statusDigestSha256":  "235d38bcd7e164a61fa7c440b9c27b51353f1982cddde78e177f0bc504c33b64"
+                  },
+    "integration":  "embedded-spring",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "bridgeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "runtimeSurfaceBridgeSha256":  null,
+    "rawOnlyVerifierSha256":  "20c8828b693c3e8e0d0409f54e9394ca63609f4d10177ce3cb190f00b05364d6",
+    "runtimeJarSha256":  "eabdddf1ae6fd0c73b8d3deda6d4cc3279986e31840b13020f9741ef9a3b2431",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-opentelemetry-pipeline-20260720t200343z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-opentelemetry-pipeline-20260720t200343z"
+                       },
+                       {
+                           "container":  "flowplane-opentelemetry-publisher-20260720t200343z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-opentelemetry-publisher-20260720t200343z"
+                       },
+                       {
+                           "container":  "flowplane-opentelemetry-bento-20260720t200343z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-opentelemetry-bento-20260720t200343z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T20:04:30.2448943Z"
+}

@@ -1,0 +1,10 @@
+{
+    "capturedAt":  "2026-07-21T05:03:03.2792017Z",
+    "os":  "Microsoft Windows 11 Home",
+    "osVersion":  "10.0.26200",
+    "cpu":  "Intel(R) Core(TM) Ultra 9 285H",
+    "logicalCores":  16,
+    "memoryBytes":  33820106752,
+    "javaVersion":  "unavailable",
+    "dockerVersion":  "28.5.1"
+}

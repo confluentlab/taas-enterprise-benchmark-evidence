@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  2,
+    "pipelineTransformedOutputReferences":  2,
+    "pipelineDlqOutputReferences":  2,
+    "verifierWriteTargets":  [
+                                 "flowplane.camel.evidence.20260720t161756z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.camel.evidence.20260720t161756z.transformed",
+                                "flowplane.camel.evidence.20260720t161756z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.camel.evidence.20260720t161756z.transformed",
+                                 "flowplane.camel.evidence.20260720t161756z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "d666cb4fd03e4529ac634d2d704f9b88f0ec00be1f95ac68345a4e831beddf2c",
+    "passed":  true
+}

@@ -1,0 +1,40 @@
+INFO: Loading '/opt/activemq/bin/env'
+INFO: Using java '/usr/local/openjdk-8/bin/java'
+INFO: Starting in foreground, this is just for debugging purposes (stop process by pressing CTRL+C)
+INFO: Creating pidfile /opt/activemq/data/activemq.pid
+Java Runtime: Oracle Corporation 1.8.0_212 /usr/local/openjdk-8
+  Heap sizes: current=62976k  free=58707k  max=932352k
+    JVM args: -Xms64M -Xmx1G -Djava.util.logging.config.file=logging.properties -Djava.security.auth.login.config=/opt/activemq/conf/login.config -Dcom.sun.management.jmxremote -Djava.awt.headless=true -Djava.io.tmpdir=/opt/activemq/tmp -Dactivemq.classpath=/opt/activemq/conf:/opt/activemq/../lib/: -Dactivemq.home=/opt/activemq -Dactivemq.base=/opt/activemq -Dactivemq.conf=/opt/activemq/conf -Dactivemq.data=/opt/activemq/data
+Extensions classpath:
+  [/opt/activemq/lib,/opt/activemq/lib/camel,/opt/activemq/lib/optional,/opt/activemq/lib/web,/opt/activemq/lib/extra]
+ACTIVEMQ_HOME: /opt/activemq
+ACTIVEMQ_BASE: /opt/activemq
+ACTIVEMQ_CONF: /opt/activemq/conf
+ACTIVEMQ_DATA: /opt/activemq/data
+Loading message broker from: xbean:activemq.xml
+ INFO | Refreshing org.apache.activemq.xbean.XBeanBrokerFactory$1@1a968a59: startup date [Mon Jul 20 18:05:41 UTC 2026]; root of context hierarchy
+ INFO | Using Persistence Adapter: KahaDBPersistenceAdapter[/opt/activemq/data/kahadb]
+ INFO | PListStore:[/opt/activemq/data/localhost/tmp_storage] started
+ INFO | Apache ActiveMQ 5.15.9 (localhost, ID:4d0271be7f84-36199-1784570741625-0:1) is starting
+ INFO | Listening for connections at: tcp://4d0271be7f84:61616?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+ INFO | Connector openwire started
+ INFO | Listening for connections at: amqp://4d0271be7f84:5672?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+ INFO | Connector amqp started
+ INFO | Listening for connections at: stomp://4d0271be7f84:61613?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+ INFO | Connector stomp started
+ INFO | Listening for connections at: mqtt://4d0271be7f84:1883?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+ INFO | Connector mqtt started
+ INFO | Starting Jetty server
+ INFO | Creating Jetty connector
+ WARN | ServletContext@o.e.j.s.ServletContextHandler@7aaca91a{/,null,STARTING} has uncovered http methods for path: /
+ INFO | Listening for connections at ws://4d0271be7f84:61614?maximumConnections=1000&wireFormat.maxFrameSize=104857600
+ INFO | Connector ws started
+ INFO | Apache ActiveMQ 5.15.9 (localhost, ID:4d0271be7f84-36199-1784570741625-0:1) started
+ INFO | For help or more information please see: http://activemq.apache.org
+ INFO | No Spring WebApplicationInitializer types detected on classpath
+ INFO | ActiveMQ WebConsole available at http://0.0.0.0:8161/
+ INFO | ActiveMQ Jolokia REST API available at http://0.0.0.0:8161/api/jolokia/
+ INFO | Initializing Spring FrameworkServlet 'dispatcher'
+ INFO | No Spring WebApplicationInitializer types detected on classpath
+ INFO | jolokia-agent: Using policy access restrictor classpath:/jolokia-access.xml
+ INFO | Connector vm://localhost started

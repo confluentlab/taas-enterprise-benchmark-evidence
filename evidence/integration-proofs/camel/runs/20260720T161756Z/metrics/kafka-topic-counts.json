@@ -1,0 +1,147 @@
+{
+  "raw": 110,
+  "transformed": 100,
+  "dlq": 10,
+  "transformedWait": {
+    "count": 100,
+    "observations": [
+      {
+        "elapsedMs": 952,
+        "count": 0
+      },
+      {
+        "elapsedMs": 3880,
+        "count": 0
+      },
+      {
+        "elapsedMs": 6776,
+        "count": 0
+      },
+      {
+        "elapsedMs": 9759,
+        "count": 0
+      },
+      {
+        "elapsedMs": 12659,
+        "count": 0
+      },
+      {
+        "elapsedMs": 15630,
+        "count": 0
+      },
+      {
+        "elapsedMs": 18518,
+        "count": 0
+      },
+      {
+        "elapsedMs": 21431,
+        "count": 0
+      },
+      {
+        "elapsedMs": 24355,
+        "count": 0
+      },
+      {
+        "elapsedMs": 27293,
+        "count": 0
+      },
+      {
+        "elapsedMs": 30260,
+        "count": 0
+      },
+      {
+        "elapsedMs": 33492,
+        "count": 0
+      },
+      {
+        "elapsedMs": 36780,
+        "count": 0
+      },
+      {
+        "elapsedMs": 39916,
+        "count": 0
+      },
+      {
+        "elapsedMs": 43210,
+        "count": 0
+      },
+      {
+        "elapsedMs": 46093,
+        "count": 0
+      },
+      {
+        "elapsedMs": 48982,
+        "count": 0
+      },
+      {
+        "elapsedMs": 51871,
+        "count": 0
+      },
+      {
+        "elapsedMs": 54809,
+        "count": 0
+      },
+      {
+        "elapsedMs": 57708,
+        "count": 0
+      },
+      {
+        "elapsedMs": 60725,
+        "count": 0
+      },
+      {
+        "elapsedMs": 63653,
+        "count": 0
+      },
+      {
+        "elapsedMs": 66657,
+        "count": 0
+      },
+      {
+        "elapsedMs": 69540,
+        "count": 0
+      },
+      {
+        "elapsedMs": 72474,
+        "count": 0
+      },
+      {
+        "elapsedMs": 75574,
+        "count": 0
+      },
+      {
+        "elapsedMs": 78514,
+        "count": 0
+      },
+      {
+        "elapsedMs": 81482,
+        "count": 0
+      },
+      {
+        "elapsedMs": 84365,
+        "count": 0
+      },
+      {
+        "elapsedMs": 87257,
+        "count": 0
+      },
+      {
+        "elapsedMs": 90475,
+        "count": 70
+      },
+      {
+        "elapsedMs": 93686,
+        "count": 100
+      }
+    ]
+  },
+  "dlqWait": {
+    "count": 10,
+    "observations": [
+      {
+        "elapsedMs": 1128,
+        "count": 10
+      }
+    ]
+  }
+}

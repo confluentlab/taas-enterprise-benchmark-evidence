@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "camel-sidecar-20260720t161756z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "CAMEL-20260720T161756Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the camel sidecar."
+}

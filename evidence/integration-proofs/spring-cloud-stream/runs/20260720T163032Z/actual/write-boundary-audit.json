@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  2,
+    "pipelineTransformedOutputReferences":  2,
+    "pipelineDlqOutputReferences":  2,
+    "verifierWriteTargets":  [
+                                 "flowplane.spring-cloud-stream.evidence.20260720t163032z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.spring-cloud-stream.evidence.20260720t163032z.transformed",
+                                "flowplane.spring-cloud-stream.evidence.20260720t163032z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.spring-cloud-stream.evidence.20260720t163032z.transformed",
+                                 "flowplane.spring-cloud-stream.evidence.20260720t163032z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "35e6d8ef7f1331df791304041345bf08519b6a64877cd9201a02c4415aafbcc8",
+    "passed":  true
+}

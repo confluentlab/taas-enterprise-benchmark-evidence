@@ -1,0 +1,5 @@
+{
+    "integration":  "serverless-gcp",
+    "executionAttempted":  false,
+    "reason":  "Prepared bundle only."
+}

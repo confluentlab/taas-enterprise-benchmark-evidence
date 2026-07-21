@@ -1,0 +1,18 @@
+﻿{
+    "runId":  "20260720T194319Z",
+    "broker":  "ActiveMQ Artemis",
+    "brokerContainer":  "flowplane-artemis-broker-20260720t194319z",
+    "brokerImage":  "apache/activemq-artemis:latest-alpine",
+    "consolePort":  51677,
+    "stompEndpoint":  "flowplane-artemis-broker-20260720t194319z:61613",
+    "queues":  {
+                   "raw":  "flowplane.artemis.20260720t194319z.raw",
+                   "transformed":  "flowplane.artemis.20260720t194319z.transformed",
+                   "dlq":  "flowplane.artemis.20260720t194319z.dlq"
+               },
+    "durableQueues":  true,
+    "preserveOnNoConsumers":  true,
+    "credentials":  "redacted",
+    "flowplaneRuntimeId":  "activemq-artemis-pipeline-sidecar-20260720t194319z",
+    "acknowledgementOrder":  "downstream STOMP receipt before raw ACK receipt"
+}

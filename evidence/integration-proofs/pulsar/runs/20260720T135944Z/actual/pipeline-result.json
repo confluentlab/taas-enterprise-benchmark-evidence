@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "flowplane.pulsar-pipeline-result.v1",
+  "runId": "20260720T135944Z",
+  "component": "independently deployed Pulsar-to-Flowplane pipeline container",
+  "boundary": "Pulsar raw subscription -> Flowplane sidecar HTTP -> Pulsar transformed/DLQ producer",
+  "readTargets": [
+    "flowplane-pulsar-20260720t135944z-raw"
+  ],
+  "writeTargets": [
+    "flowplane-pulsar-20260720t135944z-transformed",
+    "flowplane-pulsar-20260720t135944z-dlq"
+  ],
+  "processedInput": 110,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "unexpectedFailures": 0,
+  "httpTimeouts": 0,
+  "connectionErrors": 0,
+  "httpStatusCounts": {
+    "200": 100,
+    "422": 10
+  },
+  "durationSeconds": 5.11
+}

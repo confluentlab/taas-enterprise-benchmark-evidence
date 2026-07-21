@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "flowplane.pulsar-raw-only-verification-result.v1",
+  "runId": "20260720T135944Z",
+  "topics": {
+    "raw": "flowplane-pulsar-20260720t135944z-raw",
+    "transformed": "flowplane-pulsar-20260720t135944z-transformed",
+    "dlq": "flowplane-pulsar-20260720t135944z-dlq"
+  },
+  "boundary": "raw-only test producer -> Pulsar pipeline subscription -> Flowplane sidecar -> Pulsar output/DLQ -> read-only verifier consumers",
+  "verifierWriteTargets": [
+    "flowplane-pulsar-20260720t135944z-raw"
+  ],
+  "verifierReadTargets": [
+    "flowplane-pulsar-20260720t135944z-transformed",
+    "flowplane-pulsar-20260720t135944z-dlq"
+  ],
+  "attemptedInput": 110,
+  "acceptedInput": 110,
+  "validInput": 100,
+  "intentionalInvalid": 10,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "filtered": 0,
+  "duplicates": 0,
+  "expectedHashMatches": 100,
+  "expectedErrorMatches": 10,
+  "expectedErrorCodes": [
+    "MISSING_REQUIRED_FIELD",
+    "REGEX_FAILED",
+    "TYPE_CONVERSION_FAILED"
+  ],
+  "durationSeconds": 2.86
+}

@@ -1,0 +1,5 @@
+{
+    "integration":  "grpc-batch",
+    "executionAttempted":  false,
+    "reason":  "Prepared bundle only."
+}

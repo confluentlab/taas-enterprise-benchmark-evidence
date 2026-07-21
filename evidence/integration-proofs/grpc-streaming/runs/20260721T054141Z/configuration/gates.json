@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "flowplane.live-verification-gates.v1",
+  "gates": [
+    "runtime.started",
+    "runtime.healthConfirmed",
+    "runtime.versionRecorded",
+    "boundary.realRuntimeUsed",
+    "boundary.realProtocolCrossed",
+    "boundary.verifierWritesRawOnly",
+    "artifact.loaded",
+    "artifact.idRecorded",
+    "artifact.hashRecorded",
+    "fixture.validProcessed",
+    "fixture.invalidProcessed",
+    "output.expectedHashMatched",
+    "error.expectedCodeMatched",
+    "accounting.inputReconciled",
+    "accounting.noUnexpectedLoss",
+    "accounting.noUnexpectedDuplicates",
+    "accounting.noUnexpectedFailures",
+    "state.finalLagZero",
+    "state.pendingWorkZero",
+    "state.runtimeHealthyAtCompletion",
+    "evidence.environmentRecorded",
+    "evidence.commandsRecorded",
+    "evidence.logsPreserved",
+    "evidence.rawOutputsPreserved",
+    "evidence.checksumsVerified",
+    "evidence.reproductionScriptAvailable"
+  ]
+}

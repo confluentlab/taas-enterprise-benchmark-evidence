@@ -1,0 +1,9 @@
+2026-07-20T18:55:16.4163064Z Loading canonical mapping and fixtures.
+2026-07-20T18:55:16.4338595Z Reading an active team from the live control plane.
+2026-07-20T18:55:16.5010711Z Creating the synthetic mapping.
+2026-07-20T18:55:16.5613432Z Validating the synthetic mapping.
+2026-07-20T18:55:16.6144170Z Generating the 100-record expected-output baseline through mapping simulation.
+2026-07-20T18:55:16.7892300Z Submitting, approving, and QA-passing the mapping through governance.
+2026-07-20T18:55:17.1620517Z Starting the real Flowplane Bento HTTP sidecar container.
+2026-07-20T18:55:23.9763575Z Deploying the published artifact to the registered runtime.
+2026-07-20T18:55:24.2371066Z Starting isolated EMQX MQTT broker and Dashboard.

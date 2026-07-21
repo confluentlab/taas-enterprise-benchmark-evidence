@@ -1,0 +1,2 @@
+GROUP                                        TOPIC                                            PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                     HOST            CLIENT-ID
+flowplane-logstash-evidence-20260720t161054z flowplane.logstash.evidence.20260720t161054z.raw 0          110             110             0               logstash-0-067625d0-f93f-4b94-8d4b-73046ea57089 /172.28.0.22    logstash-0

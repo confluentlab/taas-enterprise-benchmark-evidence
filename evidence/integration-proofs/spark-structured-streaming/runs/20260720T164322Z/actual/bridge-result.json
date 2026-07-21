@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "flowplane.kafka-raw-only-verification-result.v1",
+  "runId": "20260720T164322Z",
+  "integrationId": "spark-structured-streaming",
+  "topics": {
+    "raw": "flowplane.spark-structured-streaming.evidence.20260720t164322z.raw",
+    "transformed": "flowplane.spark-structured-streaming.evidence.20260720t164322z.transformed",
+    "dlq": "flowplane.spark-structured-streaming.evidence.20260720t164322z.dlq"
+  },
+  "groupId": "flowplane-spark-structured-streaming-evidence-20260720t164322z",
+  "boundary": "raw-only verifier producer -> integration consumer -> Flowplane sidecar -> integration transformed/DLQ producers -> verifier consumers",
+  "verifierWriteTargets": [
+    "flowplane.spark-structured-streaming.evidence.20260720t164322z.raw"
+  ],
+  "verifierReadTargets": [
+    "flowplane.spark-structured-streaming.evidence.20260720t164322z.transformed",
+    "flowplane.spark-structured-streaming.evidence.20260720t164322z.dlq"
+  ],
+  "attemptedInput": 110,
+  "acceptedInput": 110,
+  "validInput": 100,
+  "intentionalInvalid": 10,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "filtered": 0,
+  "duplicates": 0,
+  "expectedHashMatches": 100,
+  "expectedErrorMatches": 10,
+  "expectedErrorCodes": [
+    "MISSING_REQUIRED_FIELD",
+    "REGEX_FAILED",
+    "TYPE_CONVERSION_FAILED"
+  ],
+  "finalLag": 0
+}

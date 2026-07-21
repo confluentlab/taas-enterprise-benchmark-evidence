@@ -1,0 +1,67 @@
+{
+    "id":  "http-batch-evidence-20260721t054136z",
+    "tenantId":  "acme-corp",
+    "runtimeId":  "http-batch-evidence-20260721t054136z",
+    "runtimeName":  "http-batch Evidence 20260721T054136Z",
+    "runtimeType":  "SIDECAR",
+    "environment":  "DEVELOPMENT",
+    "ownerTeam":  "Quality Engineering",
+    "projectId":  "live-local-verification",
+    "deploymentTarget":  "LOCAL_DOCKER",
+    "networkProfile":  "flowplane-quality-stack",
+    "controlPlaneUrl":  "http://flowplane-backend:8080",
+    "kafkaBootstrapServers":  "kafka:9092",
+    "schemaRegistryUrl":  "",
+    "inputTopic":  "",
+    "outputTopic":  "",
+    "errorTopic":  "",
+    "sidecarUrl":  "",
+    "connectRestUrl":  "http://localhost:8083",
+    "connectorName":  "http-batch-evidence-20260721t054136z",
+    "dockerNetwork":  "flowplane-quality-stack_default",
+    "serviceName":  "flowplane-http-batch-runtime-20260721t054136z",
+    "containerImage":  "eclipse-temurin:17-jre",
+    "outputShape":  "JSON_STRING",
+    "outputComplexTypes":  "NATIVE_JSON",
+    "outputFieldNaming":  "AS_IS",
+    "replayEnabled":  false,
+    "replayBootstrapServers":  "kafka:9092",
+    "assignmentPollIntervalMs":  1000,
+    "heartbeatIntervalMs":  10000,
+    "labels":  {
+                   "evidenceRunId":  "20260721T054136Z"
+               },
+    "additionalEnvironment":  {
+
+                              },
+    "status":  "WAITING_FOR_HEARTBEAT",
+    "secretPreview":  "****C_c4",
+    "createdAt":  "2026-07-21T05:41:56.065972110Z",
+    "createdBy":  "admin@flowplane.local",
+    "updatedAt":  "2026-07-21T05:41:56.065972110Z",
+    "updatedBy":  "admin@flowplane.local",
+    "tokenExpiresAt":  "2026-07-21T06:41:56.065972110Z",
+    "runtimeHealth":  "OFFLINE",
+    "runtimeLifecycleState":  "WAITING_FOR_HEARTBEAT",
+    "runtimeLastSeenAt":  null,
+    "runtimeDrifted":  false,
+    "activeArtifactId":  null,
+    "activeVersion":  null,
+    "generatedConfig":  {
+                            "envFile":  "FLOWPLANE_CONTROL_PLANE_URL=http://flowplane-backend:8080\nFLOWPLANE_TENANT_ID=acme-corp\nFLOWPLANE_RUNTIME_ID=http-batch-evidence-20260721t054136z\nFLOWPLANE_RUNTIME_NAME=http-batch Evidence 20260721T054136Z\nFLOWPLANE_RUNTIME_TYPE=SIDECAR\nFLOWPLANE_RUNTIME_ENVIRONMENT=DEVELOPMENT\nFLOWPLANE_RUNTIME_OWNER_TEAM=Quality Engineering\nFLOWPLANE_RUNTIME_PROJECT_ID=live-local-verification\nFLOWPLANE_RUNTIME_PRODUCTION_MODE=true\nFLOWPLANE_RUNTIME_CLIENT_SECRET=${FLOWPLANE_RUNTIME_CLIENT_SECRET}\nFLOWPLANE_KAFKA_BOOTSTRAP_SERVERS=kafka:9092\nFLOWPLANE_SCHEMA_REGISTRY_URL=\nFLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO=${FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO}\nFLOWPLANE_INPUT_TOPIC=\nFLOWPLANE_OUTPUT_TOPIC=\nFLOWPLANE_ERROR_TOPIC=\nFLOWPLANE_SIDECAR_URL=\nFLOWPLANE_ASSIGNMENT_POLL_INTERVAL_MS=1000\nFLOWPLANE_HEARTBEAT_INTERVAL_MS=10000\nFLOWPLANE_OUTPUT_SHAPE=JSON_STRING\nFLOWPLANE_OUTPUT_COMPLEX_TYPES=NATIVE_JSON\nFLOWPLANE_OUTPUT_FIELD_NAMING=AS_IS\nFLOWPLANE_REPLAY_ENABLED=false\nFLOWPLANE_REPLAY_BOOTSTRAP_SERVERS=kafka:9092\nFLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL=${FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL}\nFLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM=${FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM}\nFLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG=${FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG}\nFLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION=${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION}\nFLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD=${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD}\nFLOWPLANE_RUNTIME_REPLAY_ENABLED=false\nFLOWPLANE_RUNTIME_REPLAY_BOOTSTRAP_SERVERS=kafka:9092\nFLOWPLANE_RUNTIME_REPLAY_POLL_INTERVAL_MS=1000\nFLOWPLANE_RUNTIME_REPLAY_POLL_TIMEOUT_MS=250\nFLOWPLANE_SIDECAR_INBOUND_AUTH_TOKEN=${FLOWPLANE_RUNTIME_CLIENT_SECRET}\nFLOWPLANE_SIDECAR_GRPC_TLS_ENABLED=false\nFLOWPLANE_SIDECAR_GRPC_TLS_REQUIRE_CLIENT_AUTH=false\n",
+                            "dockerComposeService":  "flowplane-http-batch-runtime-20260721t054136z:\n  image: eclipse-temurin:17-jre\n  container_name: flowplane-http-batch-runtime-20260721t054136z\n  networks:\n    - flowplane-quality-stack_default\n  environment:\n    FLOWPLANE_CONTROL_PLANE_URL: \"http://flowplane-backend:8080\"\n    FLOWPLANE_TENANT_ID: \"acme-corp\"\n    FLOWPLANE_RUNTIME_ID: \"http-batch-evidence-20260721t054136z\"\n    FLOWPLANE_RUNTIME_NAME: \"http-batch Evidence 20260721T054136Z\"\n    FLOWPLANE_RUNTIME_TYPE: \"SIDECAR\"\n    FLOWPLANE_RUNTIME_ENVIRONMENT: \"DEVELOPMENT\"\n    FLOWPLANE_RUNTIME_OWNER_TEAM: \"Quality Engineering\"\n    FLOWPLANE_RUNTIME_PROJECT_ID: \"live-local-verification\"\n    FLOWPLANE_RUNTIME_PRODUCTION_MODE: \"true\"\n    FLOWPLANE_RUNTIME_CLIENT_SECRET: \"${FLOWPLANE_RUNTIME_CLIENT_SECRET}\"\n    FLOWPLANE_KAFKA_BOOTSTRAP_SERVERS: \"kafka:9092\"\n    FLOWPLANE_SCHEMA_REGISTRY_URL: \"\"\n    FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO: \"${FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO}\"\n    FLOWPLANE_INPUT_TOPIC: \"\"\n    FLOWPLANE_OUTPUT_TOPIC: \"\"\n    FLOWPLANE_ERROR_TOPIC: \"\"\n    FLOWPLANE_SIDECAR_URL: \"\"\n    FLOWPLANE_ASSIGNMENT_POLL_INTERVAL_MS: \"1000\"\n    FLOWPLANE_HEARTBEAT_INTERVAL_MS: \"10000\"\n    FLOWPLANE_OUTPUT_SHAPE: \"JSON_STRING\"\n    FLOWPLANE_OUTPUT_COMPLEX_TYPES: \"NATIVE_JSON\"\n    FLOWPLANE_OUTPUT_FIELD_NAMING: \"AS_IS\"\n    FLOWPLANE_REPLAY_ENABLED: \"false\"\n    FLOWPLANE_REPLAY_BOOTSTRAP_SERVERS: \"kafka:9092\"\n    FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL: \"${FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL}\"\n    FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM: \"${FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM}\"\n    FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG: \"${FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG}\"\n    FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION: \"${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION}\"\n    FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD: \"${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD}\"\n    FLOWPLANE_RUNTIME_REPLAY_ENABLED: \"false\"\n    FLOWPLANE_RUNTIME_REPLAY_BOOTSTRAP_SERVERS: \"kafka:9092\"\n    FLOWPLANE_RUNTIME_REPLAY_POLL_INTERVAL_MS: \"1000\"\n    FLOWPLANE_RUNTIME_REPLAY_POLL_TIMEOUT_MS: \"250\"\n    FLOWPLANE_SIDECAR_INBOUND_AUTH_TOKEN: \"${FLOWPLANE_RUNTIME_CLIENT_SECRET}\"\n    FLOWPLANE_SIDECAR_GRPC_TLS_ENABLED: \"false\"\n    FLOWPLANE_SIDECAR_GRPC_TLS_REQUIRE_CLIENT_AUTH: \"false\"\n  command: \u003e-\n    java -jar /app/flowplane-sidecar-app.jar\n",
+                            "kubernetesSecret":  "apiVersion: v1\nkind: Secret\nmetadata:\n  name: http-batch-evidence-20260721t054136z-runtime-env\ntype: Opaque\nstringData:\n  FLOWPLANE_CONTROL_PLANE_URL: \"http://flowplane-backend:8080\"\n  FLOWPLANE_TENANT_ID: \"acme-corp\"\n  FLOWPLANE_RUNTIME_ID: \"http-batch-evidence-20260721t054136z\"\n  FLOWPLANE_RUNTIME_NAME: \"http-batch Evidence 20260721T054136Z\"\n  FLOWPLANE_RUNTIME_TYPE: \"SIDECAR\"\n  FLOWPLANE_RUNTIME_ENVIRONMENT: \"DEVELOPMENT\"\n  FLOWPLANE_RUNTIME_OWNER_TEAM: \"Quality Engineering\"\n  FLOWPLANE_RUNTIME_PROJECT_ID: \"live-local-verification\"\n  FLOWPLANE_RUNTIME_PRODUCTION_MODE: \"true\"\n  FLOWPLANE_RUNTIME_CLIENT_SECRET: \"${FLOWPLANE_RUNTIME_CLIENT_SECRET}\"\n  FLOWPLANE_KAFKA_BOOTSTRAP_SERVERS: \"kafka:9092\"\n  FLOWPLANE_SCHEMA_REGISTRY_URL: \"\"\n  FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO: \"${FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO}\"\n  FLOWPLANE_INPUT_TOPIC: \"\"\n  FLOWPLANE_OUTPUT_TOPIC: \"\"\n  FLOWPLANE_ERROR_TOPIC: \"\"\n  FLOWPLANE_SIDECAR_URL: \"\"\n  FLOWPLANE_ASSIGNMENT_POLL_INTERVAL_MS: \"1000\"\n  FLOWPLANE_HEARTBEAT_INTERVAL_MS: \"10000\"\n  FLOWPLANE_OUTPUT_SHAPE: \"JSON_STRING\"\n  FLOWPLANE_OUTPUT_COMPLEX_TYPES: \"NATIVE_JSON\"\n  FLOWPLANE_OUTPUT_FIELD_NAMING: \"AS_IS\"\n  FLOWPLANE_REPLAY_ENABLED: \"false\"\n  FLOWPLANE_REPLAY_BOOTSTRAP_SERVERS: \"kafka:9092\"\n  FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL: \"${FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL}\"\n  FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM: \"${FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM}\"\n  FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG: \"${FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG}\"\n  FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION: \"${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION}\"\n  FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD: \"${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD}\"\n  FLOWPLANE_RUNTIME_REPLAY_ENABLED: \"false\"\n  FLOWPLANE_RUNTIME_REPLAY_BOOTSTRAP_SERVERS: \"kafka:9092\"\n  FLOWPLANE_RUNTIME_REPLAY_POLL_INTERVAL_MS: \"1000\"\n  FLOWPLANE_RUNTIME_REPLAY_POLL_TIMEOUT_MS: \"250\"\n  FLOWPLANE_SIDECAR_INBOUND_AUTH_TOKEN: \"${FLOWPLANE_RUNTIME_CLIENT_SECRET}\"\n  FLOWPLANE_SIDECAR_GRPC_TLS_ENABLED: \"false\"\n  FLOWPLANE_SIDECAR_GRPC_TLS_REQUIRE_CLIENT_AUTH: \"false\"\n",
+                            "helmValues":  "runtime:\n  id: http-batch-evidence-20260721t054136z\n  type: SIDECAR\n  environment: DEVELOPMENT\n  image: eclipse-temurin:17-jre\n  networkProfile: flowplane-quality-stack\nenv:\n  FLOWPLANE_CONTROL_PLANE_URL: \"http://flowplane-backend:8080\"\n  FLOWPLANE_TENANT_ID: \"acme-corp\"\n  FLOWPLANE_RUNTIME_ID: \"http-batch-evidence-20260721t054136z\"\n  FLOWPLANE_RUNTIME_NAME: \"http-batch Evidence 20260721T054136Z\"\n  FLOWPLANE_RUNTIME_TYPE: \"SIDECAR\"\n  FLOWPLANE_RUNTIME_ENVIRONMENT: \"DEVELOPMENT\"\n  FLOWPLANE_RUNTIME_OWNER_TEAM: \"Quality Engineering\"\n  FLOWPLANE_RUNTIME_PROJECT_ID: \"live-local-verification\"\n  FLOWPLANE_RUNTIME_PRODUCTION_MODE: \"true\"\n  FLOWPLANE_RUNTIME_CLIENT_SECRET: \"${FLOWPLANE_RUNTIME_CLIENT_SECRET}\"\n  FLOWPLANE_KAFKA_BOOTSTRAP_SERVERS: \"kafka:9092\"\n  FLOWPLANE_SCHEMA_REGISTRY_URL: \"\"\n  FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO: \"${FLOWPLANE_SCHEMA_REGISTRY_BASIC_AUTH_USER_INFO}\"\n  FLOWPLANE_INPUT_TOPIC: \"\"\n  FLOWPLANE_OUTPUT_TOPIC: \"\"\n  FLOWPLANE_ERROR_TOPIC: \"\"\n  FLOWPLANE_SIDECAR_URL: \"\"\n  FLOWPLANE_ASSIGNMENT_POLL_INTERVAL_MS: \"1000\"\n  FLOWPLANE_HEARTBEAT_INTERVAL_MS: \"10000\"\n  FLOWPLANE_OUTPUT_SHAPE: \"JSON_STRING\"\n  FLOWPLANE_OUTPUT_COMPLEX_TYPES: \"NATIVE_JSON\"\n  FLOWPLANE_OUTPUT_FIELD_NAMING: \"AS_IS\"\n  FLOWPLANE_REPLAY_ENABLED: \"false\"\n  FLOWPLANE_REPLAY_BOOTSTRAP_SERVERS: \"kafka:9092\"\n  FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL: \"${FLOWPLANE_REPLAY_KAFKA_SECURITY_PROTOCOL}\"\n  FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM: \"${FLOWPLANE_REPLAY_KAFKA_SASL_MECHANISM}\"\n  FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG: \"${FLOWPLANE_REPLAY_KAFKA_SASL_JAAS_CONFIG}\"\n  FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION: \"${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_LOCATION}\"\n  FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD: \"${FLOWPLANE_REPLAY_KAFKA_SSL_TRUSTSTORE_PASSWORD}\"\n  FLOWPLANE_RUNTIME_REPLAY_ENABLED: \"false\"\n  FLOWPLANE_RUNTIME_REPLAY_BOOTSTRAP_SERVERS: \"kafka:9092\"\n  FLOWPLANE_RUNTIME_REPLAY_POLL_INTERVAL_MS: \"1000\"\n  FLOWPLANE_RUNTIME_REPLAY_POLL_TIMEOUT_MS: \"250\"\n  FLOWPLANE_SIDECAR_INBOUND_AUTH_TOKEN: \"${FLOWPLANE_RUNTIME_CLIENT_SECRET}\"\n  FLOWPLANE_SIDECAR_GRPC_TLS_ENABLED: \"false\"\n  FLOWPLANE_SIDECAR_GRPC_TLS_REQUIRE_CLIENT_AUTH: \"false\"\n",
+                            "launchCommand":  "java -jar /app/flowplane-sidecar-app.jar",
+                            "connectorConfig":  {
+
+                                                },
+                            "notes":  [
+                                          "Runtime registration is outbound-first: runtime authenticates to the control plane, fetches assignments, then heartbeats.",
+                                          "Store the one-time clientSecret response value in a secret manager as FLOWPLANE_RUNTIME_CLIENT_SECRET; generated snippets intentionally use a placeholder and must not be committed with raw secrets.",
+                                          "Rotate the runtime credential from the control plane, update the secret-manager value, and restart or reload the runtime to pick up the new secret.",
+                                          "Runtime assignment caches are encrypted and authenticated; plaintext cache envelopes are always rejected.",
+                                          "HTTP sidecar tools should reach the sidecar URL locally; the sidecar performs control-plane auth and artifact polling."
+                                      ]
+                        }
+}

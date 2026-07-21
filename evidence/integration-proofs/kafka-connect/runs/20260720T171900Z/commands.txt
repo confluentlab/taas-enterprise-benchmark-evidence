@@ -1,0 +1,7 @@
+# Exact run values; generated credentials are redacted.
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.kafka-connect.evidence.20260720t171900z.raw --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.kafka-connect.evidence.20260720t171900z.transformed --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.kafka-connect.evidence.20260720t171900z.dlq --partitions 1 --replication-factor 1
+POST http://127.0.0.1:8084/connectors (sanitized config: configuration/kafka-connect-smt.json)
+GET http://127.0.0.1:8084/connectors/flowplane-evidence-20260720t171900z/status
+node kafka-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> 20260720T171900Z kafka-connect flowplane-kafka kafka:9092

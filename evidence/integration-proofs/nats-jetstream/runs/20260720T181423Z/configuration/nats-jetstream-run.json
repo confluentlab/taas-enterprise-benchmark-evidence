@@ -1,0 +1,14 @@
+﻿{
+    "runId":  "20260720T181423Z",
+    "broker":  "NATS JetStream",
+    "brokerContainer":  "flowplane-nats-jetstream-broker-20260720t181423z",
+    "brokerImage":  "nats:2.11-alpine",
+    "monitoringPort":  60139,
+    "flowplaneRuntimeContainer":  "flowplane-nats-jetstream-bento-20260720t181423z",
+    "flowplaneRuntimeId":  "nats-jetstream-pipeline-sidecar-20260720t181423z",
+    "flowplaneRuntimePort":  60119,
+    "flowplaneNetwork":  "flowplane-quality-stack_default",
+    "pipelineContainer":  "flowplane-nats-jetstream-pipeline-20260720t181423z",
+    "pipelineImage":  "node:22-alpine",
+    "pipeline":  "Independent durable consumer: JetStream raw -\u003e Flowplane Bento HTTP sidecar -\u003e JetStream transformed/DLQ"
+}

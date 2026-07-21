@@ -1,0 +1,106 @@
+{
+    "mappingId":  "6a5e84528dd158f5c962d033",
+    "artifactId":  "6a5e84528dd158f5c962d042",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "debezium-sidecar-20260720t202552z",
+                        "runtimeName":  "Debezium MySQL CDC Sidecar 20260720T202552Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "debezium-sidecar-20260720t202552z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5e845f8dd158f5c962d059",
+                        "runtimeId":  "debezium-sidecar-20260720t202552z",
+                        "runtimeName":  "Debezium MySQL CDC Sidecar 20260720T202552Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "artifactId":  "6a5e84528dd158f5c962d042",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-20T20:26:07.463Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5e84528dd158f5c962d042",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-20T20:26:07.463Z",
+                               "lastActiveAt":  "2026-07-20T20:26:07.463Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "debezium-sidecar-20260720t202552z",
+                                                    "runtimeName":  "Debezium MySQL CDC Sidecar 20260720T202552Z",
+                                                    "runtimeType":  "BENTO",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-20T20:26:07.463Z",
+                                                    "lastActiveAt":  "2026-07-20T20:26:07.463Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+                       {
+                           "approvalId":  "6a5e84528dd158f5c962d03d",
+                           "environment":  "PRODUCTION",
+                           "requestedVersion":  "v1.0.0-draft",
+                           "status":  "QA_PASSED",
+                           "reviewer":  "admin@flowplane.local",
+                           "qaTester":  "admin@flowplane.local",
+                           "requestedAt":  "2026-07-20T20:25:54.708Z",
+                           "qaVerifiedAt":  "2026-07-20T20:25:54.881Z",
+                           "qaComment":  "Valid and invalid simulation gates passed.",
+                           "qaArtifactId":  "6a5e84528dd158f5c962d042",
+                           "qaArtifactVersion":  "v1.0.0",
+                           "qaArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+                       }
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  "2026-07-20T20:56:07.463Z",
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

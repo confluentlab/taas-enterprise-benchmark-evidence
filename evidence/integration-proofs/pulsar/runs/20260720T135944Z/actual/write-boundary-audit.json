@@ -1,0 +1,10 @@
+﻿{
+    "verifierRawProducerCalls":  1,
+    "verifierDownstreamProducerCalls":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawConsumerCalls":  1,
+    "pipelineDownstreamProducerCalls":  2,
+    "verifierSha256":  "4b08a65218a557d36aafe4ef17cb25853d026e4f9714eb2eeabcdaaaa445b088",
+    "pipelineSha256":  "0a0f3d546f8a01fd0c2e7ba932648914ee2a76449686475eb382f80c038d8c5f",
+    "passed":  true
+}

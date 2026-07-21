@@ -1,0 +1,15 @@
+{
+  "name": "flowplane-nats-live-local-evidence",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@node-rs/crc32-linux-x64-musl": "1.10.6",
+    "amqplib": "0.10.8",
+    "kafkajs": "2.2.4",
+    "mqtt": "5.14.1",
+    "nats": "2.29.3",
+    "redis": "4.7.0",
+    "rocketmq-client-nodejs": "1.0.7",
+    "stompit": "1.0.0"
+  }
+}

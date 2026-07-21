@@ -1,0 +1,6 @@
+2026-07-20T17:06:01.8941275Z Loading canonical mapping and fixtures.
+2026-07-20T17:06:01.9369609Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T17:06:03.4648835Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T17:06:20.0337939Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T17:06:31.4507828Z Starting the independently deployed Apache Beam DirectRunner pipeline.
+2026-07-20T17:07:00.3758743Z Publishing canonical fixtures through the raw-only verifier.

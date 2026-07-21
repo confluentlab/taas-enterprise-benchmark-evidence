@@ -1,0 +1,106 @@
+{
+    "mappingId":  "6a5e4d2a8dd158f5c96270c3",
+    "artifactId":  "6a5e4d2b8dd158f5c96270d1",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "spring-cloud-stream-sidecar-20260720t163032z",
+                        "runtimeName":  "Spring Cloud Stream Sidecar 20260720T163032Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "spring-cloud-stream-sidecar-20260720t163032z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5e4d328dd158f5c96270dd",
+                        "runtimeId":  "spring-cloud-stream-sidecar-20260720t163032z",
+                        "runtimeName":  "Spring Cloud Stream Sidecar 20260720T163032Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "artifactId":  "6a5e4d2b8dd158f5c96270d1",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-20T16:30:42.281Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5e4d2b8dd158f5c96270d1",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-20T16:30:42.281Z",
+                               "lastActiveAt":  "2026-07-20T16:30:42.281Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "spring-cloud-stream-sidecar-20260720t163032z",
+                                                    "runtimeName":  "Spring Cloud Stream Sidecar 20260720T163032Z",
+                                                    "runtimeType":  "BENTO",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-20T16:30:42.281Z",
+                                                    "lastActiveAt":  "2026-07-20T16:30:42.281Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+                       {
+                           "approvalId":  "6a5e4d2b8dd158f5c96270cd",
+                           "environment":  "PRODUCTION",
+                           "requestedVersion":  "v1.0.0-draft",
+                           "status":  "QA_PASSED",
+                           "reviewer":  "admin@flowplane.local",
+                           "qaTester":  "admin@flowplane.local",
+                           "requestedAt":  "2026-07-20T16:30:35.171Z",
+                           "qaVerifiedAt":  "2026-07-20T16:30:35.362Z",
+                           "qaComment":  "Valid and invalid simulation gates passed.",
+                           "qaArtifactId":  "6a5e4d2b8dd158f5c96270d1",
+                           "qaArtifactVersion":  "v1.0.0",
+                           "qaArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+                       }
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  "2026-07-20T17:00:42.281Z",
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

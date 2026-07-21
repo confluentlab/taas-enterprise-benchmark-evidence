@@ -1,0 +1,10 @@
+{
+    "captured":  true,
+    "runtimeHealthy":  true,
+    "assignmentPresent":  true,
+    "pending":  0,
+    "finalLag":  0,
+    "qos1Completed":  110,
+    "emqxStatsExitCode":  1,
+    "emqxMetricsExitCode":  1
+}

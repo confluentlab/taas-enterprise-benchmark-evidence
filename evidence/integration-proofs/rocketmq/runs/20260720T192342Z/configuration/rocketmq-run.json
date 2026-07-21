@@ -1,0 +1,17 @@
+﻿{
+    "runId":  "20260720T192342Z",
+    "broker":  "Apache RocketMQ",
+    "version":  "5.3.2",
+    "nameServerContainer":  "flowplane-rocketmq-namesrv-20260720t192342z",
+    "brokerContainer":  "flowplane-rocketmq-broker-20260720t192342z",
+    "dashboardContainer":  "flowplane-rocketmq-dashboard-20260720t192342z",
+    "dashboardPort":  53418,
+    "proxyEndpoints":  "flowplane-rocketmq-broker:8081",
+    "topics":  {
+                   "raw":  "flowplane_rocketmq_20260720t192342z_raw",
+                   "transformed":  "flowplane_rocketmq_20260720t192342z_transformed",
+                   "dlq":  "flowplane_rocketmq_20260720t192342z_dlq"
+               },
+    "flowplaneRuntimeId":  "rocketmq-pipeline-sidecar-20260720t192342z",
+    "acknowledgementOrder":  "downstream confirmed before raw ack"
+}

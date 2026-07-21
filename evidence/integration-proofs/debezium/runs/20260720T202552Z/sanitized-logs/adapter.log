@@ -1,0 +1,7 @@
+2026-07-20T20:25:54.3156496Z Loading canonical mapping and fixtures.
+2026-07-20T20:25:54.3310423Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T20:25:54.9445111Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T20:26:00.4294190Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T20:26:08.1810863Z Starting the dedicated Flowplane HTTP/Kafka publisher bridge used by Debezium MySQL CDC.
+2026-07-20T20:26:13.9680930Z Starting the MySQL raw source and independently deployed Debezium Connect worker.
+2026-07-20T20:26:36.0960199Z Publishing canonical fixtures through the raw-only verifier.

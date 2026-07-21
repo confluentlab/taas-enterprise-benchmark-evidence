@@ -1,0 +1,16 @@
+{
+    "schemaVersion":  "flowplane.runtime-surface-pipeline-result.v1",
+    "container":  "flowplane-http-single-bridge-20260721t045008z",
+    "completedSuccessfully":  true,
+    "readTargets":  [
+                        "flowplane.http-single.evidence.20260721t045008z.raw"
+                    ],
+    "writeTargets":  [
+                         "flowplane.http-single.evidence.20260721t045008z.transformed",
+                         "flowplane.http-single.evidence.20260721t045008z.dlq"
+                     ],
+    "processedInput":  110,
+    "successfulOutput":  100,
+    "errorOutput":  10,
+    "unexpectedFailures":  0
+}

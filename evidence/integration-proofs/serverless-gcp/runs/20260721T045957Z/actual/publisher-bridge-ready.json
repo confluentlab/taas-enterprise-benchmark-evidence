@@ -1,0 +1,19 @@
+{
+  "integrationId": "serverless-gcp",
+  "runId": "20260721T045957Z",
+  "mode": "gcp-functions",
+  "endpoint": "http://flowplane-serverless-gcp-runtime-20260721t045957z:8080/",
+  "metadata": {
+    "tenantId": "acme-corp",
+    "runtimeId": "serverless-gcp-evidence-20260721t045957z",
+    "mappingId": "6a5efccf8dd158f5c96318e2",
+    "mappingVersion": "v1.0.0",
+    "artifactHash": "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+  },
+  "topics": {
+    "raw": "flowplane.serverless-gcp.evidence.20260721t045957z.raw",
+    "transformed": "flowplane.serverless-gcp.evidence.20260721t045957z.transformed",
+    "dlq": "flowplane.serverless-gcp.evidence.20260721t045957z.dlq"
+  },
+  "readyAt": "2026-07-21T05:00:22.468Z"
+}

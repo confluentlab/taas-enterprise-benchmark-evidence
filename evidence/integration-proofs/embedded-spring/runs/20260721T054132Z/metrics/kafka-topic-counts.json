@@ -1,0 +1,51 @@
+{
+  "raw": 10000,
+  "transformed": 9900,
+  "dlq": 100,
+  "transformedWait": {
+    "count": 9900,
+    "observations": [
+      {
+        "elapsedMs": 1642,
+        "count": 1140
+      },
+      {
+        "elapsedMs": 4737,
+        "count": 3516
+      },
+      {
+        "elapsedMs": 8616,
+        "count": 6356
+      },
+      {
+        "elapsedMs": 12708,
+        "count": 9292
+      },
+      {
+        "elapsedMs": 16180,
+        "count": 9900
+      }
+    ]
+  },
+  "dlqWait": {
+    "count": 100,
+    "observations": [
+      {
+        "elapsedMs": 1649,
+        "count": 31
+      },
+      {
+        "elapsedMs": 5228,
+        "count": 61
+      },
+      {
+        "elapsedMs": 9193,
+        "count": 91
+      },
+      {
+        "elapsedMs": 13468,
+        "count": 100
+      }
+    ]
+  }
+}

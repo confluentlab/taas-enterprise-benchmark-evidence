@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "redpanda-connect-sidecar-20260720t160552z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "RPC-20260720T160552Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the redpanda-connect sidecar."
+}

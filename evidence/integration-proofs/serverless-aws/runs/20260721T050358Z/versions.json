@@ -1,0 +1,17 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  179,
+                      "statusDigestSha256":  "235d38bcd7e164a61fa7c440b9c27b51353f1982cddde78e177f0bc504c33b64"
+                  },
+    "integration":  "serverless-aws",
+    "runtimeImage":  "flowplane-aws-lambda-local",
+    "runtimeImageId":  "sha256:a6b4051ba0187b6b4919234835071b6b76c0a6c0f3054c5667e50275ca2b4d23",
+    "bridgeImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "runtimeSurfaceBridgeSha256":  "9c39befd08f4af1f070afdc46fa6493da5cf84d63d5466c201be6b76f0cf3a54",
+    "rawOnlyVerifierSha256":  "20c8828b693c3e8e0d0409f54e9394ca63609f4d10177ce3cb190f00b05364d6",
+    "runtimeJarSha256":  null,
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

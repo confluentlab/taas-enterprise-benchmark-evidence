@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-nifi-pipeline-20260720t163618z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-nifi-pipeline-20260720t163618z"
+                       },
+                       {
+                           "container":  "flowplane-nifi-bento-20260720t163618z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-nifi-bento-20260720t163618z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T16:37:34.2254398Z"
+}

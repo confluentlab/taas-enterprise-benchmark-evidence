@@ -1,0 +1,11 @@
+{
+    "runtimeId":  "bento-warpstream-sidecar-20260720t175209z",
+    "runtimeName":  "WarpStream Bento Sidecar 20260720T175209Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e604e8dd158f5c962900d",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e604d8dd158f5c9628ffe",
+    "mappingName":  "bento-warpstream-live-local-20260720t175209z"
+}

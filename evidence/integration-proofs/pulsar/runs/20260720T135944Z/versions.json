@@ -1,0 +1,21 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "pulsarVersion":  "Current version of pulsar is: 4.2.3\nGit Revision 72b4f8014496cee519ac90da3e2c733cf6e2b76a\nGit Branch branch-4.2\nBuilt by Lari Hotari \u003clhotari@apache.org\u003e on Laris-MacBook-Pro-2.local at 2026-06-30T01:31:55+0300",
+    "pulsarImage":  "apachepulsar/pulsar:4.2.3",
+    "pulsarImageId":  "sha256:71b014dd8a841469ad8f6c92053affdbc4b4a55361be919722d0c4896b480f39",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineImage":  "node:22-alpine",
+    "pipelineImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "pipelineScriptSha256":  "0a0f3d546f8a01fd0c2e7ba932648914ee2a76449686475eb382f80c038d8c5f",
+    "rawOnlyVerifierSha256":  "4b08a65218a557d36aafe4ef17cb25853d026e4f9714eb2eeabcdaaaa445b088",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

@@ -1,0 +1,21 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "natsVersion":  "2.11.17",
+    "natsImage":  "nats:2.11-alpine",
+    "natsImageId":  "sha256:e4bf19f15fd3218814a4e3c9e0064e1334bd8aa20d5984b9f1a0afd084f8cc00",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineImage":  "node:22-alpine",
+    "pipelineImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "natsNodeClientVersion":  "2.29.3",
+    "pipelineScriptSha256":  "4b7eaed3eb59811271a5c44266460f94635c45ec2c4385a0c1027beb63df45b2",
+    "rawOnlyVerifierSha256":  "1ceaa4531ba32c774ca0fda3936644c3431e008f59cfd7ce2f8f589ee8e61b4c",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "dockerVersion":  "28.5.1"
+}

@@ -1,0 +1,17 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeReferences":  0,
+    "pipelineRawInputReferences":  1,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  2,
+    "verifierWriteTargets":  [
+                                 "flowplane.http-single.evidence.20260721t054134z.raw"
+                             ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.http-single.evidence.20260721t054134z.transformed",
+                                 "flowplane.http-single.evidence.20260721t054134z.dlq"
+                             ],
+    "passed":  true
+}

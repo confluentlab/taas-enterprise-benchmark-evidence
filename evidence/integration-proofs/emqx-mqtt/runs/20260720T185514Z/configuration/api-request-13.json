@@ -1,0 +1,1 @@
+{"runtimeIds":["emqx-mqtt-pipeline-sidecar-20260720t185514z"],"requireReplayGate":false,"changeTicket":"EMQX-20260720T185514Z","rolloutPercent":100,"reason":"Assign the approved synthetic artifact to the EMQX MQTT pipeline sidecar."}

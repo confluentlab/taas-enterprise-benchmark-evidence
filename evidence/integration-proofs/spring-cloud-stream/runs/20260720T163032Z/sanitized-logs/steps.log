@@ -1,0 +1,6 @@
+2026-07-20T16:30:34.7548369Z Loading canonical mapping and fixtures.
+2026-07-20T16:30:34.7701232Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T16:30:35.4529525Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T16:30:42.4798476Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T16:30:47.8284959Z Starting the independently deployed Spring Cloud Stream pipeline.
+2026-07-20T16:31:13.2361216Z Publishing canonical fixtures through the raw-only verifier.

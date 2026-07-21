@@ -1,0 +1,16 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "rocketMqVersion":  "5.3.2",
+    "rocketMqImage":  "apache/rocketmq:5.3.2",
+    "rocketMqImageId":  "sha256:4a80ff5cd4b0a3d3ef6dc338ce2028a85bd995648cb3aa5c3e753746d2dbc587",
+    "dashboardImage":  "apacherocketmq/rocketmq-dashboard:latest",
+    "dashboardImageId":  "sha256:ce78506bd6fe01095bf1b37c954625e363ba5afae5d1539b77f395785d445e33",
+    "nodeClientVersion":  "1.0.7",
+    "pipelineScriptSha256":  "45b76818c62fb7f12b83d3da58b1ca1ae6be419a3b401c8887f9a5f9bf57e497",
+    "rawOnlyVerifierSha256":  "dbe0e9e89a7774a49e11c001619458a5df1ca48d2b27a1d10510697f303ad308"
+}

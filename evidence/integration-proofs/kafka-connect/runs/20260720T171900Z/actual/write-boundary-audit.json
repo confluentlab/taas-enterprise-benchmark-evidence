@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  1,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  1,
+    "verifierWriteTargets":  [
+                                 "flowplane.kafka-connect.evidence.20260720t171900z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.kafka-connect.evidence.20260720t171900z.transformed",
+                                "flowplane.kafka-connect.evidence.20260720t171900z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.kafka-connect.evidence.20260720t171900z.transformed",
+                                 "flowplane.kafka-connect.evidence.20260720t171900z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "b848fa47ea3690965bc854e6144ef6349e7e144f285dce9855e3119270a8206d",
+    "passed":  true
+}

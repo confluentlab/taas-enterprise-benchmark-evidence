@@ -1,0 +1,6 @@
+2026-07-20T17:25:05.4672891Z Loading canonical mapping and fixtures.
+2026-07-20T17:25:05.5084152Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T17:25:06.9847866Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T17:25:17.7499304Z Starting a run-specific first-class Flowplane Kafka Streams runtime.
+2026-07-20T17:25:25.4170691Z Using the independently running first-class Kafka Streams runtime.
+2026-07-20T17:25:25.5299776Z Publishing canonical fixtures through the raw-only verifier.

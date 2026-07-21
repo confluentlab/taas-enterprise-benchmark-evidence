@@ -1,0 +1,13 @@
+{
+    "id":  "beam-directrunner",
+    "type":  "tool",
+    "runtime":  "Apache Beam DirectRunner",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/beam-kafka-http-streaming"
+                            ],
+    "harness":  "scripts/dev/test-beam-kafka-http-streaming-local.ps1",
+    "protocolBoundary":  "Beam DirectRunner Kafka pipeline to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-beam-kafka-http-streaming-local.ps1 -ValidRecordCount 100"
+}

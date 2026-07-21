@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "flowplane.kafka-http-publisher-bridge-result.v1",
+  "integrationId": "opentelemetry",
+  "runId": "20260720T200343Z",
+  "boundary": "integration HTTP delivery -> Flowplane runtime -> acknowledged Kafka transformed/DLQ publish",
+  "topics": {
+    "transformed": "flowplane.opentelemetry.evidence.20260720t200343z.transformed",
+    "dlq": "flowplane.opentelemetry.evidence.20260720t200343z.dlq"
+  },
+  "received": 110,
+  "transformed": 100,
+  "dlq": 10,
+  "publishFailures": 0,
+  "runtimeFailures": 0,
+  "completed": true,
+  "updatedAt": "2026-07-20T20:04:13.798Z"
+}

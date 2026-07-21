@@ -1,0 +1,925 @@
+WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+info: Host.Triggers.Warmup[0]
+      Initializing Warmup Extension.
+info: Host.Startup[503]
+      Initializing Host. OperationId: 'c7ffdbb2-ee57-424b-a137-4e643741d183'.
+info: Host.Startup[504]
+      Host initialization: ConsecutiveErrors=0, StartupCount=1, OperationId=c7ffdbb2-ee57-424b-a137-4e643741d183
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ScriptJobHostOptions
+      {
+        "FileWatchingEnabled": true,
+        "FileLoggingMode": "DebugOnly",
+        "FunctionTimeout": "00:30:00",
+        "TelemetryMode": "ApplicationInsights"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      LoggerFilterOptions
+      {
+        "MinLevel": "None",
+        "Rules": [
+          {
+            "ProviderName": null,
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.WebHostSystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": "None",
+            "Filter": null
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.WebHostSystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          },
+          {
+            "ProviderName": null,
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          },
+          {
+            "ProviderName": null,
+            "CategoryName": "Host.Function.ToolingConsoleLog",
+            "LogLevel": "Information",
+            "Filter": null
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": "None",
+            "Filter": null
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          }
+        ]
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      HttpWorkerOptions
+      {
+        "Type": 0,
+        "Description": null,
+        "Arguments": null,
+        "Port": 35783,
+        "IsPortManuallySet": false,
+        "EnableForwardingHttpRequest": false,
+        "EnableProxyingHttpRequest": false,
+        "InitializationTimeout": "00:00:30",
+        "CustomRoutesEnabled": false,
+        "Http": null
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ScriptJobHostOptions
+      {
+        "FileWatchingEnabled": true,
+        "FileLoggingMode": "DebugOnly",
+        "FunctionTimeout": "00:30:00",
+        "TelemetryMode": "ApplicationInsights"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      FunctionResultAggregatorOptions
+      {
+        "BatchSize": 1000,
+        "FlushTimeout": "00:00:30",
+        "IsEnabled": true
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ConcurrencyOptions
+      {
+        "DynamicConcurrencyEnabled": false,
+        "MaximumFunctionConcurrency": 500,
+        "CPUThreshold": 0.8,
+        "SnapshotPersistenceEnabled": true
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      EventHubOptions
+      {
+        "TargetUnprocessedEventThreshold": null,
+        "MaxEventBatchSize": 100,
+        "MinEventBatchSize": 1,
+        "MaxWaitTime": "00:01:00",
+        "BatchCheckpointFrequency": 1,
+        "TransportType": "AmqpTcp",
+        "WebProxy": "",
+        "ClientRetryOptions": {
+          "Mode": "Exponential",
+          "TryTimeout": "00:01:00",
+          "Delay": "00:00:00.8000000",
+          "MaximumDelay": "00:01:00",
+          "MaximumRetries": 3
+        },
+        "TrackLastEnqueuedEventProperties": false,
+        "PrefetchCount": 300,
+        "PrefetchSizeInBytes": null,
+        "PartitionOwnershipExpirationInterval": "00:02:00",
+        "LoadBalancingUpdateInterval": "00:00:30",
+        "InitialOffsetOptions": {
+          "Type": "",
+          "EnqueuedTimeUtc": null
+        },
+        "EnableCheckpointing": true
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      QueuesOptions
+      {
+        "BatchSize": 16,
+        "NewBatchThreshold": 80,
+        "MaxPollingInterval": "00:01:00",
+        "MaxDequeueCount": 5,
+        "VisibilityTimeout": "00:00:00",
+        "MessageEncoding": "Base64"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      SingletonOptions
+      {
+        "LockPeriod": "00:00:15",
+        "ListenerLockPeriod": "00:01:00",
+        "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+        "LockAcquisitionPollingInterval": "00:00:05",
+        "ListenerLockRecoveryPollingInterval": "00:01:00"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      TimerTriggerPlatformOptions
+      {
+        "NonCronScheduleBehavior": "Allow"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ScaleOptions
+      {
+        "ScaleMetricsMaxAge": "00:02:00",
+        "ScaleMetricsSampleInterval": "00:00:10",
+        "MetricsPurgeEnabled": true,
+        "IsTargetScalingEnabled": true,
+        "IsRuntimeScalingEnabled": false
+      }
+info: Microsoft.Azure.WebJobs.Hosting.JobHostService[0]
+      Starting JobHost
+info: Host.Startup[401]
+      Starting Host (HostId=a497af30fc18-2137340777, InstanceId=633ee56e-9beb-4978-90d6-5c0db110a559, Version=4.1051.300.4, ProcessId=9, AppDomainId=1, InDebugMode=False, InDiagnosticMode=False, FunctionsExtensionVersion=~4)
+info: Host.Startup[314]
+      Loading functions metadata
+info: Host.Startup[326]
+      Reading functions metadata (Custom)
+info: Host.Startup[327]
+      0 functions found (Custom)
+info: Host.Startup[315]
+      3 functions loaded
+info: Host.Startup[0]
+      Generating 3 job function(s)
+fail: Host.Startup[0]
+      Error indexing method 'Functions.flowplaneQueueTransform'
+      Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexingException: Error indexing method 'Functions.flowplaneQueueTransform'
+       ---> System.InvalidOperationException: Storage account connection string 'AzureWebJobsAzureWebJobsStorage' does not exist. Make sure that it is a defined App Setting.
+         at Microsoft.Azure.WebJobs.Extensions.Clients.Shared.StorageClientProvider`2.GetWebJobsConnectionStringSection(String name)
+         at Microsoft.Azure.WebJobs.Extensions.Clients.Shared.StorageClientProvider`2.Get(String name)
+         at Microsoft.Azure.WebJobs.Extensions.Storage.Queues.Triggers.QueueTriggerAttributeBindingProvider.TryCreateAsync(TriggerBindingProviderContext context)
+         at Microsoft.Azure.WebJobs.Host.Triggers.CompositeTriggerBindingProvider.TryCreateAsync(TriggerBindingProviderContext context) in /_/src/Microsoft.Azure.WebJobs.Host/Triggers/CompositeTriggerBindingProvider.cs:line 20
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexMethodAsyncCore(MethodInfo method, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 172
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexMethodAsync(MethodInfo method, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 149
+         --- End of inner exception stack trace ---
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexMethodAsync(MethodInfo method, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 157
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexTypeAsync(Type type, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 85
+fail: Function.flowplaneQueueTransform[0]
+      Microsoft.Azure.WebJobs.Host: Error indexing method 'Functions.flowplaneQueueTransform'. Microsoft.Azure.WebJobs.Extensions.Storage.Queues: Storage account connection string 'AzureWebJobsAzureWebJobsStorage' does not exist. Make sure that it is a defined App Setting.
+warn: Host.Startup[0]
+      Function 'Functions.flowplaneQueueTransform' failed indexing and will be disabled.
+info: Host.Startup[0]
+      Found the following functions:
+      Host.Functions.flowplaneEventHubTransform
+      Host.Functions.flowplaneHttpTransform
+      
+warn: Host.Function.Console[0]
+      OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+info: Host.Startup[0]
+      Function 'Functions.flowplaneEventHubTransform' is disabled
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      HttpOptions
+      {
+        "DynamicThrottlesEnabled": false,
+        "EnableChunkedRequestBinding": false,
+        "MaxConcurrentRequests": -1,
+        "MaxOutstandingRequests": -1,
+        "RoutePrefix": "api"
+      }
+info: Microsoft.Azure.WebJobs.Script.WebHost.WebScriptHostHttpRoutesManager[0]
+      Initializing function HTTP routes
+      Mapped function route 'api/flowplaneHttpTransform' [POST] to 'flowplaneHttpTransform'
+      
+info: Host.Startup[412]
+      Host initialized (79ms)
+info: Host.Startup[413]
+      Host started (91ms)
+info: Host.Startup[0]
+      Job host started
+fail: Host.Startup[402]
+      The 'flowplaneQueueTransform' function is in error: Microsoft.Azure.WebJobs.Host: Error indexing method 'Functions.flowplaneQueueTransform'. Microsoft.Azure.WebJobs.Extensions.Storage.Queues: Storage account connection string 'AzureWebJobsAzureWebJobsStorage' does not exist. Make sure that it is a defined App Setting.
+info: Microsoft.Azure.WebJobs.Script.Workers.Rpc.RpcFunctionInvocationDispatcher[0]
+      Worker process started and initialized.
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=bacee1f7-63ac-42ff-8ef7-b3295ec5cce1)
+info: Host.Function.Console[0]
+      SLF4J(W): No SLF4J providers were found.
+info: Host.Function.Console[0]
+      SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+info: Host.Function.Console[0]
+      SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: bacee1f7-63ac-42ff-8ef7-b3295ec5cce1) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=bacee1f7-63ac-42ff-8ef7-b3295ec5cce1, Duration=412ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=c77e05cb-132a-4467-9a63-d0fef4a0573c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: c77e05cb-132a-4467-9a63-d0fef4a0573c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=c77e05cb-132a-4467-9a63-d0fef4a0573c, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=e240560d-b5e1-41e1-b51c-db275039d172)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: e240560d-b5e1-41e1-b51c-db275039d172) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=e240560d-b5e1-41e1-b51c-db275039d172, Duration=33ms)
+info: Host.General[337]
+      Host lock lease acquired by instance ID '0000000000000000000000009F809ACE'.
+warn: Microsoft.Azure.WebJobs.Script.Diagnostics.HealthChecks.TelemetryHealthCheckPublisher[0]
+      [Tag=''] Process reporting unhealthy: Unhealthy. Health check entries are {"azure.functions.web_host.lifecycle":{"status":"Healthy","description":null},"azure.functions.script_host.lifecycle":{"status":"Healthy","description":null},"azure.functions.webjobs.storage":{"status":"Unhealthy","description":"Unable to create client for AzureWebJobsStorage"}}
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=e3d0dfe1-fa15-431e-ba2c-171caad5b035)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: e3d0dfe1-fa15-431e-ba2c-171caad5b035) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=e3d0dfe1-fa15-431e-ba2c-171caad5b035, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=ba977a43-db31-4b20-85b8-d321887627e6)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: ba977a43-db31-4b20-85b8-d321887627e6) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=ba977a43-db31-4b20-85b8-d321887627e6, Duration=210ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=170b8a12-5412-4f6c-8484-06351568140a)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 170b8a12-5412-4f6c-8484-06351568140a) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=170b8a12-5412-4f6c-8484-06351568140a, Duration=48ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=d8ac8cd9-f220-4cb1-8901-0ba6d22338e5)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: d8ac8cd9-f220-4cb1-8901-0ba6d22338e5) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=d8ac8cd9-f220-4cb1-8901-0ba6d22338e5, Duration=40ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=e74df3dc-d99c-400c-b259-1d597838f21a)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: e74df3dc-d99c-400c-b259-1d597838f21a) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=e74df3dc-d99c-400c-b259-1d597838f21a, Duration=41ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a875140f-5bc8-4d1c-bf5c-b38ac4cdfa9f)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a875140f-5bc8-4d1c-bf5c-b38ac4cdfa9f) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a875140f-5bc8-4d1c-bf5c-b38ac4cdfa9f, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=974db899-c6b6-44e9-910d-548c2bc8a6e5)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 974db899-c6b6-44e9-910d-548c2bc8a6e5) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=974db899-c6b6-44e9-910d-548c2bc8a6e5, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=367a5e01-c852-4df6-b28c-fd949f7735e8)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 367a5e01-c852-4df6-b28c-fd949f7735e8) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=367a5e01-c852-4df6-b28c-fd949f7735e8, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=5e944883-0990-4f89-b890-7350bd763e07)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 5e944883-0990-4f89-b890-7350bd763e07) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=5e944883-0990-4f89-b890-7350bd763e07, Duration=29ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=9a20cdf6-9584-4163-9556-d711a2132297)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 9a20cdf6-9584-4163-9556-d711a2132297) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=9a20cdf6-9584-4163-9556-d711a2132297, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=f0c15e44-bdbd-4a44-abb1-24ade11b2a67)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: f0c15e44-bdbd-4a44-abb1-24ade11b2a67) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=f0c15e44-bdbd-4a44-abb1-24ade11b2a67, Duration=33ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=198e2495-9481-4ddf-bec6-82cdd96608f3)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 198e2495-9481-4ddf-bec6-82cdd96608f3) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=198e2495-9481-4ddf-bec6-82cdd96608f3, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=92cca0f9-b8e1-464c-b727-63bb73e04d80)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 92cca0f9-b8e1-464c-b727-63bb73e04d80) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=92cca0f9-b8e1-464c-b727-63bb73e04d80, Duration=38ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=7587c9ef-4c5e-4f11-af27-6967cdafbcf0)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 7587c9ef-4c5e-4f11-af27-6967cdafbcf0) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=7587c9ef-4c5e-4f11-af27-6967cdafbcf0, Duration=29ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=ef3ba6e1-1813-4eb4-9520-5d90d45a4095)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: ef3ba6e1-1813-4eb4-9520-5d90d45a4095) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=ef3ba6e1-1813-4eb4-9520-5d90d45a4095, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=c0b7c427-03de-4b71-923d-9e2cfb9c103f)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: c0b7c427-03de-4b71-923d-9e2cfb9c103f) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=c0b7c427-03de-4b71-923d-9e2cfb9c103f, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a7c40b1a-c7ba-49c1-8a38-c014bf15b728)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a7c40b1a-c7ba-49c1-8a38-c014bf15b728) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a7c40b1a-c7ba-49c1-8a38-c014bf15b728, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=30b8a05c-7f88-457c-a166-97cca6f57117)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 30b8a05c-7f88-457c-a166-97cca6f57117) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=30b8a05c-7f88-457c-a166-97cca6f57117, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=9aed6190-7bd3-4a40-a81f-86c8754d078a)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 9aed6190-7bd3-4a40-a81f-86c8754d078a) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=9aed6190-7bd3-4a40-a81f-86c8754d078a, Duration=33ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=2da9ece1-19b0-4be7-8c8d-d46c3c492e10)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 2da9ece1-19b0-4be7-8c8d-d46c3c492e10) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=2da9ece1-19b0-4be7-8c8d-d46c3c492e10, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=98641266-3b8d-48ce-8527-720b1a3a0bb5)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 98641266-3b8d-48ce-8527-720b1a3a0bb5) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=98641266-3b8d-48ce-8527-720b1a3a0bb5, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=4ad69284-878b-415e-966b-0edda1448a82)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 4ad69284-878b-415e-966b-0edda1448a82) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=4ad69284-878b-415e-966b-0edda1448a82, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=b47b20ed-2fea-4bd9-9142-daf41bd30fd2)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: b47b20ed-2fea-4bd9-9142-daf41bd30fd2) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=b47b20ed-2fea-4bd9-9142-daf41bd30fd2, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=729da9ae-b2ac-49b8-b69c-67d7eea67f73)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 729da9ae-b2ac-49b8-b69c-67d7eea67f73) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=729da9ae-b2ac-49b8-b69c-67d7eea67f73, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=146c1931-285c-4cf4-91c7-8750a0b7ed02)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 146c1931-285c-4cf4-91c7-8750a0b7ed02) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=146c1931-285c-4cf4-91c7-8750a0b7ed02, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=be942688-5836-4a5f-abee-42656b4dc21b)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: be942688-5836-4a5f-abee-42656b4dc21b) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=be942688-5836-4a5f-abee-42656b4dc21b, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=679b3c36-1ed3-4bc2-8119-0b27dabe0941)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 679b3c36-1ed3-4bc2-8119-0b27dabe0941) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=679b3c36-1ed3-4bc2-8119-0b27dabe0941, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=52d756e3-a7f1-44c5-a739-15494e0ae6ef)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 52d756e3-a7f1-44c5-a739-15494e0ae6ef) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=52d756e3-a7f1-44c5-a739-15494e0ae6ef, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=680168d5-84a9-4549-8c30-7713f8d0bb4a)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 680168d5-84a9-4549-8c30-7713f8d0bb4a) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=680168d5-84a9-4549-8c30-7713f8d0bb4a, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=6b2dd044-ed32-4cba-a134-41da8b07f3ab)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 6b2dd044-ed32-4cba-a134-41da8b07f3ab) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=6b2dd044-ed32-4cba-a134-41da8b07f3ab, Duration=24ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=56ec6676-017b-49b1-a3eb-fa530f2f2429)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 56ec6676-017b-49b1-a3eb-fa530f2f2429) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=56ec6676-017b-49b1-a3eb-fa530f2f2429, Duration=25ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=cbbcfce7-f954-4450-b6ef-4f3ea70bc572)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: cbbcfce7-f954-4450-b6ef-4f3ea70bc572) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=cbbcfce7-f954-4450-b6ef-4f3ea70bc572, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=27a9b112-3c51-4188-b814-7fa145b232e7)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 27a9b112-3c51-4188-b814-7fa145b232e7) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=27a9b112-3c51-4188-b814-7fa145b232e7, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=ec88eda1-6b96-42d2-bce6-9a5975c96145)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: ec88eda1-6b96-42d2-bce6-9a5975c96145) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=ec88eda1-6b96-42d2-bce6-9a5975c96145, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=5a581b67-7f40-4630-af25-83ae9fa3c441)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 5a581b67-7f40-4630-af25-83ae9fa3c441) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=5a581b67-7f40-4630-af25-83ae9fa3c441, Duration=29ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=866cabbe-46dd-4bfe-b92b-46b87578c740)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 866cabbe-46dd-4bfe-b92b-46b87578c740) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=866cabbe-46dd-4bfe-b92b-46b87578c740, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=1bbd62ba-3b82-4986-84e5-64e26142e0f5)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 1bbd62ba-3b82-4986-84e5-64e26142e0f5) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=1bbd62ba-3b82-4986-84e5-64e26142e0f5, Duration=35ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=7d9309d4-9850-4faf-ae22-0f1a3fe04529)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 7d9309d4-9850-4faf-ae22-0f1a3fe04529) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=7d9309d4-9850-4faf-ae22-0f1a3fe04529, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=cd9a5a4c-9d2d-4db6-b23d-e6e9eee070b3)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: cd9a5a4c-9d2d-4db6-b23d-e6e9eee070b3) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=cd9a5a4c-9d2d-4db6-b23d-e6e9eee070b3, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=9d6c63b5-2a06-40cc-9127-ff5347d2b192)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 9d6c63b5-2a06-40cc-9127-ff5347d2b192) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=9d6c63b5-2a06-40cc-9127-ff5347d2b192, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=f3dc18a0-aadd-4984-87aa-00adf371495e)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: f3dc18a0-aadd-4984-87aa-00adf371495e) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=f3dc18a0-aadd-4984-87aa-00adf371495e, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=8cb6de3e-f6e1-44e7-b189-2295b3d77ed9)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 8cb6de3e-f6e1-44e7-b189-2295b3d77ed9) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=8cb6de3e-f6e1-44e7-b189-2295b3d77ed9, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=2cd2f338-1f6b-4fcd-b793-5ecfc430a614)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 2cd2f338-1f6b-4fcd-b793-5ecfc430a614) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=2cd2f338-1f6b-4fcd-b793-5ecfc430a614, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=46e3973d-e6eb-431a-9093-dc1edb568379)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 46e3973d-e6eb-431a-9093-dc1edb568379) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=46e3973d-e6eb-431a-9093-dc1edb568379, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=9e353b32-a169-44f0-bf61-c5eae614eea3)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 9e353b32-a169-44f0-bf61-c5eae614eea3) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=9e353b32-a169-44f0-bf61-c5eae614eea3, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=11741c3e-0fd6-4ce3-996e-0ce194ac2aed)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 11741c3e-0fd6-4ce3-996e-0ce194ac2aed) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=11741c3e-0fd6-4ce3-996e-0ce194ac2aed, Duration=29ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=c9a66c9d-1c11-482a-b8e9-e665c3f4da09)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: c9a66c9d-1c11-482a-b8e9-e665c3f4da09) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=c9a66c9d-1c11-482a-b8e9-e665c3f4da09, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=4655b2eb-e273-441c-adba-cc911d8628f5)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 4655b2eb-e273-441c-adba-cc911d8628f5) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=4655b2eb-e273-441c-adba-cc911d8628f5, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=81517e77-2ed7-4a56-9c1e-5c2d308ce4cc)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 81517e77-2ed7-4a56-9c1e-5c2d308ce4cc) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=81517e77-2ed7-4a56-9c1e-5c2d308ce4cc, Duration=23ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=6e1bc734-9b51-491f-9f01-8c8bfeeebbd1)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 6e1bc734-9b51-491f-9f01-8c8bfeeebbd1) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=6e1bc734-9b51-491f-9f01-8c8bfeeebbd1, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=16293e82-e063-4828-9bb8-cacfec34d7fb)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 16293e82-e063-4828-9bb8-cacfec34d7fb) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=16293e82-e063-4828-9bb8-cacfec34d7fb, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a4bce3ae-69a6-4c5c-8590-5980513bff4c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a4bce3ae-69a6-4c5c-8590-5980513bff4c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a4bce3ae-69a6-4c5c-8590-5980513bff4c, Duration=23ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=d97a11b8-ace7-4eef-93cd-4c1aae470b72)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: d97a11b8-ace7-4eef-93cd-4c1aae470b72) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=d97a11b8-ace7-4eef-93cd-4c1aae470b72, Duration=24ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=3df41157-834a-442f-8c74-4b017f6bcf6d)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 3df41157-834a-442f-8c74-4b017f6bcf6d) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=3df41157-834a-442f-8c74-4b017f6bcf6d, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=fe034e81-c114-4a4d-8d15-c0d532cceaf2)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: fe034e81-c114-4a4d-8d15-c0d532cceaf2) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=fe034e81-c114-4a4d-8d15-c0d532cceaf2, Duration=23ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=500b20f5-91c6-4776-91a7-ea9da7e3359c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 500b20f5-91c6-4776-91a7-ea9da7e3359c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=500b20f5-91c6-4776-91a7-ea9da7e3359c, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=14e46222-a6ec-4154-9cf4-067c8cf7c9d6)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 14e46222-a6ec-4154-9cf4-067c8cf7c9d6) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=14e46222-a6ec-4154-9cf4-067c8cf7c9d6, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=39fc7135-2d2f-4510-893f-b0f7a1227a2c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 39fc7135-2d2f-4510-893f-b0f7a1227a2c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=39fc7135-2d2f-4510-893f-b0f7a1227a2c, Duration=33ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=77da3d05-09d7-4e01-a3a2-ceaba566b2a3)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 77da3d05-09d7-4e01-a3a2-ceaba566b2a3) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=77da3d05-09d7-4e01-a3a2-ceaba566b2a3, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=4162c63e-51f6-4b34-9a5f-584b54ab49cb)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 4162c63e-51f6-4b34-9a5f-584b54ab49cb) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=4162c63e-51f6-4b34-9a5f-584b54ab49cb, Duration=35ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=f43108ba-a432-4d1e-950f-6ee9a24102b6)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: f43108ba-a432-4d1e-950f-6ee9a24102b6) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=f43108ba-a432-4d1e-950f-6ee9a24102b6, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=425b6738-aaa2-4e95-b11a-b06e8ee000d7)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 425b6738-aaa2-4e95-b11a-b06e8ee000d7) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=425b6738-aaa2-4e95-b11a-b06e8ee000d7, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a4080f44-e570-44c6-9748-2eecaa6d26a8)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a4080f44-e570-44c6-9748-2eecaa6d26a8) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a4080f44-e570-44c6-9748-2eecaa6d26a8, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=7096cf6c-3b72-4937-bbf6-3d4de0e3d885)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 7096cf6c-3b72-4937-bbf6-3d4de0e3d885) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=7096cf6c-3b72-4937-bbf6-3d4de0e3d885, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=27e946f5-cd38-489b-979d-fe133a272d81)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 27e946f5-cd38-489b-979d-fe133a272d81) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=27e946f5-cd38-489b-979d-fe133a272d81, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=d8d2f07e-fcf5-4d82-af88-d3546346fdd7)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: d8d2f07e-fcf5-4d82-af88-d3546346fdd7) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=d8d2f07e-fcf5-4d82-af88-d3546346fdd7, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=6f781f95-b676-4380-93d1-b3d1238cc4a1)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 6f781f95-b676-4380-93d1-b3d1238cc4a1) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=6f781f95-b676-4380-93d1-b3d1238cc4a1, Duration=38ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=b0b8f27d-a609-4b96-a1dc-6d4a4962a37e)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: b0b8f27d-a609-4b96-a1dc-6d4a4962a37e) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=b0b8f27d-a609-4b96-a1dc-6d4a4962a37e, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=e7c4683f-34ed-4164-aa5f-8eadb1b99e50)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: e7c4683f-34ed-4164-aa5f-8eadb1b99e50) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=e7c4683f-34ed-4164-aa5f-8eadb1b99e50, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=5df8a7f3-010c-4149-8f5d-89455435a1ff)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 5df8a7f3-010c-4149-8f5d-89455435a1ff) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=5df8a7f3-010c-4149-8f5d-89455435a1ff, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=645d6c7c-0c77-4f8c-af69-9aefc6b455d1)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 645d6c7c-0c77-4f8c-af69-9aefc6b455d1) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=645d6c7c-0c77-4f8c-af69-9aefc6b455d1, Duration=29ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=5515db72-28c8-4e8e-bade-b50f423e22ad)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 5515db72-28c8-4e8e-bade-b50f423e22ad) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=5515db72-28c8-4e8e-bade-b50f423e22ad, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=3c4edebb-06b9-4dc6-b7a3-f1c86cd13a66)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 3c4edebb-06b9-4dc6-b7a3-f1c86cd13a66) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=3c4edebb-06b9-4dc6-b7a3-f1c86cd13a66, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=1884c867-789d-4bbd-bfb4-5acb1b04907a)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 1884c867-789d-4bbd-bfb4-5acb1b04907a) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=1884c867-789d-4bbd-bfb4-5acb1b04907a, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=1913aa44-77ce-43c3-b476-aac8858221ea)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 1913aa44-77ce-43c3-b476-aac8858221ea) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=1913aa44-77ce-43c3-b476-aac8858221ea, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=774d6d01-a594-4932-8480-b8d0a1df3f15)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 774d6d01-a594-4932-8480-b8d0a1df3f15) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=774d6d01-a594-4932-8480-b8d0a1df3f15, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=d9684516-aa4d-4f2b-b0b9-972d102a3e7c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: d9684516-aa4d-4f2b-b0b9-972d102a3e7c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=d9684516-aa4d-4f2b-b0b9-972d102a3e7c, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=04e5a2af-640f-4fb9-bcce-51af863038bb)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 04e5a2af-640f-4fb9-bcce-51af863038bb) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=04e5a2af-640f-4fb9-bcce-51af863038bb, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a973c1e2-6633-47e1-a1ac-375f56114c72)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a973c1e2-6633-47e1-a1ac-375f56114c72) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a973c1e2-6633-47e1-a1ac-375f56114c72, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a7a474ba-6744-4bb3-b206-f322da352e01)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a7a474ba-6744-4bb3-b206-f322da352e01) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a7a474ba-6744-4bb3-b206-f322da352e01, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=b8ef74dc-fdb0-45f3-85c4-43d938140c10)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: b8ef74dc-fdb0-45f3-85c4-43d938140c10) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=b8ef74dc-fdb0-45f3-85c4-43d938140c10, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=1ebc5e2a-7cc6-47bf-a522-13c0d44fefe8)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 1ebc5e2a-7cc6-47bf-a522-13c0d44fefe8) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=1ebc5e2a-7cc6-47bf-a522-13c0d44fefe8, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a4b88450-c158-4b59-ab47-602567f856fb)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a4b88450-c158-4b59-ab47-602567f856fb) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a4b88450-c158-4b59-ab47-602567f856fb, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=70ccfb6c-d019-4697-983e-c90b5eab1bfd)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 70ccfb6c-d019-4697-983e-c90b5eab1bfd) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=70ccfb6c-d019-4697-983e-c90b5eab1bfd, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=923fbe42-0a2f-487a-a522-e91027f48bba)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 923fbe42-0a2f-487a-a522-e91027f48bba) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=923fbe42-0a2f-487a-a522-e91027f48bba, Duration=32ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=c77c462e-d02f-4905-906e-492a76668370)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: c77c462e-d02f-4905-906e-492a76668370) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=c77c462e-d02f-4905-906e-492a76668370, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=38ab6ae6-f5d3-4e77-8ff0-4e06631ecec5)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 38ab6ae6-f5d3-4e77-8ff0-4e06631ecec5) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=38ab6ae6-f5d3-4e77-8ff0-4e06631ecec5, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=c8191177-88f2-4e13-85bb-75ca4fbd24fb)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: c8191177-88f2-4e13-85bb-75ca4fbd24fb) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=c8191177-88f2-4e13-85bb-75ca4fbd24fb, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=df1ec92f-3786-4524-ba26-8d3531486973)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: df1ec92f-3786-4524-ba26-8d3531486973) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=df1ec92f-3786-4524-ba26-8d3531486973, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=2e2e826e-0894-4cb3-a8cf-91e52b70ba44)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 2e2e826e-0894-4cb3-a8cf-91e52b70ba44) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=2e2e826e-0894-4cb3-a8cf-91e52b70ba44, Duration=31ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=0c946375-8bd9-4af1-80f1-14b22d956932)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 0c946375-8bd9-4af1-80f1-14b22d956932) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=0c946375-8bd9-4af1-80f1-14b22d956932, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=cae2da55-02c8-4fcd-815e-91317380d84e)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: cae2da55-02c8-4fcd-815e-91317380d84e) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=cae2da55-02c8-4fcd-815e-91317380d84e, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=99f0b7d8-e135-4f10-9c94-f855c6d40768)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 99f0b7d8-e135-4f10-9c94-f855c6d40768) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=99f0b7d8-e135-4f10-9c94-f855c6d40768, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=1d22146f-5875-47d3-9160-ba7a831ea318)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 1d22146f-5875-47d3-9160-ba7a831ea318) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=1d22146f-5875-47d3-9160-ba7a831ea318, Duration=26ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=2cd60fc3-a5de-4b5c-bd95-08be705d4c53)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 2cd60fc3-a5de-4b5c-bd95-08be705d4c53) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=2cd60fc3-a5de-4b5c-bd95-08be705d4c53, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=adf59479-1531-455e-8245-6482b0bad803)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: adf59479-1531-455e-8245-6482b0bad803) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=adf59479-1531-455e-8245-6482b0bad803, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=7dd1d0da-8272-4af2-8445-31cee005c70c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 7dd1d0da-8272-4af2-8445-31cee005c70c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=7dd1d0da-8272-4af2-8445-31cee005c70c, Duration=24ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=addbee7a-7047-41c9-839d-e3c3546c80e1)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: addbee7a-7047-41c9-839d-e3c3546c80e1) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=addbee7a-7047-41c9-839d-e3c3546c80e1, Duration=28ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=abc751d9-6008-4112-b80f-944abe6a3859)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: abc751d9-6008-4112-b80f-944abe6a3859) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=abc751d9-6008-4112-b80f-944abe6a3859, Duration=33ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=542dda1b-84c6-474f-9a51-4cbaf6ebc2e6)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 542dda1b-84c6-474f-9a51-4cbaf6ebc2e6) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=542dda1b-84c6-474f-9a51-4cbaf6ebc2e6, Duration=30ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=b485e743-3863-4b23-b60b-ee3166fa070c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: b485e743-3863-4b23-b60b-ee3166fa070c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=b485e743-3863-4b23-b60b-ee3166fa070c, Duration=27ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=7fc8242f-d8db-45ba-bcca-48bed655e57f)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 7fc8242f-d8db-45ba-bcca-48bed655e57f) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=7fc8242f-d8db-45ba-bcca-48bed655e57f, Duration=43ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=69b3da6e-8e12-4cfa-8033-98d27ab05dfe)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 69b3da6e-8e12-4cfa-8033-98d27ab05dfe) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=69b3da6e-8e12-4cfa-8033-98d27ab05dfe, Duration=44ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=20e0e58a-81a2-4b36-a6db-04c612bc27db)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 20e0e58a-81a2-4b36-a6db-04c612bc27db) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=20e0e58a-81a2-4b36-a6db-04c612bc27db, Duration=34ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=71f386b2-0580-45e6-a6e1-4bff6a207b18)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 71f386b2-0580-45e6-a6e1-4bff6a207b18) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=71f386b2-0580-45e6-a6e1-4bff6a207b18, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=cbe49d4c-3002-4c70-b7c9-bba991b6b4e9)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: cbe49d4c-3002-4c70-b7c9-bba991b6b4e9) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=cbe49d4c-3002-4c70-b7c9-bba991b6b4e9, Duration=39ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=3546bfb6-e372-451b-a061-ba6a4ad4d00c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 3546bfb6-e372-451b-a061-ba6a4ad4d00c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=3546bfb6-e372-451b-a061-ba6a4ad4d00c, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=bc3b7366-cd74-4214-8b09-2c3f22619a1d)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: bc3b7366-cd74-4214-8b09-2c3f22619a1d) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=bc3b7366-cd74-4214-8b09-2c3f22619a1d, Duration=41ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=8c9fc851-eaff-41c7-ae53-d6adcd6c4057)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 8c9fc851-eaff-41c7-ae53-d6adcd6c4057) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=8c9fc851-eaff-41c7-ae53-d6adcd6c4057, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=3b38e7a9-f022-4672-9cf9-1a04f2bdea4c)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 3b38e7a9-f022-4672-9cf9-1a04f2bdea4c) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=3b38e7a9-f022-4672-9cf9-1a04f2bdea4c, Duration=36ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=a122880b-c211-4633-bfa0-9a7d39323ef6)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: a122880b-c211-4633-bfa0-9a7d39323ef6) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=a122880b-c211-4633-bfa0-9a7d39323ef6, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=8292e3f8-fc75-461b-adc7-855ff1c0a8f1)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 8292e3f8-fc75-461b-adc7-855ff1c0a8f1) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=8292e3f8-fc75-461b-adc7-855ff1c0a8f1, Duration=37ms)

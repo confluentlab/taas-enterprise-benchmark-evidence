@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-rabbitmq-streams-pipeline-20260720t183755z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-rabbitmq-streams-bento-20260720t183755z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-rabbitmq-streams-bento-20260720t183755z"
+                       },
+                       {
+                           "container":  "flowplane-rabbitmq-streams-broker-20260720t183755z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "RabbitMQ retained temporarily for native Management UI screenshots."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T18:38:15.5042510Z"
+}

@@ -1,0 +1,21 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "debezium",
+    "toolVersion":  "Debezium Connect 4.3.0 (Kafka a9ce3221537b8653)",
+    "toolImage":  "quay.io/debezium/connect:3.6",
+    "toolImageId":  "sha256:c41778a2c6b507ab50f138debc5070387d296b57bd69c1ec94c75e149cec6c8f",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineConfigurationSha256":  "8d8a1ef8f5014ad5914bc2dce646f9880107331696ee1b8ecf4cc149ef7ccb6b",
+    "publisherBridgeSha256":  "6f3eb43c8ecdde3d33d085644011d8c7674cf592cc78e2aaf34b71e9ab261b31",
+    "rawOnlyVerifierSha256":  "26ba463cef1c89199cfc0e9cda5a8d5ce66b7a0bfa00480359f85fa244ca7f93",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

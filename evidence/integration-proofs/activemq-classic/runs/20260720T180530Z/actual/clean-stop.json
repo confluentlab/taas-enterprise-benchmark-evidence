@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-activemq-classic-pipeline-20260720t180530z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-activemq-classic-bento-20260720t180530z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-activemq-classic-bento-20260720t180530z"
+                       },
+                       {
+                           "container":  "flowplane-activemq-classic-broker-20260720t180530z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "Broker retained temporarily so its run-specific console and Jolokia counters can be captured before exact-container cleanup."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T18:05:48.5437870Z"
+}

@@ -1,0 +1,11 @@
+{
+  "containers": [
+    "flowplane-rocketmq-dashboard-20260720t192342z",
+    "flowplane-rocketmq-broker-20260720t192342z",
+    "flowplane-rocketmq-namesrv-20260720t192342z"
+  ],
+  "action": "stopped-after-native-dashboard-capture",
+  "exitCode": 0,
+  "capturedAt": "2026-07-20T19:29:54.5078599Z",
+  "recoverable": "The exact run can be reproduced with reproduce.ps1; stopped containers remain available until explicitly removed."
+}

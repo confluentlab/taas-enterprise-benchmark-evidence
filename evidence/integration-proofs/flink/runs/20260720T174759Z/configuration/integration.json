@@ -1,0 +1,13 @@
+{
+    "id":  "flink",
+    "type":  "native",
+    "runtime":  "Apache Flink",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-flink-runtime"
+                            ],
+    "harness":  "scripts/qa/flink-streaming-soak.ps1",
+    "protocolBoundary":  "Flink job with Kafka source, output, and DLQ",
+    "plannedCommand":  "powershell -File scripts/qa/flink-streaming-soak.ps1"
+}

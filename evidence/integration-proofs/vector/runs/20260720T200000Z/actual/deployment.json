@@ -1,0 +1,106 @@
+{
+    "mappingId":  "6a5e7e428dd158f5c962c54b",
+    "artifactId":  "6a5e7e438dd158f5c962c55a",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "vector-sidecar-20260720t200000z",
+                        "runtimeName":  "Vector Sidecar 20260720T200000Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "vector-sidecar-20260720t200000z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5e7e528dd158f5c962c576",
+                        "runtimeId":  "vector-sidecar-20260720t200000z",
+                        "runtimeName":  "Vector Sidecar 20260720T200000Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "artifactId":  "6a5e7e438dd158f5c962c55a",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-20T20:00:18.727Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5e7e438dd158f5c962c55a",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-20T20:00:18.727Z",
+                               "lastActiveAt":  "2026-07-20T20:00:18.727Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "vector-sidecar-20260720t200000z",
+                                                    "runtimeName":  "Vector Sidecar 20260720T200000Z",
+                                                    "runtimeType":  "BENTO",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-20T20:00:18.727Z",
+                                                    "lastActiveAt":  "2026-07-20T20:00:18.727Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+                       {
+                           "approvalId":  "6a5e7e438dd158f5c962c556",
+                           "environment":  "PRODUCTION",
+                           "requestedVersion":  "v1.0.0-draft",
+                           "status":  "QA_PASSED",
+                           "reviewer":  "admin@flowplane.local",
+                           "qaTester":  "admin@flowplane.local",
+                           "requestedAt":  "2026-07-20T20:00:03.024Z",
+                           "qaVerifiedAt":  "2026-07-20T20:00:03.218Z",
+                           "qaComment":  "Valid and invalid simulation gates passed.",
+                           "qaArtifactId":  "6a5e7e438dd158f5c962c55a",
+                           "qaArtifactVersion":  "v1.0.0",
+                           "qaArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+                       }
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  "2026-07-20T20:30:18.727Z",
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

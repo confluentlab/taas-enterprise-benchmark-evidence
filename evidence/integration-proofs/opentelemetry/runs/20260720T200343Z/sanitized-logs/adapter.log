@@ -1,0 +1,7 @@
+2026-07-20T20:03:46.1750796Z Loading canonical mapping and fixtures.
+2026-07-20T20:03:46.2045054Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T20:03:47.5112899Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T20:03:57.2749051Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T20:04:04.4644130Z Starting the dedicated Flowplane HTTP/Kafka publisher bridge used by OpenTelemetry Collector.
+2026-07-20T20:04:10.1156289Z Starting the independently deployed OpenTelemetry Collector pipeline.
+2026-07-20T20:04:10.6794274Z Publishing canonical fixtures through the raw-only verifier.

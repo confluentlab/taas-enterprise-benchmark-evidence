@@ -1,0 +1,1 @@
+{"runtimeIds":["rocketmq-pipeline-sidecar-20260720t192342z"],"requireReplayGate":false,"changeTicket":"ROCKETMQ-20260720T192342Z","rolloutPercent":100,"reason":"Assign the approved synthetic artifact to the Apache RocketMQ pipeline sidecar."}

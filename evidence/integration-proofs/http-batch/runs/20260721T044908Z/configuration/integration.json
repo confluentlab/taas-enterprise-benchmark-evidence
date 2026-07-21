@@ -1,0 +1,14 @@
+{
+    "id":  "http-batch",
+    "type":  "protocol",
+    "runtime":  "Flowplane sidecar HTTP",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-sidecar-http",
+                                "flowplane-java-sdk/flowplane-sidecar-benchmark"
+                            ],
+    "harness":  "scripts/qa/live-sidecar-contract.mjs",
+    "protocolBoundary":  "TCP HTTP batch request",
+    "plannedCommand":  "node scripts/qa/live-sidecar-contract.mjs"
+}

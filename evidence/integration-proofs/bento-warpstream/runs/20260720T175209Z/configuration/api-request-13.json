@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "bento-warpstream-sidecar-20260720t175209z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "BENTO-20260720T175209Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the bento-warpstream sidecar."
+}

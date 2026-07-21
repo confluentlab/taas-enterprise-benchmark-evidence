@@ -1,0 +1,21 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "redisVersion":  "Redis server v=7.4.7 sha=00000000:0 malloc=jemalloc-5.3.0 bits=64 build=7ff529a4e8a149e0",
+    "redisImage":  "redis/redis-stack:latest",
+    "redisImageId":  "sha256:5d5154123426693540ea6c1d9e638eae2bf2024879c839db6fcfdd7717e817c7",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineImage":  "node:22-alpine",
+    "pipelineImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "redisNodeClientVersion":  "4.7.0",
+    "pipelineScriptSha256":  "2b01960af0c83d4290f9dbf05ff46e0097f048051cbd5e57d5b8b250b11e8dd3",
+    "rawOnlyVerifierSha256":  "7ce04d47d8e8c4e4550e229cd6d275f58d870d70a4fb641d8bcd192f477fefe3",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "dockerVersion":  "28.5.1"
+}

@@ -1,0 +1,14 @@
+{
+    "id":  "serverless-aws",
+    "type":  "tool",
+    "runtime":  "AWS Lambda local wrapper",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "CONTRACT_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-serverless-aws-lambda",
+                                "docker/serverless-local/aws-lambda-api.Dockerfile"
+                            ],
+    "harness":  "scripts/dev/test-aws-serverless-local.ps1",
+    "protocolBoundary":  "local Lambda API container invocation",
+    "plannedCommand":  "powershell -File scripts/dev/test-aws-serverless-local.ps1"
+}

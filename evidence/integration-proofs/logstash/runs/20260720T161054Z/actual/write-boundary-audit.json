@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  1,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  1,
+    "verifierWriteTargets":  [
+                                 "flowplane.logstash.evidence.20260720t161054z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.logstash.evidence.20260720t161054z.transformed",
+                                "flowplane.logstash.evidence.20260720t161054z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.logstash.evidence.20260720t161054z.transformed",
+                                 "flowplane.logstash.evidence.20260720t161054z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "6c743e2a66ec798d05ea356ab495cad0db3f6f65760e2091c20012eae9a441cc",
+    "passed":  true
+}

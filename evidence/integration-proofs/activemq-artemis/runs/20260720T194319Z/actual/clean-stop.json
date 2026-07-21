@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-activemq-artemis-pipeline-20260720t194319z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-activemq-artemis-bento-20260720t194319z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-activemq-artemis-bento-20260720t194319z"
+                       },
+                       {
+                           "container":  "flowplane-artemis-broker-20260720t194319z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "Artemis retained temporarily for native Hawtio console screenshots."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T19:43:46.9565509Z"
+}

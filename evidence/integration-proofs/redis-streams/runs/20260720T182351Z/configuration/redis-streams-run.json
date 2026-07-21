@@ -1,0 +1,14 @@
+﻿{
+    "runId":  "20260720T182351Z",
+    "broker":  "Redis Streams",
+    "brokerContainer":  "flowplane-redis-streams-broker-20260720t182351z",
+    "brokerImage":  "redis/redis-stack:latest",
+    "redisInsightPort":  61658,
+    "flowplaneRuntimeContainer":  "flowplane-redis-streams-bento-20260720t182351z",
+    "flowplaneRuntimeId":  "redis-streams-pipeline-sidecar-20260720t182351z",
+    "flowplaneRuntimePort":  61648,
+    "flowplaneNetwork":  "flowplane-quality-stack_default",
+    "pipelineContainer":  "flowplane-redis-streams-pipeline-20260720t182351z",
+    "pipelineImage":  "node:22-alpine",
+    "pipeline":  "Independent consumer group: Redis raw -\u003e Flowplane Bento HTTP sidecar -\u003e Redis transformed/DLQ"
+}

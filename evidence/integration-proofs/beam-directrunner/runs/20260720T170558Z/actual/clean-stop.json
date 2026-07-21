@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-beam-directrunner-pipeline-20260720t170558z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-beam-directrunner-bento-20260720t170558z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-beam-directrunner-bento-20260720t170558z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T17:07:26.4381473Z"
+}

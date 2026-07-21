@@ -1,0 +1,13 @@
+{
+    "id":  "emqx-mqtt",
+    "type":  "tool",
+    "runtime":  "EMQX MQTT with Flowplane HTTP bridge",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "FEASIBLE_BRIDGE",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "EMQX raw QoS1 subscription through assigned Flowplane HTTP runtime to confirmed transformed/DLQ MQTT publications",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration emqx-mqtt"
+}

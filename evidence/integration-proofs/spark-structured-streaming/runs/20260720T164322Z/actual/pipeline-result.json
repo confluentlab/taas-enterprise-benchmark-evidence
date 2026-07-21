@@ -1,0 +1,16 @@
+{
+    "schemaVersion":  "flowplane.spark-structured-streaming-pipeline-result.v1",
+    "container":  "flowplane-spark-structured-streaming-pipeline-20260720t164322z",
+    "runningAtCompletion":  true,
+    "readTargets":  [
+                        "flowplane.spark-structured-streaming.evidence.20260720t164322z.raw"
+                    ],
+    "writeTargets":  [
+                         "flowplane.spark-structured-streaming.evidence.20260720t164322z.transformed",
+                         "flowplane.spark-structured-streaming.evidence.20260720t164322z.dlq"
+                     ],
+    "processedInput":  110,
+    "successfulOutput":  100,
+    "errorOutput":  10,
+    "unexpectedFailures":  0
+}

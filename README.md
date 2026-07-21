@@ -15,6 +15,8 @@ Flowplane is a governed transformation control plane and portable Java execution
 | Evidence repository snapshot | `bc442dc` (the commit referenced by the release tag) |
 | Evidence dates | 2026-07-11 through 2026-07-18; core benchmark tested 2026-07-17 |
 
+> **New local-integration supplement:** This working tree also contains 38 successful checksum-verified bundles captured on 2026-07-20/21 UTC: 22 streaming/tool integrations, eight runtime/protocol baselines, five core-surface stability soaks, and three provider-trigger proofs. These files are newer than the immutable `evidence-2026.07.1` release above. Treat them as a supplement until they receive their own release tag. See the [complete evidence overview](evidence/integration-proofs/EVIDENCE-OVERVIEW.md).
+
 ## 30-second demo
 
 [![Flowplane evidence-safe product demo](assets/demo-poster.png)](assets/demo.mp4)
@@ -60,6 +62,8 @@ The 30-minute local Kafka/Flink run produced 1,080,001 synthetic 102,400-byte re
 
 A fixed mapping and fixture produced the same valid-output SHA-256 through embedded Java, HTTP single, HTTP batch, gRPC batch, and gRPC stream contract modes. This is contract verification, not a live gRPC deployment claim.
 
+Separate 2026-07-21 live-local runs subsequently exercised current HTTP single/batch and gRPC batch/bidirectional-streaming sidecars. Each completed a 110-record baseline, and all five core JVM/HTTP/gRPC surfaces completed independent 10,000-record/five-minute soaks with exact accounting, zero final lag, and healthy periodic observations. These newer runs prove the documented local sidecar boundary; they do not turn the earlier contract fixture into a deployment benchmark.
+
 ![Latest evidence summary](assets/benchmark-summary.svg)
 
 ## Architecture
@@ -89,30 +93,31 @@ See [How it works](docs/how-it-works.md) and [Architecture](docs/architecture.md
 
 | Protocol | Execution path | Evidence status |
 |---|---|---|
-| HTTP single | Stateless synchronous API | **Incomplete** (`INCOMPLETE`) for the latest full run; contract fixture verified |
-| HTTP batch | Stateless batch API | **Live local verified** (`LIVE_LOCAL_VERIFIED`) |
-| gRPC batch | In-process service contract | **Contract verified** (`CONTRACT_VERIFIED`); live attempt is a **preserved failure** (`PRESERVED_FAILURE`) |
-| gRPC streaming | In-process streaming contract | **Contract verified** (`CONTRACT_VERIFIED`); live attempt is a **preserved failure** (`PRESERVED_FAILURE`) |
+| HTTP single | Stateless synchronous API | **Live local verified** (`LIVE_LOCAL_VERIFIED`), including a 10,000-record/five-minute soak; older 60,000-record attempt remains `INCOMPLETE` |
+| HTTP batch | Stateless batch API | **Live local verified** (`LIVE_LOCAL_VERIFIED`), including a 10,000-record/five-minute soak |
+| gRPC batch | Live sidecar `TransformBatch` | **Live local verified** (`LIVE_LOCAL_VERIFIED`), including a 10,000-record/five-minute soak; older `UNIMPLEMENTED` attempt remains historical |
+| gRPC streaming | Live sidecar `TransformStream` | **Live local verified** (`LIVE_LOCAL_VERIFIED`), including a 10,000-record/five-minute soak; older `UNIMPLEMENTED` attempt remains historical |
 
 ### Tool interoperability
 
 | Tools | Execution path | Evidence status |
 |---|---|---|
-| Bento and Pulsar bridge | Assigned adapter / HTTP bridge | **Live local verified** (`LIVE_LOCAL_VERIFIED`) for small local fixtures |
-| NiFi, Spark, Redpanda Connect, Logstash, Vector | HTTP or sidecar | **Measured** (`MEASURED`) |
-| Camel, Beam, Spring Cloud Stream, Debezium, OpenTelemetry | HTTP or framework integration | **Measured** (`MEASURED`) |
-| Serverless wrappers | Assigned AWS, Azure, and GCP wrappers | **Not tested** (`NOT_TESTED`) as a single cross-cloud qualification suite |
+| Pulsar, ActiveMQ Classic/Artemis, NATS JetStream, Redis Streams, RabbitMQ Streams, EMQX/MQTT, RocketMQ | Broker-native input/output plus HTTP/sidecar execution | **Live local verified** (`LIVE_LOCAL_VERIFIED`) for focused 100-valid/10-invalid fixtures |
+| Redpanda Connect, Logstash, Camel, Spring Cloud Stream, NiFi, Spark, Beam, Bento, Vector, OpenTelemetry Collector, Debezium | Tool/framework integration, primarily HTTP or sidecar | **Live local verified** (`LIVE_LOCAL_VERIFIED`) for focused 100-valid/10-invalid fixtures |
+| AWS, Azure, and GCP HTTP wrappers | Assigned serverless wrappers | **Live local verified** (`LIVE_LOCAL_VERIFIED`) in local Docker images |
+| Azure Queue/Event Hub and GCP Pub/Sub CloudEvent triggers | Provider handler plus local emulator | Local trigger contract **passed**; GCP includes a documented envelope-only Eventarc substitute |
 
-Third-party names identify tested technical execution paths only. They do not imply sponsorship, partnership, endorsement, or certification. See the full [runtime portability matrix](docs/runtime-portability.md) and [historical attempts](evidence/historical-attempts/README.md).
+Third-party names identify tested technical execution paths only. They do not imply sponsorship, partnership, endorsement, or certification. See the full [runtime portability matrix](docs/runtime-portability.md), [proven integration overview](evidence/integration-proofs/EVIDENCE-OVERVIEW.md), and [historical attempts](evidence/historical-attempts/README.md).
 
 ### Latest evidence by protocol
 
 | Path | Latest preserved evidence | Current status | Superseded? |
 |---|---|---|---|
-| HTTP batch | [60,000/60,000 local batch record](evidence/integration-proofs/README.md) | **Live local verified** (`LIVE_LOCAL_VERIFIED`) | No later public run is preserved. |
-| HTTP single | [`http-single-60000`](evidence/historical-attempts/http-single-60000.md) | **Incomplete** (`INCOMPLETE`) | No equivalent full passing rerun is preserved. |
+| HTTP batch | [10,000-record/five-minute run](evidence/integration-proofs/http-batch/runs/20260721T054136Z/summary.md) | **Live local verified** (`LIVE_LOCAL_VERIFIED`) | Latest local supplement run. |
+| HTTP single | [10,000-record/five-minute run](evidence/integration-proofs/http-single/runs/20260721T054134Z/summary.md) | **Live local verified** (`LIVE_LOCAL_VERIFIED`) | Supersedes the older incomplete run as current interoperability evidence, but does not make that 60,000-record workload pass. |
 | gRPC contract | [`runtime-parity-20260712`](evidence/runtime-parity/summary.md) | **Contract verified** (`CONTRACT_VERIFIED`) | Current for the preserved fixture and contract boundary. |
-| Live gRPC service | [`grpc-live-attempt`](evidence/historical-attempts/grpc-live-service.md) | **Preserved failure** (`PRESERVED_FAILURE`) | No. Contract verification is a different boundary. |
+| Live gRPC batch | [10,000-record/five-minute run](evidence/integration-proofs/grpc-batch/runs/20260721T054138Z/summary.md) | **Live local verified** (`LIVE_LOCAL_VERIFIED`) | Newer sidecar build; older `UNIMPLEMENTED` run remains historical. |
+| Live gRPC streaming | [10,000-record/five-minute run](evidence/integration-proofs/grpc-streaming/runs/20260721T054141Z/summary.md) | **Live local verified** (`LIVE_LOCAL_VERIFIED`) | Newer sidecar build; older `UNIMPLEMENTED` run remains historical. |
 
 ## Benchmark results
 
@@ -169,6 +174,8 @@ Detailed implementation controls remain in [Governance and security](docs/govern
 - [Evidence classification](docs/evidence-classification.md)
 - [Evidence manifest](evidence/manifest.json)
 - [Evidence index](evidence/evidence-index.md)
+- [Proven local integration evidence](evidence/integration-proofs/EVIDENCE-OVERVIEW.md)
+- [Integration reproduction guide](reproduction/README.md)
 - [Claims matrix](evidence/claims-matrix.csv)
 - [Core benchmark qualification](docs/repeatability-qualification.md)
 - [Runtime parity matrix](evidence/runtime-parity/parity-matrix.csv)
@@ -176,6 +183,7 @@ Detailed implementation controls remain in [Governance and security](docs/govern
 - Release: [`evidence-2026.07.1`](https://github.com/Flowplane/flowplane-evidence/releases/tag/evidence-2026.07.1)
 
 ```bash
+python scripts/validate-live-local-evidence.py
 python scripts/validate-evidence.py
 sh scripts/verify-checksums.sh
 ```
@@ -186,7 +194,7 @@ This repository intentionally excludes Flowplane’s production source code, com
 
 ## Scope and limitations
 
-Results apply only to their documented fixtures, boundaries, and environments. Core JMH and live runtime measurements are not interchangeable. Local Docker and emulator results are not managed-cloud certification. Contract verification is separate from live deployment proof. No universal throughput, runtime-equivalence, security-audit, or vendor-certification claim is made. See [Scope and limitations](docs/limitations.md).
+Results apply only to their documented fixtures, boundaries, and environments. Core JMH and live runtime measurements are not interchangeable. Local Docker and emulator results are not managed-cloud certification. Contract verification is separate from live deployment proof. The five-minute soak claim applies only to the five named JVM/HTTP/gRPC surfaces. No universal throughput, runtime-equivalence, security-audit, or vendor-certification claim is made. See [Scope and limitations](docs/limitations.md).
 
 ## Contact
 

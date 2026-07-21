@@ -1,0 +1,11 @@
+﻿{
+    "runId":  "20260720T185514Z",
+    "broker":  "EMQX MQTT",
+    "brokerContainer":  "flowplane-emqx-mqtt-broker-20260720t185514z",
+    "brokerImage":  "emqx/emqx:latest",
+    "dashboardPort":  55993,
+    "flowplaneRuntimeId":  "emqx-mqtt-pipeline-sidecar-20260720t185514z",
+    "pipelineContainer":  "flowplane-emqx-mqtt-pipeline-20260720t185514z",
+    "qos":  1,
+    "deferredPubAck":  true
+}

@@ -1,0 +1,25 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-07-20T17:06:08.722Z  INFO 1 --- [           main] c.f.bento.BentoRuntimeApplication        : Starting BentoRuntimeApplication using Java 17.0.19 with PID 1 (/app/flowplane-bento-runtime.jar started by root in /)
+2026-07-20T17:06:08.729Z  INFO 1 --- [           main] c.f.bento.BentoRuntimeApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-20T17:06:14.792Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-20T17:06:14.834Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-20T17:06:14.834Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.57]
+2026-07-20T17:06:14.987Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-20T17:06:14.988Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6041 ms
+2026-07-20T17:06:17.777Z  WARN 1 --- [signment-poller] c.flowplane.bento.BentoMappingProvider   : FLOWPLANE Bento runtime assignment poll failed for beam-directrunner-sidecar-20260720t170558z (ControlPlaneHttpException)
+2026-07-20T17:06:17.783Z  WARN 1 --- [signment-poller] c.flowplane.bento.BentoMappingProvider   : FLOWPLANE Bento runtime assignment refresh failed for beam-directrunner-sidecar-20260720t170558z (IllegalStateException)
+2026-07-20T17:06:18.236Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-07-20T17:06:18.410Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-20T17:06:18.433Z  INFO 1 --- [           main] c.f.bento.BentoRuntimeApplication        : Started BentoRuntimeApplication in 12.258 seconds (process running for 14.309)
+2026-07-20T17:06:18.744Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-20T17:06:18.745Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-20T17:06:18.747Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

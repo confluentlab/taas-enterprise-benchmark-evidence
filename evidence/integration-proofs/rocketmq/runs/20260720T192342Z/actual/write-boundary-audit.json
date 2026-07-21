@@ -1,0 +1,12 @@
+﻿{
+    "verifierRawProducerCalls":  1,
+    "verifierDownstreamProducerCalls":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawConsumerSubscriptions":  1,
+    "pipelineDynamicProducerCalls":  1,
+    "targetRestrictedToTransformedOrDlq":  true,
+    "downstreamSendBeforeRawAck":  true,
+    "verifierSha256":  "dbe0e9e89a7774a49e11c001619458a5df1ca48d2b27a1d10510697f303ad308",
+    "pipelineSha256":  "45b76818c62fb7f12b83d3da58b1ca1ae6be419a3b401c8887f9a5f9bf57e497",
+    "passed":  true
+}

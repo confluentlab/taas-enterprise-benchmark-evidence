@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "spark-structured-streaming-sidecar-20260720t164322z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "SPARK-20260720T164322Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the spark-structured-streaming sidecar."
+}

@@ -1,0 +1,1 @@
+{"runtimeIds":["rabbitmq-streams-pipeline-sidecar-20260720t183755z"],"requireReplayGate":false,"changeTicket":"RABBITMQ-20260720T183755Z","rolloutPercent":100,"reason":"Assign the approved synthetic artifact to the RabbitMQ Streams pipeline sidecar."}

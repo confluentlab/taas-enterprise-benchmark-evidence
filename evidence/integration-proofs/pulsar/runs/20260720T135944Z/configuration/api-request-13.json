@@ -1,0 +1,1 @@
+{"runtimeIds":["pulsar-pipeline-sidecar-20260720t135944z"],"requireReplayGate":false,"changeTicket":"PULSAR-20260720T135944Z","rolloutPercent":100,"reason":"Assign the approved synthetic artifact to the Pulsar pipeline sidecar."}

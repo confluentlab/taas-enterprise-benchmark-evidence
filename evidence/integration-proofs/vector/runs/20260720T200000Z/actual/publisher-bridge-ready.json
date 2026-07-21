@@ -1,0 +1,11 @@
+{
+  "integrationId": "vector",
+  "runId": "20260720T200000Z",
+  "kafkaBootstrap": "kafka:9092",
+  "runtimeUrl": "http://flowplane-vector-bento-20260720t200000z:8080/transform",
+  "topics": {
+    "transformed": "flowplane.vector.evidence.20260720t200000z.transformed",
+    "dlq": "flowplane.vector.evidence.20260720t200000z.dlq"
+  },
+  "readyAt": "2026-07-20T20:00:24.384Z"
+}

@@ -1,0 +1,57 @@
+{
+    "runId":  "20260720T183755Z",
+    "integration":  "rabbitmq-streams",
+    "integrationType":  "tool",
+    "status":  "LIVE_LOCAL_VERIFIED",
+    "startedAt":  "2026-07-20T18:37:56.0319351Z",
+    "completedAt":  "2026-07-20T18:39:28.6083023Z",
+    "durationSeconds":  92.576,
+    "flowplaneCommit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+    "evidenceRepoCommit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+    "flowplaneWorktree":  {
+                              "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                              "dirty":  true,
+                              "statusEntryCount":  174,
+                              "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                          },
+    "evidenceRepoWorktree":  {
+                                 "commit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+                                 "dirty":  true,
+                                 "statusEntryCount":  3,
+                                 "statusDigestSha256":  "0321ff0878bf602d122cffdda041f7301f0a89cbaddb56c32faa1100cdc452e4"
+                             },
+    "artifactId":  "6a5e6b068dd158f5c962a348",
+    "artifactVersion":  "v1.0.0",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "fixtureSet":  "flowplane-live-local-verification-v1",
+    "canonicalizationVersion":  "flowplane.canonicalization.v1",
+    "runtime":  {
+                    "name":  "RabbitMQ Streams + confirmed pipeline + Flowplane Bento sidecar",
+                    "version":  "4.3.2",
+                    "executionMode":  "Docker live local",
+                    "containerImages":  [
+                                            "rabbitmq:4-management",
+                                            "node:22-alpine",
+                                            "eclipse-temurin:17-jre"
+                                        ]
+                },
+    "host":  {
+                 "os":  "see environment.json",
+                 "cpu":  "see environment.json",
+                 "logicalCores":  0,
+                 "memoryBytes":  0,
+                 "javaVersion":  "see environment.json",
+                 "dockerVersion":  "see environment.json"
+             },
+    "protocolBoundary":  "RabbitMQ raw stream consumer through assigned Flowplane HTTP runtime to confirmed transformed/DLQ stream queues",
+    "sourceBoundary":  "Raw-only verifier confirmed publish to RabbitMQ raw stream queue",
+    "sinkBoundary":  "Independent pipeline confirmed publish to RabbitMQ transformed/DLQ stream queues",
+    "validRecords":  100,
+    "invalidRecords":  10,
+    "successfulOutputs":  100,
+    "errorOutputs":  10,
+    "duplicates":  0,
+    "unexplainedMissing":  0,
+    "finalLag":  0,
+    "unexpectedFailures":  0
+}

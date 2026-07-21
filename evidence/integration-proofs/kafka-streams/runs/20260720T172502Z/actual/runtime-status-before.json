@@ -1,0 +1,9 @@
+{
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e59f28dd158f5c962846a",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "runtimeId":  "kafka-streams-evidence-20260720t172502z",
+    "health":  "HEALTHY",
+    "lifecycleState":  "RUNNING"
+}

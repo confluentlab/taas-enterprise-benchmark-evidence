@@ -1,0 +1,15 @@
+{
+    "id":  "embedded-spring",
+    "type":  "native",
+    "runtime":  "JVM / Spring Boot",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-spring-boot-starter",
+                                "flowplane-java-sdk/flowplane-kafka-streaming-demo",
+                                "scripts/demo/live-local-verification/adapters/embedded-spring.ps1"
+                            ],
+    "harness":  "scripts/demo/live-local-verification/adapters/embedded-spring.ps1",
+    "protocolBoundary":  "persistent Kafka raw topic through the embedded Spring/JVM runtime to persistent transformed and DLQ topics",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration embedded-spring"
+}

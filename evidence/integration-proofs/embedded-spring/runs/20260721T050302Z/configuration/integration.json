@@ -1,0 +1,14 @@
+{
+    "id":  "embedded-spring",
+    "type":  "native",
+    "runtime":  "JVM / Spring Boot",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-spring-boot-starter",
+                                "flowplane-java-sdk/flowplane-runtime-executor"
+                            ],
+    "harness":  "scripts/qa/single-source-byte-parity.ps1",
+    "protocolBoundary":  "real JVM public transformer entry point",
+    "plannedCommand":  "powershell -File scripts/qa/single-source-byte-parity.ps1"
+}

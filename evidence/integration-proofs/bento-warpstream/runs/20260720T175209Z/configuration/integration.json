@@ -1,0 +1,13 @@
+{
+    "id":  "bento-warpstream",
+    "type":  "tool",
+    "runtime":  "WarpStream Bento",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "RUNNABLE",
+    "implementationPaths":  [
+                                "docker/network-isolation/warpstream-bento.yml"
+                            ],
+    "harness":  "scripts/demo/live-local-verification/adapters/bento-warpstream.ps1",
+    "protocolBoundary":  "Bento Kafka-compatible input/output pipeline to assigned Flowplane HTTP runtime",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration bento-warpstream"
+}

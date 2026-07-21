@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  2,
+    "pipelineTransformedOutputReferences":  2,
+    "pipelineDlqOutputReferences":  2,
+    "verifierWriteTargets":  [
+                                 "flowplane.beam-directrunner.evidence.20260720t170558z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.beam-directrunner.evidence.20260720t170558z.transformed",
+                                "flowplane.beam-directrunner.evidence.20260720t170558z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.beam-directrunner.evidence.20260720t170558z.transformed",
+                                 "flowplane.beam-directrunner.evidence.20260720t170558z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "776a9a58043f8ac38ecf188c977fa0df8acc4a0a0796da2f94009ae578d6c5e2",
+    "passed":  true
+}

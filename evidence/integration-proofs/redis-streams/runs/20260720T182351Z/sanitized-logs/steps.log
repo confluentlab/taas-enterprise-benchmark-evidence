@@ -1,0 +1,12 @@
+2026-07-20T18:23:53.1817897Z Loading canonical mapping and fixtures.
+2026-07-20T18:23:53.1985229Z Reading an active team from the live control plane.
+2026-07-20T18:23:53.2796779Z Creating the synthetic mapping.
+2026-07-20T18:23:53.3435657Z Validating the synthetic mapping.
+2026-07-20T18:23:53.3967925Z Generating the 100-record expected-output baseline through mapping simulation.
+2026-07-20T18:23:53.5629157Z Submitting, approving, and QA-passing the mapping through governance.
+2026-07-20T18:23:53.8428739Z Starting the real Flowplane Bento HTTP sidecar container.
+2026-07-20T18:24:00.6260791Z Deploying the published artifact to the registered runtime.
+2026-07-20T18:24:00.9509178Z Starting an isolated Redis Stack broker with RedisInsight.
+2026-07-20T18:24:01.5585409Z Starting the independently deployed Redis Streams-to-Flowplane pipeline container.
+2026-07-20T18:24:13.5873018Z Publishing 110 records to the Redis raw stream only; downstream streams are read-only to the verifier.
+2026-07-20T18:24:26.1364806Z Reconciling Redis stream lengths and consumer-group pending entries.

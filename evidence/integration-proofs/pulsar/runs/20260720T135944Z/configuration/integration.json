@@ -1,0 +1,13 @@
+{
+    "id":  "pulsar",
+    "type":  "tool",
+    "runtime":  "Apache Pulsar",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED (small HTTP bridge fixture)",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "Pulsar topics and subscription through Flowplane",
+    "plannedCommand":  ""
+}

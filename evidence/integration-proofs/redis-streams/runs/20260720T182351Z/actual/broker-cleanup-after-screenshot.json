@@ -1,0 +1,14 @@
+{
+  "container": "flowplane-redis-streams-broker-20260720t182351z",
+  "purpose": "Redis Stack was retained only long enough to capture RedisInsight stream evidence.",
+  "screenshotEvidence": [
+    "screenshots/redisinsight-native-stream-list.png",
+    "screenshots/redisinsight-native-raw-stream.png",
+    "screenshots/redisinsight-native-transformed-stream.png",
+    "screenshots/redisinsight-native-dlq-stream.png"
+  ],
+  "stoppedAt": "2026-07-20T18:25:45.6000844Z",
+  "runningAfterStop": false,
+  "containerExitCode": 143,
+  "sharedFlowplaneServicesStopped": false
+}

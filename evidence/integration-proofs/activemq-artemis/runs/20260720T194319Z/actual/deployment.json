@@ -1,0 +1,106 @@
+﻿{
+    "mappingId":  "6a5e7a598dd158f5c962be83",
+    "artifactId":  "6a5e7a5a8dd158f5c962be93",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "activemq-artemis-pipeline-sidecar-20260720t194319z",
+                        "runtimeName":  "ActiveMQ Artemis Pipeline Sidecar 20260720T194319Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "activemq-artemis-pipeline-sidecar-20260720t194319z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5e7a618dd158f5c962be9f",
+                        "runtimeId":  "activemq-artemis-pipeline-sidecar-20260720t194319z",
+                        "runtimeName":  "ActiveMQ Artemis Pipeline Sidecar 20260720T194319Z",
+                        "runtimeType":  "BENTO",
+                        "environment":  "PRODUCTION",
+                        "artifactId":  "6a5e7a5a8dd158f5c962be93",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-20T19:43:29.122Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5e7a5a8dd158f5c962be93",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-20T19:43:29.122Z",
+                               "lastActiveAt":  "2026-07-20T19:43:29.122Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "activemq-artemis-pipeline-sidecar-20260720t194319z",
+                                                    "runtimeName":  "ActiveMQ Artemis Pipeline Sidecar 20260720T194319Z",
+                                                    "runtimeType":  "BENTO",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-20T19:43:29.122Z",
+                                                    "lastActiveAt":  "2026-07-20T19:43:29.122Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+                       {
+                           "approvalId":  "6a5e7a598dd158f5c962be8e",
+                           "environment":  "PRODUCTION",
+                           "requestedVersion":  "v1.0.0-draft",
+                           "status":  "QA_PASSED",
+                           "reviewer":  "admin@flowplane.local",
+                           "qaTester":  "admin@flowplane.local",
+                           "requestedAt":  "2026-07-20T19:43:21.931Z",
+                           "qaVerifiedAt":  "2026-07-20T19:43:22.121Z",
+                           "qaComment":  "Valid and invalid simulation gates passed.",
+                           "qaArtifactId":  "6a5e7a5a8dd158f5c962be93",
+                           "qaArtifactVersion":  "v1.0.0",
+                           "qaArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+                       }
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  "2026-07-20T20:13:29.122Z",
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

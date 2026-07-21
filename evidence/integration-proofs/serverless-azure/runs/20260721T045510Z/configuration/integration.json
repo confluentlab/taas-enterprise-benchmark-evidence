@@ -1,0 +1,13 @@
+{
+    "id":  "serverless-azure",
+    "type":  "tool",
+    "runtime":  "Azure Functions local wrapper",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "CONTRACT_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-serverless-azure-functions"
+                            ],
+    "harness":  "scripts/dev/run-azure-serverless-local.ps1",
+    "protocolBoundary":  "Azure Functions host HTTP invocation",
+    "plannedCommand":  "powershell -File scripts/dev/run-azure-serverless-local.ps1"
+}

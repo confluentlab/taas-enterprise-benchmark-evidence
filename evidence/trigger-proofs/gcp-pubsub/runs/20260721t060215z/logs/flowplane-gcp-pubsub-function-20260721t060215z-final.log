@@ -1,0 +1,17 @@
+﻿Jul 21, 2026 6:02:18 AM org.eclipse.jetty.server.Server doStart
+INFO: jetty-12.1.8; built: 2026-04-01T01:09:18.991Z; git: c9cdc9aaa434a3665b8a53b4d1cc3684992da649; jvm 17.0.19+10
+Jul 21, 2026 6:02:18 AM org.eclipse.jetty.server.AbstractConnector doStart
+INFO: Started oejs.ServerConnector@45044f1a{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+Jul 21, 2026 6:02:18 AM org.eclipse.jetty.server.Server doStart
+INFO: Started oejs.Server@1b2abca6{STARTING}[12.1.8,sto=0] @102ms
+Jul 21, 2026 6:02:18 AM com.google.cloud.functions.invoker.runner.Invoker logServerInfo
+INFO: Serving function...
+Jul 21, 2026 6:02:18 AM com.google.cloud.functions.invoker.runner.Invoker logServerInfo
+INFO: Function: com.flowplane.serverless.gcp.FlowPlaneGcpPubSubFunction
+Jul 21, 2026 6:02:18 AM com.google.cloud.functions.invoker.runner.Invoker logServerInfo
+INFO: URL: http://localhost:8080/
+SLF4J(W): No SLF4J providers were found.
+SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+Jul 21, 2026 6:02:30 AM io.grpc.netty.shaded.io.grpc.netty.TcpMetrics loadEpollInfo
+INFO: Epoll available during static init of TcpMetrics:true

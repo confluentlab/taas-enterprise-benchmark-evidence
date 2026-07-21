@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "connect-smt-evidence-20260720t171900z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "CONNECT-20260720T171900Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the Kafka Connect SMT runtime."
+}

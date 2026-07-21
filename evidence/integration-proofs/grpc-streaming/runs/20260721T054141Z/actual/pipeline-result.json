@@ -1,0 +1,16 @@
+{
+    "schemaVersion":  "flowplane.runtime-surface-pipeline-result.v1",
+    "container":  "flowplane-grpc-streaming-bridge-20260721t054141z",
+    "completedSuccessfully":  true,
+    "readTargets":  [
+                        "flowplane.grpc-streaming.evidence.20260721t054141z.raw"
+                    ],
+    "writeTargets":  [
+                         "flowplane.grpc-streaming.evidence.20260721t054141z.transformed",
+                         "flowplane.grpc-streaming.evidence.20260721t054141z.dlq"
+                     ],
+    "processedInput":  10000,
+    "successfulOutput":  9900,
+    "errorOutput":  100,
+    "unexpectedFailures":  0
+}

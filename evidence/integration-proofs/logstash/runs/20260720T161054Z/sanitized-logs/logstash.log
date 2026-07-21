@@ -1,0 +1,442 @@
+Using bundled JDK: /usr/share/logstash/jdk
+Sending Logstash logs to /usr/share/logstash/logs which is now configured via log4j2.properties
+[2026-07-20T16:11:23,524][WARN ][deprecation.logstash.settings] The setting `http.host` is a deprecated alias for `api.http.host` and will be removed in a future release of Logstash. Please use api.http.host instead
+[2026-07-20T16:11:23,537][INFO ][logstash.runner          ] Log4j configuration path used is: /usr/share/logstash/config/log4j2.properties
+[2026-07-20T16:11:23,539][INFO ][logstash.runner          ] Starting Logstash {"logstash.version"=>"8.15.3", "jruby.version"=>"jruby 9.4.8.0 (3.1.4) 2024-07-02 4d41e55a67 OpenJDK 64-Bit Server VM 21.0.4+7-LTS on 21.0.4+7-LTS +indy +jit [x86_64-linux]"}
+[2026-07-20T16:11:23,541][INFO ][logstash.runner          ] JVM bootstrap flags: [-Xms1g, -Xmx1g, -Djava.awt.headless=true, -Dfile.encoding=UTF-8, -Djruby.compile.invokedynamic=true, -XX:+HeapDumpOnOutOfMemoryError, -Djava.security.egd=file:/dev/urandom, -Dlog4j2.isThreadContextMapInheritable=true, -Dlogstash.jackson.stream-read-constraints.max-string-length=200000000, -Dlogstash.jackson.stream-read-constraints.max-number-length=10000, -Dls.cgroup.cpuacct.path.override=/, -Dls.cgroup.cpu.path.override=/, -Djruby.regexp.interruptible=true, -Djdk.io.File.enableADS=true, --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED, --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED, --add-opens=java.base/java.security=ALL-UNNAMED, --add-opens=java.base/java.io=ALL-UNNAMED, --add-opens=java.base/java.nio.channels=ALL-UNNAMED, --add-opens=java.base/sun.nio.ch=ALL-UNNAMED, --add-opens=java.management/sun.management=ALL-UNNAMED, -Dio.netty.allocator.maxOrder=11]
+[2026-07-20T16:11:23,545][INFO ][logstash.runner          ] Jackson default value override `logstash.jackson.stream-read-constraints.max-string-length` configured to `200000000`
+[2026-07-20T16:11:23,545][INFO ][logstash.runner          ] Jackson default value override `logstash.jackson.stream-read-constraints.max-number-length` configured to `10000`
+[2026-07-20T16:11:23,550][INFO ][logstash.settings        ] Creating directory {:setting=>"path.queue", :path=>"/usr/share/logstash/data/queue"}
+[2026-07-20T16:11:23,552][INFO ][logstash.settings        ] Creating directory {:setting=>"path.dead_letter_queue", :path=>"/usr/share/logstash/data/dead_letter_queue"}
+[2026-07-20T16:11:23,712][INFO ][logstash.agent           ] No persistent UUID file found. Generating new UUID {:uuid=>"2d8ea203-305e-4611-b246-71087e4301ec", :path=>"/usr/share/logstash/data/uuid"}
+[2026-07-20T16:11:24,145][WARN ][logstash.monitoringextension.pipelineregisterhook] xpack.monitoring.enabled has not been defined, but found elasticsearch configuration. Please explicitly set `xpack.monitoring.enabled: true` in logstash.yml
+[2026-07-20T16:11:24,145][WARN ][deprecation.logstash.monitoringextension.pipelineregisterhook] Internal collectors option for Logstash monitoring is deprecated and targeted for removal in the next major version.
+Please configure Elastic Agent to monitor Logstash. Documentation can be found at: 
+https://www.elastic.co/guide/en/logstash/current/monitoring-with-elastic-agent.html
+[2026-07-20T16:11:24,464][INFO ][logstash.licensechecker.licensereader] Elasticsearch pool URLs updated {:changes=>{:removed=>[], :added=>[http://elasticsearch:9200/]}}
+[2026-07-20T16:11:28,218][INFO ][logstash.licensechecker.licensereader] Failed to perform request {:message=>"elasticsearch: Name or service not known", :exception=>Manticore::ResolutionFailure, :cause=>#<Java::JavaNet::UnknownHostException: elasticsearch: Name or service not known>}
+[2026-07-20T16:11:28,219][WARN ][logstash.licensechecker.licensereader] Attempted to resurrect connection to dead ES instance, but got an error {:url=>"http://elasticsearch:9200/", :exception=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError, :message=>"Elasticsearch Unreachable: [http://elasticsearch:9200/][Manticore::ResolutionFailure] elasticsearch: Name or service not known"}
+[2026-07-20T16:11:28,224][INFO ][logstash.licensechecker.licensereader] Failed to perform request {:message=>"elasticsearch", :exception=>Manticore::ResolutionFailure, :cause=>#<Java::JavaNet::UnknownHostException: elasticsearch>}
+[2026-07-20T16:11:28,224][WARN ][logstash.licensechecker.licensereader] Marking url as dead. Last error: [LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError] Elasticsearch Unreachable: [http://elasticsearch:9200/][Manticore::ResolutionFailure] elasticsearch {:url=>http://elasticsearch:9200/, :error_message=>"Elasticsearch Unreachable: [http://elasticsearch:9200/][Manticore::ResolutionFailure] elasticsearch", :error_class=>"LogStash::Outputs::ElasticSearch::HttpClient::Pool::HostUnreachableError"}
+[2026-07-20T16:11:28,225][WARN ][logstash.licensechecker.licensereader] Attempt to fetch Elasticsearch cluster info failed. Sleeping for 0.02 {:fail_count=>1, :exception=>"Elasticsearch Unreachable: [http://elasticsearch:9200/][Manticore::ResolutionFailure] elasticsearch"}
+[2026-07-20T16:11:28,246][ERROR][logstash.licensechecker.licensereader] Unable to retrieve Elasticsearch cluster info. {:message=>"No Available connections", :exception=>LogStash::Outputs::ElasticSearch::HttpClient::Pool::NoConnectionAvailableError}
+[2026-07-20T16:11:28,247][ERROR][logstash.licensechecker.licensereader] Unable to retrieve license information from license server {:message=>"No Available connections"}
+[2026-07-20T16:11:28,260][ERROR][logstash.monitoring.internalpipelinesource] Failed to fetch X-Pack information from Elasticsearch. This is likely due to failure to reach a live Elasticsearch cluster.
+[2026-07-20T16:11:28,320][INFO ][logstash.agent           ] Successfully started Logstash API endpoint {:port=>9600, :ssl_enabled=>false}
+[2026-07-20T16:11:28,548][INFO ][org.reflections.Reflections] Reflections took 59 ms to scan 1 urls, producing 138 keys and 481 values
+[2026-07-20T16:11:28,673][INFO ][logstash.javapipeline    ] Pipeline `main` is configured with `pipeline.ecs_compatibility: v8` setting. All plugins in this pipeline will default to `ecs_compatibility => v8` unless explicitly configured otherwise.
+[2026-07-20T16:11:28,720][INFO ][org.apache.kafka.clients.producer.ProducerConfig][main] Idempotence will be disabled because acks is set to 1, not set to 'all'.
+[2026-07-20T16:11:28,721][INFO ][org.apache.kafka.clients.producer.ProducerConfig][main] ProducerConfig values: 
+	acks = 1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = logstash
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 50
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 40000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [REDACTED]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = [REDACTED]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = [REDACTED]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[2026-07-20T16:11:28,766][INFO ][org.apache.kafka.common.utils.AppInfoParser][main] Kafka version: 3.4.1
+[2026-07-20T16:11:28,767][INFO ][org.apache.kafka.common.utils.AppInfoParser][main] Kafka commitId: 8a516edc2755df89
+[2026-07-20T16:11:28,767][INFO ][org.apache.kafka.common.utils.AppInfoParser][main] Kafka startTimeMs: 1784563888764
+[2026-07-20T16:11:28,768][INFO ][org.apache.kafka.clients.producer.ProducerConfig][main] Idempotence will be disabled because acks is set to 1, not set to 'all'.
+[2026-07-20T16:11:28,768][INFO ][org.apache.kafka.clients.producer.ProducerConfig][main] ProducerConfig values: 
+	acks = 1
+	auto.include.jmx.reporter = true
+	batch.size = 16384
+	bootstrap.servers = [kafka:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = logstash
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 50
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 40000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [REDACTED]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = [REDACTED]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = [REDACTED]
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+[2026-07-20T16:11:28,773][INFO ][org.apache.kafka.common.utils.AppInfoParser][main] Kafka version: 3.4.1
+[2026-07-20T16:11:28,773][INFO ][org.apache.kafka.common.utils.AppInfoParser][main] Kafka commitId: 8a516edc2755df89
+[2026-07-20T16:11:28,773][INFO ][org.apache.kafka.common.utils.AppInfoParser][main] Kafka startTimeMs: 1784563888773
+[2026-07-20T16:11:28,773][WARN ][org.apache.kafka.common.utils.AppInfoParser][main] Error registering AppInfo mbean
+javax.management.InstanceAlreadyExistsException: kafka.producer:type=app-info,id=logstash
+	at com.sun.jmx.mbeanserver.Repository.addMBean(Repository.java:322) ~[?:?]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerWithRepository(DefaultMBeanServerInterceptor.java:1848) ~[?:?]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerDynamicMBean(DefaultMBeanServerInterceptor.java:945) ~[?:?]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerObject(DefaultMBeanServerInterceptor.java:880) ~[?:?]
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.registerMBean(DefaultMBeanServerInterceptor.java:315) ~[?:?]
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.registerMBean(JmxMBeanServer.java:523) ~[?:?]
+	at org.apache.kafka.common.utils.AppInfoParser.registerAppInfo(AppInfoParser.java:64) ~[kafka-clients-3.4.1.jar:?]
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:459) ~[kafka-clients-3.4.1.jar:?]
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:290) ~[kafka-clients-3.4.1.jar:?]
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:317) ~[kafka-clients-3.4.1.jar:?]
+	at org.apache.kafka.clients.producer.KafkaProducer.<init>(KafkaProducer.java:302) ~[kafka-clients-3.4.1.jar:?]
+	at jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at org.jruby.javasupport.JavaConstructor.newInstanceDirect(JavaConstructor.java:165) ~[jruby.jar:?]
+	at org.jruby.java.invokers.ConstructorInvoker.call(ConstructorInvoker.java:85) ~[jruby.jar:?]
+	at org.jruby.java.invokers.ConstructorInvoker.call(ConstructorInvoker.java:174) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:471) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:259) ~[jruby.jar:?]
+	at org.jruby.java.proxies.ConcreteJavaProxy$InitializeMethod.call(ConcreteJavaProxy.java:93) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:257) ~[jruby.jar:?]
+	at org.jruby.RubyClass.newInstance(RubyClass.java:922) ~[jruby.jar:?]
+	at org.jruby.RubyClass$INVOKER$i$newInstance.call(RubyClass$INVOKER$i$newInstance.gen) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodZeroOrOneOrNBlock.call(JavaMethod.java:355) ~[jruby.jar:?]
+	at org.jruby.java.proxies.ConcreteJavaProxy$NewMethod.call(ConcreteJavaProxy.java:188) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:242) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:314) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.interpret(InterpreterEngine.java:76) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.INTERPRET_METHOD(MixedModeIRMethod.java:164) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:151) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:212) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:456) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:195) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:346) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.interpret(InterpreterEngine.java:76) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.INTERPRET_METHOD(MixedModeIRMethod.java:164) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:151) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:212) ~[jruby.jar:?]
+	at org.jruby.RubyClass.finvoke(RubyClass.java:598) ~[jruby.jar:?]
+	at org.jruby.runtime.Helpers.invoke(Helpers.java:708) ~[jruby.jar:?]
+	at org.jruby.RubyBasicObject.callMethod(RubyBasicObject.java:349) ~[jruby.jar:?]
+	at org.logstash.config.ir.compiler.OutputStrategyExt$SimpleAbstractOutputStrategyExt.reg(OutputStrategyExt.java:275) ~[logstash-core.jar:?]
+	at org.logstash.config.ir.compiler.OutputStrategyExt$AbstractOutputStrategyExt.register(OutputStrategyExt.java:131) ~[logstash-core.jar:?]
+	at org.logstash.config.ir.compiler.OutputDelegatorExt.doRegister(OutputDelegatorExt.java:126) ~[logstash-core.jar:?]
+	at org.logstash.config.ir.compiler.AbstractOutputDelegatorExt.register(AbstractOutputDelegatorExt.java:69) ~[logstash-core.jar:?]
+	at org.logstash.config.ir.compiler.AbstractOutputDelegatorExt$INVOKER$i$0$0$register.call(AbstractOutputDelegatorExt$INVOKER$i$0$0$register.gen) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:193) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:346) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.Interpreter.INTERPRET_BLOCK(Interpreter.java:118) ~[jruby.jar:?]
+	at org.jruby.runtime.MixedModeIRBlockBody.commonYieldPath(MixedModeIRBlockBody.java:136) ~[jruby.jar:?]
+	at org.jruby.runtime.IRBlockBody.doYield(IRBlockBody.java:169) ~[jruby.jar:?]
+	at org.jruby.runtime.BlockBody.yield(BlockBody.java:108) ~[jruby.jar:?]
+	at org.jruby.runtime.Block.yield(Block.java:189) ~[jruby.jar:?]
+	at org.jruby.RubyArray.each(RubyArray.java:1981) ~[jruby.jar:?]
+	at org.jruby.RubyArray$INVOKER$i$0$0$each.call(RubyArray$INVOKER$i$0$0$each.gen) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.JavaMethod$JavaMethodZeroBlock.call(JavaMethod.java:561) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:446) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:92) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.callIter(CachingCallSite.java:103) ~[jruby.jar:?]
+	at org.jruby.ir.instructions.CallBase.interpret(CallBase.java:545) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:363) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.interpret(InterpreterEngine.java:82) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.INTERPRET_METHOD(MixedModeIRMethod.java:201) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:188) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:220) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:466) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:244) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:314) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.interpret(InterpreterEngine.java:76) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.INTERPRET_METHOD(MixedModeIRMethod.java:164) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:151) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:212) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:456) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:195) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:346) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.interpret(InterpreterEngine.java:76) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.INTERPRET_METHOD(MixedModeIRMethod.java:164) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:151) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:212) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:456) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:195) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:346) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.interpret(InterpreterEngine.java:76) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.INTERPRET_METHOD(MixedModeIRMethod.java:164) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.MixedModeIRMethod.call(MixedModeIRMethod.java:151) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.methods.DynamicMethod.call(DynamicMethod.java:212) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.cacheAndCall(CachingCallSite.java:456) ~[jruby.jar:?]
+	at org.jruby.runtime.callsite.CachingCallSite.call(CachingCallSite.java:195) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.InterpreterEngine.processCall(InterpreterEngine.java:346) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.StartupInterpreterEngine.interpret(StartupInterpreterEngine.java:66) ~[jruby.jar:?]
+	at org.jruby.ir.interpreter.Interpreter.INTERPRET_BLOCK(Interpreter.java:118) ~[jruby.jar:?]
+	at org.jruby.runtime.MixedModeIRBlockBody.commonYieldPath(MixedModeIRBlockBody.java:136) ~[jruby.jar:?]
+	at org.jruby.runtime.IRBlockBody.call(IRBlockBody.java:66) ~[jruby.jar:?]
+	at org.jruby.runtime.IRBlockBody.call(IRBlockBody.java:58) ~[jruby.jar:?]
+	at org.jruby.runtime.Block.call(Block.java:144) ~[jruby.jar:?]
+	at org.jruby.RubyProc.call(RubyProc.java:354) ~[jruby.jar:?]
+	at org.jruby.internal.runtime.RubyRunnable.run(RubyRunnable.java:111) ~[jruby.jar:?]
+	at java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[2026-07-20T16:11:28,802][INFO ][logstash.javapipeline    ][main] Starting pipeline {:pipeline_id=>"main", "pipeline.workers"=>10, "pipeline.batch.size"=>125, "pipeline.batch.delay"=>50, "pipeline.max_inflight"=>1250, "pipeline.sources"=>["/usr/share/logstash/pipeline/logstash.conf"], :thread=>"#<Thread:0x2dc8d596 /usr/share/logstash/logstash-core/lib/logstash/java_pipeline.rb:134 run>"}
+[2026-07-20T16:11:29,068][INFO ][org.apache.kafka.clients.Metadata][main] [Producer clientId=logstash] Cluster ID: MkU3OEVBNTcwNTJENDM2Qk
+[2026-07-20T16:11:29,068][INFO ][org.apache.kafka.clients.Metadata][main] [Producer clientId=logstash] Cluster ID: MkU3OEVBNTcwNTJENDM2Qk
+[2026-07-20T16:11:29,383][INFO ][logstash.javapipeline    ][main] Pipeline Java execution initialization time {"seconds"=>0.58}
+[2026-07-20T16:11:29,389][INFO ][logstash.javapipeline    ][main] Pipeline started {"pipeline.id"=>"main"}
+[2026-07-20T16:11:29,403][INFO ][logstash.agent           ] Pipelines running {:count=>1, :running_pipelines=>[:main], :non_running_pipelines=>[]}
+[2026-07-20T16:11:29,426][INFO ][org.apache.kafka.clients.consumer.ConsumerConfig][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.include.jmx.reporter = true
+	auto.offset.reset = earliest
+	bootstrap.servers = [kafka:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = logstash-0
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = flowplane-logstash-evidence-20260720t161054z
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 50
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 40000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = [REDACTED]
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = [REDACTED]
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = [REDACTED]
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+[2026-07-20T16:11:29,455][INFO ][org.apache.kafka.common.utils.AppInfoParser][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] Kafka version: 3.4.1
+[2026-07-20T16:11:29,455][INFO ][org.apache.kafka.common.utils.AppInfoParser][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] Kafka commitId: 8a516edc2755df89
+[2026-07-20T16:11:29,455][INFO ][org.apache.kafka.common.utils.AppInfoParser][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] Kafka startTimeMs: 1784563889455
+[2026-07-20T16:11:29,456][INFO ][org.apache.kafka.clients.consumer.KafkaConsumer][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Subscribed to topic(s): flowplane.logstash.evidence.20260720t161054z.raw
+[2026-07-20T16:11:29,475][INFO ][org.apache.kafka.clients.Metadata][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Resetting the last seen epoch of partition flowplane.logstash.evidence.20260720t161054z.raw-0 to 0 since the associated topicId changed from null to Ni00XCncRS6R4DBNuxomSw
+[2026-07-20T16:11:29,476][INFO ][org.apache.kafka.clients.Metadata][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Cluster ID: MkU3OEVBNTcwNTJENDM2Qk
+[2026-07-20T16:11:29,477][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null)
+[2026-07-20T16:11:29,482][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] (Re-)joining group
+[2026-07-20T16:11:29,508][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Request joining group due to: need to re-join with the given member-id: logstash-0-067625d0-f93f-4b94-8d4b-73046ea57089
+[2026-07-20T16:11:29,508][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+[2026-07-20T16:11:29,508][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] (Re-)joining group
+[2026-07-20T16:11:29,510][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Successfully joined group with generation Generation{generationId=1, memberId='logstash-0-067625d0-f93f-4b94-8d4b-73046ea57089', protocol='range'}
+[2026-07-20T16:11:29,511][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Finished assignment for group at generation 1: {logstash-0-067625d0-f93f-4b94-8d4b-73046ea57089=Assignment(partitions=[flowplane.logstash.evidence.20260720t161054z.raw-0])}
+[2026-07-20T16:11:29,515][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Successfully synced group in generation Generation{generationId=1, memberId='logstash-0-067625d0-f93f-4b94-8d4b-73046ea57089', protocol='range'}
+[2026-07-20T16:11:29,516][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Notifying assignor about the new Assignment(partitions=[flowplane.logstash.evidence.20260720t161054z.raw-0])
+[2026-07-20T16:11:29,517][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Adding newly assigned partitions: flowplane.logstash.evidence.20260720t161054z.raw-0
+[2026-07-20T16:11:29,521][INFO ][org.apache.kafka.clients.consumer.internals.ConsumerCoordinator][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Found no committed offset for partition flowplane.logstash.evidence.20260720t161054z.raw-0
+[2026-07-20T16:11:29,526][INFO ][org.apache.kafka.clients.consumer.internals.SubscriptionState][main][5e4ebf2c6392b43108baafe0712775e1d78ee595b4b9e268738fa53bee9847b9] [Consumer clientId=logstash-0, groupId=flowplane-logstash-evidence-20260720t161054z] Resetting offset for partition flowplane.logstash.evidence.20260720t161054z.raw-0 to position FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[kafka:9092 (id: 1 rack: null)], epoch=0}}.
+[2026-07-20T16:11:30,077][INFO ][org.apache.kafka.clients.Metadata][main] [Producer clientId=logstash] Resetting the last seen epoch of partition flowplane.logstash.evidence.20260720t161054z.transformed-0 to 0 since the associated topicId changed from null to bngDbomFQ0GQ0BGJHhsGMg
+[2026-07-20T16:11:30,140][INFO ][org.apache.kafka.clients.Metadata][main] [Producer clientId=logstash] Resetting the last seen epoch of partition flowplane.logstash.evidence.20260720t161054z.dlq-0 to 0 since the associated topicId changed from null to PQBXUHPqQ8aPmS_9fTBIMg

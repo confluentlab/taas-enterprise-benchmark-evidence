@@ -1,0 +1,6 @@
+2026-07-20T16:05:55.0048247Z Loading canonical mapping and fixtures.
+2026-07-20T16:05:55.0537943Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T16:05:56.3337013Z Starting a run-specific Flowplane Bento HTTP sidecar.
+2026-07-20T16:06:05.5857913Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T16:06:11.3564465Z Starting the independently deployed Redpanda Connect pipeline.
+2026-07-20T16:06:16.7387422Z Publishing canonical fixtures through the raw-only verifier.

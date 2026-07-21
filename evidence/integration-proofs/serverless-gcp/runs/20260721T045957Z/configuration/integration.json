@@ -1,0 +1,13 @@
+{
+    "id":  "serverless-gcp",
+    "type":  "tool",
+    "runtime":  "Google Cloud Functions local wrapper",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "CONTRACT_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-serverless-gcp-functions"
+                            ],
+    "harness":  "scripts/dev/run-gcp-serverless-local.ps1",
+    "protocolBoundary":  "Functions Framework HTTP invocation",
+    "plannedCommand":  "powershell -File scripts/dev/run-gcp-serverless-local.ps1"
+}

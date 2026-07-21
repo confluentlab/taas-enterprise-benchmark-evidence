@@ -1,0 +1,15 @@
+{
+  "schemaVersion": "flowplane.redis-streams-pipeline-ready.v1",
+  "runId": "20260720T182351Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane:redis:20260720t182351z:raw"
+  ],
+  "writeTargets": [
+    "flowplane:redis:20260720t182351z:transformed",
+    "flowplane:redis:20260720t182351z:dlq"
+  ],
+  "consumerGroup": "pipeline-20260720t182351z",
+  "runtimeUrl": "http://flowplane-redis-streams-bento-20260720t182351z:8080/transform",
+  "readyAt": "2026-07-20T18:24:13.521Z"
+}

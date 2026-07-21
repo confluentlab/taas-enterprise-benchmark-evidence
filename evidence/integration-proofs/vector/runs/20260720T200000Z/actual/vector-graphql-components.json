@@ -1,0 +1,38 @@
+{
+    "data":  {
+                 "components":  {
+                                    "edges":  [
+                                                  {
+                                                      "node":  {
+                                                                   "componentId":  "internal_metrics",
+                                                                   "componentType":  "internal_metrics"
+                                                               }
+                                                  },
+                                                  {
+                                                      "node":  {
+                                                                   "componentId":  "flowplane_publisher_bridge",
+                                                                   "componentType":  "http"
+                                                               }
+                                                  },
+                                                  {
+                                                      "node":  {
+                                                                   "componentId":  "payload_only",
+                                                                   "componentType":  "remap"
+                                                               }
+                                                  },
+                                                  {
+                                                      "node":  {
+                                                                   "componentId":  "prometheus",
+                                                                   "componentType":  "prometheus_exporter"
+                                                               }
+                                                  },
+                                                  {
+                                                      "node":  {
+                                                                   "componentId":  "raw_kafka",
+                                                                   "componentType":  "kafka"
+                                                               }
+                                                  }
+                                              ]
+                                }
+             }
+}

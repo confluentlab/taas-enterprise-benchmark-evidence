@@ -1,0 +1,13 @@
+{
+    "integrationId":  "serverless-gcp",
+    "runtimeId":  "serverless-gcp-evidence-20260721t045957z",
+    "runtimeImage":  "flowplane-gcp-functions-local",
+    "network":  "flowplane-quality-stack_default",
+    "topics":  {
+                   "raw":  "flowplane.serverless-gcp.evidence.20260721t045957z.raw",
+                   "transformed":  "flowplane.serverless-gcp.evidence.20260721t045957z.transformed",
+                   "dlq":  "flowplane.serverless-gcp.evidence.20260721t045957z.dlq"
+               },
+    "sourceBoundary":  "raw-only verifier -\u003e persistent Kafka raw topic",
+    "sinkBoundary":  "independent runtime bridge -\u003e persistent Kafka transformed and DLQ topics"
+}

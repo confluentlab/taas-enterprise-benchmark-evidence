@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-07-21
+
+- Added 38 checksum-verified local evidence bundles covering 22 streaming/tool integrations, eight runtime/protocol baselines, five core-surface stability soaks, and three provider-trigger proofs.
+- Preserved 53,630 attempted inputs, 52,800 transformed outputs, and 830 intentional DLQ outputs with zero reported duplicates or unexplained loss.
+- Added 62 run-bundle screenshots, four supplemental control-plane screenshots, complete manifests, outputs, logs, metrics, write-boundary audits, and reproduction commands.
+- Added the exact local verification harness, canonical fixture, evidence import pipeline, and a validator for checksums, accounting, stability health, trigger content, and raw-only producer boundaries.
+- Updated HTTP and gRPC status wording to distinguish current successful sidecar runs from preserved historical incomplete and `UNIMPLEMENTED` attempts.
+
 ## 2026-07-20
 
 - Reframed the 1 MiB result as `MEASURED_NOT_QUALIFIED` while preserving the evaluator’s original status.

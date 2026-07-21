@@ -1,0 +1,11 @@
+{
+    "runtimeId":  "beam-directrunner-sidecar-20260720t170558z",
+    "runtimeName":  "Apache Beam DirectRunner Sidecar 20260720T170558Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e557b8dd158f5c9627d6d",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e557a8dd158f5c9627d5d",
+    "mappingName":  "beam-directrunner-live-local-20260720t170558z"
+}

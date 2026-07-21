@@ -1,0 +1,13 @@
+{
+    "id":  "debezium",
+    "type":  "tool",
+    "runtime":  "Debezium",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "Debezium CDC event through Flowplane",
+    "plannedCommand":  ""
+}

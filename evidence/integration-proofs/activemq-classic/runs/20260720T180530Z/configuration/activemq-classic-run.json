@@ -1,0 +1,14 @@
+﻿{
+    "runId":  "20260720T180530Z",
+    "broker":  "ActiveMQ Classic",
+    "brokerContainer":  "flowplane-activemq-classic-broker-20260720t180530z",
+    "brokerImage":  "rmohr/activemq:5.15.9",
+    "brokerHttpPort":  52115,
+    "flowplaneRuntimeContainer":  "flowplane-activemq-classic-bento-20260720t180530z",
+    "flowplaneRuntimeId":  "activemq-classic-pipeline-sidecar-20260720t180530z",
+    "flowplaneRuntimePort":  52105,
+    "flowplaneNetwork":  "flowplane-quality-stack_default",
+    "pipelineContainer":  "flowplane-activemq-classic-pipeline-20260720t180530z",
+    "pipelineImage":  "node:22-alpine",
+    "pipeline":  "Independent container: ActiveMQ raw queue -\u003e Flowplane Bento HTTP sidecar -\u003e ActiveMQ transformed/DLQ queues"
+}

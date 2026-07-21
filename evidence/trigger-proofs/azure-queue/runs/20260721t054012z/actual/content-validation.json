@@ -1,0 +1,9 @@
+{
+  "expectedOutputs": 100,
+  "actualOutputs": 100,
+  "expectedHashMatches": 100,
+  "intentionalErrors": 10,
+  "errorContractMatches": 10,
+  "duplicates": 0,
+  "passed": true
+}

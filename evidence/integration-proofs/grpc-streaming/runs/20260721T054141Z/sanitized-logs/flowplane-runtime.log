@@ -1,0 +1,25 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-07-21T05:42:09.939Z  INFO 1 --- [           main] c.f.s.app.FlowPlaneSidecarApplication    : Starting FlowPlaneSidecarApplication using Java 17.0.19 with PID 1 (/app/flowplane-sidecar-app.jar started by root in /)
+2026-07-21T05:42:09.951Z  INFO 1 --- [           main] c.f.s.app.FlowPlaneSidecarApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-07-21T05:42:13.698Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-21T05:42:13.721Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-21T05:42:13.722Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.57]
+2026-07-21T05:42:13.800Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-21T05:42:13.801Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3662 ms
+2026-07-21T05:42:15.223Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-07-21T05:42:15.321Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-21T05:42:15.352Z  INFO 1 --- [           main] c.f.s.app.FlowPlaneSidecarApplication    : Started FlowPlaneSidecarApplication in 7.443 seconds (process running for 10.515)
+2026-07-21T05:42:16.190Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-21T05:42:16.191Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-21T05:42:16.192Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-07-21T05:42:16.714Z  INFO 1 --- [           main] c.f.sidecar.app.GrpcServerLifecycle      : FLOWPLANE sidecar gRPC runtime protocol listening on port 9090 with tls=false
+2026-07-21T05:42:34.243Z  INFO 1 --- [-worker-ELG-3-1] i.g.n.shaded.io.grpc.netty.TcpMetrics    : Epoll available during static init of TcpMetrics:true

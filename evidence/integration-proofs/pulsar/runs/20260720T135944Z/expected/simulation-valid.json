@@ -1,0 +1,29 @@
+﻿{
+    "id":  "6a5e29d68dd158f5c9624303",
+    "outputPreview":  {
+                          "eventId":  "evt-live-000001",
+                          "customerName":  "Ada Lovelace",
+                          "amount":  128.45,
+                          "amountWithTax":  141.295,
+                          "occurredAt":  1784550896000,
+                          "region":  "unknown",
+                          "emailMasked":  "**************test",
+                          "tags":  [
+                                       "synthetic",
+                                       "verification",
+                                       "batch-0"
+                                   ],
+                          "primarySku":  "SKU-001"
+                      },
+    "warnings":  [
+
+                 ],
+    "errors":  [
+
+               ],
+    "latencyEstimateMs":  1.443202,
+    "warningCount":  0,
+    "errorCount":  0,
+    "outputPreviewRedacted":  false,
+    "outputPreviewMode":  "plaintext"
+}

@@ -1,0 +1,6 @@
+2026-07-21T05:03:04.8528539Z Creating and governing the run-specific mapping.
+2026-07-21T05:03:05.1051072Z Creating empty persistent Kafka evidence topics.
+2026-07-21T05:03:11.2841421Z Pre-registering the runtime profile and obtaining its runtime-scoped client secret.
+2026-07-21T05:03:11.3063003Z Starting the embedded-spring runtime container.
+2026-07-21T05:03:27.9394447Z Using the independently deployed embedded Spring runtime as the raw Kafka consumer and downstream publisher.
+2026-07-21T05:03:27.9550403Z Publishing 100 valid and 10 intentional-invalid records through the raw-only verifier.

@@ -15,10 +15,12 @@
 
 ## Runtime evidence scope
 
-- Contract verification is separate from a live deployment proof. The gRPC contract fixture passed, while the preserved live service attempt returned `UNIMPLEMENTED`.
-- Local Docker, LocalStack, and emulator evidence does not cover managed-cloud networking, identity, quotas, service behavior, or operations.
-- The latest HTTP single-record full run completed 59,600 of 60,000 records and is `INCOMPLETE`. HTTP batch completed 60,000 of 60,000 in its preserved local run.
-- Several tool and sidecar integrations are `MEASURED`, not native-runtime qualifications.
+- Contract verification is separate from live deployment proof. The older gRPC service attempt returned `UNIMPLEMENTED`; newer sidecar builds completed live gRPC batch and bidirectional-streaming baseline proofs plus separate 10,000-record/five-minute stability soaks.
+- Local Docker, LocalStack, Azurite, Event Hubs emulator, and Pub/Sub emulator evidence does not cover managed-cloud networking, identity, quotas, service behavior, failover, or operations.
+- The older 60,000-record HTTP single attempt remains `INCOMPLETE`, but it is superseded as a current-interoperability indicator by newer 110-record and 10,000-record successful local runs. The newer soak does not retroactively make the older 60,000-record workload pass.
+- Tool and sidecar evidence qualifies only the documented local interoperability path. It does not make an HTTP/sidecar integration a first-class native wrapper.
+- The GCP Pub/Sub emulator does not provide Eventarc. The local bridge converts only the incoming Pub/Sub push envelope to a binary CloudEvent envelope and is explicitly part of that proof boundary.
+- Five-minute stability evidence applies only to Embedded Spring/JVM, HTTP single, HTTP batch, gRPC batch, and gRPC streaming. It is not a general stability claim for every tool integration.
 
 ## Non-claims
 

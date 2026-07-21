@@ -1,0 +1,17 @@
+{
+    "name":  "flowplane-debezium-20260720t202552z",
+    "connector":  {
+                      "state":  "RUNNING",
+                      "worker_id":  "172.28.0.26:8083",
+                      "version":  "3.6.0.Final"
+                  },
+    "tasks":  [
+                  {
+                      "id":  0,
+                      "state":  "RUNNING",
+                      "worker_id":  "172.28.0.26:8083",
+                      "version":  "3.6.0.Final"
+                  }
+              ],
+    "type":  "source"
+}

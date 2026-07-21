@@ -1,0 +1,27 @@
+{
+    "captured":  true,
+    "runtimeHealthy":  true,
+    "assignmentPresent":  true,
+    "pending":  0,
+    "finalLag":  0,
+    "redisStreams":  {
+                         "raw":  {
+                                     "stream":  "flowplane:redis:20260720t182351z:raw",
+                                     "length":  110,
+                                     "consumerGroup":  "pipeline-20260720t182351z",
+                                     "pending":  0
+                                 },
+                         "transformed":  {
+                                             "stream":  "flowplane:redis:20260720t182351z:transformed",
+                                             "length":  100,
+                                             "consumerGroup":  "verify-output-20260720t182351z",
+                                             "pending":  0
+                                         },
+                         "dlq":  {
+                                     "stream":  "flowplane:redis:20260720t182351z:dlq",
+                                     "length":  10,
+                                     "consumerGroup":  "verify-dlq-20260720t182351z",
+                                     "pending":  0
+                                 }
+                     }
+}

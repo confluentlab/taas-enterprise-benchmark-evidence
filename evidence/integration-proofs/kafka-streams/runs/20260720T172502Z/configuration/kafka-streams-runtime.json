@@ -1,0 +1,18 @@
+{
+    "runtimeId":  "kafka-streams-evidence-20260720t172502z",
+    "runtimeName":  "Kafka Streams Evidence 20260720T172502Z",
+    "runtimeEnvironment":  "PRODUCTION",
+    "bootstrapServers":  "kafka:9092",
+    "inputTopic":  "flowplane.kafka-streams.evidence.20260720t172502z.raw",
+    "outputTopic":  "flowplane.kafka-streams.evidence.20260720t172502z.transformed",
+    "errorTopic":  "flowplane.kafka-streams.evidence.20260720t172502z.dlq",
+    "applicationId":  "kafka-streams-evidence-20260720t172502z",
+    "controlPlaneUrl":  "http://flowplane-backend:8080",
+    "outputShape":  "JSON_STRING",
+    "outputComplexTypes":  "NATIVE_JSON",
+    "outputFieldNaming":  "AS_IS",
+    "kafkaOutputMode":  "JSON_STRING",
+    "autoOffsetReset":  "earliest",
+    "authToken":  "\u003credacted\u003e",
+    "runtimeClientSecret":  "\u003credacted\u003e"
+}

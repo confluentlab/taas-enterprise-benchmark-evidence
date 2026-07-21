@@ -1,0 +1,14 @@
+{
+    "attemptedInput":  110,
+    "acceptedInput":  110,
+    "successfulOutput":  100,
+    "intentionalInvalid":  10,
+    "errorOutput":  10,
+    "filtered":  0,
+    "duplicates":  0,
+    "unexpectedFailures":  0,
+    "pending":  0,
+    "finalLag":  0,
+    "retries":  0,
+    "timeouts":  0
+}

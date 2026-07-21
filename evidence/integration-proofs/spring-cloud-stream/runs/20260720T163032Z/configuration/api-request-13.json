@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "spring-cloud-stream-sidecar-20260720t163032z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "SCSTREAM-20260720T163032Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the spring-cloud-stream sidecar."
+}

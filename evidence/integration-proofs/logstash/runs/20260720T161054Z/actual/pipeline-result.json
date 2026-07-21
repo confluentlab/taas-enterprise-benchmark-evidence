@@ -1,0 +1,16 @@
+{
+    "schemaVersion":  "flowplane.logstash-pipeline-result.v1",
+    "container":  "flowplane-logstash-pipeline-20260720t161054z",
+    "runningAtCompletion":  true,
+    "readTargets":  [
+                        "flowplane.logstash.evidence.20260720t161054z.raw"
+                    ],
+    "writeTargets":  [
+                         "flowplane.logstash.evidence.20260720t161054z.transformed",
+                         "flowplane.logstash.evidence.20260720t161054z.dlq"
+                     ],
+    "processedInput":  110,
+    "successfulOutput":  100,
+    "errorOutput":  10,
+    "unexpectedFailures":  0
+}

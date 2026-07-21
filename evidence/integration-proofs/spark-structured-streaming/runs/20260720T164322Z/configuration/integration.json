@@ -1,0 +1,14 @@
+{
+    "id":  "spark-structured-streaming",
+    "type":  "tool",
+    "runtime":  "Apache Spark 3.5.3",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-spark-http-integration",
+                                "docker/http-integrations-local/spark_kafka_http_streaming.py"
+                            ],
+    "harness":  "scripts/dev/test-spark-kafka-http-streaming-local.ps1",
+    "protocolBoundary":  "Spark Kafka micro-batch to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-spark-kafka-http-streaming-local.ps1 -ValidRecordCount 100"
+}

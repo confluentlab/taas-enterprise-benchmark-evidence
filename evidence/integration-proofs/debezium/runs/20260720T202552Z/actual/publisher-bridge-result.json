@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "flowplane.kafka-http-publisher-bridge-result.v1",
+  "integrationId": "debezium",
+  "runId": "20260720T202552Z",
+  "boundary": "integration HTTP delivery -> Flowplane runtime -> acknowledged Kafka transformed/DLQ publish",
+  "topics": {
+    "transformed": "flowplane.debezium.evidence.20260720t202552z.transformed",
+    "dlq": "flowplane.debezium.evidence.20260720t202552z.dlq"
+  },
+  "received": 110,
+  "transformed": 100,
+  "dlq": 10,
+  "publishFailures": 0,
+  "runtimeFailures": 0,
+  "completed": true,
+  "updatedAt": "2026-07-20T20:26:38.625Z"
+}

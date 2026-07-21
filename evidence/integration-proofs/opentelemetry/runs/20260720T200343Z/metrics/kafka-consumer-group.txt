@@ -1,0 +1,2 @@
+GROUP                                             TOPIC                                                 PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                         HOST            CLIENT-ID
+flowplane-opentelemetry-evidence-20260720t200343z flowplane.opentelemetry.evidence.20260720t200343z.raw 0          110             110             0               otel-collector-e4f694e4-9f6e-4a15-b227-7404486a1398 /172.28.0.25    otel-collector

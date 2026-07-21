@@ -1,0 +1,13 @@
+{
+    "schemaVersion":  "flowplane.canonicalization.v1",
+    "encoding":  "UTF-8",
+    "objectFieldOrdering":  "lexicographic by Unicode property name",
+    "arrayOrdering":  "preserve semantic input order; sort only when an integration explicitly declares unordered semantics",
+    "numberFormatting":  "JSON finite decimal representation; no locale-specific separators",
+    "timestampFormatting":  "UTC RFC3339 with Z suffix",
+    "nullHandling":  "preserve explicit null; omit only fields declared optional by the artifact",
+    "whitespace":  "no insignificant whitespace",
+    "lineEndings":  "LF",
+    "errorFieldOrdering":  "lexicographic by Unicode property name",
+    "optionalFieldOmission":  "only fields absent from the source and declared optional are omitted"
+}

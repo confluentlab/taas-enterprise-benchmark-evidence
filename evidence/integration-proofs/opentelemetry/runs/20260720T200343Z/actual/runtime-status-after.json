@@ -1,0 +1,11 @@
+{
+    "runtimeId":  "opentelemetry-sidecar-20260720t200343z",
+    "runtimeName":  "OpenTelemetry Collector Sidecar 20260720T200343Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e7f238dd158f5c962c6f0",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e7f228dd158f5c962c6e1",
+    "mappingName":  "opentelemetry-live-local-20260720t200343z"
+}

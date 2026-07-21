@@ -1,0 +1,21 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "vector",
+    "toolVersion":  "vector 0.50.0 (x86_64-unknown-linux-musl 9053198 2025-09-23 14:18:50.944442940)",
+    "toolImage":  "timberio/vector:0.50.0-alpine",
+    "toolImageId":  "sha256:93761c26fa3a3793f5f200de0f4cfc6102b5e9803ab33b4830d0873ba8dbdc4f",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineConfigurationSha256":  "f3265e23937de7784ac0a0ef73b4e0c1c7cd58bd737a3cf42a5c2c52736c568d",
+    "publisherBridgeSha256":  "9308a388fdeecc2554f9cda60a9ca26898fdb26700b5a0b65d538afd7627d199",
+    "rawOnlyVerifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

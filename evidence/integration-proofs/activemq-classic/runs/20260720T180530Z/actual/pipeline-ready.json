@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "flowplane.activemq-classic-pipeline-ready.v1",
+  "runId": "20260720T180530Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane.activemq-classic.20260720t180530z.raw"
+  ],
+  "writeTargets": [
+    "flowplane.activemq-classic.20260720t180530z.transformed",
+    "flowplane.activemq-classic.20260720t180530z.dlq"
+  ],
+  "runtimeUrl": "http://flowplane-activemq-classic-bento-20260720t180530z:8080/transform",
+  "readyAt": "2026-07-20T18:05:43.320Z"
+}

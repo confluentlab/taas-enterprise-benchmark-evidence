@@ -1,0 +1,13 @@
+{
+    "id":  "rabbitmq-streams",
+    "type":  "tool",
+    "runtime":  "RabbitMQ Streams with Flowplane HTTP bridge",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "FEASIBLE_BRIDGE",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "RabbitMQ raw stream consumer through assigned Flowplane HTTP runtime to confirmed transformed/DLQ stream queues",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration rabbitmq-streams"
+}

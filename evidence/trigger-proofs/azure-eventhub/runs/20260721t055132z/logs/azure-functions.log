@@ -1,0 +1,1140 @@
+﻿WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+info: Host.Triggers.Warmup[0]
+      Initializing Warmup Extension.
+info: Host.Startup[503]
+      Initializing Host. OperationId: 'cf4df0b3-7c05-4039-8756-8eae55f8e102'.
+info: Host.Startup[504]
+      Host initialization: ConsecutiveErrors=0, StartupCount=1, OperationId=cf4df0b3-7c05-4039-8756-8eae55f8e102
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ScriptJobHostOptions
+      {
+        "FileWatchingEnabled": true,
+        "FileLoggingMode": "DebugOnly",
+        "FunctionTimeout": "00:30:00",
+        "TelemetryMode": "ApplicationInsights"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      LoggerFilterOptions
+      {
+        "MinLevel": "None",
+        "Rules": [
+          {
+            "ProviderName": null,
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.WebHostSystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": "None",
+            "Filter": null
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.WebHostSystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          },
+          {
+            "ProviderName": null,
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          },
+          {
+            "ProviderName": null,
+            "CategoryName": "Host.Function.ToolingConsoleLog",
+            "LogLevel": "Information",
+            "Filter": null
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": "None",
+            "Filter": null
+          },
+          {
+            "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+            "CategoryName": null,
+            "LogLevel": null,
+            "Filter": "<AddFilter>b__0"
+          }
+        ]
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      HttpWorkerOptions
+      {
+        "Type": 0,
+        "Description": null,
+        "Arguments": null,
+        "Port": 42587,
+        "IsPortManuallySet": false,
+        "EnableForwardingHttpRequest": false,
+        "EnableProxyingHttpRequest": false,
+        "InitializationTimeout": "00:00:30",
+        "CustomRoutesEnabled": false,
+        "Http": null
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ScriptJobHostOptions
+      {
+        "FileWatchingEnabled": true,
+        "FileLoggingMode": "DebugOnly",
+        "FunctionTimeout": "00:30:00",
+        "TelemetryMode": "ApplicationInsights"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      FunctionResultAggregatorOptions
+      {
+        "BatchSize": 1000,
+        "FlushTimeout": "00:00:30",
+        "IsEnabled": true
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ConcurrencyOptions
+      {
+        "DynamicConcurrencyEnabled": false,
+        "MaximumFunctionConcurrency": 500,
+        "CPUThreshold": 0.8,
+        "SnapshotPersistenceEnabled": true
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      EventHubOptions
+      {
+        "TargetUnprocessedEventThreshold": null,
+        "MaxEventBatchSize": 100,
+        "MinEventBatchSize": 1,
+        "MaxWaitTime": "00:01:00",
+        "BatchCheckpointFrequency": 1,
+        "TransportType": "AmqpTcp",
+        "WebProxy": "",
+        "ClientRetryOptions": {
+          "Mode": "Exponential",
+          "TryTimeout": "00:01:00",
+          "Delay": "00:00:00.8000000",
+          "MaximumDelay": "00:01:00",
+          "MaximumRetries": 3
+        },
+        "TrackLastEnqueuedEventProperties": false,
+        "PrefetchCount": 300,
+        "PrefetchSizeInBytes": null,
+        "PartitionOwnershipExpirationInterval": "00:02:00",
+        "LoadBalancingUpdateInterval": "00:00:30",
+        "InitialOffsetOptions": {
+          "Type": "",
+          "EnqueuedTimeUtc": null
+        },
+        "EnableCheckpointing": true
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      QueuesOptions
+      {
+        "BatchSize": 16,
+        "NewBatchThreshold": 80,
+        "MaxPollingInterval": "00:01:00",
+        "MaxDequeueCount": 5,
+        "VisibilityTimeout": "00:00:00",
+        "MessageEncoding": "Base64"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      SingletonOptions
+      {
+        "LockPeriod": "00:00:15",
+        "ListenerLockPeriod": "00:01:00",
+        "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+        "LockAcquisitionPollingInterval": "00:00:05",
+        "ListenerLockRecoveryPollingInterval": "00:01:00"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      TimerTriggerPlatformOptions
+      {
+        "NonCronScheduleBehavior": "Allow"
+      }
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      ScaleOptions
+      {
+        "ScaleMetricsMaxAge": "00:02:00",
+        "ScaleMetricsSampleInterval": "00:00:10",
+        "MetricsPurgeEnabled": true,
+        "IsTargetScalingEnabled": true,
+        "IsRuntimeScalingEnabled": false
+      }
+info: Microsoft.Azure.WebJobs.Hosting.JobHostService[0]
+      Starting JobHost
+info: Host.Startup[401]
+      Starting Host (HostId=09c3b0e2baf1-2137340777, InstanceId=3d89855c-ff5e-49b7-99c5-5b7e3c50b6ee, Version=4.1051.300.4, ProcessId=9, AppDomainId=1, InDebugMode=False, InDiagnosticMode=False, FunctionsExtensionVersion=~4)
+info: Host.Startup[314]
+      Loading functions metadata
+info: Host.Startup[326]
+      Reading functions metadata (Custom)
+info: Host.Startup[327]
+      0 functions found (Custom)
+info: Host.Startup[315]
+      3 functions loaded
+info: Host.Startup[0]
+      Generating 3 job function(s)
+warn: Host.Function.Console[0]
+      OpenJDK 64-Bit Server VM warning: Options -Xverify:none and -noverify were deprecated in JDK 13 and will likely be removed in a future release.
+fail: Host.Startup[0]
+      Error indexing method 'Functions.flowplaneQueueTransform'
+      Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexingException: Error indexing method 'Functions.flowplaneQueueTransform'
+       ---> System.InvalidOperationException: '%FLOWPLANE_AZURE_INPUT_QUEUE%' does not resolve to a value.
+         at Microsoft.Azure.WebJobs.Host.NameResolverExtensions.ResolveWholeStringCore(INameResolver resolver, String resolve, Boolean throwOnFailure) in /_/src/Microsoft.Azure.WebJobs.Host/NameResolverExtensions.cs:line 96
+         at Microsoft.Azure.WebJobs.Extensions.Storage.Queues.Triggers.QueueTriggerAttributeBindingProvider.TryCreateAsync(TriggerBindingProviderContext context)
+         at Microsoft.Azure.WebJobs.Host.Triggers.CompositeTriggerBindingProvider.TryCreateAsync(TriggerBindingProviderContext context) in /_/src/Microsoft.Azure.WebJobs.Host/Triggers/CompositeTriggerBindingProvider.cs:line 20
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexMethodAsyncCore(MethodInfo method, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 172
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexMethodAsync(MethodInfo method, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 149
+         --- End of inner exception stack trace ---
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexMethodAsync(MethodInfo method, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 157
+         at Microsoft.Azure.WebJobs.Host.Indexers.FunctionIndexer.IndexTypeAsync(Type type, IFunctionIndexCollector index, CancellationToken cancellationToken) in /_/src/Microsoft.Azure.WebJobs.Host/Indexers/FunctionIndexer.cs:line 85
+fail: Function.flowplaneQueueTransform[0]
+      Microsoft.Azure.WebJobs.Host: Error indexing method 'Functions.flowplaneQueueTransform'. Microsoft.Azure.WebJobs.Host: '%FLOWPLANE_AZURE_INPUT_QUEUE%' does not resolve to a value.
+warn: Host.Startup[0]
+      Function 'Functions.flowplaneQueueTransform' failed indexing and will be disabled.
+info: Host.Startup[0]
+      Found the following functions:
+      Host.Functions.flowplaneEventHubTransform
+      Host.Functions.flowplaneHttpTransform
+      
+info: Microsoft.Azure.WebJobs.Hosting.OptionsLoggingService[0]
+      HttpOptions
+      {
+        "DynamicThrottlesEnabled": false,
+        "EnableChunkedRequestBinding": false,
+        "MaxConcurrentRequests": -1,
+        "MaxOutstandingRequests": -1,
+        "RoutePrefix": "api"
+      }
+info: Microsoft.Azure.WebJobs.Script.WebHost.WebScriptHostHttpRoutesManager[0]
+      Initializing function HTTP routes
+      Mapped function route 'api/flowplaneHttpTransform' [POST] to 'flowplaneHttpTransform'
+      
+info: Host.Startup[412]
+      Host initialized (184ms)
+info: Microsoft.Azure.WebJobs.Script.Workers.Rpc.RpcFunctionInvocationDispatcher[0]
+      Worker process started and initialized.
+info: Host.Startup[413]
+      Host started (724ms)
+info: Host.Startup[0]
+      Job host started
+fail: Host.Startup[402]
+      The 'flowplaneQueueTransform' function is in error: Microsoft.Azure.WebJobs.Host: Error indexing method 'Functions.flowplaneQueueTransform'. Microsoft.Azure.WebJobs.Host: '%FLOWPLANE_AZURE_INPUT_QUEUE%' does not resolve to a value.
+info: Host.General[337]
+      Host lock lease acquired by instance ID '00000000000000000000000066AF9D15'.
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=50b19bd8-9cd8-4733-b872-69cc59ae8d2f)
+info: Host.Function.Console[0]
+      SLF4J(W): No SLF4J providers were found.
+info: Host.Function.Console[0]
+      SLF4J(W): Defaulting to no-operation (NOP) logger implementation
+info: Host.Function.Console[0]
+      SLF4J(W): See https://www.slf4j.org/codes.html#noProviders for further details.
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 50b19bd8-9cd8-4733-b872-69cc59ae8d2f) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=50b19bd8-9cd8-4733-b872-69cc59ae8d2f, Duration=442ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=4c7b0f34-9db9-49b5-8165-a88d578171a7)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 4c7b0f34-9db9-49b5-8165-a88d578171a7) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=4c7b0f34-9db9-49b5-8165-a88d578171a7, Duration=40ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=ffecf225-876f-48e9-be42-9c150a30645b)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: ffecf225-876f-48e9-be42-9c150a30645b) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=ffecf225-876f-48e9-be42-9c150a30645b, Duration=37ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=150d49af-d270-4ddf-b99a-2053f627167a)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 150d49af-d270-4ddf-b99a-2053f627167a) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=150d49af-d270-4ddf-b99a-2053f627167a, Duration=33ms)
+info: Function.flowplaneHttpTransform[1]
+      Executing 'Functions.flowplaneHttpTransform' (Reason='This function was programmatically called via the host APIs.', Id=10ac43d5-8248-4129-adc5-7e0b53f0fb29)
+info: Function.flowplaneHttpTransform.User[0]
+      Function "flowplaneHttpTransform" (Id: 10ac43d5-8248-4129-adc5-7e0b53f0fb29) invoked by Java Worker
+info: Function.flowplaneHttpTransform[2]
+      Executed 'Functions.flowplaneHttpTransform' (Succeeded, Id=10ac43d5-8248-4129-adc5-7e0b53f0fb29, Duration=171ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=780deecd-7e5f-4ad2-8be5-bc3748ff6ddd)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 47288, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 110, Count: 1, Offset: 47288, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 780deecd-7e5f-4ad2-8be5-bc3748ff6ddd) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=780deecd-7e5f-4ad2-8be5-bc3748ff6ddd, Duration=198ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=32d027d6-0ea7-4e61-be5f-b5981b5bff28)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 47680, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 111, Count: 1, Offset: 47680, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 32d027d6-0ea7-4e61-be5f-b5981b5bff28) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=32d027d6-0ea7-4e61-be5f-b5981b5bff28, Duration=57ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ccd66e53-cb39-45d0-8dfa-a037d91988c2)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 48072, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 112, Count: 1, Offset: 48072, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ccd66e53-cb39-45d0-8dfa-a037d91988c2) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ccd66e53-cb39-45d0-8dfa-a037d91988c2, Duration=51ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ea9a7471-e849-491f-b190-22e0159d1fff)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 48464, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 113, Count: 1, Offset: 48464, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ea9a7471-e849-491f-b190-22e0159d1fff) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ea9a7471-e849-491f-b190-22e0159d1fff, Duration=48ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=9e8c3e1e-5d30-40f4-85d8-e8f10a62f12b)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 48856, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 114, Count: 1, Offset: 48856, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 9e8c3e1e-5d30-40f4-85d8-e8f10a62f12b) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=9e8c3e1e-5d30-40f4-85d8-e8f10a62f12b, Duration=46ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=8eea32e2-585b-482d-a44c-4067de8918db)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 49248, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 115, Count: 1, Offset: 49248, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 8eea32e2-585b-482d-a44c-4067de8918db) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=8eea32e2-585b-482d-a44c-4067de8918db, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=88ef362c-b363-4857-b6b8-d15ceaedd3c8)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 49640, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 116, Count: 1, Offset: 49640, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 88ef362c-b363-4857-b6b8-d15ceaedd3c8) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=88ef362c-b363-4857-b6b8-d15ceaedd3c8, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=145899a1-25ef-4134-a0e5-065e6d59643d)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 50032, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 117, Count: 1, Offset: 50032, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 145899a1-25ef-4134-a0e5-065e6d59643d) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=145899a1-25ef-4134-a0e5-065e6d59643d, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7da4ff23-1ac6-4573-854d-3989156f9727)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 50424, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 118, Count: 1, Offset: 50424, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7da4ff23-1ac6-4573-854d-3989156f9727) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7da4ff23-1ac6-4573-854d-3989156f9727, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ff5f73ad-d31b-431c-8a06-efd3d7e024df)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 50816, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 119, Count: 1, Offset: 50816, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ff5f73ad-d31b-431c-8a06-efd3d7e024df) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ff5f73ad-d31b-431c-8a06-efd3d7e024df, Duration=35ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=3e19fa8e-f946-425b-8b26-2ac79819de9d)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 51208, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 120, Count: 1, Offset: 51208, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 3e19fa8e-f946-425b-8b26-2ac79819de9d) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=3e19fa8e-f946-425b-8b26-2ac79819de9d, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=3dca8622-55ac-414e-8cec-6e489c235276)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 51600, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 121, Count: 1, Offset: 51600, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 3dca8622-55ac-414e-8cec-6e489c235276) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=3dca8622-55ac-414e-8cec-6e489c235276, Duration=45ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f0dd1f43-a7dd-4aa7-8372-f19ae58f682f)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 51992, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 122, Count: 1, Offset: 51992, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f0dd1f43-a7dd-4aa7-8372-f19ae58f682f) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f0dd1f43-a7dd-4aa7-8372-f19ae58f682f, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=acb4faf6-81f8-412f-a79d-7f3ae8f6204a)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 52384, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 123, Count: 1, Offset: 52384, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: acb4faf6-81f8-412f-a79d-7f3ae8f6204a) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=acb4faf6-81f8-412f-a79d-7f3ae8f6204a, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=a90ea1c7-5c98-473c-8c69-e38c4a15c24d)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 52776, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 124, Count: 1, Offset: 52776, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: a90ea1c7-5c98-473c-8c69-e38c4a15c24d) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=a90ea1c7-5c98-473c-8c69-e38c4a15c24d, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=fda8dbe2-a549-46f3-ae74-69258e45217c)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 53168, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 125, Count: 1, Offset: 53168, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: fda8dbe2-a549-46f3-ae74-69258e45217c) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=fda8dbe2-a549-46f3-ae74-69258e45217c, Duration=36ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=70265490-ecbf-427b-b40b-a4c67816cad9)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 53560, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 126, Count: 1, Offset: 53560, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 70265490-ecbf-427b-b40b-a4c67816cad9) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=70265490-ecbf-427b-b40b-a4c67816cad9, Duration=38ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=31e608f2-02f4-47ca-91b1-9f18907e2fc6)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 53952, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 127, Count: 1, Offset: 53952, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 31e608f2-02f4-47ca-91b1-9f18907e2fc6) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=31e608f2-02f4-47ca-91b1-9f18907e2fc6, Duration=39ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=26dc8e8c-092b-4ee8-8a39-96b68887b1bb)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 54344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 128, Count: 1, Offset: 54344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 26dc8e8c-092b-4ee8-8a39-96b68887b1bb) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=26dc8e8c-092b-4ee8-8a39-96b68887b1bb, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=d8763fb2-68c4-439e-910e-c3f35b4874cd)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 54744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 129, Count: 1, Offset: 54744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: d8763fb2-68c4-439e-910e-c3f35b4874cd) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=d8763fb2-68c4-439e-910e-c3f35b4874cd, Duration=39ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=68d282ed-3a69-44dd-9ad8-4bf151059cd9)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 55144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 130, Count: 1, Offset: 55144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 68d282ed-3a69-44dd-9ad8-4bf151059cd9) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=68d282ed-3a69-44dd-9ad8-4bf151059cd9, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=604724db-521e-45cb-a2bd-cdc6d6532229)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 55544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 131, Count: 1, Offset: 55544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 604724db-521e-45cb-a2bd-cdc6d6532229) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=604724db-521e-45cb-a2bd-cdc6d6532229, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=66631261-1bd6-4d81-88e3-a86a685912fc)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 55944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 132, Count: 1, Offset: 55944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 66631261-1bd6-4d81-88e3-a86a685912fc) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=66631261-1bd6-4d81-88e3-a86a685912fc, Duration=37ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=c74dbd83-b647-43b7-8526-b99b8d991cf4)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 56344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 133, Count: 1, Offset: 56344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: c74dbd83-b647-43b7-8526-b99b8d991cf4) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=c74dbd83-b647-43b7-8526-b99b8d991cf4, Duration=36ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=2f936658-afb5-4950-ae7b-9a72b7d37896)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 56744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 134, Count: 1, Offset: 56744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 2f936658-afb5-4950-ae7b-9a72b7d37896) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=2f936658-afb5-4950-ae7b-9a72b7d37896, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=5c071e9d-c0c6-44f5-be22-b5fa0279a22f)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 57144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 135, Count: 1, Offset: 57144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 5c071e9d-c0c6-44f5-be22-b5fa0279a22f) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=5c071e9d-c0c6-44f5-be22-b5fa0279a22f, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=1302f7bf-ff7d-4326-97fa-a8246a67a5c2)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 57544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 136, Count: 1, Offset: 57544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 1302f7bf-ff7d-4326-97fa-a8246a67a5c2) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=1302f7bf-ff7d-4326-97fa-a8246a67a5c2, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=1fc4c751-ba75-40d0-939b-0a3890b9f77e)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 57944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 137, Count: 1, Offset: 57944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 1fc4c751-ba75-40d0-939b-0a3890b9f77e) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=1fc4c751-ba75-40d0-939b-0a3890b9f77e, Duration=37ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=62ef8a0c-8f43-43f3-af96-919332960692)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 58344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 138, Count: 1, Offset: 58344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 62ef8a0c-8f43-43f3-af96-919332960692) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=62ef8a0c-8f43-43f3-af96-919332960692, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=057f82fd-0ccb-416b-a919-b4a937230277)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 58744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 139, Count: 1, Offset: 58744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 057f82fd-0ccb-416b-a919-b4a937230277) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=057f82fd-0ccb-416b-a919-b4a937230277, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=db90ba53-3a16-4c8d-b507-eecfd98bb3b1)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 59144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 140, Count: 1, Offset: 59144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: db90ba53-3a16-4c8d-b507-eecfd98bb3b1) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=db90ba53-3a16-4c8d-b507-eecfd98bb3b1, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7123ca54-72fb-411f-b002-b3ce77c0b8c7)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 59544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 141, Count: 1, Offset: 59544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7123ca54-72fb-411f-b002-b3ce77c0b8c7) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7123ca54-72fb-411f-b002-b3ce77c0b8c7, Duration=45ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=78a9e907-59e8-4751-96a3-c6b319697235)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 59944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 142, Count: 1, Offset: 59944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 78a9e907-59e8-4751-96a3-c6b319697235) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=78a9e907-59e8-4751-96a3-c6b319697235, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0401df61-9e25-45af-8e60-9113c7fbb455)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 60344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 143, Count: 1, Offset: 60344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0401df61-9e25-45af-8e60-9113c7fbb455) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0401df61-9e25-45af-8e60-9113c7fbb455, Duration=36ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=228ed10b-b754-46bf-8b76-3b44211e4bf6)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 60744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 144, Count: 1, Offset: 60744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 228ed10b-b754-46bf-8b76-3b44211e4bf6) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=228ed10b-b754-46bf-8b76-3b44211e4bf6, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=61192d2a-d767-457e-af93-70471bd03880)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 61144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 145, Count: 1, Offset: 61144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 61192d2a-d767-457e-af93-70471bd03880) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=61192d2a-d767-457e-af93-70471bd03880, Duration=50ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=c4dc23b0-67d9-4949-89b5-992dcd5fa685)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 61544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 146, Count: 1, Offset: 61544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: c4dc23b0-67d9-4949-89b5-992dcd5fa685) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=c4dc23b0-67d9-4949-89b5-992dcd5fa685, Duration=48ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=13bd79ac-ca11-4617-9abd-a1d648b7b22e)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 61944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 147, Count: 1, Offset: 61944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 13bd79ac-ca11-4617-9abd-a1d648b7b22e) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=13bd79ac-ca11-4617-9abd-a1d648b7b22e, Duration=39ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=c95bb0bc-e126-452c-bb8b-7961081ae6f9)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 62344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 148, Count: 1, Offset: 62344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: c95bb0bc-e126-452c-bb8b-7961081ae6f9) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=c95bb0bc-e126-452c-bb8b-7961081ae6f9, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=25283d46-4ffa-465d-83ac-03a8c5c527b8)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 62744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 149, Count: 1, Offset: 62744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 25283d46-4ffa-465d-83ac-03a8c5c527b8) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=25283d46-4ffa-465d-83ac-03a8c5c527b8, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=15271ff8-a3f6-4354-85ca-f1ee0df32c4c)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 63144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 150, Count: 1, Offset: 63144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 15271ff8-a3f6-4354-85ca-f1ee0df32c4c) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=15271ff8-a3f6-4354-85ca-f1ee0df32c4c, Duration=45ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=85c756ec-9df7-49ea-8eff-05fb8f417934)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 63544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 151, Count: 1, Offset: 63544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 85c756ec-9df7-49ea-8eff-05fb8f417934) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=85c756ec-9df7-49ea-8eff-05fb8f417934, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f8918a87-04bd-4470-81c3-5a9769177737)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 63944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 152, Count: 1, Offset: 63944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f8918a87-04bd-4470-81c3-5a9769177737) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f8918a87-04bd-4470-81c3-5a9769177737, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0bce55c3-fd8b-481f-a30f-40c58369840b)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 64344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 153, Count: 1, Offset: 64344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0bce55c3-fd8b-481f-a30f-40c58369840b) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0bce55c3-fd8b-481f-a30f-40c58369840b, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ae5dea5b-8eaf-4e24-9b76-7ea35bf7a03e)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 64744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 154, Count: 1, Offset: 64744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ae5dea5b-8eaf-4e24-9b76-7ea35bf7a03e) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ae5dea5b-8eaf-4e24-9b76-7ea35bf7a03e, Duration=38ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=8c7247ef-8e55-4a95-a43f-9f34a85dd854)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 65144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 155, Count: 1, Offset: 65144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 8c7247ef-8e55-4a95-a43f-9f34a85dd854) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=8c7247ef-8e55-4a95-a43f-9f34a85dd854, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=d3b27501-0176-44f4-b06a-134ccaef7aa9)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 65544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 156, Count: 1, Offset: 65544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: d3b27501-0176-44f4-b06a-134ccaef7aa9) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=d3b27501-0176-44f4-b06a-134ccaef7aa9, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=193a08e3-9960-4295-a6a9-4951fa5682c7)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 65944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 157, Count: 1, Offset: 65944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 193a08e3-9960-4295-a6a9-4951fa5682c7) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=193a08e3-9960-4295-a6a9-4951fa5682c7, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=8cdb089e-0b78-4830-96d7-ba0c1ce072bd)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 66344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 158, Count: 1, Offset: 66344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 8cdb089e-0b78-4830-96d7-ba0c1ce072bd) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=8cdb089e-0b78-4830-96d7-ba0c1ce072bd, Duration=37ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ea37c29c-507c-4fd1-8a8d-f60b1629d945)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 66744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 159, Count: 1, Offset: 66744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ea37c29c-507c-4fd1-8a8d-f60b1629d945) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ea37c29c-507c-4fd1-8a8d-f60b1629d945, Duration=45ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=e089edb2-5af5-4a93-8451-fddad700dd71)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 67144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 160, Count: 1, Offset: 67144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: e089edb2-5af5-4a93-8451-fddad700dd71) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=e089edb2-5af5-4a93-8451-fddad700dd71, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=531c46e8-71ca-46ad-95e5-f797c02a740e)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 67544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 161, Count: 1, Offset: 67544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 531c46e8-71ca-46ad-95e5-f797c02a740e) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=531c46e8-71ca-46ad-95e5-f797c02a740e, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=95c8eb6e-ad84-4de8-9dda-3cdce6bbe51c)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 67944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 162, Count: 1, Offset: 67944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 95c8eb6e-ad84-4de8-9dda-3cdce6bbe51c) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=95c8eb6e-ad84-4de8-9dda-3cdce6bbe51c, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=46afb3cf-9064-4aa9-9ae4-833c7f2bdce7)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 68344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 163, Count: 1, Offset: 68344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 46afb3cf-9064-4aa9-9ae4-833c7f2bdce7) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=46afb3cf-9064-4aa9-9ae4-833c7f2bdce7, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=84913293-e98a-428b-a482-15b7057936ec)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 68744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 164, Count: 1, Offset: 68744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 84913293-e98a-428b-a482-15b7057936ec) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=84913293-e98a-428b-a482-15b7057936ec, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=8b9aa5e7-68f1-46df-989d-e289df28ccf0)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 69144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 165, Count: 1, Offset: 69144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 8b9aa5e7-68f1-46df-989d-e289df28ccf0) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=8b9aa5e7-68f1-46df-989d-e289df28ccf0, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=15853715-2c31-4846-a33f-b6f2e577f7a8)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 69544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 166, Count: 1, Offset: 69544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 15853715-2c31-4846-a33f-b6f2e577f7a8) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=15853715-2c31-4846-a33f-b6f2e577f7a8, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=1701f304-7806-453c-8cc0-ceef97af149c)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 69944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 167, Count: 1, Offset: 69944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 1701f304-7806-453c-8cc0-ceef97af149c) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=1701f304-7806-453c-8cc0-ceef97af149c, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f7b5187d-19b3-437f-80a0-2629f8607e80)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 70344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 168, Count: 1, Offset: 70344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f7b5187d-19b3-437f-80a0-2629f8607e80) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f7b5187d-19b3-437f-80a0-2629f8607e80, Duration=39ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=c693a244-6fdd-4ea4-b0db-7eb5bf583b64)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 70744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 169, Count: 1, Offset: 70744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: c693a244-6fdd-4ea4-b0db-7eb5bf583b64) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=c693a244-6fdd-4ea4-b0db-7eb5bf583b64, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=bc8704e3-0de5-453b-82fd-04a033646bf4)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 71144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 170, Count: 1, Offset: 71144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: bc8704e3-0de5-453b-82fd-04a033646bf4) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=bc8704e3-0de5-453b-82fd-04a033646bf4, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=b4dac99c-3baf-4467-8554-855cf364212f)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 71544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 171, Count: 1, Offset: 71544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: b4dac99c-3baf-4467-8554-855cf364212f) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=b4dac99c-3baf-4467-8554-855cf364212f, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0326f155-b88b-42f7-a02b-ace602ad20b6)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 71944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 172, Count: 1, Offset: 71944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0326f155-b88b-42f7-a02b-ace602ad20b6) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0326f155-b88b-42f7-a02b-ace602ad20b6, Duration=45ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=63a14a65-142e-4e04-b577-952277f53de9)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 72344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 173, Count: 1, Offset: 72344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 63a14a65-142e-4e04-b577-952277f53de9) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=63a14a65-142e-4e04-b577-952277f53de9, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f66664e7-64b9-413a-a4a5-6f6cc3949155)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 72744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 174, Count: 1, Offset: 72744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f66664e7-64b9-413a-a4a5-6f6cc3949155) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f66664e7-64b9-413a-a4a5-6f6cc3949155, Duration=38ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=475503b7-0ebb-4c87-86ca-e9d8ea78ad15)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 73144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 175, Count: 1, Offset: 73144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 475503b7-0ebb-4c87-86ca-e9d8ea78ad15) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=475503b7-0ebb-4c87-86ca-e9d8ea78ad15, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=84fd2aaf-b6d7-4967-8104-ef68a6e5a5a7)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 73544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 176, Count: 1, Offset: 73544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 84fd2aaf-b6d7-4967-8104-ef68a6e5a5a7) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=84fd2aaf-b6d7-4967-8104-ef68a6e5a5a7, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ee0574ff-a4ed-4da7-95f4-3f3cf9396995)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 73944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 177, Count: 1, Offset: 73944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ee0574ff-a4ed-4da7-95f4-3f3cf9396995) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ee0574ff-a4ed-4da7-95f4-3f3cf9396995, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=556aceed-233e-4dbd-9869-81d225e3396a)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 74344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 178, Count: 1, Offset: 74344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 556aceed-233e-4dbd-9869-81d225e3396a) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=556aceed-233e-4dbd-9869-81d225e3396a, Duration=49ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=d2becd71-250b-46c7-a884-55eac0bf36d3)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 74744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 179, Count: 1, Offset: 74744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: d2becd71-250b-46c7-a884-55eac0bf36d3) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=d2becd71-250b-46c7-a884-55eac0bf36d3, Duration=45ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=96849cbe-4f87-414e-b739-75e149bd5867)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 75144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 180, Count: 1, Offset: 75144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 96849cbe-4f87-414e-b739-75e149bd5867) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=96849cbe-4f87-414e-b739-75e149bd5867, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=6ce13fac-fbd3-49f0-bf81-e341c15b5326)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 75544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 181, Count: 1, Offset: 75544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 6ce13fac-fbd3-49f0-bf81-e341c15b5326) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=6ce13fac-fbd3-49f0-bf81-e341c15b5326, Duration=51ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f48491e1-1e50-4b7c-9c49-1c5195fadb8c)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 75944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 182, Count: 1, Offset: 75944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f48491e1-1e50-4b7c-9c49-1c5195fadb8c) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f48491e1-1e50-4b7c-9c49-1c5195fadb8c, Duration=49ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7e19dbcc-18b5-4250-a51d-403acf81a327)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 76344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 183, Count: 1, Offset: 76344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7e19dbcc-18b5-4250-a51d-403acf81a327) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7e19dbcc-18b5-4250-a51d-403acf81a327, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f0d07177-442b-49b5-a1b1-00c525100663)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 76744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 184, Count: 1, Offset: 76744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f0d07177-442b-49b5-a1b1-00c525100663) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f0d07177-442b-49b5-a1b1-00c525100663, Duration=46ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=d453c9ad-6b1c-4e37-acf7-020f33c5bd55)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 77144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 185, Count: 1, Offset: 77144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: d453c9ad-6b1c-4e37-acf7-020f33c5bd55) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=d453c9ad-6b1c-4e37-acf7-020f33c5bd55, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=6f881b1e-c6c6-4f3e-9225-9c795551955d)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 77544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 186, Count: 1, Offset: 77544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 6f881b1e-c6c6-4f3e-9225-9c795551955d) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=6f881b1e-c6c6-4f3e-9225-9c795551955d, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7231d30e-6244-43a8-9157-bb41809ac75e)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 77944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 187, Count: 1, Offset: 77944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7231d30e-6244-43a8-9157-bb41809ac75e) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7231d30e-6244-43a8-9157-bb41809ac75e, Duration=47ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=668fcbe9-58fb-4548-b803-e9dac63e503b)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 78344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 188, Count: 1, Offset: 78344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 668fcbe9-58fb-4548-b803-e9dac63e503b) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=668fcbe9-58fb-4548-b803-e9dac63e503b, Duration=41ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=6092a745-7289-4a9d-bc13-c2beab1d3450)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 78744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 189, Count: 1, Offset: 78744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 6092a745-7289-4a9d-bc13-c2beab1d3450) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=6092a745-7289-4a9d-bc13-c2beab1d3450, Duration=55ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0bada2bb-44c9-4b4f-b94b-9f5891b2e0e3)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 79144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 190, Count: 1, Offset: 79144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0bada2bb-44c9-4b4f-b94b-9f5891b2e0e3) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0bada2bb-44c9-4b4f-b94b-9f5891b2e0e3, Duration=55ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=3c82c05c-0869-4f2a-931e-13ef58d79b97)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 79544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 191, Count: 1, Offset: 79544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 3c82c05c-0869-4f2a-931e-13ef58d79b97) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=3c82c05c-0869-4f2a-931e-13ef58d79b97, Duration=50ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=629d5869-407c-4f7f-8c71-1130322e8870)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 79944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 192, Count: 1, Offset: 79944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 629d5869-407c-4f7f-8c71-1130322e8870) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=629d5869-407c-4f7f-8c71-1130322e8870, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ec9c8959-fbfd-476e-872c-2d423411055a)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 80344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 193, Count: 1, Offset: 80344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ec9c8959-fbfd-476e-872c-2d423411055a) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ec9c8959-fbfd-476e-872c-2d423411055a, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=6fa4bb0f-251e-4f06-86af-b3349baaf99f)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 80744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 194, Count: 1, Offset: 80744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 6fa4bb0f-251e-4f06-86af-b3349baaf99f) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=6fa4bb0f-251e-4f06-86af-b3349baaf99f, Duration=37ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=52e9063e-dbcd-4112-b9bb-cbfbbb99a56b)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 81144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 195, Count: 1, Offset: 81144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 52e9063e-dbcd-4112-b9bb-cbfbbb99a56b) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=52e9063e-dbcd-4112-b9bb-cbfbbb99a56b, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=1e841785-16f4-4ae1-9a1f-b38fbb40ffe4)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 81544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 196, Count: 1, Offset: 81544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 1e841785-16f4-4ae1-9a1f-b38fbb40ffe4) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=1e841785-16f4-4ae1-9a1f-b38fbb40ffe4, Duration=37ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=4b9fb58c-c935-4ba8-86bb-1e3716216e84)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 81944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 197, Count: 1, Offset: 81944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 4b9fb58c-c935-4ba8-86bb-1e3716216e84) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=4b9fb58c-c935-4ba8-86bb-1e3716216e84, Duration=37ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0ce6caaf-3a2e-4983-88c4-cb6059d01b4b)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 82344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 198, Count: 1, Offset: 82344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0ce6caaf-3a2e-4983-88c4-cb6059d01b4b) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0ce6caaf-3a2e-4983-88c4-cb6059d01b4b, Duration=38ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=87aad929-6971-44f9-b649-722ecdc803cb)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 82744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 199, Count: 1, Offset: 82744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 87aad929-6971-44f9-b649-722ecdc803cb) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=87aad929-6971-44f9-b649-722ecdc803cb, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0411a209-8f2c-40fc-94d6-a1229c0de1a7)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 83144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 200, Count: 1, Offset: 83144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0411a209-8f2c-40fc-94d6-a1229c0de1a7) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0411a209-8f2c-40fc-94d6-a1229c0de1a7, Duration=42ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=43ab5d68-d68b-42c4-84fc-e73d7b75984d)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 83544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 201, Count: 1, Offset: 83544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 43ab5d68-d68b-42c4-84fc-e73d7b75984d) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=43ab5d68-d68b-42c4-84fc-e73d7b75984d, Duration=40ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=df52f55a-9a6e-43cf-acee-de5feee80bdc)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 83944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 202, Count: 1, Offset: 83944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: df52f55a-9a6e-43cf-acee-de5feee80bdc) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=df52f55a-9a6e-43cf-acee-de5feee80bdc, Duration=48ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=c9b8aac2-38cf-4ee0-914f-b84387ef759d)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 84344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 203, Count: 1, Offset: 84344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: c9b8aac2-38cf-4ee0-914f-b84387ef759d) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=c9b8aac2-38cf-4ee0-914f-b84387ef759d, Duration=39ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=17e8745c-d720-4d45-a22a-4b0c1a28fa36)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 84744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 204, Count: 1, Offset: 84744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 17e8745c-d720-4d45-a22a-4b0c1a28fa36) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=17e8745c-d720-4d45-a22a-4b0c1a28fa36, Duration=34ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7898557a-a3ff-4e6e-bf6a-95523f4bfd71)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 85144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 205, Count: 1, Offset: 85144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7898557a-a3ff-4e6e-bf6a-95523f4bfd71) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7898557a-a3ff-4e6e-bf6a-95523f4bfd71, Duration=33ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=0f88f1e8-d4c3-40ad-834a-9b80b34b02ea)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 85544, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 206, Count: 1, Offset: 85544, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 0f88f1e8-d4c3-40ad-834a-9b80b34b02ea) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=0f88f1e8-d4c3-40ad-834a-9b80b34b02ea, Duration=36ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=66825f79-e47a-4649-8a12-f3737a7f37ee)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 85944, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 207, Count: 1, Offset: 85944, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 66825f79-e47a-4649-8a12-f3737a7f37ee) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=66825f79-e47a-4649-8a12-f3737a7f37ee, Duration=33ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7844368d-6ca1-4af1-b9ca-d825d5a66bd9)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 86344, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 208, Count: 1, Offset: 86344, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7844368d-6ca1-4af1-b9ca-d825d5a66bd9) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7844368d-6ca1-4af1-b9ca-d825d5a66bd9, Duration=35ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=3c8b44c9-a2e8-4862-beb8-2e436f1e2aa5)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 86744, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 209, Count: 1, Offset: 86744, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 3c8b44c9-a2e8-4862-beb8-2e436f1e2aa5) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=3c8b44c9-a2e8-4862-beb8-2e436f1e2aa5, Duration=36ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=7d4728e1-d27a-4c15-8c3e-7629ab8f422b)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 87144, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 210, Count: 1, Offset: 87144, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 7d4728e1-d27a-4c15-8c3e-7629ab8f422b) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=7d4728e1-d27a-4c15-8c3e-7629ab8f422b, Duration=105ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=8922907a-f74d-4578-b762-2c0b634da870)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 87440, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 211, Count: 1, Offset: 87440, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 8922907a-f74d-4578-b762-2c0b634da870) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=8922907a-f74d-4578-b762-2c0b634da870, Duration=52ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=74233545-396c-4455-b2a2-3bf3c5f6b02c)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 87736, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 212, Count: 1, Offset: 87736, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 74233545-396c-4455-b2a2-3bf3c5f6b02c) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=74233545-396c-4455-b2a2-3bf3c5f6b02c, Duration=46ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=dacc18e6-aea3-4d50-84c9-d285f677d97a)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 88032, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 213, Count: 1, Offset: 88032, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: dacc18e6-aea3-4d50-84c9-d285f677d97a) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=dacc18e6-aea3-4d50-84c9-d285f677d97a, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=4a875742-f862-45cf-9832-4aece424fb3a)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 88328, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 214, Count: 1, Offset: 88328, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 4a875742-f862-45cf-9832-4aece424fb3a) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=4a875742-f862-45cf-9832-4aece424fb3a, Duration=47ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=12a38315-3d68-40fc-be46-13da3a17d140)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 88624, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 215, Count: 1, Offset: 88624, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 12a38315-3d68-40fc-be46-13da3a17d140) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=12a38315-3d68-40fc-be46-13da3a17d140, Duration=44ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=35b79ece-f2fb-4ecf-b266-6ebfe005b48f)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 88920, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 216, Count: 1, Offset: 88920, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: 35b79ece-f2fb-4ecf-b266-6ebfe005b48f) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=35b79ece-f2fb-4ecf-b266-6ebfe005b48f, Duration=60ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=f55d4299-0ba3-4a5b-a2e1-a203d7652ced)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 89216, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 217, Count: 1, Offset: 89216, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: f55d4299-0ba3-4a5b-a2e1-a203d7652ced) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=f55d4299-0ba3-4a5b-a2e1-a203d7652ced, Duration=51ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=a4660d3e-b230-4cf5-ab0b-c2290070ad70)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 89512, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 218, Count: 1, Offset: 89512, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: a4660d3e-b230-4cf5-ab0b-c2290070ad70) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=a4660d3e-b230-4cf5-ab0b-c2290070ad70, Duration=43ms)
+info: Function.flowplaneEventHubTransform[1]
+      Executing 'Functions.flowplaneEventHubTransform' (Reason='(null)', Id=ff9ed898-fbdd-49f5-876a-d0c5da81d6b5)
+info: Function.flowplaneEventHubTransform[0]
+      Trigger Details: PartitionId: 0, OffsetString: 89808, EnqueueTimeUtc: 2026-07-21T05:51:56.5320000+00:00, SequenceNumber: 219, Count: 1, Offset: 89808, PartionId: 0
+info: Function.flowplaneEventHubTransform.User[0]
+      Function "flowplaneEventHubTransform" (Id: ff9ed898-fbdd-49f5-876a-d0c5da81d6b5) invoked by Java Worker
+info: Function.flowplaneEventHubTransform[2]
+      Executed 'Functions.flowplaneEventHubTransform' (Succeeded, Id=ff9ed898-fbdd-49f5-876a-d0c5da81d6b5, Duration=46ms)

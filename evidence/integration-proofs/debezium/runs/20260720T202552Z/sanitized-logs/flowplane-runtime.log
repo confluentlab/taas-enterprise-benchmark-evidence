@@ -1,0 +1,25 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::               (v3.5.16)
+
+2026-07-20T20:26:02.901Z  INFO 1 --- [           main] c.f.bento.BentoRuntimeApplication        : Starting BentoRuntimeApplication using Java 17.0.19 with PID 1 (/app/flowplane-bento-runtime.jar started by root in /)
+2026-07-20T20:26:02.906Z  INFO 1 --- [           main] c.f.bento.BentoRuntimeApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-07-20T20:26:05.138Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-07-20T20:26:05.154Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-07-20T20:26:05.154Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.57]
+2026-07-20T20:26:05.196Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-07-20T20:26:05.197Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2200 ms
+2026-07-20T20:26:06.645Z  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2026-07-20T20:26:06.737Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-07-20T20:26:06.752Z  INFO 1 --- [           main] c.f.bento.BentoRuntimeApplication        : Started BentoRuntimeApplication in 4.967 seconds (process running for 5.977)
+2026-07-20T20:26:06.788Z  WARN 1 --- [signment-poller] c.flowplane.bento.BentoMappingProvider   : FLOWPLANE Bento runtime assignment poll failed for debezium-sidecar-20260720t202552z (ControlPlaneHttpException)
+2026-07-20T20:26:06.792Z  WARN 1 --- [signment-poller] c.flowplane.bento.BentoMappingProvider   : FLOWPLANE Bento runtime assignment refresh failed for debezium-sidecar-20260720t202552z (IllegalStateException)
+2026-07-20T20:26:07.029Z  INFO 1 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-20T20:26:07.030Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-07-20T20:26:07.031Z  INFO 1 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

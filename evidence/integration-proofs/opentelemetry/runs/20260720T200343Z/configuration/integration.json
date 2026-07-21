@@ -1,0 +1,13 @@
+{
+    "id":  "opentelemetry",
+    "type":  "tool",
+    "runtime":  "OpenTelemetry Collector",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/otel_collector_filelog_kafka.yaml"
+                            ],
+    "harness":  "scripts/dev/test-http-integrations-local.ps1",
+    "protocolBoundary":  "Collector receiver/processor/exporter through Flowplane",
+    "plannedCommand":  "powershell -File scripts/dev/test-http-integrations-local.ps1 -VerifyRealRuntimeFailure"
+}

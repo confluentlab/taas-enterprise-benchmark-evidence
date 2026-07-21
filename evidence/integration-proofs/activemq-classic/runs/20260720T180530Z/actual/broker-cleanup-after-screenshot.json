@@ -1,0 +1,12 @@
+{
+  "container": "flowplane-activemq-classic-broker-20260720t180530z",
+  "purpose": "Broker was retained only long enough to capture its native queue console and Jolokia counters.",
+  "screenshotEvidence": [
+    "screenshots/activemq-classic-native-queues.png",
+    "screenshots/activemq-classic-native-jolokia-counts.png"
+  ],
+  "stoppedAt": "2026-07-20T18:07:58.2434042Z",
+  "runningAfterStop": false,
+  "containerExitCode": 137,
+  "sharedFlowplaneServicesStopped": false
+}

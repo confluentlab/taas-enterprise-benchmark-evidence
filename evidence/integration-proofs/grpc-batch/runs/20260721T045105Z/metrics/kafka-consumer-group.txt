@@ -1,0 +1,2 @@
+GROUP                                          TOPIC                                              PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID     HOST            CLIENT-ID
+flowplane-grpc-batch-evidence-20260721t045105z flowplane.grpc-batch.evidence.20260721t045105z.raw 0          110             110             0               -               -               -

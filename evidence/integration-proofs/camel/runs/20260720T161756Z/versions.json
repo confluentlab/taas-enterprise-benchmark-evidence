@@ -1,0 +1,20 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "camel",
+    "toolVersion":  "Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)\nMaven home: /usr/share/maven\nJava version: 17.0.15, vendor: Eclipse Adoptium, runtime: /opt/java/openjdk\nDefault locale: en_US, platform encoding: UTF-8\nOS name: \"linux\", version: \"6.6.87.2-microsoft-standard-wsl2\", arch: \"amd64\", family: \"unix\"",
+    "toolImage":  "maven:3.9.9-eclipse-temurin-17",
+    "toolImageId":  "sha256:f58d59b6273e785ac0a4477f6e9b5ba1d7731c75b906c0f7b34076f1851318cc",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineConfigurationSha256":  "d666cb4fd03e4529ac634d2d704f9b88f0ec00be1f95ac68345a4e831beddf2c",
+    "rawOnlyVerifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

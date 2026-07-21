@@ -1,0 +1,13 @@
+2026-07-20T19:23:44.8487183Z Loading canonical mapping and fixtures.
+2026-07-20T19:23:44.8737941Z Reading an active team from the live control plane.
+2026-07-20T19:23:44.9627713Z Creating the synthetic mapping.
+2026-07-20T19:23:45.0440563Z Validating the synthetic mapping.
+2026-07-20T19:23:45.1828609Z Generating the 100-record expected-output baseline through mapping simulation.
+2026-07-20T19:23:45.4212378Z Submitting, approving, and QA-passing the mapping through governance.
+2026-07-20T19:23:45.8099225Z Starting the real Flowplane Bento HTTP sidecar container.
+2026-07-20T19:23:56.8601816Z Deploying the published artifact to the registered runtime.
+2026-07-20T19:23:57.1698425Z Starting isolated Apache RocketMQ 5.3.2 NameServer.
+2026-07-20T19:23:57.6129719Z Starting RocketMQ Broker with the gRPC Proxy enabled.
+2026-07-20T19:24:02.3305620Z Starting the first-party RocketMQ Dashboard.
+2026-07-20T19:24:25.2454720Z Starting the independent RocketMQ-to-Flowplane pipeline.
+2026-07-20T19:24:32.1259408Z Publishing 110 records only to the RocketMQ raw topic.

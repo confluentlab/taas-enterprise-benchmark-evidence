@@ -1,0 +1,6 @@
+2026-07-20T17:48:03.0016607Z Loading canonical mapping and fixtures.
+2026-07-20T17:48:03.0459256Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T17:48:04.0776197Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T17:48:14.6406598Z Submitting a run-specific first-class Flowplane job to the existing Flink cluster.
+2026-07-20T17:48:42.8749648Z Using the independently running first-class Apache Flink runtime.
+2026-07-20T17:48:42.9849211Z Publishing canonical fixtures through the raw-only verifier.

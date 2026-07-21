@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "flowplane.kafka-runtime-surface-bridge-result.v1",
+  "integrationId": "grpc-batch",
+  "runId": "20260721T054138Z",
+  "mode": "grpc-batch",
+  "endpoint": "flowplane-grpc-batch-runtime-20260721t054138z:9090",
+  "metadata": {
+    "tenantId": "acme-corp",
+    "runtimeId": "grpc-batch-evidence-20260721t054138z",
+    "mappingId": "6a5f06978dd158f5c9632d84",
+    "mappingVersion": "v1.0.0",
+    "artifactHash": "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+  },
+  "topics": {
+    "raw": "flowplane.grpc-batch.evidence.20260721t054138z.raw",
+    "transformed": "flowplane.grpc-batch.evidence.20260721t054138z.transformed",
+    "dlq": "flowplane.grpc-batch.evidence.20260721t054138z.dlq"
+  },
+  "boundary": "persistent Kafka raw input -> deployed runtime surface -> acknowledged Kafka transformed/DLQ output",
+  "received": 10000,
+  "transformed": 9900,
+  "dlq": 100,
+  "publishFailures": 0,
+  "runtimeFailures": 0,
+  "completed": true,
+  "updatedAt": "2026-07-21T05:43:04.763Z"
+}

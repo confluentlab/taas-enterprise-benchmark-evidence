@@ -1,0 +1,6 @@
+2026-07-20T17:19:03.3852902Z Loading canonical mapping and fixtures.
+2026-07-20T17:19:03.4225935Z Creating and governing a run-specific synthetic mapping.
+2026-07-20T17:19:04.9189847Z Creating empty raw, transformed, and DLQ Kafka topics.
+2026-07-20T17:19:15.8003055Z Registering a run-specific connector on the existing Kafka Connect worker.
+2026-07-20T17:19:29.2638674Z Using the already-running first-class Kafka Connect worker and run-specific connector task.
+2026-07-20T17:19:29.3752645Z Publishing canonical fixtures through the raw-only verifier.

@@ -1,0 +1,13 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.7)
+
+2026-07-20T16:32:09.652Z  INFO 98 --- [flowplane-spring-cloud-stream-kafka-http] [           main] c.f.local.SpringCloudStreamKafkaHttpApp  : Starting SpringCloudStreamKafkaHttpApp using Java 17.0.15 with PID 98 (/workspace/target/classes started by root in /workspace)
+2026-07-20T16:32:09.658Z  INFO 98 --- [flowplane-spring-cloud-stream-kafka-http] [           main] c.f.local.SpringCloudStreamKafkaHttpApp  : No active profile set, falling back to 1 default profile: "default"
+2026-07-20T16:32:17.451Z  INFO 98 --- [flowplane-spring-cloud-stream-kafka-http] [           main] c.f.local.SpringCloudStreamKafkaHttpApp  : Started SpringCloudStreamKafkaHttpApp in 9.364 seconds (process running for 10.07)

@@ -1,0 +1,20 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "spark-structured-streaming",
+    "toolVersion":  "Apache Spark 3.5.3 (pinned image tag)",
+    "toolImage":  "apache/spark:3.5.3",
+    "toolImageId":  "sha256:d0f5d63bfbbffdbec08debb4911554ba671a2fa7398374db8db314d80328f576",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineConfigurationSha256":  "4fd564aa96ebd9c9e6aafb2384b23b2479f976ea9f013065403cff804c145324",
+    "rawOnlyVerifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "runtimeJar":  "flowplane-bento-runtime-1.0.0-SNAPSHOT.jar",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

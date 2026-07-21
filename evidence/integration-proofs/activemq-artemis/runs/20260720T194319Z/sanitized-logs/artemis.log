@@ -1,0 +1,62 @@
+Creating ActiveMQ Artemis instance at: /var/lib/artemis-instance
+
+Auto tuning journal ...
+done! Your system can make 62.5 writes per millisecond, your journal-buffer-timeout will be 16000
+
+You can now start the broker by executing:  
+
+   "/var/lib/artemis-instance/bin/artemis" run
+
+Or you can run the broker in the background using:
+
+   "/var/lib/artemis-instance/bin/artemis-service" start
+
+     _        _               _
+    / \  ____| |_  ___ __  __(_) _____
+   / _ \|  _ \ __|/ _ \  \/  | |/  __/
+  / ___ \ | \/ |_/  __/ |\/| | |\___ \
+ /_/   \_\|   \__\____|_|  |_|_|/___ /
+ Apache ActiveMQ Artemis 2.44.0
+
+
+2026-07-20 19:43:32,527 INFO  [org.apache.activemq.artemis.integration.bootstrap] AMQ101000: Starting ActiveMQ Artemis Server version 2.44.0
+2026-07-20 19:43:32,583 INFO  [org.apache.activemq.artemis.core.server] AMQ221000: Primary message broker is starting with configuration Broker Configuration (clustered=false,journalDirectory=data/journal,bindingsDirectory=data/bindings,largeMessagesDirectory=data/large-messages,pagingDirectory=data/paging)
+2026-07-20 19:43:32,611 INFO  [org.apache.activemq.artemis.core.server] AMQ221012: Using AIO Journal
+2026-07-20 19:43:32,653 INFO  [org.apache.activemq.artemis.core.server] AMQ221057: Global Max Size is being adjusted to 1/2 of the JVM max size (-Xmx). being defined as 1073741824
+2026-07-20 19:43:32,675 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-server]. Adding protocol support for: CORE
+2026-07-20 19:43:32,675 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-amqp-protocol]. Adding protocol support for: AMQP
+2026-07-20 19:43:32,675 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-hornetq-protocol]. Adding protocol support for: HORNETQ
+2026-07-20 19:43:32,676 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-mqtt-protocol]. Adding protocol support for: MQTT
+2026-07-20 19:43:32,676 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-openwire-protocol]. Adding protocol support for: OPENWIRE
+2026-07-20 19:43:32,677 INFO  [org.apache.activemq.artemis.core.server] AMQ221043: Protocol module found: [artemis-stomp-protocol]. Adding protocol support for: STOMP
+2026-07-20 19:43:32,710 INFO  [org.apache.activemq.artemis.core.server] AMQ221034: Waiting indefinitely to obtain primary lock
+2026-07-20 19:43:32,710 INFO  [org.apache.activemq.artemis.core.server] AMQ221035: Primary Server Obtained primary lock
+2026-07-20 19:43:32,777 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address DLQ supporting [ANYCAST]
+2026-07-20 19:43:32,789 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue DLQ on address DLQ
+2026-07-20 19:43:32,828 INFO  [org.apache.activemq.artemis.core.server] AMQ221080: Deploying address ExpiryQueue supporting [ANYCAST]
+2026-07-20 19:43:32,830 INFO  [org.apache.activemq.artemis.core.server] AMQ221003: Deploying ANYCAST queue ExpiryQueue on address ExpiryQueue
+2026-07-20 19:43:33,113 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:61616 for protocols [CORE,MQTT,AMQP,STOMP,HORNETQ,OPENWIRE]
+2026-07-20 19:43:33,148 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:5445 for protocols [HORNETQ,STOMP]
+2026-07-20 19:43:33,152 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:5672 for protocols [AMQP]
+2026-07-20 19:43:33,155 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:1883 for protocols [MQTT]
+2026-07-20 19:43:33,188 INFO  [org.apache.activemq.artemis.core.server] AMQ221020: Started EPOLL Acceptor at 0.0.0.0:61613 for protocols [STOMP]
+2026-07-20 19:43:33,193 INFO  [org.apache.activemq.artemis.core.server] AMQ221007: Server is now active
+2026-07-20 19:43:33,193 INFO  [org.apache.activemq.artemis.core.server] AMQ221001: Apache ActiveMQ Artemis Message Broker version 2.44.0 [0.0.0.0, nodeID=4a2ca0a6-8473-11f1-8c1d-760131d4b12f] 
+2026-07-20 19:43:33,201 INFO  [org.apache.activemq.artemis] AMQ241003: Starting embedded web server
+2026-07-20 19:43:33,494 INFO  [io.hawt.HawtioContextListener] Initialising Hawtio services
+2026-07-20 19:43:33,500 INFO  [io.hawt.jmx.JmxTreeWatcher] Welcome to Hawtio 4.4.1
+2026-07-20 19:43:33,505 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Authentication throttling is enabled
+2026-07-20 19:43:33,507 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Starting Hawtio authentication filter, JAAS realm: "activemq" authorized role(s): "amq" role principal classes: "org.apache.activemq.artemis.spi.core.security.jaas.RolePrincipal"
+2026-07-20 19:43:33,507 INFO  [io.hawt.web.auth.AuthenticationConfiguration] Looking for OIDC configuration file in: /var/lib/artemis-instance/etc/hawtio-oidc.properties
+2026-07-20 19:43:33,531 INFO  [io.hawt.web.auth.ClientRouteRedirectFilter] Hawtio ClientRouteRedirectFilter is using 1800 sec. HttpSession timeout
+2026-07-20 19:43:33,556 INFO  [org.apache.activemq.artemis] AMQ241001: HTTP Server started at http://0.0.0.0:8161
+2026-07-20 19:43:33,556 INFO  [org.apache.activemq.artemis] AMQ241002: Artemis Jolokia REST API available at http://0.0.0.0:8161/console/jolokia
+2026-07-20 19:43:33,556 INFO  [org.apache.activemq.artemis] AMQ241004: Artemis Console available at http://0.0.0.0:8161/console
+2026-07-20 19:43:43,220 WARN  [org.apache.activemq.artemis.core.protocol.stomp] AMQ332069: Sent ERROR frame to STOMP client 172.28.0.25:40610: 
+2026-07-20 19:43:43,221 WARN  [org.apache.activemq.artemis.core.server] AMQ222067: Connection failure has been detected:  [code=REMOTE_DISCONNECT]
+2026-07-20 19:43:43,221 WARN  [org.apache.activemq.artemis.core.protocol.stomp] AMQ332069: Sent ERROR frame to STOMP client 172.28.0.25:40606: 
+2026-07-20 19:43:43,221 WARN  [org.apache.activemq.artemis.core.server] AMQ222067: Connection failure has been detected:  [code=REMOTE_DISCONNECT]
+2026-07-20 19:43:43,234 WARN  [org.apache.activemq.artemis.core.protocol.stomp] AMQ332069: Sent ERROR frame to STOMP client 172.28.0.26:35584: 
+2026-07-20 19:43:43,234 WARN  [org.apache.activemq.artemis.core.server] AMQ222067: Connection failure has been detected:  [code=REMOTE_DISCONNECT]
+2026-07-20 19:43:43,234 WARN  [org.apache.activemq.artemis.core.protocol.stomp] AMQ332069: Sent ERROR frame to STOMP client 172.28.0.26:35582: 
+2026-07-20 19:43:43,234 WARN  [org.apache.activemq.artemis.core.server] AMQ222067: Connection failure has been detected:  [code=REMOTE_DISCONNECT]

@@ -1,0 +1,9 @@
+2026-07-20T20:00:24.927416Z  INFO vector::app: Log level is enabled. level="info"
+2026-07-20T20:00:24.929066Z  INFO vector::app: Loading configs. paths=["/etc/vector/vector.toml"]
+2026-07-20T20:00:24.972970Z  INFO vector::topology::running: Running healthchecks.
+2026-07-20T20:00:24.973179Z  INFO vector::topology::builder: Healthcheck passed.
+2026-07-20T20:00:24.973188Z  INFO vector::topology::builder: Healthcheck passed.
+2026-07-20T20:00:24.973192Z  INFO vector::topology::running: All healthchecks passed.
+2026-07-20T20:00:24.974255Z  INFO vector::sinks::prometheus::exporter: Building HTTP server. address=0.0.0.0:9598
+2026-07-20T20:00:24.974319Z  INFO vector: Vector has started. debug="false" version="0.50.0" arch="x86_64" revision="9053198 2025-09-23 14:18:50.944442940"
+2026-07-20T20:00:24.975524Z  INFO vector::internal_events::api: API server running. address=0.0.0.0:8686 playground=http://0.0.0.0:8686/playground graphql=http://0.0.0.0:8686/graphql

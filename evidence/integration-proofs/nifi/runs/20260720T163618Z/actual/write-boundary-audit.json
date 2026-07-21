@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  8,
+    "pipelineTransformedOutputReferences":  6,
+    "pipelineDlqOutputReferences":  7,
+    "verifierWriteTargets":  [
+                                 "flowplane.nifi.evidence.20260720t163618z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.nifi.evidence.20260720t163618z.transformed",
+                                "flowplane.nifi.evidence.20260720t163618z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.nifi.evidence.20260720t163618z.transformed",
+                                 "flowplane.nifi.evidence.20260720t163618z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "2f074c0d243aeb73eb31f19bdefd56ea63672f44c7cd29d5e69bab57806918d4",
+    "passed":  true
+}

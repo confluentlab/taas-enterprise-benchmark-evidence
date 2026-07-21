@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-nats-jetstream-pipeline-20260720t181423z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-nats-jetstream-bento-20260720t181423z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-nats-jetstream-bento-20260720t181423z"
+                       },
+                       {
+                           "container":  "flowplane-nats-jetstream-broker-20260720t181423z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "Broker retained temporarily so its run-specific /jsz monitoring state can be captured before exact-container cleanup."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T18:14:47.1029716Z"
+}

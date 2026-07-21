@@ -1,0 +1,8 @@
+# Exact run values; generated credentials are redacted.
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.debezium.evidence.20260720t202552z.raw --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.debezium.evidence.20260720t202552z.transformed --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.debezium.evidence.20260720t202552z.dlq --partitions 1 --replication-factor 1
+
+docker run --name flowplane-debezium-bento-20260720t202552z --network flowplane-quality-stack_default -p 127.0.0.1::8080 -v <bento-jar>:/app/flowplane-bento-runtime.jar:ro eclipse-temurin:17-jre java -jar /app/flowplane-bento-runtime.jar
+docker run MySQL + quay.io/debezium/connect:3.6; POST the checksum-covered connector configuration; docker run --name flowplane-debezium-publisher-20260720t202552z --network flowplane-quality-stack_default <publisher-bridge> kafka:9092 http://flowplane-debezium-bento-20260720t202552z:8080/transform debezium 20260720T202552Z 110 /evidence flowplane.debezium.evidence.20260720t202552z.raw
+node debezium-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> 20260720T202552Z <mysql-container> <redacted> flowplane-kafka kafka:9092

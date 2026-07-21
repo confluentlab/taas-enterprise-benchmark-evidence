@@ -1,0 +1,13 @@
+{
+    "id":  "activemq-artemis",
+    "type":  "tool",
+    "runtime":  "ActiveMQ Artemis STOMP with Flowplane HTTP bridge",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "FEASIBLE_BRIDGE",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "Artemis raw client-individual subscription through assigned Flowplane HTTP runtime to receipted transformed/DLQ sends before receipted raw ACK",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration activemq-artemis"
+}

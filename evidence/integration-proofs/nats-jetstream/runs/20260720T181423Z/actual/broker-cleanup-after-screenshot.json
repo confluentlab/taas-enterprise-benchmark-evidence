@@ -1,0 +1,14 @@
+{
+  "container": "flowplane-nats-jetstream-broker-20260720t181423z",
+  "purpose": "Broker was retained only long enough to capture the native JetStream monitoring API.",
+  "screenshotEvidence": [
+    "screenshots/nats-jetstream-native-jsz.png",
+    "screenshots/nats-jetstream-native-stream-consumers.png",
+    "screenshots/nats-jetstream-native-transformed-stream.png",
+    "screenshots/nats-jetstream-native-dlq-stream.png"
+  ],
+  "stoppedAt": "2026-07-20T18:16:21.4337371Z",
+  "runningAfterStop": false,
+  "containerExitCode": 0,
+  "sharedFlowplaneServicesStopped": false
+}

@@ -1,0 +1,7 @@
+# Exact run values; generated credentials are redacted.
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.flink.evidence.20260720t174759z.raw --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.flink.evidence.20260720t174759z.transformed --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.flink.evidence.20260720t174759z.dlq --partitions 1 --replication-factor 1
+POST http://127.0.0.1:8089/jars/upload then POST /jars/<uploaded-jar-id>/run (exact sanitized arguments: configuration/flink-runtime.json)
+GET http://127.0.0.1:8089/jobs/<run-specific-job-id>
+node kafka-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> 20260720T174759Z flink flowplane-kafka kafka:9092

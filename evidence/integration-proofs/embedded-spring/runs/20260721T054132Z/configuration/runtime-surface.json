@@ -1,0 +1,17 @@
+{
+    "integrationId":  "embedded-spring",
+    "runtimeId":  "embedded-spring-evidence-20260721t054132z",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "network":  "flowplane-quality-stack_default",
+    "topics":  {
+                   "raw":  "flowplane.embedded-spring.evidence.20260721t054132z.raw",
+                   "transformed":  "flowplane.embedded-spring.evidence.20260721t054132z.transformed",
+                   "dlq":  "flowplane.embedded-spring.evidence.20260721t054132z.dlq"
+               },
+    "validRecordCount":  9900,
+    "invalidRecordCount":  100,
+    "totalRecordCount":  10000,
+    "minimumDurationSeconds":  300,
+    "sourceBoundary":  "raw-only verifier -\u003e persistent Kafka raw topic",
+    "sinkBoundary":  "independent runtime bridge -\u003e persistent Kafka transformed and DLQ topics"
+}

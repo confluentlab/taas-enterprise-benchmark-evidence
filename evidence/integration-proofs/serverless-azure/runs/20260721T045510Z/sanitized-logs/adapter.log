@@ -1,0 +1,5 @@
+2026-07-21T04:55:12.9157957Z Creating and governing the run-specific mapping.
+2026-07-21T04:55:13.1937211Z Creating empty persistent Kafka evidence topics.
+2026-07-21T04:55:19.5180078Z Starting the serverless-azure runtime container.
+2026-07-21T04:55:31.1998542Z Starting the independent raw-Kafka-to-serverless-azure bridge.
+2026-07-21T04:55:38.7511577Z Publishing 100 valid and 10 intentional-invalid records through the raw-only verifier.

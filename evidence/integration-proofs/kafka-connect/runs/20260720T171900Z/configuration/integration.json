@@ -1,0 +1,13 @@
+{
+    "id":  "kafka-connect",
+    "type":  "native",
+    "runtime":  "Kafka Connect",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-kafka-connect-smt"
+                            ],
+    "harness":  "scripts/qa/single-source-byte-parity.ps1",
+    "protocolBoundary":  "Connect worker REST, task, Kafka output, and DLQ",
+    "plannedCommand":  "powershell -File scripts/qa/single-source-byte-parity.ps1"
+}

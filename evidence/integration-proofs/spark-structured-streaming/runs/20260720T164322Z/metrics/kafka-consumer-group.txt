@@ -1,0 +1,1 @@
+Error: Consumer group 'flowplane-spark-structured-streaming-evidence-20260720t164322z' does not exist.

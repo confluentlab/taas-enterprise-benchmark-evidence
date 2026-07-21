@@ -1,0 +1,10 @@
+{
+    "runtimeId":  "http-batch-evidence-20260721t054136z",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5f06988dd158f5c9632e05",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5f06948dd158f5c9632cb6",
+    "runtimeHealth":  "HEALTHY",
+    "lifecycleState":  "RUNNING"
+}

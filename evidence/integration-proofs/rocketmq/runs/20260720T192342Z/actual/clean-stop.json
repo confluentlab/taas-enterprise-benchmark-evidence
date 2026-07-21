@@ -1,0 +1,36 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-rocketmq-pipeline-20260720t192342z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-rocketmq-bento-20260720t192342z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-rocketmq-bento-20260720t192342z"
+                       },
+                       {
+                           "container":  "flowplane-rocketmq-namesrv-20260720t192342z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "RocketMQ topology retained temporarily for first-party Dashboard screenshots."
+                       },
+                       {
+                           "container":  "flowplane-rocketmq-broker-20260720t192342z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "RocketMQ topology retained temporarily for first-party Dashboard screenshots."
+                       },
+                       {
+                           "container":  "flowplane-rocketmq-dashboard-20260720t192342z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "RocketMQ topology retained temporarily for first-party Dashboard screenshots."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T19:25:11.3170043Z"
+}

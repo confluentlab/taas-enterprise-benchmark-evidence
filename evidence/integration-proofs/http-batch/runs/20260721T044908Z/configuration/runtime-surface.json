@@ -1,0 +1,13 @@
+{
+    "integrationId":  "http-batch",
+    "runtimeId":  "http-batch-evidence-20260721t044908z",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "network":  "flowplane-quality-stack_default",
+    "topics":  {
+                   "raw":  "flowplane.http-batch.evidence.20260721t044908z.raw",
+                   "transformed":  "flowplane.http-batch.evidence.20260721t044908z.transformed",
+                   "dlq":  "flowplane.http-batch.evidence.20260721t044908z.dlq"
+               },
+    "sourceBoundary":  "raw-only verifier -\u003e persistent Kafka raw topic",
+    "sinkBoundary":  "independent runtime bridge -\u003e persistent Kafka transformed and DLQ topics"
+}

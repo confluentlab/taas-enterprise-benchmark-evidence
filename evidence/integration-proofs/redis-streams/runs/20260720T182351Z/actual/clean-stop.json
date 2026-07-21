@@ -1,0 +1,24 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-redis-streams-pipeline-20260720t182351z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-redis-streams-bento-20260720t182351z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-redis-streams-bento-20260720t182351z"
+                       },
+                       {
+                           "container":  "flowplane-redis-streams-broker-20260720t182351z",
+                           "action":  "left-running-for-native-evidence",
+                           "exitCode":  0,
+                           "output":  "Redis Stack retained temporarily so RedisInsight and native stream state can be captured before exact-container cleanup."
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T18:24:28.5670398Z"
+}

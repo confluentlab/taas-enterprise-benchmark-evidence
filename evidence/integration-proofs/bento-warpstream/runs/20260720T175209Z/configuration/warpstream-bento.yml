@@ -1,0 +1,44 @@
+input:
+  kafka_franz:
+    seed_brokers:
+      - ${FLOWPLANE_WARPSTREAM_KAFKA_BOOTSTRAP:kafka:9092}
+    topics:
+      - ${FLOWPLANE_WARPSTREAM_RAW_TOPIC:flowplane.warpstream.iso.raw}
+    consumer_group: ${FLOWPLANE_WARPSTREAM_GROUP_ID:flowplane-warpstream-network-isolation}
+    start_from_oldest: true
+
+pipeline:
+  processors:
+    - http:
+        url: ${FLOWPLANE_WARPSTREAM_TRANSFORM_URL:https://warpstream-https-sidecar:8443/transform}
+        verb: POST
+        successful_on:
+          - 200
+          - 422
+        extract_headers:
+          include_prefixes:
+            - X-FlowPlane-Result
+        headers:
+          Content-Type: application/json
+          X-FlowPlane-Source-Topic: '${! meta("kafka_topic") }'
+          X-FlowPlane-Source-Partition: '${! meta("kafka_partition") }'
+          X-FlowPlane-Source-Offset: '${! meta("kafka_offset") }'
+          X-FlowPlane-Source-Key: '${! meta("kafka_key") }'
+        tls:
+          enabled: ${FLOWPLANE_WARPSTREAM_TLS_ENABLED:true}
+          skip_cert_verify: ${FLOWPLANE_WARPSTREAM_TLS_SKIP_VERIFY:true}
+
+output:
+  switch:
+    cases:
+      - check: this.schemaVersion == "flowplane.runtime.error.v1" || meta("http_status_code") == "422"
+        output:
+          kafka_franz:
+            seed_brokers:
+              - ${FLOWPLANE_WARPSTREAM_KAFKA_BOOTSTRAP:kafka:9092}
+            topic: ${FLOWPLANE_WARPSTREAM_DLQ_TOPIC:flowplane.warpstream.iso.dlq}
+      - output:
+          kafka_franz:
+            seed_brokers:
+              - ${FLOWPLANE_WARPSTREAM_KAFKA_BOOTSTRAP:kafka:9092}
+            topic: ${FLOWPLANE_WARPSTREAM_OUTPUT_TOPIC:flowplane.warpstream.iso.transformed}

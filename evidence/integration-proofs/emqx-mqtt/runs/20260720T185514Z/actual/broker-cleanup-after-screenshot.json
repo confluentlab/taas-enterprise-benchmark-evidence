@@ -1,0 +1,7 @@
+{
+  "container": "flowplane-emqx-mqtt-broker-20260720t185514z",
+  "action": "stopped-after-native-dashboard-capture",
+  "exitCode": 0,
+  "capturedAt": "2026-07-20T18:57:56.1916497Z",
+  "recoverable": "The exact run can be reproduced with reproduce.ps1; the stopped container remains available until explicitly removed."
+}

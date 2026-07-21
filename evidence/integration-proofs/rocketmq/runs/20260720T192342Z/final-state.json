@@ -1,0 +1,12 @@
+{
+    "captured":  true,
+    "runtimeHealthy":  true,
+    "assignmentPresent":  true,
+    "pending":  0,
+    "finalLag":  0,
+    "topics":  {
+                   "raw":  "flowplane_rocketmq_20260720t192342z_raw",
+                   "transformed":  "flowplane_rocketmq_20260720t192342z_transformed",
+                   "dlq":  "flowplane_rocketmq_20260720t192342z_dlq"
+               }
+}

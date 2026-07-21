@@ -1,3 +1,12 @@
 * text=auto eol=lf
 *.png binary
 *.mp4 binary
+
+# Captured evidence and copied reproduction fixtures are byte-exact artifacts.
+# Line-ending normalization would invalidate their preserved SHA-256 identities.
+evidence/integration-proofs/*/runs/** -text
+evidence/trigger-proofs/** -text
+evidence/live-local-supplement/** -text
+reproduction/canonical-fixture/** -text
+reproduction/live-local-verification/** -text
+reproduction/11-run-live-local-verification.ps1 -text

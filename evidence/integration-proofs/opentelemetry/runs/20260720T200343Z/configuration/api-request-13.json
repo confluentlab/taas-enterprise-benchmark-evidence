@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "opentelemetry-sidecar-20260720t200343z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "OTEL-20260720T200343Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the opentelemetry sidecar."
+}

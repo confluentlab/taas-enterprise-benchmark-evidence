@@ -1,0 +1,20 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "kafka-streams",
+    "toolVersion":  "Flowplane Kafka Streams runtime 1.0.0 (local shaded jar)",
+    "toolImage":  "eclipse-temurin:17-jre",
+    "toolImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineConfigurationSha256":  "e0b34369ba2af7fdc9169e2ca7f1668fe706565e805a981c5b83147b4aff3c77",
+    "rawOnlyVerifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "runtimeJar":  "flowplane-kafka-streams-runtime.jar",
+    "runtimeJarSha256":  "c7319bf02ca5590119d85cc3fa67440bb0597b9be61db2fffcbf73c2353cfd12",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

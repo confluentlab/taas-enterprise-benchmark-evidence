@@ -1,0 +1,17 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeReferences":  0,
+    "pipelineRawInputReferences":  1,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  2,
+    "verifierWriteTargets":  [
+                                 "flowplane.serverless-aws.evidence.20260721t050358z.raw"
+                             ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.serverless-aws.evidence.20260721t050358z.transformed",
+                                 "flowplane.serverless-aws.evidence.20260721t050358z.dlq"
+                             ],
+    "passed":  true
+}

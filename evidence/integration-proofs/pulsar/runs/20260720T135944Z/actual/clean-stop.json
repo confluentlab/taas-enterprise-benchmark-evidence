@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-pulsar-pipeline-20260720t135944z",
+                           "action":  "already-exited",
+                           "exitCode":  0,
+                           "output":  "Container completed before cleanup."
+                       },
+                       {
+                           "container":  "flowplane-pulsar-bento-20260720t135944z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-pulsar-bento-20260720t135944z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T14:00:39.5855116Z"
+}

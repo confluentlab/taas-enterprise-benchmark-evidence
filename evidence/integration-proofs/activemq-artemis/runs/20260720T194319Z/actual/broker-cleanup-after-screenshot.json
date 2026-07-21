@@ -1,0 +1,6 @@
+{
+  "container": "flowplane-artemis-broker-20260720t194319z",
+  "stoppedAtUtc": "2026-07-20T19:50:40.9777271Z",
+  "stopped": true,
+  "reason": "Retained only long enough to capture and visually validate the native Hawtio queue evidence."
+}

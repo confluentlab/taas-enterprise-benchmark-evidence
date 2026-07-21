@@ -1,0 +1,2 @@
+GROUP                                                TOPIC                                                    PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                  HOST            CLIENT-ID
+flowplane-redpanda-connect-evidence-20260720t160552z flowplane.redpanda-connect.evidence.20260720t160552z.raw 0          110             110             0               benthos-4c30e419-5e2b-4d4f-a11f-787df4a9a257 /172.28.0.22    benthos

@@ -1,0 +1,93 @@
+{
+    "mappingId":  "6a5efdc18dd158f5c9631bc0",
+    "artifactId":  "6a5efdc18dd158f5c9631bca",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "deployable":  true,
+    "blockers":  [
+
+                 ],
+    "targets":  [
+                    {
+                        "runtimeId":  "serverless-aws-evidence-20260721t050358z",
+                        "runtimeName":  "AWS Lambda Evidence 20260721T050358Z",
+                        "runtimeType":  "SERVERLESS",
+                        "environment":  "DEVELOPMENT",
+                        "compatible":  true,
+                        "status":  "ROLLOUT_PENDING_RUNTIME_ACK",
+                        "activeVersion":  null,
+                        "activeArtifactHash":  null,
+                        "expectedVersion":  "v1.0.0",
+                        "expectedArtifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "lifecycleState":  "ROLLOUT_PENDING",
+                        "drifted":  false,
+                        "id":  "serverless-aws-evidence-20260721t050358z"
+                    }
+                ],
+    "history":  [
+                    {
+                        "activationId":  "6a5efdc88dd158f5c9631bdc",
+                        "runtimeId":  "serverless-aws-evidence-20260721t050358z",
+                        "runtimeName":  "AWS Lambda Evidence 20260721T050358Z",
+                        "runtimeType":  "SERVERLESS",
+                        "environment":  "DEVELOPMENT",
+                        "artifactId":  "6a5efdc18dd158f5c9631bca",
+                        "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                        "rolloutPercent":  100,
+                        "deploymentState":  "ROLLOUT_PENDING",
+                        "active":  false,
+                        "activatedAt":  "2026-07-21T05:04:08.678Z",
+                        "lastActiveAt":  null,
+                        "activatedBy":  "admin@flowplane.local"
+                    }
+                ],
+    "versionHistory":  [
+                           {
+                               "artifactId":  "6a5efdc18dd158f5c9631bca",
+                               "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                               "artifactVersion":  "v1.0.0",
+                               "active":  false,
+                               "rollbackEligible":  false,
+                               "firstActivatedAt":  "2026-07-21T05:04:08.678Z",
+                               "lastActiveAt":  "2026-07-21T05:04:08.678Z",
+                               "runtimes":  [
+                                                {
+                                                    "runtimeId":  "serverless-aws-evidence-20260721t050358z",
+                                                    "runtimeName":  "AWS Lambda Evidence 20260721T050358Z",
+                                                    "runtimeType":  "SERVERLESS",
+                                                    "active":  false,
+                                                    "rollbackEligible":  false,
+                                                    "deploymentState":  "ROLLOUT_PENDING",
+                                                    "activatedAt":  "2026-07-21T05:04:08.678Z",
+                                                    "lastActiveAt":  "2026-07-21T05:04:08.678Z",
+                                                    "activatedBy":  "admin@flowplane.local",
+                                                    "supersededByArtifactId":  null
+                                                }
+                                            ]
+                           }
+                       ],
+    "replayEvidence":  [
+
+                       ],
+    "schemaEvidence":  [
+
+                       ],
+    "qaEvidence":  [
+
+                   ],
+    "versionGovernance":  {
+                              "maxConcurrentActiveVersions":  2,
+                              "activeVersionCount":  0,
+                              "activeArtifactIds":  [
+
+                                                    ],
+                              "activeVersions":  [
+
+                                                 ],
+                              "state":  "CONVERGED",
+                              "convergenceDeadline":  null,
+                              "convergenceWindowSeconds":  1800,
+                              "proposedDeploymentAllowed":  true,
+                              "message":  "Runtime-acknowledged artifacts are converged."
+                          }
+}

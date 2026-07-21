@@ -1,0 +1,5 @@
+{
+    "integration":  "rabbitmq-streams",
+    "executionAttempted":  false,
+    "reason":  "Prepared bundle only."
+}

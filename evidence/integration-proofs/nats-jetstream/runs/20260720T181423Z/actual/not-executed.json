@@ -1,0 +1,5 @@
+{
+    "integration":  "nats-jetstream",
+    "executionAttempted":  false,
+    "reason":  "Prepared bundle only."
+}

@@ -1,0 +1,17 @@
+{
+    "integrationId":  "grpc-streaming",
+    "runtimeId":  "grpc-streaming-evidence-20260721t054141z",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "network":  "flowplane-quality-stack_default",
+    "topics":  {
+                   "raw":  "flowplane.grpc-streaming.evidence.20260721t054141z.raw",
+                   "transformed":  "flowplane.grpc-streaming.evidence.20260721t054141z.transformed",
+                   "dlq":  "flowplane.grpc-streaming.evidence.20260721t054141z.dlq"
+               },
+    "validRecordCount":  9900,
+    "invalidRecordCount":  100,
+    "totalRecordCount":  10000,
+    "minimumDurationSeconds":  300,
+    "sourceBoundary":  "raw-only verifier -\u003e persistent Kafka raw topic",
+    "sinkBoundary":  "independent runtime bridge -\u003e persistent Kafka transformed and DLQ topics"
+}

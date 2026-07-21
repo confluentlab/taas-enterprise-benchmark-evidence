@@ -1,0 +1,38 @@
+{
+    "id":  "6a5efccf8dd158f5c96318e2",
+    "tenantId":  "acme-corp",
+    "environment":  "DEVELOPMENT",
+    "teamName":  "JVM Portability 20260716152136590",
+    "projectName":  "Live Local Verification",
+    "name":  "serverless-gcp-live-local-20260721t045957z",
+    "description":  "Synthetic serverless-gcp live-local runtime-surface verification.",
+    "status":  "PUBLISHED",
+    "activeVersion":  null,
+    "draftVersion":  "v1.0.1-draft",
+    "runtimeCount":  0,
+    "p99LatencyMs":  0.0,
+    "updatedBy":  "admin@flowplane.local",
+    "updatedAt":  "2026-07-21T04:59:59.400Z",
+    "dictionaryIds":  [
+
+                      ],
+    "mappingDsl":  "version: 1\nname: flowplane-live-local-verification-v1\nerror_policy:\n  on_transformation_error: ROUTE_TO_DLQ\n  on_validation_failure: ROUTE_TO_DLQ\n  on_type_mismatch: ROUTE_TO_DLQ\noutput:\n  shape: FLAT_OBJECT\n  complexTypes: NATIVE_JSON\n  fieldNaming: AS_IS\nfields:\n  eventId:\n    path: $.event.id\n    required: true\n    validate:\n      required: true\n      pattern: \"^evt-live-[0-9]{6}$\"\n  customerName:\n    path: $.customer.name\n    normalize_string: true\n  amount:\n    path: $.order.amount\n    cast: decimal\n    decimalScale: 2\n    decimalScalePolicy: ROUND\n  amountWithTax:\n    arithmetic: \"$.order.amount * 1.10\"\n  occurredAt:\n    path: $.event.occurredAt\n    cast: timestamp\n  region:\n    path: $.customer.region\n    default: unknown\n  emailMasked:\n    path: $.customer.email\n    mask: last4\n  tags:\n    path: $.order.tags\n  primarySku:\n    path: $.order.lines[0].sku\n    required: true\n",
+    "samplePayload":  "{\"event\":{\"id\":\"evt-live-000001\",\"occurredAt\":\"2026-07-20T12:34:56Z\"},\"customer\":{\"name\":\"  Ada   Lovelace  \",\"email\":\"ada+1@example.test\",\"region\":null},\"order\":{\"amount\":\"128.45\",\"tags\":[\"synthetic\",\"verification\",\"batch-0\"],\"lines\":[{\"sku\":\"SKU-001\",\"quantity\":2},{\"sku\":\"SKU-002\",\"quantity\":1}]}}",
+    "activatedVersions":  [
+                              {
+                                  "artifactId":  "6a5efccf8dd158f5c96318ec",
+                                  "version":  "v1.0.0",
+                                  "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                                  "activeRuntimeCount":  0,
+                                  "expectedRuntimeCount":  0,
+                                  "activeRuntimeNames":  [
+
+                                                         ],
+                                  "expectedRuntimeNames":  [
+
+                                                           ],
+                                  "latestActivated":  true,
+                                  "state":  "LATEST_NOT_DEPLOYED"
+                              }
+                          ]
+}

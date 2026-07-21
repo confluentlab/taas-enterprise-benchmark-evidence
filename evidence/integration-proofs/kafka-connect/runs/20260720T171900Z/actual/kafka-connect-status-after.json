@@ -1,0 +1,15 @@
+{
+    "name":  "flowplane-evidence-20260720t171900z",
+    "connector":  {
+                      "state":  "RUNNING",
+                      "worker_id":  "connect:8083"
+                  },
+    "tasks":  [
+                  {
+                      "id":  0,
+                      "state":  "RUNNING",
+                      "worker_id":  "connect:8083"
+                  }
+              ],
+    "type":  "source"
+}

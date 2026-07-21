@@ -1,0 +1,15 @@
+﻿{
+    "runId":  "20260720T135944Z",
+    "pulsarContainer":  "flowplane-pulsar-local",
+    "pulsarImage":  "apachepulsar/pulsar:4.2.3",
+    "pulsarHttpPort":  8080,
+    "pulsarBinaryPort":  6650,
+    "flowplaneRuntimeContainer":  "flowplane-pulsar-bento-20260720t135944z",
+    "flowplaneRuntimeId":  "pulsar-pipeline-sidecar-20260720t135944z",
+    "flowplaneRuntimePort":  60782,
+    "pulsarNetwork":  "pulsar-local-ui_default",
+    "flowplaneNetwork":  "flowplane-quality-stack_default",
+    "pipelineContainer":  "flowplane-pulsar-pipeline-20260720t135944z",
+    "pipelineImage":  "node:22-alpine",
+    "pipeline":  "Independent container: Pulsar raw subscription -\u003e Flowplane Bento HTTP sidecar -\u003e Pulsar transformed/DLQ topics"
+}

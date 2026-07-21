@@ -1,0 +1,9 @@
+{
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e58888dd158f5c96281cb",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "runtimeId":  "connect-smt-evidence-20260720t171900z",
+    "health":  "HEALTHY",
+    "lifecycleState":  "RUNNING"
+}

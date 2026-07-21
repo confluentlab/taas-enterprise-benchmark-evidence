@@ -1,0 +1,13 @@
+{
+    "id":  "nats-jetstream",
+    "type":  "tool",
+    "runtime":  "NATS JetStream 2.11 with Flowplane HTTP bridge",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "FEASIBLE_BRIDGE",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "JetStream raw durable consumer through assigned Flowplane HTTP runtime to JetStream transformed/DLQ streams",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration nats-jetstream"
+}

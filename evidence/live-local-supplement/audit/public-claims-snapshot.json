@@ -1,0 +1,43 @@
+{
+    "schemaVersion":  "flowplane.public-claims-snapshot.v1",
+    "capturedAt":  "2026-07-21T06:08:50.4652519Z",
+    "publicEvidenceCommit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+    "files":  [
+                  {
+                      "path":  "README.md",
+                      "exists":  true,
+                      "sha256":  "90a4644adb784fd72b6e39be16515f60e027b7f340dbb10f1cd0d7795e123348"
+                  },
+                  {
+                      "path":  "docs/runtime-portability.md",
+                      "exists":  true,
+                      "sha256":  "4d3179a335b8e0200a8d385f69c4b3906552d42c7ca1b8d9dbdd11ce37b9043d"
+                  },
+                  {
+                      "path":  "docs/evidence-classification.md",
+                      "exists":  true,
+                      "sha256":  "282c5c073a218a47054d187fbfad9447c781dc3692234ccede08d85b8dda4e0e"
+                  },
+                  {
+                      "path":  "docs/limitations.md",
+                      "exists":  true,
+                      "sha256":  "315b32bee7aa7e25b253dcf58934a3eaa475ba9e97b70e4f04e7cbf3bab6fa84"
+                  },
+                  {
+                      "path":  "evidence/claims-matrix.csv",
+                      "exists":  true,
+                      "sha256":  "3217afda81971cbdf706fec1b14b61e6bd3ea6c52f6d2a28d1ad760050686f91"
+                  },
+                  {
+                      "path":  "evidence/manifest.json",
+                      "exists":  true,
+                      "sha256":  "6f7dd824bc780a01d52166b1775a40bc1e9f3433d9f8329ccc0640ce5a27c2a5"
+                  },
+                  {
+                      "path":  "evidence/integration-proofs/README.md",
+                      "exists":  true,
+                      "sha256":  "c154dd17fab9e5bf48ccf216bd64b981610442ff911d4bf11b21700beb514df1"
+                  }
+              ],
+    "note":  "Read-only snapshot. This script does not update or publish public claims."
+}

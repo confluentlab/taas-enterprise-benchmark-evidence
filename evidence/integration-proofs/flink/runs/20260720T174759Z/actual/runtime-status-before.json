@@ -1,0 +1,10 @@
+{
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e5f548dd158f5c9628e0c",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "runtimeId":  "flink-evidence-20260720t174759z",
+    "health":  "HEALTHY",
+    "lifecycleState":  "RUNNING",
+    "flinkJobId":  "bbada270a6a76aa94a3753f21486ad9b"
+}

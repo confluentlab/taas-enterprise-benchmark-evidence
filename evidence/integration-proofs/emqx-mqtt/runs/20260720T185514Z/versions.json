@@ -1,0 +1,12 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "emqxStatus":  "Node \u0027emqx@172.28.0.24\u0027 6.2.2 is started",
+    "emqxImage":  "emqx/emqx:latest",
+    "pipelineScriptSha256":  "cb4e6e18d3279cd9bbc5708c2510d3175025c3106e146c3f76968ce20bf0a552",
+    "rawOnlyVerifierSha256":  "2556777bb44302d9e5283680b6e3173c7e56b33039a53b1c541cf674ec50e8ce"
+}

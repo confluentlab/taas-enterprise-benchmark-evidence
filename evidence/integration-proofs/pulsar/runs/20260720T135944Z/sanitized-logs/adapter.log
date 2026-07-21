@@ -1,0 +1,14 @@
+2026-07-20T13:59:47.0120075Z Loading canonical mapping and fixtures.
+2026-07-20T13:59:47.0322476Z Reading an active team from the live control plane.
+2026-07-20T13:59:47.1988208Z Creating the synthetic mapping.
+2026-07-20T13:59:47.5455225Z Validating the synthetic mapping.
+2026-07-20T13:59:47.6772682Z Generating the 100-record expected-output baseline through mapping simulation.
+2026-07-20T13:59:48.1391783Z Submitting, approving, and QA-passing the mapping through governance.
+2026-07-20T13:59:48.8380045Z Starting the real Flowplane Bento HTTP sidecar container.
+2026-07-20T13:59:58.7608675Z Deploying the published artifact to the registered runtime.
+2026-07-20T13:59:59.3423272Z Confirming the persistent Apache Pulsar 4.2.3 broker is healthy.
+2026-07-20T13:59:59.4693174Z Ensuring the persistent Pulsar public/default namespace exists.
+2026-07-20T14:00:08.5834476Z Starting the independently deployed Pulsar-to-Flowplane pipeline container.
+2026-07-20T14:00:12.4132096Z Publishing 110 records to the raw topic only; downstream topics are read-only to the verifier.
+{"schemaVersion":"flowplane.pulsar-raw-only-verification-result.v1","runId":"20260720T135944Z","topics":{"raw":"flowplane-pulsar-20260720t135944z-raw","transformed":"flowplane-pulsar-20260720t135944z-transformed","dlq":"flowplane-pulsar-20260720t135944z-dlq"},"boundary":"raw-only test producer -> Pulsar pipeline subscription -> Flowplane sidecar -> Pulsar output/DLQ -> read-only verifier consumers","verifierWriteTargets":["flowplane-pulsar-20260720t135944z-raw"],"verifierReadTargets":["flowplane-pulsar-20260720t135944z-transformed","flowplane-pulsar-20260720t135944z-dlq"],"attemptedInput":110,"acceptedInput":110,"validInput":100,"intentionalInvalid":10,"successfulOutput":100,"errorOutput":10,"filtered":0,"duplicates":0,"expectedHashMatches":100,"expectedErrorMatches":10,"expectedErrorCodes":["MISSING_REQUIRED_FIELD","REGEX_FAILED","TYPE_CONVERSION_FAILED"],"durationSeconds":2.86}
+2026-07-20T14:00:16.6045191Z Reconciling Pulsar subscriptions and final backlog.

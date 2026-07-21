@@ -1,0 +1,2 @@
+GROUP                                      TOPIC                                          PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                 HOST            CLIENT-ID
+flowplane-vector-evidence-20260720t200000z flowplane.vector.evidence.20260720t200000z.raw 0          110             110             0               vector-75765547-e674-4185-b4e2-9af99799ee3e /172.28.0.25    vector

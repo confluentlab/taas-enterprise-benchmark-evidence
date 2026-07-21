@@ -1,0 +1,12 @@
+Connection brokerURL = tcp://localhost:61616
+|NAME                     |ADDRESS                  |CONSUMER|MESSAGE|MESSAGES|DELIVERING|MESSAGES|SCHEDULED|ROUTING|INTERNAL|
+|                         |                         | COUNT  | COUNT | ADDED  |  COUNT   | ACKED  |  COUNT  | TYPE  |        |
+|$sys.mqtt.sessions       |$sys.mqtt.sessions       |   0    |   0   |   0    |    0     |   0    |    0    |ANYCAST|  true  |
+|DLQ                      |DLQ                      |   0    |   0   |   0    |    0     |   0    |    0    |ANYCAST| false  |
+|ExpiryQueue              |ExpiryQueue              |   0    |   0   |   0    |    0     |   0    |    0    |ANYCAST| false  |
+|flowplane.artemis.2026072|flowplane.artemis.2026072|   0    |   0   |   10   |    0     |   10   |    0    |ANYCAST| false  |
+|  0t194319z.dlq          |  0t194319z.dlq          |        |       |        |          |        |         |       |        |
+|flowplane.artemis.2026072|flowplane.artemis.2026072|   0    |   0   |  110   |    0     |  110   |    0    |ANYCAST| false  |
+|  0t194319z.raw          |  0t194319z.raw          |        |       |        |          |        |         |       |        |
+|flowplane.artemis.2026072|flowplane.artemis.2026072|   0    |   0   |  100   |    0     |  100   |    0    |ANYCAST| false  |
+|  0t194319z.transformed  |  0t194319z.transformed  |        |       |        |          |        |         |       |        |

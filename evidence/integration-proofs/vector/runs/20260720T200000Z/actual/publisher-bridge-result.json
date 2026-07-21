@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "flowplane.kafka-http-publisher-bridge-result.v1",
+  "integrationId": "vector",
+  "runId": "20260720T200000Z",
+  "boundary": "integration HTTP delivery -> Flowplane runtime -> acknowledged Kafka transformed/DLQ publish",
+  "topics": {
+    "transformed": "flowplane.vector.evidence.20260720t200000z.transformed",
+    "dlq": "flowplane.vector.evidence.20260720t200000z.dlq"
+  },
+  "received": 110,
+  "transformed": 100,
+  "dlq": 10,
+  "publishFailures": 0,
+  "runtimeFailures": 0,
+  "completed": true,
+  "updatedAt": "2026-07-20T20:00:28.142Z"
+}

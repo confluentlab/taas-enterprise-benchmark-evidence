@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "flowplane.nats-jetstream-pipeline-ready.v1",
+  "runId": "20260720T181423Z",
+  "ready": true,
+  "readTargets": [
+    "flowplane.nats.20260720t181423z.raw"
+  ],
+  "writeTargets": [
+    "flowplane.nats.20260720t181423z.transformed",
+    "flowplane.nats.20260720t181423z.dlq"
+  ],
+  "streams": {
+    "raw": "FP_20260720T181423Z_RAW",
+    "transformed": "FP_20260720T181423Z_TRANSFORMED",
+    "dlq": "FP_20260720T181423Z_DLQ"
+  },
+  "durableConsumer": "pipeline_20260720T181423Z",
+  "runtimeUrl": "http://flowplane-nats-jetstream-bento-20260720t181423z:8080/transform",
+  "readyAt": "2026-07-20T18:14:42.070Z"
+}

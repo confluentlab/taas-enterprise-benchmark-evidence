@@ -1,0 +1,31 @@
+{
+  "raw": 110,
+  "transformed": 100,
+  "dlq": 10,
+  "transformedWait": {
+    "count": 100,
+    "observations": [
+      {
+        "elapsedMs": 1092,
+        "count": 0
+      },
+      {
+        "elapsedMs": 4045,
+        "count": 59
+      },
+      {
+        "elapsedMs": 7012,
+        "count": 100
+      }
+    ]
+  },
+  "dlqWait": {
+    "count": 10,
+    "observations": [
+      {
+        "elapsedMs": 950,
+        "count": 10
+      }
+    ]
+  }
+}

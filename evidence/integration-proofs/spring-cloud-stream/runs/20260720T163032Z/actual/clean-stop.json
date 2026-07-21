@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-spring-cloud-stream-pipeline-20260720t163032z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-spring-cloud-stream-pipeline-20260720t163032z"
+                       },
+                       {
+                           "container":  "flowplane-spring-cloud-stream-bento-20260720t163032z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-spring-cloud-stream-bento-20260720t163032z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T16:32:36.7571600Z"
+}

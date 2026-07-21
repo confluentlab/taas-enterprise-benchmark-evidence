@@ -1,0 +1,24 @@
+Starting EMQX Enterprise 6.2.2
+WARNING: Default (insecure) Erlang cookie is in use.
+WARNING: Configure node.cookie in /opt/emqx/etc/emqx.conf or override from environment variable EMQX_NODE__COOKIE
+WARNING: NOTE: Use the same cookie for all nodes in the cluster.
+EMQX_RPC__PORT_DISCOVERY [rpc.port_discovery]: manual
+EMQX_NODE__NAME [node.name]: emqx@172.28.0.24
+2026-07-20T18:55:31.941299+00:00 [warning] msg: alarm_is_activated, pid: <0.4573.0>, message: <<"80.72% mem usage">>, name: high_system_memory_usage
+Listener tcp:default on 0.0.0.0:1883 started.
+Listener ssl:default on 0.0.0.0:8883 started.
+Listener ws:default on 0.0.0.0:8083 started.
+Listener wss:default on 0.0.0.0:8084 started.
+
+=====================================================================
+You are currently using the EMQX Community License included with this software.
+Permitted Use: Free use of a single node in your internal environment.
+What Requires a Different License:
+ - Clustered deployments (more than one node).
+ - Commercial use in SaaS, hosted services, or embedded/resold products.
+To enable clustering or use EMQX for external commercial purposes, a commercial license is required.
+Visit https://emqx.com/apply-licenses/emqx to apply for a license.
+(Clustering for non-profit or educational purposes may qualify for a free license - please inquire via the link above)
+=====================================================================
+Listener http:dashboard on :18083 started.
+EMQX Enterprise 6.2.2 is running now!

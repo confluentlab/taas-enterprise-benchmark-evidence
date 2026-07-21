@@ -1,0 +1,202 @@
+[
+    {
+        "recordId":  "invalid-001",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-002",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-003",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-004",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-005",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-006",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-007",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-008",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-009",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    },
+    {
+        "recordId":  "invalid-010",
+        "event":  {
+                      "id":  "",
+                      "occurredAt":  "not-a-timestamp"
+                  },
+        "customer":  {
+                         "name":  "Invalid Synthetic",
+                         "email":  "invalid@example.test"
+                     },
+        "order":  {
+                      "amount":  "not-a-number",
+                      "tags":  [
+
+                               ],
+                      "lines":  [
+
+                                ]
+                  }
+    }
+]

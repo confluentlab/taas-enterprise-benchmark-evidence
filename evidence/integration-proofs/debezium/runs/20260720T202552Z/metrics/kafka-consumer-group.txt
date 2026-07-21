@@ -1,0 +1,2 @@
+GROUP                                         TOPIC                                            PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                                                        HOST            CLIENT-ID
+flowplane-debezium-publisher-20260720t202552z flowplane.debezium.evidence.20260720t202552z.raw 0          110             110             0               flowplane-debezium-publisher-20260720t202552z-35942e5d-6a47-45fb-a609-2f9434021b82 /172.28.0.24    flowplane-debezium-publisher-20260720t202552z

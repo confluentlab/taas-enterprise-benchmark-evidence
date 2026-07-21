@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "vector-sidecar-20260720t200000z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "VECTOR-20260720T200000Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the vector sidecar."
+}

@@ -1,0 +1,150 @@
+19:24:03,227 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.18
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Here is a list of configurators discovered as a service, by rank: 
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:24:03,236 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:24:03,236 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:24:03,238 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:24:03,267 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+19:24:03,269 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+19:24:03,269 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 31 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:24:03,269 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:24:03,269 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:24:03,271 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+19:24:03,271 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml]
+19:24:03,281 |-INFO in ConfigurationWatchList(mainURL=jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml, fileWatchList={}, urlWatchList=[}) - URL [jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml] is not of type file
+19:24:03,406 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+19:24:03,406 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:24:03,424 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:24:03,476 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+19:24:03,476 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - console in production environments, especially in high volume systems.
+19:24:03,476 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#slowConsole
+19:24:03,476 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+19:24:03,476 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+19:24:03,481 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@c86b9e3 - value "/root/logs/dashboardlogs/rocketmq-dashboard.log" substituted for "${user.home}/logs/dashboardlogs/rocketmq-dashboard.log"
+19:24:03,483 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@c86b9e3 - value "/root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log" substituted for "${user.home}/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log"
+19:24:03,490 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@279593458 - No compression will be used
+19:24:03,496 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@279593458 - Will use the pattern /root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log for the active file
+19:24:03,496 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+19:24:03,542 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - The date pattern is 'yyyy-MM-dd' from file name pattern '/root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log'.
+19:24:03,542 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - Roll-over at midnight.
+19:24:03,551 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - Setting initial period to 2026-07-20T19:24:03.551Z
+19:24:03,551 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+19:24:03,551 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+19:24:03,551 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+19:24:03,558 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:24:03,569 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: /root/logs/dashboardlogs/rocketmq-dashboard.log
+19:24:03,569 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [/root/logs/dashboardlogs/rocketmq-dashboard.log]
+19:24:03,573 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+19:24:03,581 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+19:24:03,583 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+19:24:03,583 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@37271612 - End of configuration.
+19:24:03,587 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@ed7f8b4 - Registering current configuration as safe fallback point
+19:24:03,587 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 318 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+
+19:24:03,227 |-INFO in ch.qos.logback.classic.LoggerContext[default] - This is logback-classic version 1.5.18
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Here is a list of configurators discovered as a service, by rank: 
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 -   org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - They will be invoked in order until ExecutionStatus.DO_NOT_INVOKE_NEXT_IF_ANY is returned.
+19:24:03,230 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Constructed configurator of type class org.springframework.boot.logging.logback.RootLogLevelConfigurator
+19:24:03,236 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - org.springframework.boot.logging.logback.RootLogLevelConfigurator.configure() call lasted 0 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:24:03,236 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Trying to configure with ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:24:03,238 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Constructed configurator of type class ch.qos.logback.classic.joran.SerializedModelConfigurator
+19:24:03,267 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.scmo]
+19:24:03,269 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback.scmo]
+19:24:03,269 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - ch.qos.logback.classic.joran.SerializedModelConfigurator.configure() call lasted 31 milliseconds. ExecutionStatus=INVOKE_NEXT_IF_ANY
+19:24:03,269 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Trying to configure with ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:24:03,269 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - Constructed configurator of type class ch.qos.logback.classic.util.DefaultJoranConfigurator
+19:24:03,271 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+19:24:03,271 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.xml] at [jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml]
+19:24:03,281 |-INFO in ConfigurationWatchList(mainURL=jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml, fileWatchList={}, urlWatchList=[}) - URL [jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml] is not of type file
+19:24:03,406 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+19:24:03,406 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:24:03,424 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:24:03,476 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+19:24:03,476 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - console in production environments, especially in high volume systems.
+19:24:03,476 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#slowConsole
+19:24:03,476 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+19:24:03,476 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+19:24:03,481 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@c86b9e3 - value "/root/logs/dashboardlogs/rocketmq-dashboard.log" substituted for "${user.home}/logs/dashboardlogs/rocketmq-dashboard.log"
+19:24:03,483 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@c86b9e3 - value "/root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log" substituted for "${user.home}/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log"
+19:24:03,490 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@279593458 - No compression will be used
+19:24:03,496 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@279593458 - Will use the pattern /root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log for the active file
+19:24:03,496 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+19:24:03,542 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - The date pattern is 'yyyy-MM-dd' from file name pattern '/root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log'.
+19:24:03,542 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - Roll-over at midnight.
+19:24:03,551 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - Setting initial period to 2026-07-20T19:24:03.551Z
+19:24:03,551 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+19:24:03,551 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+19:24:03,551 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@3af9c5b7 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+19:24:03,558 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:24:03,569 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: /root/logs/dashboardlogs/rocketmq-dashboard.log
+19:24:03,569 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [/root/logs/dashboardlogs/rocketmq-dashboard.log]
+19:24:03,573 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+19:24:03,581 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+19:24:03,583 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+19:24:03,583 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@37271612 - End of configuration.
+19:24:03,587 |-INFO in ch.qos.logback.classic.joran.JoranConfigurator@ed7f8b4 - Registering current configuration as safe fallback point
+19:24:03,587 |-INFO in ch.qos.logback.classic.util.ContextInitializer@687e99d8 - ch.qos.logback.classic.util.DefaultJoranConfigurator.configure() call lasted 318 milliseconds. ExecutionStatus=DO_NOT_INVOKE_NEXT_IF_ANY
+19:24:04,897 |-INFO in ConfigurationWatchList(mainURL=jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml, fileWatchList={}, urlWatchList=[}) - URL [jar:nested:/rocketmq-dashboard.jar/!BOOT-INF/classes/!/logback.xml] is not of type file
+19:24:04,907 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [STDOUT]
+19:24:04,907 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+19:24:04,907 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:24:04,908 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - BEWARE: Writing to the console can be very slow. Avoid logging to the 
+19:24:04,908 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - console in production environments, especially in high volume systems.
+19:24:04,908 |-INFO in ch.qos.logback.core.ConsoleAppender[STDOUT] - See also https://logback.qos.ch/codes.html#slowConsole
+19:24:04,908 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [FILE]
+19:24:04,908 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+19:24:04,908 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@531c311e - value "/root/logs/dashboardlogs/rocketmq-dashboard.log" substituted for "${user.home}/logs/dashboardlogs/rocketmq-dashboard.log"
+19:24:04,908 |-INFO in ch.qos.logback.core.model.processor.ModelInterpretationContext@531c311e - value "/root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log" substituted for "${user.home}/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log"
+19:24:04,909 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@582300198 - No compression will be used
+19:24:04,909 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@582300198 - Will use the pattern /root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log for the active file
+19:24:04,909 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - SizeAndTimeBasedFNATP class was renamed as SizeAndTimeBasedFileNamingAndTriggeringPolicy.
+19:24:04,910 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - The date pattern is 'yyyy-MM-dd' from file name pattern '/root/logs/dashboardlogs/rocketmq-dashboard-%d{yyyy-MM-dd}.%i.log'.
+19:24:04,910 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - Roll-over at midnight.
+19:24:04,910 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - Setting initial period to 2026-07-20T19:24:03.566Z
+19:24:04,910 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - Direct use of either SizeAndTimeBasedFNATP or SizeAndTimeBasedFileNamingAndTriggeringPolicy 
+19:24:04,910 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - is deprecated. Please use SizeAndTimeBasedRollingPolicy instead.
+19:24:04,910 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@1fcb4808 - For more information see https://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+19:24:04,912 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+19:24:04,914 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Active log file name: /root/logs/dashboardlogs/rocketmq-dashboard.log
+19:24:04,916 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - Setting currentFileLength to 0 for /root/logs/dashboardlogs/rocketmq-dashboard.log
+19:24:04,916 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE] - File property is set to [/root/logs/dashboardlogs/rocketmq-dashboard.log]
+19:24:04,917 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+19:24:04,917 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@726e5805 - Propagating INFO level on Logger[ROOT] onto the JUL framework
+19:24:04,918 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [STDOUT] to Logger[ROOT]
+19:24:04,918 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [FILE] to Logger[ROOT]
+19:24:04,918 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@40c80397 - End of configuration.
+19:24:04,918 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@4b672daa - Registering current configuration as safe fallback point
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.4.5)
+
+[2026-07-20 19:24:04.982] INFO background-preinit - HV000001: Hibernate Validator 8.0.2.Final
+[2026-07-20 19:24:05.262] INFO main - Starting App v2.1.1-SNAPSHOT using Java 17.0.16 with PID 1 (/rocketmq-dashboard.jar started by root in /)
+[2026-07-20 19:24:05.265] INFO main - No active profile set, falling back to 1 default profile: "default"
+[2026-07-20 19:24:08.439] INFO main - Tomcat initialized with port 8082 (http)
+[2026-07-20 19:24:08.460] INFO main - Initializing ProtocolHandler ["http-nio-8082"]
+[2026-07-20 19:24:08.464] INFO main - Starting service [Tomcat]
+[2026-07-20 19:24:08.464] INFO main - Starting Servlet engine: [Apache Tomcat/10.1.40]
+[2026-07-20 19:24:08.524] INFO main - Initializing Spring embedded WebApplicationContext
+[2026-07-20 19:24:08.526] INFO main - Root WebApplicationContext: initialization completed in 3124 ms
+[2026-07-20 19:24:09.176] INFO main - UserMQAdminPoolManager initialized with baseClientConfig for NameServer: flowplane-rocketmq-namesrv:9876
+[2026-07-20 19:24:09.687] INFO pool-3-thread-1 - create MQAdmin instance ClientConfig{namesrvAddr='flowplane-rocketmq-namesrv:9876', clientIP='172.28.0.26', instanceName='1784575449386', clientCallbackExecutorThreads=10, namespace='null', namespaceInitialized=false, namespaceV2='null', accessChannel=LOCAL, pollNameServerInterval=30000, heartbeatBrokerInterval=30000, persistConsumerOffsetInterval=5000, pullTimeDelayMillsWhenException=1000, unitMode=false, unitName='null', decodeReadBody=true, decodeDecompressBody=true, vipChannelEnabled=true, useHeartbeatV2=false, useTLS=false, socksProxyConfig='{}', mqClientApiTimeout=3000, detectTimeout=200, detectInterval=2000, language=JAVA, enableStreamRequestType=false, sendLatencyEnable=false, startDetectorEnable=false, enableHeartbeatChannelEventListener=true, enableTrace=false, traceTopic='null'} success.
+[2026-07-20 19:24:09.861] INFO main - Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2026-07-20 19:24:10.019] INFO main - Adding welcome page: class path resource [public/index.html]
+[2026-07-20 19:24:10.679] INFO main - Exposing 14 endpoints beneath base path '/actuator'
+[2026-07-20 19:24:11.504] INFO main - Starting ProtocolHandler ["http-nio-8082"]
+[2026-07-20 19:24:11.519] INFO main - Tomcat started on port 8082 (http) with context path '/'
+[2026-07-20 19:24:11.540] INFO main - Started App in 7.647 seconds (process running for 8.812)
+[2026-07-20 19:24:13.004] INFO http-nio-8082-exec-1 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2026-07-20 19:24:13.004] INFO http-nio-8082-exec-1 - Initializing Servlet 'dispatcherServlet'
+[2026-07-20 19:24:13.006] INFO http-nio-8082-exec-1 - Completed initialization in 2 ms

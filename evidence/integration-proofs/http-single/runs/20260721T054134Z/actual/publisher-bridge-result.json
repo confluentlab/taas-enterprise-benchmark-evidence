@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "flowplane.kafka-runtime-surface-bridge-result.v1",
+  "integrationId": "http-single",
+  "runId": "20260721T054134Z",
+  "mode": "http-single",
+  "endpoint": "http://flowplane-http-single-runtime-20260721t054134z:8080/v1/transform",
+  "metadata": {
+    "tenantId": "acme-corp",
+    "runtimeId": "http-single-evidence-20260721t054134z",
+    "mappingId": "6a5f06928dd158f5c9632bb8",
+    "mappingVersion": "v1.0.0",
+    "artifactHash": "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c"
+  },
+  "topics": {
+    "raw": "flowplane.http-single.evidence.20260721t054134z.raw",
+    "transformed": "flowplane.http-single.evidence.20260721t054134z.transformed",
+    "dlq": "flowplane.http-single.evidence.20260721t054134z.dlq"
+  },
+  "boundary": "persistent Kafka raw input -> deployed runtime surface -> acknowledged Kafka transformed/DLQ output",
+  "received": 10000,
+  "transformed": 9900,
+  "dlq": 100,
+  "publishFailures": 0,
+  "runtimeFailures": 0,
+  "completed": true,
+  "updatedAt": "2026-07-21T05:44:47.655Z"
+}

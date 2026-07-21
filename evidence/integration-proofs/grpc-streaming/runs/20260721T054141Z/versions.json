@@ -1,0 +1,17 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  185,
+                      "statusDigestSha256":  "a6b241349deb90c610384f07299c4fe58dcd2dfdd4dab799104163c0c49277cf"
+                  },
+    "integration":  "grpc-streaming",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "bridgeImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "runtimeSurfaceBridgeSha256":  "9c39befd08f4af1f070afdc46fa6493da5cf84d63d5466c201be6b76f0cf3a54",
+    "rawOnlyVerifierSha256":  "097622cb07d9cb5f93d8536bf4bc135368bcc3b099fe02e24ef373d71d636cf3",
+    "runtimeJarSha256":  "610b6b321e61a40aab36554f36a5c0e08c67e14031bbcedd7cf937c13bff3208",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

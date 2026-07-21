@@ -1,0 +1,131 @@
+{
+    "minimumDurationSeconds":  300,
+    "observations":  [
+                         {
+                             "capturedAt":  "2026-07-21T05:43:18.2789515Z",
+                             "elapsedSeconds":  99.75,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:43:28.3790988Z",
+                             "elapsedSeconds":  109.85,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:43:38.4393215Z",
+                             "elapsedSeconds":  119.91,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:43:48.4914583Z",
+                             "elapsedSeconds":  129.962,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:43:58.5586857Z",
+                             "elapsedSeconds":  140.03,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:44:08.6191963Z",
+                             "elapsedSeconds":  150.09,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:44:18.6860659Z",
+                             "elapsedSeconds":  160.157,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:44:28.8276647Z",
+                             "elapsedSeconds":  170.299,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:44:38.9114108Z",
+                             "elapsedSeconds":  180.382,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:44:48.9840561Z",
+                             "elapsedSeconds":  190.455,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:44:59.0503807Z",
+                             "elapsedSeconds":  200.521,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:45:09.1111741Z",
+                             "elapsedSeconds":  210.582,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:45:19.1910786Z",
+                             "elapsedSeconds":  220.662,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:45:29.2565042Z",
+                             "elapsedSeconds":  230.727,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:45:39.3212546Z",
+                             "elapsedSeconds":  240.792,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:45:49.3900629Z",
+                             "elapsedSeconds":  250.861,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:45:59.4536520Z",
+                             "elapsedSeconds":  260.925,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:46:09.5153071Z",
+                             "elapsedSeconds":  270.986,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:46:19.5866929Z",
+                             "elapsedSeconds":  281.058,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:46:29.6640370Z",
+                             "elapsedSeconds":  291.135,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         },
+                         {
+                             "capturedAt":  "2026-07-21T05:46:38.7298335Z",
+                             "elapsedSeconds":  300.201,
+                             "containerRunning":  true,
+                             "controlPlaneHealth":  "HEALTHY"
+                         }
+                     ]
+}

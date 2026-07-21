@@ -1,0 +1,5 @@
+{
+    "integration":  "serverless-aws",
+    "executionAttempted":  false,
+    "reason":  "Prepared bundle only."
+}

@@ -1,0 +1,23 @@
+{
+    "verifierProducerOperations":  1,
+    "verifierRawProducerTargets":  1,
+    "verifierDownstreamProducerTargets":  0,
+    "verifierRuntimeUrlReferences":  0,
+    "pipelineRawInputReferences":  1,
+    "pipelineTransformedOutputReferences":  1,
+    "pipelineDlqOutputReferences":  1,
+    "verifierWriteTargets":  [
+                                 "flowplane.bento-warpstream.evidence.20260720t175209z.raw"
+                             ],
+    "verifierReadTargets":  [
+                                "flowplane.bento-warpstream.evidence.20260720t175209z.transformed",
+                                "flowplane.bento-warpstream.evidence.20260720t175209z.dlq"
+                            ],
+    "pipelineWriteTargets":  [
+                                 "flowplane.bento-warpstream.evidence.20260720t175209z.transformed",
+                                 "flowplane.bento-warpstream.evidence.20260720t175209z.dlq"
+                             ],
+    "verifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "pipelineConfigurationSha256":  "ed5deebe21a9f0f3717add3ca41e2aefb29a3b2197aa9b4220c3785f1183de04",
+    "passed":  true
+}

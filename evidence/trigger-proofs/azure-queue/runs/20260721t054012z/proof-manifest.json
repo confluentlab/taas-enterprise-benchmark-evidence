@@ -1,0 +1,15 @@
+{
+    "status":  "PASS",
+    "runId":  "20260721t054012z",
+    "trigger":  "Azure QueueTrigger",
+    "runtimeId":  "azure-queue-evidence-20260721t054012z",
+    "artifactId":  "6a5efbb08dd158f5c9631626",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "validRecords":  100,
+    "invalidRecords":  10,
+    "sourceBoundary":  "Verifier writes only the Azurite input queue",
+    "sinkBoundary":  "Azure Functions QueueTrigger writes output and DLQ queues",
+    "emulatorImage":  "sha256:2628ee10a72833cc344b9d194cd8b245543892b307d16cf26a2cf55a15b816af",
+    "functionImage":  "sha256:9ab2b0dfd70bd31f0ab00fd83557fa7f9985d461966fa4d44613caa7f8658348",
+    "completedAt":  "2026-07-21T05:40:49.3397074Z"
+}

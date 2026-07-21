@@ -1,0 +1,17 @@
+{
+    "schemaVersion":  "flowplane.embedded-spring-runtime-result.v1",
+    "integrationId":  "embedded-spring",
+    "runId":  "20260721T054132Z",
+    "mode":  "embedded-spring",
+    "received":  10000,
+    "transformed":  9900,
+    "dlq":  100,
+    "publishFailures":  0,
+    "runtimeFailures":  0,
+    "completed":  true,
+    "topics":  {
+                   "raw":  "flowplane.embedded-spring.evidence.20260721t054132z.raw",
+                   "transformed":  "flowplane.embedded-spring.evidence.20260721t054132z.transformed",
+                   "dlq":  "flowplane.embedded-spring.evidence.20260721t054132z.dlq"
+               }
+}

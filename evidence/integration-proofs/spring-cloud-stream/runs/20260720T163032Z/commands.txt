@@ -1,0 +1,7 @@
+# Exact run values; generated credentials are redacted.
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.spring-cloud-stream.evidence.20260720t163032z.raw --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.spring-cloud-stream.evidence.20260720t163032z.transformed --partitions 1 --replication-factor 1
+docker exec flowplane-kafka kafka-topics --bootstrap-server kafka:9092 --create --topic flowplane.spring-cloud-stream.evidence.20260720t163032z.dlq --partitions 1 --replication-factor 1
+docker run --name flowplane-spring-cloud-stream-bento-20260720t163032z --network flowplane-quality-stack_default -p 127.0.0.1::8080 -v <bento-jar>:/app/flowplane-bento-runtime.jar:ro eclipse-temurin:17-jre java -jar /app/flowplane-bento-runtime.jar
+docker run --name flowplane-spring-cloud-stream-pipeline-20260720t163032z --network flowplane-quality-stack_default -v <isolated-tool-workspace>:/workspace:rw <tool-environment> -e FLOWPLANE_TRANSFORM_URL=http://flowplane-spring-cloud-stream-bento-20260720t163032z:8080/transform maven:3.9.9-eclipse-temurin-17 mvn -q -DskipTests spring-boot:run
+node kafka-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> 20260720T163032Z spring-cloud-stream flowplane-kafka kafka:9092

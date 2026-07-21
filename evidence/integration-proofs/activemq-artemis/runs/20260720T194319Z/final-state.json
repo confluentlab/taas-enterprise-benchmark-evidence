@@ -1,0 +1,12 @@
+{
+    "captured":  true,
+    "runtimeHealthy":  true,
+    "assignmentPresent":  true,
+    "pending":  0,
+    "finalLag":  0,
+    "queues":  {
+                   "raw":  "flowplane.artemis.20260720t194319z.raw",
+                   "transformed":  "flowplane.artemis.20260720t194319z.transformed",
+                   "dlq":  "flowplane.artemis.20260720t194319z.dlq"
+               }
+}

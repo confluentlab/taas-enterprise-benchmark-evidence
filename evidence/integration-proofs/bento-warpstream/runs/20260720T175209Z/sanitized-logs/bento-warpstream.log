@@ -1,0 +1,31 @@
+level=info msg="Running main config from specified file" @service=bento bento_version=v1.18.1 path=/etc/bento/config.yml
+level=info msg="Listening for HTTP requests at: http://0.0.0.0:4195" @service=bento
+level=info msg="Launching a Bento instance, use CTRL+C to close" @service=bento
+level=info msg="Output type kafka_franz is now active" @service=bento label="" path=root.output.switch.output
+level=info msg="Output type kafka_franz is now active" @service=bento label="" path=root.output.switch.output
+level=info msg="immediate metadata update triggered" @service=bento label="" path=root.input why="querying metadata for consumer initialization"
+level=info msg="Input type kafka_franz is now active" @service=bento label="" path=root.input
+level=info msg="beginning to manage the group lifecycle" @service=bento group=flowplane-bento-warpstream-evidence-20260720t175209z label="" path=root.input
+level=info msg="beginning autocommit loop" @service=bento group=flowplane-bento-warpstream-evidence-20260720t175209z label="" path=root.input
+level=info msg="joining group" @service=bento group=flowplane-bento-warpstream-evidence-20260720t175209z label="" path=root.input
+level=info msg="join returned MemberIDRequired, rejoining with response's MemberID" @service=bento group=flowplane-bento-warpstream-evidence-20260720t175209z label="" member_id=bento-1bef52cd-5475-4750-a964-aa0dd60f01c4 path=root.input
+level=info msg="joined, balancing group" @service=bento balance_protocol=cooperative-sticky generation=1 group=flowplane-bento-warpstream-evidence-20260720t175209z instance_id="<nil>" label="" leader=true member_id=bento-1bef52cd-5475-4750-a964-aa0dd60f01c4 path=root.input
+level=info msg="balancing group as leader" @service=bento label="" path=root.input
+level=info msg="balance group member" @service=bento id=bento-1bef52cd-5475-4750-a964-aa0dd60f01c4 interests="interested topics: [flowplane.bento-warpstream.evidence.20260720t175209z.raw], previously owned: " label="" path=root.input
+level=info msg=balanced @service=bento label="" path=root.input plan="bento-1bef52cd-5475-4750-a964-aa0dd60f01c4{flowplane.bento-warpstream.evidence.20260720t175209z.raw[0]}"
+level=info msg=syncing @service=bento group=flowplane-bento-warpstream-evidence-20260720t175209z label="" path=root.input protocol=cooperative-sticky protocol_type=consumer
+level=info msg=synced @service=bento assigned="flowplane.bento-warpstream.evidence.20260720t175209z.raw[0]" group=flowplane-bento-warpstream-evidence-20260720t175209z label="" path=root.input
+level=info msg="new group session begun" @service=bento added="flowplane.bento-warpstream.evidence.20260720t175209z.raw[0]" group=flowplane-bento-warpstream-evidence-20260720t175209z label="" lost="" path=root.input
+level=info msg="beginning heartbeat loop" @service=bento group=flowplane-bento-warpstream-evidence-20260720t175209z label="" path=root.input
+level=info msg="assigning partitions" @service=bento how="assigning everything new, keeping current assignment" input="flowplane.bento-warpstream.evidence.20260720t175209z.raw[0{-2 e-1 ce0}]" label="" path=root.input why="newly fetched offsets for group flowplane-bento-warpstream-evidence-20260720t175209z"
+level=info msg="producing to a new topic for the first time, fetching metadata to learn its partitions" @service=bento label="" path=root.output.switch.output topic=flowplane.bento-warpstream.evidence.20260720t175209z.transformed
+level=info msg="immediate metadata update triggered" @service=bento label="" path=root.output.switch.output why="forced load because we are producing to a topic for the first time"
+level=info msg="metadata update triggered" @service=bento label="" path=root.output.switch.output why="reload trigger due to produce topic still not known"
+level=info msg="done waiting for metadata for new topic" @service=bento label="" path=root.output.switch.output topic=flowplane.bento-warpstream.evidence.20260720t175209z.transformed
+level=info msg="initializing producer id" @service=bento label="" path=root.output.switch.output
+level=info msg="producer id initialization success" @service=bento epoch=0 id=35615 label="" path=root.output.switch.output
+level=info msg="immediate metadata update triggered" @service=bento label="" path=root.output.switch.output why="forced load because we are producing to a topic for the first time"
+level=info msg="producing to a new topic for the first time, fetching metadata to learn its partitions" @service=bento label="" path=root.output.switch.output topic=flowplane.bento-warpstream.evidence.20260720t175209z.dlq
+level=info msg="done waiting for metadata for new topic" @service=bento label="" path=root.output.switch.output topic=flowplane.bento-warpstream.evidence.20260720t175209z.dlq
+level=info msg="initializing producer id" @service=bento label="" path=root.output.switch.output
+level=info msg="producer id initialization success" @service=bento epoch=0 id=35616 label="" path=root.output.switch.output

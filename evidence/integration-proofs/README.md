@@ -1,30 +1,25 @@
-# Integration proof matrix
+# Integration proof index
 
-These are local execution proofs, not vendor certifications. Third-party names identify tested technical execution paths only; they do not imply sponsorship, partnership, endorsement, or certification. Statuses follow the repository [evidence classification](../../docs/evidence-classification.md).
+The current local evidence set proves 22 streaming/tool integrations and eight Flowplane runtime/protocol surfaces. Five core surfaces also have separate 10,000-record, five-minute stability runs, and three provider-trigger proofs are preserved under `evidence/trigger-proofs/`.
 
-## Latest preserved evidence
+Start with the complete [proven local integration evidence overview](EVIDENCE-OVERVIEW.md). It lists every successful run, its exact execution boundary, screenshots or native operational evidence, accounting, reproduction entry point, and qualification limits.
 
-| Path | Evidence record | Status | Superseded? |
-|---|---|---|---|
-| HTTP batch | This matrix’s 60,000/60,000 local batch record | `LIVE_LOCAL_VERIFIED` | No later public run is preserved. |
-| HTTP single | [`http-single-60000`](../historical-attempts/http-single-60000.md) | `INCOMPLETE` | No equivalent full passing rerun is preserved. |
-| gRPC contract | [`runtime-parity-20260712`](../runtime-parity/summary.md) | `CONTRACT_VERIFIED` | Current for the preserved contract fixture. |
-| Live gRPC service | [`grpc-live-attempt`](../historical-attempts/grpc-live-service.md) | `PRESERVED_FAILURE` | No; contract verification is a different boundary. |
+## Current result
 
-| Path | Status | Preserved scope / result |
-|---|---|---|
-| Kafka Connect + MongoDB | `LIVE_LOCAL_VERIFIED` | Focused local native proof |
-| Kafka Connect + PostgreSQL | `LIVE_LOCAL_VERIFIED` | Focused local native proof |
-| Flink | `LIVE_LOCAL_VERIFIED` | Focused local native proof plus 1 MiB live probe |
-| Kafka Streams | `LIVE_LOCAL_VERIFIED` | Focused local native proof |
-| Spring Boot | `LIVE_LOCAL_VERIFIED` | Focused local embedded proof |
-| HTTP batch | `LIVE_LOCAL_VERIFIED` | 60,000 / 60,000; 649.34 records/s |
-| HTTP single | `INCOMPLETE` | 59,600 / 60,000; 400 failed; 129.99 records/s |
-| gRPC unary and stream | `PRESERVED_FAILURE` | Live service returned `UNIMPLEMENTED` |
-| Kafka Connect S3 | `PRESERVED_FAILURE` | Connector creation returned HTTP 500 |
-| WarpStream / Bento local | `LIVE_LOCAL_VERIFIED` | Small 50-record local proofs |
-| Pulsar HTTP bridge | `LIVE_LOCAL_VERIFIED` | Small 50-record local proof |
-| NiFi, Spark, Redpanda Connect, Logstash, Vector | `MEASURED` | HTTP/sidecar paths; not first-class native wrappers |
-| Camel, Beam, Spring Cloud Stream, Debezium, OpenTelemetry | `MEASURED` | Local measurements; no formal qualification applied |
+| Evidence group | Successful bundles | Attempted inputs | Transformed | Intentional DLQ |
+|---|---:|---:|---:|---:|
+| 22 streaming/tool integrations | 22 | 2,420 | 2,200 | 220 |
+| Eight runtime/protocol baselines | 8 | 880 | 800 | 80 |
+| Five core-surface stability soaks | 5 | 50,000 | 49,500 | 500 |
+| Three provider-trigger proofs | 3 | 330 | 300 | 30 |
+| **Total** | **38** | **53,630** | **52,800** | **830** |
 
-Additional high-value local proofs are summarized in [HTTP tools](http-tools.md). See [Kafka/native](kafka-native.md), [gRPC](grpc.md), and [other runtimes](pulsar-and-other-runtimes.md).
+All 38 bundles passed their documented gates and per-bundle checksum verification. They report zero duplicates and zero unexplained loss. Final lag or pending work is zero wherever that concept applies.
+
+## Evidence policy
+
+These are local technical-interoperability proofs, not vendor certifications. A green row applies only to its recorded fixture, source/worktree identity, runtime images, host, and execution boundary. Screenshots corroborate the proof; manifests, outputs, hashes, write-boundary audits, counts, logs, metrics, and health observations are primary evidence.
+
+The verifier did not manually insert downstream results. See [Proof boundary: no downstream fixture insertion](EVIDENCE-OVERVIEW.md#proof-boundary-no-downstream-fixture-insertion) and the [reproduction guide](../../reproduction/README.md).
+
+Earlier incomplete and failed runs remain under [historical attempts](../historical-attempts/README.md). They are historical records and must not be described as the latest status after the successful 2026-07-20/21 reruns.

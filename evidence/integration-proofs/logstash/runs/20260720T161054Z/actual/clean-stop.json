@@ -1,0 +1,18 @@
+{
+    "attempted":  true,
+    "containers":  [
+                       {
+                           "container":  "flowplane-logstash-pipeline-20260720t161054z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-logstash-pipeline-20260720t161054z"
+                       },
+                       {
+                           "container":  "flowplane-logstash-bento-20260720t161054z",
+                           "action":  "stopped",
+                           "exitCode":  0,
+                           "output":  "flowplane-logstash-bento-20260720t161054z"
+                       }
+                   ],
+    "capturedAt":  "2026-07-20T16:11:45.5630988Z"
+}

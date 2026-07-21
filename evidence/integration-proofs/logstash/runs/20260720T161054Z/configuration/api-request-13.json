@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "logstash-sidecar-20260720t161054z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "LOGSTASH-20260720T161054Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the logstash sidecar."
+}

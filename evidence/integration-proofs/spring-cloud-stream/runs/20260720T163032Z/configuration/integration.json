@@ -1,0 +1,13 @@
+{
+    "id":  "spring-cloud-stream",
+    "type":  "tool",
+    "runtime":  "Spring Cloud Stream",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "MEASURED",
+    "implementationPaths":  [
+                                "docker/http-integrations-local/spring-cloud-stream-kafka-http"
+                            ],
+    "harness":  "scripts/dev/test-spring-cloud-stream-kafka-http-local.ps1",
+    "protocolBoundary":  "Spring Cloud Stream Kafka binder to real Flowplane HTTP",
+    "plannedCommand":  "powershell -File scripts/dev/test-spring-cloud-stream-kafka-http-local.ps1 -ValidRecordCount 100"
+}

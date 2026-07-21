@@ -1,0 +1,20 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "integration":  "flink",
+    "toolVersion":  "Apache Flink 1.20.2 + Flowplane runtime 1.0.0",
+    "toolImage":  "flink:1.20.2-scala_2.12-java17",
+    "toolImageId":  "sha256:f0f0a1bcdad2b1b21246256b4c3754c527833930750a5189270aa639043a25c0",
+    "runtimeImage":  "eclipse-temurin:17-jre",
+    "runtimeImageId":  "sha256:f0f0a1bcdad2b1b21246256b4c3754c527833930750a5189270aa639043a25c0",
+    "pipelineConfigurationSha256":  "228328930884645fee3a9aa7bcef6f4ac94836488d83d9e7100e7a49c5e2e467",
+    "rawOnlyVerifierSha256":  "d02694af4deebb71508b29ae4771c753987e77391f94165a082b942d4cc7d884",
+    "runtimeJar":  "flowplane-flink-runtime-job.jar",
+    "runtimeJarSha256":  "1e750cd1ab9662e2a3e0c596470190369e14c2786f34f812fc8a81fbf66bc49c",
+    "nodeVersion":  "v24.14.0",
+    "dockerVersion":  "28.5.1"
+}

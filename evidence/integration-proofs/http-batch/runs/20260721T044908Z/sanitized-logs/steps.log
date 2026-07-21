@@ -1,0 +1,6 @@
+2026-07-21T04:49:10.2758175Z Creating and governing the run-specific mapping.
+2026-07-21T04:49:10.5271731Z Creating empty persistent Kafka evidence topics.
+2026-07-21T04:49:16.5746069Z Pre-registering the sidecar profile and obtaining its runtime-scoped client secret.
+2026-07-21T04:49:16.5967735Z Starting the http-batch runtime container.
+2026-07-21T04:49:35.7680378Z Starting the independent raw-Kafka-to-http-batch bridge.
+2026-07-21T04:49:43.3529795Z Publishing 100 valid and 10 intentional-invalid records through the raw-only verifier.

@@ -1,0 +1,11 @@
+﻿{
+    "runtimeId":  "rocketmq-pipeline-sidecar-20260720t192342z",
+    "runtimeName":  "Apache RocketMQ Pipeline Sidecar 20260720T192342Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e75c18dd158f5c962b64e",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e75c18dd158f5c962b640",
+    "mappingName":  "rocketmq-live-local-20260720t192342z"
+}

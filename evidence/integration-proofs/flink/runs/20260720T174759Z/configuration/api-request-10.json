@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "flink-evidence-20260720t174759z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "FLINK-20260720T174759Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the Flink runtime."
+}

@@ -1,0 +1,111 @@
+{
+  "raw": 110,
+  "transformed": 100,
+  "dlq": 10,
+  "transformedWait": {
+    "count": 100,
+    "observations": [
+      {
+        "elapsedMs": 1336,
+        "count": 0
+      },
+      {
+        "elapsedMs": 4521,
+        "count": 0
+      },
+      {
+        "elapsedMs": 7806,
+        "count": 0
+      },
+      {
+        "elapsedMs": 11151,
+        "count": 0
+      },
+      {
+        "elapsedMs": 14421,
+        "count": 0
+      },
+      {
+        "elapsedMs": 17347,
+        "count": 0
+      },
+      {
+        "elapsedMs": 20246,
+        "count": 0
+      },
+      {
+        "elapsedMs": 23160,
+        "count": 0
+      },
+      {
+        "elapsedMs": 26008,
+        "count": 0
+      },
+      {
+        "elapsedMs": 28964,
+        "count": 0
+      },
+      {
+        "elapsedMs": 31815,
+        "count": 0
+      },
+      {
+        "elapsedMs": 34677,
+        "count": 0
+      },
+      {
+        "elapsedMs": 37553,
+        "count": 0
+      },
+      {
+        "elapsedMs": 40572,
+        "count": 0
+      },
+      {
+        "elapsedMs": 43538,
+        "count": 0
+      },
+      {
+        "elapsedMs": 46430,
+        "count": 0
+      },
+      {
+        "elapsedMs": 49335,
+        "count": 0
+      },
+      {
+        "elapsedMs": 52273,
+        "count": 0
+      },
+      {
+        "elapsedMs": 55262,
+        "count": 0
+      },
+      {
+        "elapsedMs": 58139,
+        "count": 0
+      },
+      {
+        "elapsedMs": 61452,
+        "count": 0
+      },
+      {
+        "elapsedMs": 64597,
+        "count": 0
+      },
+      {
+        "elapsedMs": 67830,
+        "count": 100
+      }
+    ]
+  },
+  "dlqWait": {
+    "count": 10,
+    "observations": [
+      {
+        "elapsedMs": 1179,
+        "count": 10
+      }
+    ]
+  }
+}

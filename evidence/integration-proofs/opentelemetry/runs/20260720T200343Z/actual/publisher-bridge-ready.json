@@ -1,0 +1,12 @@
+{
+  "integrationId": "opentelemetry",
+  "runId": "20260720T200343Z",
+  "kafkaBootstrap": "kafka:9092",
+  "runtimeUrl": "http://flowplane-opentelemetry-bento-20260720t200343z:8080/transform",
+  "sourceTopic": "flowplane.opentelemetry.evidence.20260720t200343z.forwarded",
+  "topics": {
+    "transformed": "flowplane.opentelemetry.evidence.20260720t200343z.transformed",
+    "dlq": "flowplane.opentelemetry.evidence.20260720t200343z.dlq"
+  },
+  "readyAt": "2026-07-20T20:04:09.235Z"
+}

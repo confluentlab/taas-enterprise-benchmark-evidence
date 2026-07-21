@@ -1,0 +1,2 @@
+GROUP                                                TOPIC                                                    PARTITION  CURRENT-OFFSET  LOG-END-OFFSET  LAG             CONSUMER-ID                                HOST            CLIENT-ID
+flowplane-bento-warpstream-evidence-20260720t175209z flowplane.bento-warpstream.evidence.20260720t175209z.raw 0          110             110             0               bento-1bef52cd-5475-4750-a964-aa0dd60f01c4 /172.28.0.22    bento

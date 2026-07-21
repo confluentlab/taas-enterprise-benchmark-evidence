@@ -1,0 +1,14 @@
+{
+    "id":  "grpc-batch",
+    "type":  "protocol",
+    "runtime":  "Flowplane sidecar gRPC",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "CONTRACT_VERIFIED / PRESERVED_FAILURE",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-sidecar-grpc",
+                                "flowplane-java-sdk/flowplane-sidecar-app"
+                            ],
+    "harness":  "scripts/qa/live-sidecar-contract.mjs",
+    "protocolBoundary":  "real gRPC channel TransformBatch",
+    "plannedCommand":  "node scripts/qa/live-sidecar-contract.mjs"
+}

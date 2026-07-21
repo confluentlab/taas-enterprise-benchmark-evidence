@@ -1,0 +1,57 @@
+{
+    "runId":  "20260720T194319Z",
+    "integration":  "activemq-artemis",
+    "integrationType":  "tool",
+    "status":  "LIVE_LOCAL_VERIFIED",
+    "startedAt":  "2026-07-20T19:43:19.0656398Z",
+    "completedAt":  "2026-07-20T19:50:59.2382150Z",
+    "durationSeconds":  460.173,
+    "flowplaneCommit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+    "evidenceRepoCommit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+    "flowplaneWorktree":  {
+                              "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                              "dirty":  true,
+                              "statusEntryCount":  174,
+                              "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                          },
+    "evidenceRepoWorktree":  {
+                                 "commit":  "33f598fbc3464c9cb7a8c769d1d8f6361f680e80",
+                                 "dirty":  true,
+                                 "statusEntryCount":  3,
+                                 "statusDigestSha256":  "0321ff0878bf602d122cffdda041f7301f0a89cbaddb56c32faa1100cdc452e4"
+                             },
+    "artifactId":  "6a5e7a5a8dd158f5c962be93",
+    "artifactVersion":  "v1.0.0",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "fixtureSet":  "flowplane-live-local-verification-v1",
+    "canonicalizationVersion":  "flowplane.canonicalization.v1",
+    "runtime":  {
+                    "name":  "ActiveMQ Artemis STOMP receipt pipeline + Flowplane Bento sidecar",
+                    "version":  "2.44.0",
+                    "executionMode":  "Docker live local",
+                    "containerImages":  [
+                                            "apache/activemq-artemis:latest-alpine",
+                                            "node:22-alpine",
+                                            "eclipse-temurin:17-jre"
+                                        ]
+                },
+    "host":  {
+                 "os":  "see environment.json",
+                 "cpu":  "see environment.json",
+                 "logicalCores":  0,
+                 "memoryBytes":  0,
+                 "javaVersion":  "see environment.json",
+                 "dockerVersion":  "see environment.json"
+             },
+    "protocolBoundary":  "Artemis raw client-individual subscription through assigned Flowplane HTTP runtime to receipted transformed/DLQ sends before receipted raw ACK",
+    "sourceBoundary":  "Raw-only verifier receipted STOMP SEND to Artemis raw queue",
+    "sinkBoundary":  "Independent pipeline receipted transformed/DLQ SEND before receipted raw ACK",
+    "validRecords":  100,
+    "invalidRecords":  10,
+    "successfulOutputs":  100,
+    "errorOutputs":  10,
+    "duplicates":  0,
+    "unexplainedMissing":  0,
+    "finalLag":  0,
+    "unexpectedFailures":  0
+}

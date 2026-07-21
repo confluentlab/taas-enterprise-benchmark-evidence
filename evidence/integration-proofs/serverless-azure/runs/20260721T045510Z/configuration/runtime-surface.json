@@ -1,0 +1,13 @@
+{
+    "integrationId":  "serverless-azure",
+    "runtimeId":  "serverless-azure-evidence-20260721t045510z",
+    "runtimeImage":  "flowplane-azure-functions-local",
+    "network":  "flowplane-quality-stack_default",
+    "topics":  {
+                   "raw":  "flowplane.serverless-azure.evidence.20260721t045510z.raw",
+                   "transformed":  "flowplane.serverless-azure.evidence.20260721t045510z.transformed",
+                   "dlq":  "flowplane.serverless-azure.evidence.20260721t045510z.dlq"
+               },
+    "sourceBoundary":  "raw-only verifier -\u003e persistent Kafka raw topic",
+    "sinkBoundary":  "independent runtime bridge -\u003e persistent Kafka transformed and DLQ topics"
+}

@@ -1,0 +1,1 @@
+Error: Consumer group 'flowplane-kafka-connect-evidence-20260720t171900z' does not exist.

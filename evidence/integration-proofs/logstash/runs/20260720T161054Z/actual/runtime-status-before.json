@@ -1,0 +1,11 @@
+{
+    "runtimeId":  "logstash-sidecar-20260720t161054z",
+    "runtimeName":  "Logstash Sidecar 20260720T161054Z",
+    "runtimeType":  "BENTO",
+    "assignmentPresent":  true,
+    "artifactId":  "6a5e48928dd158f5c9626a0e",
+    "artifactHash":  "sha256:063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "version":  "v1.0.0",
+    "mappingId":  "6a5e48918dd158f5c96269fe",
+    "mappingName":  "logstash-live-local-20260720t161054z"
+}

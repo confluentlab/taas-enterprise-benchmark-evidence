@@ -1,0 +1,16 @@
+{
+    "id":  "grpc-batch",
+    "type":  "protocol",
+    "runtime":  "Flowplane sidecar gRPC",
+    "coreStabilityRequired":  true,
+    "currentPublicStatus":  "LIVE_LOCAL_VERIFIED",
+    "implementationPaths":  [
+                                "flowplane-java-sdk/flowplane-sidecar-grpc",
+                                "flowplane-java-sdk/flowplane-sidecar-app",
+                                "scripts/demo/live-local-verification/adapters/runtime-surface.ps1",
+                                "scripts/demo/live-local-verification/adapters/kafka-runtime-surface-bridge.mjs"
+                            ],
+    "harness":  "scripts/demo/live-local-verification/adapters/grpc-batch.ps1",
+    "protocolBoundary":  "persistent Kafka raw topic through gRPC TransformBatch to persistent transformed and DLQ topics",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration grpc-batch"
+}

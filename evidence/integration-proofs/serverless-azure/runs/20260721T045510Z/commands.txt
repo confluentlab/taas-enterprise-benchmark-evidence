@@ -1,0 +1,1 @@
+PLANNED: powershell -File scripts/dev/run-azure-serverless-local.ps1

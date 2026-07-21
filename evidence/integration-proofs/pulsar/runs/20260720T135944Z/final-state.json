@@ -1,0 +1,183 @@
+{
+    "captured":  true,
+    "runtimeHealthy":  true,
+    "assignmentPresent":  true,
+    "pending":  0,
+    "finalLag":  0,
+    "pulsarSubscriptions":  [
+                                {
+                                    "pipeline-20260720T135944Z":  {
+                                                                      "msgRateOut":  0.0,
+                                                                      "msgThroughputOut":  0.0,
+                                                                      "bytesOutCounter":  50082,
+                                                                      "msgOutCounter":  110,
+                                                                      "msgRateRedeliver":  0.0,
+                                                                      "messageAckRate":  0.0,
+                                                                      "chunkedMessageRate":  0.0,
+                                                                      "msgBacklog":  0,
+                                                                      "backlogSize":  0,
+                                                                      "earliestMsgPublishTimeInBacklog":  0,
+                                                                      "msgBacklogNoDelayed":  0,
+                                                                      "blockedSubscriptionOnUnackedMsgs":  false,
+                                                                      "msgDelayed":  0,
+                                                                      "msgInReplay":  0,
+                                                                      "unackedMessages":  0,
+                                                                      "type":  "Exclusive",
+                                                                      "msgRateExpired":  0.0,
+                                                                      "msgExpired":  0,
+                                                                      "totalMsgExpired":  0,
+                                                                      "lastExpireTimestamp":  0,
+                                                                      "lastConsumedFlowTimestamp":  1784556011420,
+                                                                      "lastConsumedTimestamp":  0,
+                                                                      "lastAckedTimestamp":  0,
+                                                                      "lastMarkDeleteAdvancedTimestamp":  1784556014493,
+                                                                      "consumers":  [
+
+                                                                                    ],
+                                                                      "isDurable":  true,
+                                                                      "isReplicated":  false,
+                                                                      "allowOutOfOrderDelivery":  false,
+                                                                      "consumersAfterMarkDeletePosition":  {
+
+                                                                                                           },
+                                                                      "drainingHashesCount":  0,
+                                                                      "drainingHashesClearedTotal":  0,
+                                                                      "drainingHashesUnackedMessages":  0,
+                                                                      "nonContiguousDeletedMessagesRanges":  0,
+                                                                      "nonContiguousDeletedMessagesRangesSerializedSize":  0,
+                                                                      "delayedMessageIndexSizeInBytes":  0,
+                                                                      "subscriptionProperties":  {
+
+                                                                                                 },
+                                                                      "filterProcessedMsgCount":  0,
+                                                                      "filterAcceptedMsgCount":  0,
+                                                                      "filterRejectedMsgCount":  0,
+                                                                      "filterRescheduledMsgCount":  0,
+                                                                      "dispatchThrottledMsgEventsBySubscriptionLimit":  0,
+                                                                      "dispatchThrottledBytesEventsBySubscriptionLimit":  0,
+                                                                      "dispatchThrottledMsgEventsByTopicLimit":  0,
+                                                                      "dispatchThrottledBytesEventsByTopicLimit":  0,
+                                                                      "dispatchThrottledMsgEventsByBrokerLimit":  0,
+                                                                      "dispatchThrottledBytesEventsByBrokerLimit":  0,
+                                                                      "replicated":  false,
+                                                                      "durable":  true
+                                                                  }
+                                },
+                                {
+                                    "verify-output-20260720T135944Z":  {
+                                                                           "msgRateOut":  0.0,
+                                                                           "msgThroughputOut":  0.0,
+                                                                           "bytesOutCounter":  42392,
+                                                                           "msgOutCounter":  100,
+                                                                           "msgRateRedeliver":  0.0,
+                                                                           "messageAckRate":  0.0,
+                                                                           "chunkedMessageRate":  0.0,
+                                                                           "msgBacklog":  0,
+                                                                           "backlogSize":  0,
+                                                                           "earliestMsgPublishTimeInBacklog":  0,
+                                                                           "msgBacklogNoDelayed":  0,
+                                                                           "blockedSubscriptionOnUnackedMsgs":  false,
+                                                                           "msgDelayed":  0,
+                                                                           "msgInReplay":  0,
+                                                                           "unackedMessages":  0,
+                                                                           "type":  "Exclusive",
+                                                                           "msgRateExpired":  0.0,
+                                                                           "msgExpired":  0,
+                                                                           "totalMsgExpired":  0,
+                                                                           "lastExpireTimestamp":  0,
+                                                                           "lastConsumedFlowTimestamp":  1784556012532,
+                                                                           "lastConsumedTimestamp":  0,
+                                                                           "lastAckedTimestamp":  0,
+                                                                           "lastMarkDeleteAdvancedTimestamp":  1784556014192,
+                                                                           "consumers":  [
+
+                                                                                         ],
+                                                                           "isDurable":  true,
+                                                                           "isReplicated":  false,
+                                                                           "allowOutOfOrderDelivery":  false,
+                                                                           "consumersAfterMarkDeletePosition":  {
+
+                                                                                                                },
+                                                                           "drainingHashesCount":  0,
+                                                                           "drainingHashesClearedTotal":  0,
+                                                                           "drainingHashesUnackedMessages":  0,
+                                                                           "nonContiguousDeletedMessagesRanges":  0,
+                                                                           "nonContiguousDeletedMessagesRangesSerializedSize":  0,
+                                                                           "delayedMessageIndexSizeInBytes":  0,
+                                                                           "subscriptionProperties":  {
+
+                                                                                                      },
+                                                                           "filterProcessedMsgCount":  0,
+                                                                           "filterAcceptedMsgCount":  0,
+                                                                           "filterRejectedMsgCount":  0,
+                                                                           "filterRescheduledMsgCount":  0,
+                                                                           "dispatchThrottledMsgEventsBySubscriptionLimit":  0,
+                                                                           "dispatchThrottledBytesEventsBySubscriptionLimit":  0,
+                                                                           "dispatchThrottledMsgEventsByTopicLimit":  0,
+                                                                           "dispatchThrottledBytesEventsByTopicLimit":  0,
+                                                                           "dispatchThrottledMsgEventsByBrokerLimit":  0,
+                                                                           "dispatchThrottledBytesEventsByBrokerLimit":  0,
+                                                                           "replicated":  false,
+                                                                           "durable":  true
+                                                                       }
+                                },
+                                {
+                                    "verify-dlq-20260720T135944Z":  {
+                                                                        "msgRateOut":  0.0,
+                                                                        "msgThroughputOut":  0.0,
+                                                                        "bytesOutCounter":  32610,
+                                                                        "msgOutCounter":  10,
+                                                                        "msgRateRedeliver":  0.0,
+                                                                        "messageAckRate":  0.0,
+                                                                        "chunkedMessageRate":  0.0,
+                                                                        "msgBacklog":  0,
+                                                                        "backlogSize":  0,
+                                                                        "earliestMsgPublishTimeInBacklog":  0,
+                                                                        "msgBacklogNoDelayed":  0,
+                                                                        "blockedSubscriptionOnUnackedMsgs":  false,
+                                                                        "msgDelayed":  0,
+                                                                        "msgInReplay":  0,
+                                                                        "unackedMessages":  0,
+                                                                        "type":  "Exclusive",
+                                                                        "msgRateExpired":  0.0,
+                                                                        "msgExpired":  0,
+                                                                        "totalMsgExpired":  0,
+                                                                        "lastExpireTimestamp":  0,
+                                                                        "lastConsumedFlowTimestamp":  1784556012567,
+                                                                        "lastConsumedTimestamp":  0,
+                                                                        "lastAckedTimestamp":  0,
+                                                                        "lastMarkDeleteAdvancedTimestamp":  1784556014549,
+                                                                        "consumers":  [
+
+                                                                                      ],
+                                                                        "isDurable":  true,
+                                                                        "isReplicated":  false,
+                                                                        "allowOutOfOrderDelivery":  false,
+                                                                        "consumersAfterMarkDeletePosition":  {
+
+                                                                                                             },
+                                                                        "drainingHashesCount":  0,
+                                                                        "drainingHashesClearedTotal":  0,
+                                                                        "drainingHashesUnackedMessages":  0,
+                                                                        "nonContiguousDeletedMessagesRanges":  0,
+                                                                        "nonContiguousDeletedMessagesRangesSerializedSize":  0,
+                                                                        "delayedMessageIndexSizeInBytes":  0,
+                                                                        "subscriptionProperties":  {
+
+                                                                                                   },
+                                                                        "filterProcessedMsgCount":  0,
+                                                                        "filterAcceptedMsgCount":  0,
+                                                                        "filterRejectedMsgCount":  0,
+                                                                        "filterRescheduledMsgCount":  0,
+                                                                        "dispatchThrottledMsgEventsBySubscriptionLimit":  0,
+                                                                        "dispatchThrottledBytesEventsBySubscriptionLimit":  0,
+                                                                        "dispatchThrottledMsgEventsByTopicLimit":  0,
+                                                                        "dispatchThrottledBytesEventsByTopicLimit":  0,
+                                                                        "dispatchThrottledMsgEventsByBrokerLimit":  0,
+                                                                        "dispatchThrottledBytesEventsByBrokerLimit":  0,
+                                                                        "replicated":  false,
+                                                                        "durable":  true
+                                                                    }
+                                }
+                            ]
+}

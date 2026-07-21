@@ -1,0 +1,13 @@
+{
+  "trigger": "azure-queue",
+  "attemptedInput": 110,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "verifierWriteTargets": [
+    "fp-input-20260721t054012z"
+  ],
+  "verifierReadTargets": [
+    "fp-output-20260721t054012z",
+    "fp-dlq-20260721t054012z"
+  ]
+}

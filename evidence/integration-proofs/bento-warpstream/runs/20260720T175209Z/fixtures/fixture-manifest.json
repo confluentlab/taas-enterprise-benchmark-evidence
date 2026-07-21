@@ -1,0 +1,28 @@
+{
+    "schemaVersion":  "flowplane.canonical-fixture-set.v1",
+    "fixtureSet":  "flowplane-live-local-verification-v1",
+    "artifactId":  "flowplane-live-local-verification",
+    "artifactVersion":  "1.0.0",
+    "artifactHash":  "063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+    "canonicalizationVersion":  "flowplane.canonicalization.v1",
+    "validRecords":  100,
+    "invalidRecords":  10,
+    "batches":  5,
+    "mixedBatchIncluded":  true,
+    "expectedErrorCode":  "VALIDATION_FAILED",
+    "createdAt":  "2026-07-20T17:52:09.4447756Z",
+    "files":  {
+                  "canonicalization.json":  "d036fe7314252cf9241c7cd1742445e0e12822bc947fbb8ac701a39d0db14547",
+                  "mapping.yaml":  "063425e457f02ea84e536ef9eb085047a93b237454849e5b56f2015b633bb90c",
+                  "valid-input.jsonl":  "bfd69b0a4a12d2c2cfca7256b72ed2230e5f007fbdb570182cfa7c14cdb2c2f7",
+                  "invalid-input.jsonl":  "5f2b130e14e1bff1f9c9a7ab70266d0e8da1bc4fff4773c013e9827041aaa679",
+                  "mixed-batch.jsonl":  "bef45ff95ee6941bf0a011d28396ac1589b670e335705ac4c3be9a6577c91518",
+                  "expected-valid-output.jsonl":  "8a31471571bc6bee90d20560400cfecba75c1713a0027442347440131e3ab7fb",
+                  "expected-invalid-errors.jsonl":  "0ee4c4a75b8728241021f7ac80d2091d25d344d0ebc08fadcec8c47c2666ef70",
+                  "batches/valid-01.json":  "d601221c4720b488b7e84715c5cb7c2a9e4a4c615599a407a21405ab2e498c65",
+                  "batches/valid-02.json":  "438f57a661c242caeea24be6baf169f183faef5c75c83cfa2406552045eb8358",
+                  "batches/valid-03.json":  "61ba96cb05c93f53b17791c3d83be82bf1085421561e40e2a77b7b4cfca7fd78",
+                  "batches/invalid-only.json":  "49d4f30e697e672444a98dca22b3f3d804df109009e71abcf440c9d8362488d9",
+                  "batches/mixed.json":  "053fad7943bfbfa8533b418343540dae2c0d37c729f4425c77c1763d208a4f52"
+              }
+}

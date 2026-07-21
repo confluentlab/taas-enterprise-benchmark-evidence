@@ -1,0 +1,9 @@
+{
+    "runtimeIds":  [
+                       "nifi-sidecar-20260720t163618z"
+                   ],
+    "requireReplayGate":  false,
+    "changeTicket":  "NIFI-20260720T163618Z",
+    "rolloutPercent":  100,
+    "reason":  "Assign the approved artifact to the nifi sidecar."
+}

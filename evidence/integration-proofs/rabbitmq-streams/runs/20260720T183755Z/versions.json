@@ -1,0 +1,17 @@
+{
+    "flowplane":  {
+                      "commit":  "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
+                      "dirty":  true,
+                      "statusEntryCount":  174,
+                      "statusDigestSha256":  "1d1182fa3745587c8a4d0109fcc49e9145165d21058b682faaaa9364d6c9b9c4"
+                  },
+    "rabbitMqVersion":  "4.3.2",
+    "rabbitMqImage":  "rabbitmq:4-management",
+    "rabbitMqImageId":  "sha256:c1e33461287f4c53049ce525575f0df77b2a00a88e2593776afbb6c1489bdb81",
+    "amqplibVersion":  "0.10.8",
+    "runtimeImageId":  "sha256:8016378253033ebd971c237f6580f108b4afac11a188d3fc3b982497bbe55c65",
+    "pipelineImageId":  "sha256:16e22a550f3863206a3f701448c45f7912c6896a62de43add43bb9c86130c3e2",
+    "pipelineScriptSha256":  "b592eaa9d9fa44a16fbd316756814d5cbe1e775c241456f3de66922274a9c8d0",
+    "rawOnlyVerifierSha256":  "441579b498a8b40d1a0baa500c289a8f75a9dac64a480bbbeefbf6404b6b722c",
+    "runtimeJarSha256":  "7f4d118406c42a647ba693e50774b328b104aafa90d082e440b162439120cd05"
+}

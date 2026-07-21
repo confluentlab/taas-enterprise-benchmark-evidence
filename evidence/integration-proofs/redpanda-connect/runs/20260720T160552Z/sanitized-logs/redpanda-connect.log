@@ -1,0 +1,7 @@
+time="2026-07-20T16:06:12Z" level=info msg="Running main config from specified file" @service=redpanda-connect benthos_version=4.96.1 path=/etc/redpanda-connect/config.yaml
+time="2026-07-20T16:06:12Z" level=info msg="Successfully loaded Redpanda license" @service=redpanda-connect expires_at="2036-07-17T16:06:12Z" license_org="" license_type=open_source
+time="2026-07-20T16:06:12Z" level=info msg="Listening for HTTP requests at: http://0.0.0.0:4195" @service=redpanda-connect
+time="2026-07-20T16:06:12Z" level=info msg="Launching a Redpanda Connect instance, use CTRL+C to close" @service=redpanda-connect
+time="2026-07-20T16:06:12Z" level=info msg="Input type kafka is now active" @service=redpanda-connect label="" path=root.input
+time="2026-07-20T16:06:12Z" level=info msg="Output type kafka is now active" @service=redpanda-connect label="" path=root.output.switch.cases.0.output
+time="2026-07-20T16:06:12Z" level=info msg="Output type kafka is now active" @service=redpanda-connect label="" path=root.output.switch.cases.1.output

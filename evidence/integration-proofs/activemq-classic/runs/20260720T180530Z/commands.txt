@@ -1,0 +1,5 @@
+# Exact run values; credentials are intentionally redacted.
+docker run --name flowplane-activemq-classic-broker-20260720t180530z --network flowplane-quality-stack_default -p 127.0.0.1::8161 rmohr/activemq:5.15.9
+docker run --name flowplane-activemq-classic-bento-20260720t180530z --network flowplane-quality-stack_default -p 127.0.0.1::8080 -v <bento-jar>:/app/flowplane-bento-runtime.jar:ro eclipse-temurin:17-jre java -jar /app/flowplane-bento-runtime.jar
+docker run --name flowplane-activemq-classic-pipeline-20260720t180530z --network flowplane-quality-stack_default -v <pipeline-script>:/app/pipeline.mjs:ro -v <bundle>:/evidence node:22-alpine node /app/pipeline.mjs http://flowplane-activemq-classic-broker-20260720t180530z:8161 http://flowplane-activemq-classic-bento-20260720t180530z:8080/transform 20260720T180530Z 110 /evidence
+node activemq-classic-raw-only-verifier.mjs <fixtureRoot> <bundleRoot> http://127.0.0.1:<broker-port> 20260720T180530Z

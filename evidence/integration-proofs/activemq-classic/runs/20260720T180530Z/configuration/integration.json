@@ -1,0 +1,13 @@
+{
+    "id":  "activemq-classic",
+    "type":  "tool",
+    "runtime":  "ActiveMQ Classic 5.15.9 with Flowplane HTTP bridge",
+    "coreStabilityRequired":  false,
+    "currentPublicStatus":  "FEASIBLE_BRIDGE",
+    "implementationPaths":  [
+
+                            ],
+    "harness":  "",
+    "protocolBoundary":  "ActiveMQ raw queue through independent broker pipeline and assigned Flowplane HTTP runtime to ActiveMQ transformed/DLQ queues",
+    "plannedCommand":  "powershell -File scripts/demo/11-run-live-local-verification.ps1 -Execute -Integration activemq-classic"
+}

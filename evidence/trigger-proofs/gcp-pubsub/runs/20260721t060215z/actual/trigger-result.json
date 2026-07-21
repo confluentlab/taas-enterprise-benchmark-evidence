@@ -1,0 +1,14 @@
+{
+  "trigger": "gcp-pubsub-cloudevent",
+  "attemptedInput": 110,
+  "successfulOutput": 100,
+  "errorOutput": 10,
+  "verifierWriteTargets": [
+    "fp-raw-20260721t060215z"
+  ],
+  "verifierReadTargets": [
+    "fp-output-20260721t060215z",
+    "fp-dlq-20260721t060215z"
+  ],
+  "envelopeBridge": "local Eventarc-compatible CloudEvent conversion only"
+}
