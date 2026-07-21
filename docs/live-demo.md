@@ -65,6 +65,12 @@ For version 1.0.0, the preserved run summary records one transformed and one DLQ
 
 The Connect replay gate evaluated two historical records. Its recorded result contained one expected schema difference and one expected transform failure from the invalid fixture, with zero unexpected differences and zero contract violations. “Completed replay” therefore describes the compatibility gate result; it does not mean that every historical input transformed successfully.
 
+## How the video was produced
+
+The repository includes the [video-generation pipeline](../reproduction/live-demo-video/README.md) for reviewers who want to inspect how the final media was assembled. The preserved material includes the [top-level orchestration script](../reproduction/live-demo-video/orchestration/10-generate-demo-video.ps1), [evidence-gated renderer](../reproduction/live-demo-video/remotion-motion/render-motion-video.ps1), [Remotion composition](../reproduction/live-demo-video/remotion-motion/src/Composition.tsx), [58 narration cues](../reproduction/live-demo-video/remotion-motion/narration-cues.json), and [resolved caption timeline](../reproduction/live-demo-video/detailed-narration-captions.json).
+
+The rendering layer adds explanatory graphics and captions only. It does not replace, synthesize, or alter the live runtime results shown underneath. The copied pipeline is classified `SOURCE_INSPECTED` because the source worktree was dirty and execution-time script hashes were not captured; the exact boundary is recorded in its [source snapshot](../reproduction/live-demo-video/source-snapshot.json).
+
 ## Artifact and recording identity
 
 | Item | Preserved value |

@@ -24,6 +24,17 @@
     "sha256": "85242e9ecc0431ddd990f3ecb8cb30dadbdf306460bb1be60e943b47c3216695",
     "sourceTimestampSeconds": 405
   },
+  "generationPipeline": {
+    "classification": "SOURCE_INSPECTED",
+    "documentation": "reproduction/live-demo-video/README.md",
+    "orchestration": "reproduction/live-demo-video/orchestration/10-generate-demo-video.ps1",
+    "renderer": "reproduction/live-demo-video/remotion-motion/render-motion-video.ps1",
+    "composition": "reproduction/live-demo-video/remotion-motion/src/Composition.tsx",
+    "narrationCues": "reproduction/live-demo-video/remotion-motion/narration-cues.json",
+    "resolvedCaptions": "reproduction/live-demo-video/detailed-narration-captions.json",
+    "sourceSnapshot": "reproduction/live-demo-video/source-snapshot.json",
+    "exactExecutionTimeSnapshotClaimed": false
+  },
   "scope": {
     "mappingId": "6a5e03bf0c305eb209b46297",
     "producerBoundary": "flowplane.demo.orders.raw only",

@@ -2,6 +2,8 @@
 
 This directory preserves the scripts and canonical fixture used to create the successful local integration bundles. The scripts are inspectable evidence of the processing path, but they are not a standalone replacement for the Flowplane product source tree and Docker build context.
 
+For the captioned Connect + Flink walkthrough, see [How the live walkthrough video was produced](live-demo-video/README.md). That guide links the inspected orchestration script, Remotion project, locked dependencies, narration cues, and final resolved caption timeline.
+
 ## Prerequisites
 
 - Windows PowerShell 5.1 or PowerShell 7

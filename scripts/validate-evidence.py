@@ -241,6 +241,37 @@ def check_live_demo() -> None:
     assert manifest["runId"] in documentation
     assert video["sha256"] in documentation
 
+    pipeline = manifest["generationPipeline"]
+    assert pipeline["classification"] == "SOURCE_INSPECTED"
+    assert pipeline["exactExecutionTimeSnapshotClaimed"] is False
+    for key in ("documentation", "orchestration", "renderer", "composition", "narrationCues", "resolvedCaptions", "sourceSnapshot"):
+        assert (ROOT / pipeline[key]).is_file(), f"live demo generation pipeline path missing: {pipeline[key]}"
+
+    snapshot_path = ROOT / pipeline["sourceSnapshot"]
+    snapshot = json.loads(snapshot_path.read_text(encoding="utf-8"))
+    assert snapshot["classification"] == "SOURCE_INSPECTED"
+    assert snapshot["sourceWorktree"]["state"] == "dirty"
+    assert snapshot["sourceWorktree"]["executionTimeScriptDigestsCaptured"] is False
+    assert snapshot["sourceWorktree"]["exactExecutionTimeSnapshotClaimed"] is False
+    published_root = snapshot_path.parent
+    published_paths: set[str] = set()
+    for published in snapshot["publishedFiles"]:
+        assert published["path"] not in published_paths, f"duplicate video source snapshot path: {published['path']}"
+        published_path = (published_root / published["path"]).resolve()
+        assert published_path.is_relative_to(published_root), f"video source snapshot path escapes its root: {published['path']}"
+        assert published_path.is_file(), f"video source snapshot file missing: {published['path']}"
+        assert digest(published_path) == published["sha256"], f"video source snapshot checksum mismatch: {published['path']}"
+        published_paths.add(published["path"])
+
+    cues = json.loads((ROOT / pipeline["narrationCues"]).read_text(encoding="utf-8-sig"))
+    captions = json.loads((ROOT / pipeline["resolvedCaptions"]).read_text(encoding="utf-8-sig"))
+    assert len(cues) == len(captions) == 58
+    caption_starts = [caption["startMs"] for caption in captions]
+    assert caption_starts == sorted(caption_starts)
+    assert captions[0]["startMs"] == 0
+    assert captions[-1]["endMs"] <= round(video["durationSeconds"] * 1000)
+    assert all(caption["startMs"] < caption["endMs"] for caption in captions)
+
 
 def check_document_links() -> None:
     link_pattern = re.compile(r"!?\[[^]]*\]\(([^)]+)\)")
