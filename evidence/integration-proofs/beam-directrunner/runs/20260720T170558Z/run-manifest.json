@@ -2,7 +2,7 @@
     "runId":  "20260720T170558Z",
     "integration":  "beam-directrunner",
     "integrationType":  "tool",
-    "status":  "LIVE_LOCAL_VERIFIED",
+    "status":  "MEASURED_NOT_QUALIFIED",
     "startedAt":  "2026-07-20T17:05:58.8801826Z",
     "completedAt":  "2026-07-20T17:08:59.1488170Z",
     "durationSeconds":  180.269,

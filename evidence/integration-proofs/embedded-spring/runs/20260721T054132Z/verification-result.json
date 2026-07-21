@@ -262,7 +262,6 @@
                                        "actual/mapping-created.json",
                                        "actual/mapping-published.json",
                                        "actual/mapping-validation.json",
-                                       "actual/not-executed.json",
                                        "actual/pipeline-result.json",
                                        "actual/publisher-bridge-result.json",
                                        "actual/runtime-health-after.json",

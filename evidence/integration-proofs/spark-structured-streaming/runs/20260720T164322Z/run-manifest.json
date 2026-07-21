@@ -2,7 +2,7 @@
     "runId":  "20260720T164322Z",
     "integration":  "spark-structured-streaming",
     "integrationType":  "tool",
-    "status":  "LIVE_LOCAL_VERIFIED",
+    "status":  "MEASURED_NOT_QUALIFIED",
     "startedAt":  "2026-07-20T16:43:22.1722704Z",
     "completedAt":  "2026-07-20T16:46:11.5763584Z",
     "durationSeconds":  169.404,

@@ -12,7 +12,10 @@ const expected = simulationPath
 const transformed = readJsonl(path.join(bundleRoot, "actual", "transformed-output.jsonl"));
 const errors = readJsonl(path.join(bundleRoot, "actual", "error-output.jsonl"));
 const expectedHashes = expected.map(hash).sort(), actualHashes = transformed.map(hash).sort();
-const duplicates = transformed.length - new Set(actualHashes).size;
+const outputIds = transformed.map((value) => value.eventId ?? value.recordId);
+const errorIds = errors.map((value) => value.recordId ?? value.source?.key ?? JSON.parse(value.payload?.snippet ?? "{}").recordId);
+const duplicates = outputIds.length - new Set(outputIds).size + errorIds.length - new Set(errorIds).size;
+if (outputIds.some((value) => !value) || errorIds.some((value) => !value)) throw new Error("record ID is mandatory for duplicate detection");
 const expectedHashMatches = JSON.stringify(expectedHashes) === JSON.stringify(actualHashes) ? expected.length : 0;
 const errorContractMatches = errors.filter((value) => value?.error?.code === "MULTIPLE_FIELD_ERRORS" && Array.isArray(value.errors) && value.errors.length > 0).length;
 const report = { expectedOutputs: expected.length, actualOutputs: transformed.length, expectedHashMatches, intentionalErrors: errors.length, errorContractMatches, duplicates, passed: expectedHashMatches === expected.length && errors.length === 10 && errorContractMatches === 10 && duplicates === 0 };

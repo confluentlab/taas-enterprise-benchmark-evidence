@@ -1,5 +1,0 @@
-{
-    "integration":  "emqx-mqtt",
-    "executionAttempted":  false,
-    "reason":  "Prepared bundle only."
-}

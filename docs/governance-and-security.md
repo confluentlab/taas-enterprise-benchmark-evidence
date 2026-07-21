@@ -13,6 +13,6 @@
 - Runtime secrets returned once and stored as hashes; short-lived runtime access tokens.
 - Encryption for sensitive persistence and cache values.
 - Raw snippets and redrive payload retention disabled by default.
-- Customer production payloads execute inside customer-owned runtimes.
+- Customer production payloads are designed to execute inside separately deployed data-plane runtimes; ownership and hosting are deployment-specific.
 
 These statements describe code paths and tests inspected at revision `10a26df4d7ed6a41f8076a5d7280d73db543c13a`. They are not a SOC 2, ISO 27001, penetration-test, or vendor certification claim. Deployment configuration, key management, identity-provider policy, infrastructure, and operator practice remain part of the security boundary.

@@ -5,14 +5,19 @@ import csv
 import hashlib
 import json
 import re
+import subprocess
+import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+if not __debug__:
+    raise RuntimeError("Evidence validation must not run with Python assertions disabled.")
 APPROVED_STATUSES = {
     "QUALIFIED",
     "MEASURED",
     "MEASURED_NOT_QUALIFIED",
     "CONTRACT_VERIFIED",
+    "SOURCE_INSPECTED",
     "LIVE_LOCAL_VERIFIED",
     "INCOMPLETE",
     "PRESERVED_FAILURE",
@@ -42,15 +47,50 @@ def check_hashes() -> None:
         assert path.is_file(), f"checksum path missing: {relative}"
         assert digest(path) == expected, f"checksum mismatch: {relative}"
         entries[relative] = expected
+    inventory = subprocess.run(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+        cwd=ROOT, check=True, capture_output=True, text=True,
+    ).stdout.splitlines()
     expected_files = {
-        path.relative_to(ROOT).as_posix()
-        for path in ROOT.rglob("*")
-        if path.is_file()
-        and ".git" not in path.parts
-        and path != manifest_path
-        and path.relative_to(ROOT).as_posix() != "release/evidence-2026.07.1/checksums.sha256"
+        relative.replace("\\", "/") for relative in inventory
+        if (ROOT / relative).is_file()
+        and relative.replace("\\", "/") != "evidence/checksums.sha256"
+        and not (relative.replace("\\", "/").startswith("release/") and relative.replace("\\", "/").endswith("/checksums.sha256"))
     }
+    current_tag = json.loads((ROOT / "evidence/manifest.json").read_text(encoding="utf-8"))["releaseTag"]
+    for release_checksums in [ROOT / "release" / current_tag / "checksums.sha256"]:
+        release_root = release_checksums.parent
+        release_entries: set[str] = set()
+        for line in release_checksums.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            expected, relative = line.split("  ", 1)
+            assert relative not in release_entries, f"duplicate release checksum entry: {release_root / relative}"
+            target = release_root / relative
+            assert target.is_file(), f"release checksum path missing: {target}"
+            assert digest(target) == expected, f"release checksum mismatch: {target}"
+            release_entries.add(relative)
+        expected_release_entries = {path.name for path in release_root.iterdir() if path.is_file() and path != release_checksums}
+        assert release_entries == expected_release_entries, f"release checksum inventory mismatch: {release_root}"
     assert set(entries) == expected_files, f"checksum inventory mismatch: missing={sorted(expected_files-set(entries))}, stale={sorted(set(entries)-expected_files)}"
+
+
+def check_release_archive() -> None:
+    manifest = json.loads((ROOT / "evidence/manifest.json").read_text(encoding="utf-8"))
+    release_root = ROOT / "release" / manifest["releaseTag"]
+    assert (release_root / "evidence-manifest.json").read_bytes() == (ROOT / "evidence/manifest.json").read_bytes(), "release manifest copy is stale"
+    expected = {
+        path.relative_to(ROOT / "evidence").as_posix(): path
+        for evidence_root in (ROOT / "evidence/integration-proofs", ROOT / "evidence/trigger-proofs")
+        for path in evidence_root.rglob("*") if path.is_file()
+    }
+    with zipfile.ZipFile(release_root / "raw-evidence.zip") as archive:
+        file_entries = [name for name in archive.namelist() if not name.endswith("/")]
+        archived = {name.replace("\\", "/"): name for name in file_entries}
+        assert len(file_entries) == len(archived), "raw evidence archive contains duplicate file names"
+        assert set(archived) == set(expected), "raw evidence archive inventory differs from source tree"
+        for relative, source in expected.items():
+            assert hashlib.sha256(archive.read(archived[relative])).hexdigest() == digest(source), f"stale raw archive entry: {relative}"
 
 
 def check_claims() -> None:
@@ -168,6 +208,7 @@ def check_document_links() -> None:
 
 if __name__ == "__main__":
     check_hashes()
+    check_release_archive()
     check_claims()
     check_manifest()
     check_repeatability()

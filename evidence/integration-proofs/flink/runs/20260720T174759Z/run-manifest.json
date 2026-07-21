@@ -2,7 +2,7 @@
     "runId":  "20260720T174759Z",
     "integration":  "flink",
     "integrationType":  "native",
-    "status":  "LIVE_LOCAL_VERIFIED",
+    "status":  "MEASURED_NOT_QUALIFIED",
     "startedAt":  "2026-07-20T17:47:59.7752098Z",
     "completedAt":  "2026-07-20T17:51:02.6168535Z",
     "durationSeconds":  182.842,

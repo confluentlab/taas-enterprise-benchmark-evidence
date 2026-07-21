@@ -2,28 +2,27 @@
 from __future__ import annotations
 
 import hashlib
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "evidence/checksums.sha256"
-EXCLUDED = {
-    "evidence/checksums.sha256",
-    "release/evidence-2026.07.1/checksums.sha256",
-}
+EXCLUDED = {"evidence/checksums.sha256"}
 
 
 def digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+inventory = subprocess.run(
+    ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+    cwd=ROOT, check=True, capture_output=True, text=True,
+).stdout.splitlines()
 files = sorted(
-    (
-        path
-        for path in ROOT.rglob("*")
-        if path.is_file()
-        and ".git" not in path.parts
-        and path.relative_to(ROOT).as_posix() not in EXCLUDED
-    ),
+    (ROOT / relative for relative in inventory
+     if relative.replace("\\", "/") not in EXCLUDED
+     and (ROOT / relative).is_file()
+     and not (relative.replace("\\", "/").startswith("release/") and relative.replace("\\", "/").endswith("/checksums.sha256"))),
     key=lambda path: path.relative_to(ROOT).as_posix(),
 )
 lines = [f"{digest(path)}  {path.relative_to(ROOT).as_posix()}" for path in files]

@@ -289,7 +289,6 @@
                                        "actual/mapping-created.json",
                                        "actual/mapping-published.json",
                                        "actual/mapping-validation.json",
-                                       "actual/not-executed.json",
                                        "actual/output-hashes.json",
                                        "actual/pipeline-ready.json",
                                        "actual/pipeline-result.json",

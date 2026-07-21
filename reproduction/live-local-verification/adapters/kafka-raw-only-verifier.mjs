@@ -115,15 +115,20 @@ for (const value of errors) {
 
 let finalLag = 0;
 let groupDescription = "";
+let lagRows = 0;
 try {
   groupDescription = runDocker(["exec", kafkaContainer, "kafka-consumer-groups", "--bootstrap-server", kafkaBootstrap, "--describe", "--group", groupId]);
   for (const line of groupDescription.split(/\r?\n/)) {
     const columns = line.trim().split(/\s+/);
-    if (columns.length >= 6 && /^\d+$/.test(columns[5])) finalLag += Number.parseInt(columns[5], 10);
+    if (columns.length >= 6 && /^\d+$/.test(columns[2]) && /^\d+$/.test(columns[5])) {
+      lagRows += 1;
+      finalLag += Number.parseInt(columns[5], 10);
+    }
   }
+  if (lagRows === 0) throw new Error("consumer-group description contained no partition rows");
 } catch (error) {
   groupDescription = String(error);
-  finalLag = Math.max(0, rawInput.length - transformed.length - errors.length);
+  throw new Error(`Broker-derived consumer lag is mandatory; group inspection failed: ${groupDescription}`);
 }
 
 const actualRoot = path.join(bundleRoot, "actual");
@@ -151,7 +156,8 @@ const report = {
   successfulOutput: transformed.length,
   errorOutput: errors.length,
   filtered: 0,
-  duplicates: transformed.length - new Set(transformed.map((value) => sha256(canonical(value)))).size,
+  duplicates: transformed.length - new Set(transformed.map((value) => value.eventId ?? value.recordId)).size
+    + errors.length - new Set(errors.map((value) => value.recordId ?? value.source?.key ?? JSON.parse(value.payload?.snippet ?? "{}").recordId)).size,
   expectedHashMatches,
   expectedErrorMatches,
   expectedErrorCodes,

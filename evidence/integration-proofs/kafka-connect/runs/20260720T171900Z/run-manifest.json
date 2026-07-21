@@ -2,7 +2,7 @@
     "runId":  "20260720T171900Z",
     "integration":  "kafka-connect",
     "integrationType":  "native",
-    "status":  "LIVE_LOCAL_VERIFIED",
+    "status":  "MEASURED_NOT_QUALIFIED",
     "startedAt":  "2026-07-20T17:19:00.1661053Z",
     "completedAt":  "2026-07-20T17:23:27.7370982Z",
     "durationSeconds":  267.571,

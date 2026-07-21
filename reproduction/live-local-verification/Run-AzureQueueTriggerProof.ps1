@@ -47,8 +47,8 @@ try {
   & node (Join-Path $clientRoot "validate-trigger-output.mjs") $FixtureRoot $bundle (Join-Path $PSScriptRoot "..\..\..\artifacts\live-local-verification\evidence\integration-proofs\serverless-azure\20260721T045510Z\expected\simulation-batch.json") | Out-Null
   if ($LASTEXITCODE -ne 0) { throw "Azure Queue content validation failed." }
   docker logs $container 2>&1 | Set-Content -Encoding utf8 (Join-Path $bundle "logs\azure-functions.log")
-  Write-JsonFile (Join-Path $bundle "proof-manifest.json") ([ordered]@{ status="PASS"; runId=$run; trigger="Azure QueueTrigger"; runtimeId=$runtimeId; artifactId=$runtime.activeArtifactId; artifactHash=$runtime.activeArtifactHash; validRecords=100; invalidRecords=10; sourceBoundary="Verifier writes only the Azurite input queue"; sinkBoundary="Azure Functions QueueTrigger writes output and DLQ queues"; emulatorImage=(docker inspect flowplane-serverless-azurite --format '{{.Image}}'); functionImage=(docker inspect $container --format '{{.Image}}'); completedAt=[DateTime]::UtcNow.ToString("o") })
-  Write-Output "PASS $bundle"
+  Write-JsonFile (Join-Path $bundle "proof-manifest.json") ([ordered]@{ status="LIVE_LOCAL_VERIFIED"; runId=$run; trigger="Azure QueueTrigger"; runtimeId=$runtimeId; artifactId=$runtime.activeArtifactId; artifactHash=$runtime.activeArtifactHash; validRecords=100; invalidRecords=10; sourceBoundary="Verifier writes only the Azurite input queue"; sinkBoundary="Azure Functions QueueTrigger writes output and DLQ queues"; emulatorImage=(docker inspect flowplane-serverless-azurite --format '{{.Image}}'); functionImage=(docker inspect $container --format '{{.Image}}'); completedAt=[DateTime]::UtcNow.ToString("o") })
+  Write-Output "LIVE_LOCAL_VERIFIED $bundle"
 } finally {
   if (docker ps -aq --filter "name=^$container$") { docker logs $container 2>&1 | Set-Content -Encoding utf8 (Join-Path $bundle "logs\azure-functions-final.log"); docker rm -f $container | Out-Null }
 }

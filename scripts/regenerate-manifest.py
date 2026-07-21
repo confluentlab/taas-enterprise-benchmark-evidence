@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +68,36 @@ RUNS = [
         "methodology": "evidence/runtime-parity/summary.md",
         "charts": [],
     },
+    {
+        "id": "streaming-tool-matrix-20260720",
+        "status": "MEASURED_NOT_QUALIFIED",
+        "workload": "22-local-streaming-and-ecosystem-integrations",
+        "summary": "evidence/integration-proofs/EVIDENCE-OVERVIEW.md",
+        "rawResults": "evidence/live-local-supplement/audit/execution-matrix.csv",
+        "environment": "evidence/live-local-supplement/audit/execution-matrix.json",
+        "methodology": "reproduction/live-local-verification/README.md",
+        "charts": [],
+    },
+    {
+        "id": "runtime-surface-matrix-20260721",
+        "status": "LIVE_LOCAL_VERIFIED",
+        "workload": "jvm-http-grpc-serverless-baselines-and-five-minute-soaks",
+        "summary": "evidence/integration-proofs/EVIDENCE-OVERVIEW.md",
+        "rawResults": "evidence/integration-proofs/grpc-batch/runs/20260721T054138Z/actual/bridge-result.json",
+        "environment": "evidence/integration-proofs/grpc-batch/runs/20260721T054138Z/environment.json",
+        "methodology": "reproduction/live-local-verification/README.md",
+        "charts": [],
+    },
+    {
+        "id": "provider-triggers-20260721",
+        "status": "LIVE_LOCAL_VERIFIED",
+        "workload": "azure-queue-eventhub-and-gcp-pubsub-local-emulators",
+        "summary": "evidence/integration-proofs/EVIDENCE-OVERVIEW.md",
+        "rawResults": "evidence/trigger-proofs/gcp-pubsub/runs/20260721t060215z/actual/trigger-result.json",
+        "environment": "evidence/trigger-proofs/gcp-pubsub/runs/20260721t060215z/proof-manifest.json",
+        "methodology": "reproduction/live-local-verification/README.md",
+        "charts": [],
+    },
 ]
 
 for run in RUNS:
@@ -75,22 +106,22 @@ for run in RUNS:
 
 manifest = {
     "schemaVersion": 1,
-    "evidenceVersion": "2026.07.1",
-    "generatedAt": "2026-07-20T00:00:00Z",
+    "evidenceVersion": "2026.07.2",
+    "generatedAt": datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z"),
     "flowplaneBuild": "10a26df4d7ed6a41f8076a5d7280d73db543c13a",
-    "repositoryCommit": "resolved-by-release-tag:evidence-2026.07.1",
-    "releaseTag": "evidence-2026.07.1",
+    "repositoryCommit": "resolved-by-release-tag:evidence-2026.07.2",
+    "releaseTag": "evidence-2026.07.2",
     "statusVocabulary": "docs/evidence-classification.md",
     "claimsMatrix": "evidence/claims-matrix.csv",
     "checksums": "evidence/checksums.sha256",
     "releaseAssets": [
-        "release/evidence-2026.07.1/evidence-manifest.json",
-        "release/evidence-2026.07.1/checksums.sha256",
-        "release/evidence-2026.07.1/benchmark-summary.md",
-        "release/evidence-2026.07.1/raw-evidence.zip",
-        "release/evidence-2026.07.1/environment-bundle.zip",
-        "release/evidence-2026.07.1/benchmark-graphics.zip",
-        "release/evidence-2026.07.1/architecture.svg"
+        "release/evidence-2026.07.2/evidence-manifest.json",
+        "release/evidence-2026.07.2/checksums.sha256",
+        "release/evidence-2026.07.2/benchmark-summary.md",
+        "release/evidence-2026.07.2/raw-evidence.zip",
+        "release/evidence-2026.07.2/environment-bundle.zip",
+        "release/evidence-2026.07.2/benchmark-graphics.zip",
+        "release/evidence-2026.07.2/architecture.svg"
     ],
     "runs": RUNS,
 }

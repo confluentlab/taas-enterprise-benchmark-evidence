@@ -123,7 +123,7 @@ function normalizeProtocolResults(results) {
     }
     if (status === "DLQ") {
       const error = result.error ?? {};
-      return { id: result.recordId, destination: "dlq", value: { errors: [{ code: error.code, message: error.message, fieldPath: error.fieldPath, stage: error.stage }] } };
+      return { id: result.recordId, destination: "dlq", value: { recordId: result.recordId, errors: [{ code: error.code, message: error.message, fieldPath: error.fieldPath, stage: error.stage }] } };
     }
     throw new Error(`unexpected runtime result status ${status} for ${result.recordId}`);
   });

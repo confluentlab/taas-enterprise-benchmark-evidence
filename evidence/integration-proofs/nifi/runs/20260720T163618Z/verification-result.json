@@ -288,7 +288,6 @@
                                        "actual/nifi-flow.json",
                                        "actual/nifi-process-group-status.json",
                                        "actual/nifi-process-group.json",
-                                       "actual/not-executed.json",
                                        "actual/pipeline-result.json",
                                        "actual/runtime-health-after.json",
                                        "actual/runtime-registration.json",

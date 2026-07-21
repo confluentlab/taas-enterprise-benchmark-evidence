@@ -2,7 +2,7 @@
 
 ## Does FlowPlane move production payloads into its control plane?
 
-The intended architecture executes payload transformations in customer-owned runtimes. The control plane distributes versioned artifacts and receives bounded telemetry and failure metadata. Explicit replay or retention features can widen that boundary and are gated and off by default where payload storage is involved.
+The intended architecture executes payload transformations in separately deployed data-plane runtimes. The control plane distributes versioned artifacts and receives bounded telemetry and failure metadata. Runtime ownership and hosting are deployment-specific. Explicit replay or retention features can widen that boundary and are gated and off by default where payload storage is involved.
 
 ## Is every listed runtime production-certified?
 

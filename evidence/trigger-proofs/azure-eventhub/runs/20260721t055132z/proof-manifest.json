@@ -1,5 +1,5 @@
 {
-    "status":  "PASS",
+    "status":  "LIVE_LOCAL_VERIFIED",
     "runId":  "20260721t055132z",
     "trigger":  "Azure EventHubTrigger",
     "runtimeId":  "azure-eventhub-evidence-20260721t055132z",

@@ -2,7 +2,7 @@
 
 **Define a transformation once, govern it centrally, and execute the same versioned artifact across multiple streaming runtimes with deterministic behavior.**
 
-Flowplane is a governed transformation control plane and portable Java execution engine for authoring, validating, approving, deploying, observing, and rolling back field-level stream transformations. Production payloads remain inside the runtime boundary. The control plane distributes versioned artifacts and receives bounded operational telemetry.
+Flowplane is a governed transformation control plane and portable Java execution engine for authoring, validating, approving, deploying, observing, and rolling back field-level stream transformations. Production payloads are designed to remain inside the separately deployed data-plane runtime boundary. The control plane distributes versioned artifacts and receives bounded operational telemetry; runtime ownership and hosting depend on the deployment.
 
 > **Evidence policy:** Every result in this repository is classified by execution boundary and verification level: controlled benchmark, live local integration, contract test, incomplete run, or preserved failure. Each claim links to its methodology, environment, and raw evidence.
 
@@ -10,12 +10,12 @@ Flowplane is a governed transformation control plane and portable Java execution
 
 | Evidence identity | Immutable value |
 |---|---|
-| Evidence release | [`evidence-2026.07.1`](https://github.com/Flowplane/flowplane-evidence/releases/tag/evidence-2026.07.1) |
+| Evidence release | `evidence-2026.07.2` |
 | Flowplane source revision | `10a26df` ([full identity](evidence/manifest.json)) |
-| Evidence repository snapshot | `bc442dc` (the commit referenced by the release tag) |
-| Evidence dates | 2026-07-11 through 2026-07-18; core benchmark tested 2026-07-17 |
+| Evidence repository snapshot | The commit referenced by `evidence-2026.07.2` |
+| Evidence dates | 2026-07-11 through 2026-07-21 UTC; core benchmark tested 2026-07-17 |
 
-> **New local-integration supplement:** This working tree also contains 38 successful checksum-verified bundles captured on 2026-07-20/21 UTC: 22 streaming/tool integrations, eight runtime/protocol baselines, five core-surface stability soaks, and three provider-trigger proofs. These files are newer than the immutable `evidence-2026.07.1` release above. Treat them as a supplement until they receive their own release tag. See the [complete evidence overview](evidence/integration-proofs/EVIDENCE-OVERVIEW.md).
+Release `evidence-2026.07.2` includes the 2026-07-20/21 local-integration supplement: 22 streaming/tool integrations, eight runtime/protocol baselines, five core-surface stability soaks, and three provider-trigger proofs. See the [complete evidence overview](evidence/integration-proofs/EVIDENCE-OVERVIEW.md).
 
 ## 30-second demo
 
@@ -71,7 +71,7 @@ Separate 2026-07-21 live-local runs subsequently exercised current HTTP single/b
 1. Authors create versioned mappings with validation, transforms, and policy rules.
 2. Simulation shows before/after payloads, field failures, policy results, and latency.
 3. Approval and deployment controls produce an immutable artifact.
-4. A customer-owned runtime verifies and executes the artifact locally, then reports bounded telemetry and canonical failures.
+4. A separately deployed data-plane runtime verifies and executes the artifact locally, then reports bounded telemetry and canonical failures.
 5. Operators inspect drift, failures, and rollout state, then promote or roll back.
 
 ![Flowplane architecture](assets/architecture.svg)

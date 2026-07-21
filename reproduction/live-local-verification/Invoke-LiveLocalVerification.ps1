@@ -218,6 +218,12 @@ foreach ($item in $selected) {
       } else {
         $gateDocument.warnings = @("Adapter did not produce actual/adapter-gate-assertions.json; no gates were promoted.")
       }
+      # Once an adapter has actually run, the prepare-only marker is no longer
+      # truthful evidence, regardless of whether the run ultimately passes.
+      $notExecutedMarker = Join-Path $bundleRoot "actual\not-executed.json"
+      if (Test-Path -LiteralPath $notExecutedMarker -PathType Leaf) {
+        Remove-Item -LiteralPath $notExecutedMarker -Force
+      }
     }
   }
   Write-JsonFile -Path (Join-Path $bundleRoot "actual\gate-assertions.json") -Value $gateDocument

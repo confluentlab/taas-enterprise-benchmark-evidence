@@ -2,8 +2,14 @@
 
 ## 2026-07-21
 
+- Prepared immutable release `evidence-2026.07.2` for the complete 2026-07-20/21 live-local supplement.
+- Removed contradictory `not-executed.json` placeholders from all 35 successful integration/runtime bundles and made their presence a validation failure.
+- Made the central validator recompute output multisets, fixture-owned error contracts, observable record-ID duplication, loaded artifact identity, accounting, Kafka lag, and recorded downstream-write counters from preserved evidence.
+- Corrected the gRPC DLQ projection, Beam transport-error attribution, dirty-worktree, simulation-baseline, deployment-ownership, private-source, provider-emulator, and historical gRPC wording.
+- Hardened future captures to reject count-derived Kafka lag, detect duplicates by record ID, preserve record IDs in protocol DLQ projections, and compare mounted bridge/JAR hashes with their host artifacts.
 - Added 38 checksum-verified local evidence bundles covering 22 streaming/tool integrations, eight runtime/protocol baselines, five core-surface stability soaks, and three provider-trigger proofs.
-- Preserved 53,630 attempted inputs, 52,800 transformed outputs, and 830 intentional DLQ outputs with zero reported duplicates or unexplained loss.
+- Corrected Beam, Flink, Kafka Connect, and Spark to `MEASURED_NOT_QUALIFIED`: their content accounting passed, but preserved Kafka inspection did not contain broker-derived lag rows.
+- Preserved 53,630 attempted inputs, 52,800 transformed outputs, and 830 intentional DLQ outputs with no duplicate transformed IDs, no duplicate observable DLQ IDs, and no unexplained loss. Historical HTTP/gRPC DLQ projections without record IDs are excluded from the DLQ-ID claim; mounted bridge/JAR comparison applies to future captures until those surfaces are rerun.
 - Added 62 run-bundle screenshots, four supplemental control-plane screenshots, complete manifests, outputs, logs, metrics, write-boundary audits, and reproduction commands.
 - Added the exact local verification harness, canonical fixture, evidence import pipeline, and a validator for checksums, accounting, stability health, trigger content, and raw-only producer boundaries.
 - Updated HTTP and gRPC status wording to distinguish current successful sidecar runs from preserved historical incomplete and `UNIMPLEMENTED` attempts.

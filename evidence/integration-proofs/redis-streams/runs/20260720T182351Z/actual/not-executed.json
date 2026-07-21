@@ -1,5 +1,0 @@
-{
-    "integration":  "redis-streams",
-    "executionAttempted":  false,
-    "reason":  "Prepared bundle only."
-}

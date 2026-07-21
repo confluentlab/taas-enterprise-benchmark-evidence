@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-labelledby="title desc">
+  <title id="title">FlowPlane architecture</title><desc id="desc">A governed control plane distributes immutable mapping artifacts to separately deployed data-plane runtimes, which return bounded evidence and telemetry.</desc>
+  <rect width="1200" height="520" rx="24" fill="#07111f"/>
+  <style>.h{font:700 28px system-ui;fill:#f8fafc}.t{font:600 18px system-ui;fill:#e2e8f0}.s{font:14px system-ui;fill:#94a3b8}.box{fill:#101d30;stroke:#334155;stroke-width:2}.accent{fill:#0e7490;stroke:#22d3ee;stroke-width:2}.line{stroke:#38bdf8;stroke-width:3;fill:none;marker-end:url(#a)}</style>
+  <defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#38bdf8"/></marker></defs>
+  <text x="48" y="55" class="h">Governed lifecycle, local execution, preserved evidence</text>
+  <rect x="55" y="105" width="330" height="300" rx="18" class="accent"/><text x="90" y="150" class="t">FlowPlane control plane</text>
+  <text x="90" y="190" class="s">Author · simulate · approve</text><text x="90" y="220" class="s">Publish immutable artifacts</text><text x="90" y="250" class="s">Stage rollout · observe · rollback</text><text x="90" y="280" class="s">RBAC · audit · runtime identity</text><text x="90" y="330" class="s">No production payload processing</text>
+  <rect x="480" y="105" width="665" height="300" rx="18" class="box"/><text x="520" y="150" class="t">Separately deployed data plane</text>
+  <rect x="520" y="190" width="270" height="145" rx="14" class="box"/><text x="550" y="228" class="t">Native runtimes</text><text x="550" y="260" class="s">Flink · Kafka Streams</text><text x="550" y="287" class="s">Kafka Connect · Spring</text>
+  <rect x="835" y="190" width="270" height="145" rx="14" class="box"/><text x="865" y="228" class="t">Adapters</text><text x="865" y="260" class="s">HTTP · gRPC contract</text><text x="865" y="287" class="s">Bento · sidecars · serverless</text>
+  <path d="M385 205 H480" class="line"/><text x="394" y="191" class="s">artifacts</text><path d="M480 320 H390" class="line"/><text x="394" y="352" class="s">bounded telemetry</text>
+  <text x="55" y="468" class="s">Production records remain inside the customer runtime boundary; explicit replay/retention paths are capability-aware and gated.</text>
+</svg>

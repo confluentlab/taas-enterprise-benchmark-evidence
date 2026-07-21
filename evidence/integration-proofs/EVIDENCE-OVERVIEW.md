@@ -1,17 +1,17 @@
 # Proven local integration evidence
 
-This index covers the successful local-machine evidence captured on 2026-07-20 and 2026-07-21 UTC. It supersedes the older summary wording for these specific execution paths. It does not erase the historical failed and incomplete attempts, which remain useful records of earlier binaries and configurations.
+This index covers the local-machine evidence captured on 2026-07-20 and 2026-07-21 UTC. It supersedes the older summary wording for these specific execution paths. It does not erase the historical failed and incomplete attempts, which remain useful records of earlier binaries and configurations.
 
 ## What is proven
 
-The repository now preserves **38 checksum-verified successful bundles**:
+The repository now preserves **38 checksum-verified bundles**: 34 are `LIVE_LOCAL_VERIFIED`, and four streaming-tool bundles are `MEASURED_NOT_QUALIFIED` because their preserved Kafka inspection reported a nonexistent consumer group instead of broker-derived lag rows.
 
 - 22 streaming and ecosystem tool integrations;
 - eight Flowplane runtime or protocol surfaces;
 - five separate 10,000-record, five-minute stability soaks for the core JVM, HTTP, and gRPC surfaces; and
 - three provider-trigger paths using local emulators.
 
-Across those bundles, the captured accounting is **53,630 attempted inputs**, **52,800 transformed outputs**, and **830 intentional DLQ outputs**, with zero reported duplicates or unexplained loss. The 30 baseline integration/runtime bundles each used 100 valid and 10 intentional-invalid records. The five stability bundles each used 9,900 valid and 100 intentional-invalid records. The three trigger bundles each used 100 valid and 10 intentional-invalid records.
+Across those bundles, the captured accounting is **53,630 attempted inputs**, **52,800 transformed outputs**, and **830 intentional DLQ outputs**, with no duplicate transformed record IDs, no duplicate observable DLQ record IDs, and no unexplained loss. Eight preserved HTTP/gRPC protocol bundles contain 440 DLQ projections that predate record-ID preservation; their exact DLQ counts and error contracts are verified, but they are excluded from the per-DLQ record-ID duplicate claim. The 30 baseline integration/runtime bundles each used 100 valid and 10 intentional-invalid records. The five stability bundles each used 9,900 valid and 100 intentional-invalid records. The three trigger bundles each used 100 valid and 10 intentional-invalid records.
 
 `LIVE_LOCAL_VERIFIED` means the named runtime, broker, service, container, or emulator executed locally and met the acceptance gates recorded in that bundle. It does not mean vendor certification, managed-cloud parity, production readiness, or unrestricted performance qualification.
 
@@ -30,13 +30,15 @@ raw-only verifier
 
 The verifier produces only to the input destination. It reads output and DLQ destinations after execution. Each integration bundle contains `actual/write-boundary-audit.json`; a passing audit records zero verifier downstream producer targets or calls.
 
-For HTTP and gRPC surfaces, `kafka-runtime-surface-bridge.mjs` consumes the raw Kafka record, invokes the assigned Flowplane endpoint, and transports the **actual runtime response** to the transformed or DLQ Kafka topic. It does not load the mapping DSL, compute the expected transform, or manufacture expected output. Expected records are generated separately through control-plane simulation and compared afterward as canonical SHA-256 multisets.
+For HTTP and gRPC surfaces, `kafka-runtime-surface-bridge.mjs` consumes the raw Kafka record, invokes the assigned Flowplane endpoint, and publishes a protocol projection of the runtime result to the transformed or DLQ Kafka topic. Successful payloads are parsed and re-serialized. HTTP and gRPC DLQ results are normalized to the protocol error fields and therefore are not byte-for-byte unchanged runtime responses. The bridge does not load the mapping DSL or compute expected output. Expected records are generated separately through Flowplane control-plane simulation and used as the expected baseline for canonical multiset comparison; simulation is not an independent implementation oracle.
+
+The Beam adapter passes HTTP `200` and `422` response bodies through to its Kafka output/DLQ branches. Its separate `RUNTIME_TRANSPORT_ERROR` envelope is adapter-generated for HTTP I/O failures. That path was not exercised in the measured Beam bundle; its ten preserved intentional DLQ records are Flowplane runtime `422` responses.
 
 The embedded Spring runtime writes its own Kafka output and DLQ records. Azure and GCP trigger handlers write their provider output and DLQ destinations. The GCP local Eventarc substitute converts only the Pub/Sub push envelope into a binary CloudEvent envelope; it performs no Flowplane transformation and has no output/DLQ publisher.
 
 ## Streaming and ecosystem tools
 
-Every row below is a focused local Docker interoperability proof with 110 attempted inputs, 100 exact transformed outputs, 10 intentional DLQ outputs, and zero reported pending work or lag at completion.
+Every row below is a focused local Docker interoperability proof with 110 attempted inputs, 100 transformed outputs matching the Flowplane simulation baseline, and 10 intentional DLQ outputs matching the documented error contract. Beam DirectRunner, Flink, Kafka Connect, and Spark Structured Streaming retain exact output/error accounting but are `MEASURED_NOT_QUALIFIED`: their final Kafka command reported that the consumer group did not exist, so broker-derived zero lag is not proven. The other 18 rows are `LIVE_LOCAL_VERIFIED`.
 
 | Integration | Execution path | Preferred run | Native visual or operational evidence |
 |---|---|---|---|
@@ -88,11 +90,11 @@ All five stability runs recorded zero final Kafka lag, zero duplicates, zero une
 | Azure EventHubTrigger | Microsoft Event Hubs emulator input; Azurite DLQ; Azure Functions handler owns output writes | 100 exact outputs + 10 contract-valid DLQ envelopes | [`20260721t055132z`](../trigger-proofs/azure-eventhub/runs/20260721t055132z/proof-manifest.json) |
 | GCP Pub/Sub CloudEvent | Google Pub/Sub emulator; envelope-only local Eventarc bridge; Java handler owns output writes | 100 exact outputs + 10 contract-valid DLQ envelopes | [`20260721t060215z`](../trigger-proofs/gcp-pubsub/runs/20260721t060215z/proof-manifest.json) |
 
-The trigger result claims are backed by each bundle’s `actual/content-validation.json`, which records 100/100 expected hash matches, 10/10 error-contract matches, zero duplicates, and `passed: true`.
+Each trigger is classified `LIVE_LOCAL_VERIFIED — emulator`. The central validator recomputes its 100/100 simulation-baseline matches, 10/10 error-contract matches, and record-ID duplicate checks from the preserved JSONL files, then confirms that result against `actual/content-validation.json`.
 
 ## Screenshots and primary evidence
 
-The imported integration/runtime bundles contain **62 screenshots**. Four additional composite control-plane screenshots are preserved under [`evidence/live-local-supplement/screenshots`](../live-local-supplement/screenshots/). Screenshots corroborate runtime identity and UI-visible state. The primary evidence remains the run manifest, exact outputs, content hashes, write-boundary audit, broker/provider counts, health samples, logs, image identities, and per-bundle SHA-256 manifest.
+The imported integration/runtime bundles contain **62 screenshots**. Four additional composite control-plane screenshots are preserved under [`evidence/live-local-supplement/screenshots`](../live-local-supplement/screenshots/). Screenshots corroborate runtime identity and UI-visible state. The primary evidence remains the run manifest, preserved outputs, centrally recomputed content/error/accounting gates, loaded-artifact identity, recorded write-boundary counters, broker/provider state, health samples, logs, capture-time image/artifact identities, and per-bundle SHA-256 manifest. Existing bundles do not prove mounted bridge/JAR identity; the updated harness requires that comparison for future captures.
 
 Some deployed tools do not ship a first-party web dashboard in this configuration. For Camel, Spring Cloud Stream, Beam DirectRunner, Vector, OpenTelemetry Collector, and Debezium, the bundles intentionally use native APIs, metrics, offsets, and runtime logs instead of a synthetic screenshot.
 
@@ -112,4 +114,7 @@ Each `reproduce.ps1` inside a run bundle is the capture-time command record and 
 - The GCP Pub/Sub emulator does not include Eventarc; the envelope-only bridge is part of the documented local test boundary.
 - The WarpStream row qualifies the repository’s Bento adapter against a local Kafka-compatible API, not the WarpStream broker/control plane.
 - The five 10,000-record soaks qualify only the named JVM/HTTP/gRPC surfaces, fixture, host, and five-minute window.
+- All 35 integration/runtime bundles were captured from dirty Flowplane worktrees. Each manifest preserves the source commit, dirty flag, status-entry count, and status digest. These are authorized local verification runs, not clean-tree release builds.
+- Capture-time immutable identities are preserved where applicable: every integration/runtime bundle records a verifier SHA-256, 28 record a runtime JAR SHA-256, 32 record at least one container image ID, and all three provider-trigger bundles record emulator and function image digests. Missing non-applicable identities are not inferred.
+- Broker lag is accepted only when derived from a native broker/group observation. Current reproduction code fails when that observation cannot be collected; count-based fallback is not a qualifying lag measurement.
 - Earlier HTTP and gRPC failures remain under `evidence/historical-attempts/`; they describe historical artifacts and no longer represent the latest successful local runs.

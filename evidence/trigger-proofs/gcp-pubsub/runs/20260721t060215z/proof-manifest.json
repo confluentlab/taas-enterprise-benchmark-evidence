@@ -1,5 +1,5 @@
 {
-    "status":  "PASS",
+    "status":  "LIVE_LOCAL_VERIFIED",
     "runId":  "20260721t060215z",
     "trigger":  "GCP Pub/Sub CloudEvent",
     "runtimeId":  "gcp-pubsub-evidence-20260721t060215z",

@@ -1,6 +1,7 @@
 {
     "schemaVersion":  "flowplane.verification-result.v1",
-    "status":  "LIVE_LOCAL_VERIFIED",
+    "status":  "MEASURED_NOT_QUALIFIED",
+    "qualificationCorrection":  "Output and error accounting passed, but the preserved Kafka consumer-group command reports that the group did not exist; broker-derived zero lag is not proven.",
     "functionalMinimumMet":  true,
     "exactAccounting":  true,
     "checksumsVerified":  true,
@@ -285,7 +286,6 @@
                                        "actual/mapping-created.json",
                                        "actual/mapping-published.json",
                                        "actual/mapping-validation.json",
-                                       "actual/not-executed.json",
                                        "actual/pipeline-result.json",
                                        "actual/runtime-health-after.json",
                                        "actual/runtime-registration.json",

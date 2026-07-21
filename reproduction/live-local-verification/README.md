@@ -100,9 +100,9 @@ automatically promoted to Pulsar-grade streaming evidence.
 The current preferred runtime-surface bundles are all `LIVE_LOCAL_VERIFIED`.
 The serverless scope is the HTTP wrapper: AWS API Gateway-style events through
 Lambda RIE, the Azure HTTP trigger in the official Java Functions image, and
-the GCP HTTP function in Java Functions Framework `2.0.1`. Azure Queue/Event
-Hub triggers and the GCP Pub/Sub CloudEvent handler need separate event-trigger
-qualifications.
+the GCP HTTP function in Java Functions Framework `2.0.1`. Separate emulator-backed
+Azure Queue, Azure Event Hub, and GCP Pub/Sub CloudEvent trigger bundles are also
+classified `LIVE_LOCAL_VERIFIED — emulator`; they are not managed-cloud certification.
 
 ## Pulsar pipeline boundary
 

@@ -1,5 +1,5 @@
 {
-    "status":  "PASS",
+    "status":  "LIVE_LOCAL_VERIFIED",
     "runId":  "20260721t054012z",
     "trigger":  "Azure QueueTrigger",
     "runtimeId":  "azure-queue-evidence-20260721t054012z",

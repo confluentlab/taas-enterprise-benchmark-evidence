@@ -1,6 +1,6 @@
 # flink live local verification
 
-- Status: `LIVE_LOCAL_VERIFIED`
+- Status: `MEASURED_NOT_QUALIFIED` — output/error accounting passed; broker-derived zero lag was not captured because the consumer group did not exist at inspection time.
 - Run ID: `20260720T174759Z`
 - Boundary: Flink job with Kafka source, output, and DLQ
 - Successful outputs: 100
